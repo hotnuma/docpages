@@ -114,6 +114,19 @@
     
     reboot and use labwc session on startup
 
+
+#### Manual configuration
+
+* Menu icons
+    
+    create settings.ini into ~/.config/gtk-3.0 :
+    
+    ```
+    [Settings]
+    gtk-button-images=1
+    gtk-menu-images=1
+    ```
+    
 <br/>
 
 
