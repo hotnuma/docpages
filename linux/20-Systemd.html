@@ -1,0 +1,146 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | <a href="05-Xfce.html">Xfce</a> | <a href="10-Network.html">Network</a> | <a href="15-FFmpeg.html">FFmpeg</a> | Systemd | <a href="25-Bugs.html">Bugs</a> | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>Systemd</h2>
+
+<hr>
+
+<h4>References</h4>
+
+<p><a href="https://www.freedesktop.org/software/systemd/man/systemctl.html">https://www.freedesktop.org/software/systemd/man/systemctl.html</a><br>
+<a href="https://access.redhat.com/sites/default/files/attachments/12052018_systemd_6.pdf">https://access.redhat.com/attachments/12052018_systemd_6.pdf</a><br>
+<a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-managing_services_with_systemd">https://access.redhat.com/documentation/</a>  </p>
+
+<ul>
+<li><p>Manage services and units</p>
+
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units-fr">https://www.digitalocean.com/community/tutorials/</a>  </p>
+
+<p><code>sudo systemctl status application.service</code></p>
+
+<pre><code>sudo systemctl start application.service
+sudo systemctl stop application.service
+</code></pre>
+
+<pre><code>sudo systemctl enable application.service
+sudo systemctl disable application.service
+</code></pre>
+
+<pre><code>sudo systemctl restart application.service
+sudo systemctl reload application.service
+</code></pre>
+
+<p><code>sudo systemctl daemon-reload</code></p></li>
+<li><p>Modify unit file</p>
+
+<p><a href="https://serverfault.com/questions/840996/">https://serverfault.com/questions/840996/</a>  </p>
+
+<p><code>systemctl edit &lt;service-name&gt;</code></p></li>
+<li><p>List services</p>
+
+<p><a href="https://askubuntu.com/questions/795226/">https://askubuntu.com/questions/795226/</a>  </p>
+
+<pre><code>systemctl list-unit-files --type=service
+systemctl list-unit-files | grep &quot;enabled &quot;
+systemctl list-units --no-pager
+systemctl | grep running
+</code></pre></li>
+<li><p>List timers</p>
+
+<p><code>systemctl --no-pager list-timers</code></p></li>
+</ul>
+
+<h4>Log files</h4>
+
+<p><a href="https://www.golinuxcloud.com/view-logs-using-journalctl-filter-journald/">https://www.golinuxcloud.com/view-logs-using-journalctl-filt</a></p>
+
+<ul>
+<li><p>journalctl</p>
+
+<p>last 100 lines : <code>journalctl -b -f --lines=100</code></p>
+
+<p>last errors : <code>journalctl --no-pager -b -p 4</code></p>
+
+<p>last errors : <code>journalctl --no-pager -b -p err</code></p></li>
+<li><p>Read shutdown log</p>
+
+<p><code>journalctl -b -1 -e</code></p></li>
+<li><p>Rotation des logs avec logrotate</p>
+
+<p><a href="https://journaldunadminlinux.fr/rotation-des-logs-avec-logrotate/">https://journaldunadminlinux.fr/rotation-des-logs-avec-logro</a></p></li>
+<li><p>Delete old files</p>
+
+<p><a href="https://unix.stackexchange.com/questions/139513/">https://unix.stackexchange.com/questions/139513/</a>  </p>
+
+<p>delete older than 2 days : <code>sudo journalctl --vacuum-time=2d</code></p>
+
+<p>check result : <code>sudo du /var/log  -x | sort -nr | head -10</code></p></li>
+</ul>
+
+<!--
+    https://unix.stackexchange.com/questions/459996/  
+    https://unix.stackexchange.com/questions/184488/  
+
+    ```
+    sudo find /var/log -type f -mtime +5 -delete
+    sudo find /var/log -maxdepth 1 -type f -mtime +5 -delete
+    sudo find /var/log ! -wholename "/var/log/journal/*" -type f -mtime +5 -delete
+    ```
+-->
+
+<h4><a name="disable"></a> Turn off excessive logs</h4>
+
+<ul>
+<li><p>rtkit-daemon</p>
+
+<p><a href="https://unix.stackexchange.com/questions/684379/">https://unix.stackexchange.com/questions/684379/</a>  </p>
+
+<pre><code>sudo mkdir /etc/systemd/system/rtkit-daemon.service.d/
+sudo geany /etc/systemd/system/rtkit-daemon.service.d/log.conf
+</code></pre>
+
+<p>Add the following :</p>
+
+<pre><code>[Service]
+LogLevelMax=4
+</code></pre>
+
+<p>Reload the service</p>
+
+<pre><code>sudo systemctl daemon-reload
+sudo systemctl restart rtkit-daemon.service
+</code></pre></li>
+<li><p>sudo</p>
+
+<p><a href="https://unix.stackexchange.com/questions/224370/">https://unix.stackexchange.com/questions/224370/</a><br>
+<a href="https://unix.stackexchange.com/questions/637227/">https://unix.stackexchange.com/questions/637227/</a>  </p>
+
+<p>In <code>/etc/pam.d/sudo</code> add the following with a real user name :</p>
+
+<p><code>session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = &lt;username&gt;</code></p>
+
+<p>Example of <code>/etc/pam.d/sudo</code> file :</p>
+
+<pre><code>#%PAM-1.0
+
+# Set up user limits from /etc/security/limits.conf.
+session    required   pam_limits.so
+session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = hotnuma
+
+@include common-auth
+@include common-account
+@include common-session-noninteractive
+</code></pre></li>
+</ul>
+
+<h4>Other</h4>
+
+<ul>
+<li><p>Analyze startup</p>
+
+<pre><code>systemd-analyze
+systemd-analyze --no-pager blame
+systemd-analyze critical-chain
+</code></pre></li>
+</ul>

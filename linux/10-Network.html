@@ -1,0 +1,225 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | <a href="05-Xfce.html">Xfce</a> | Network | <a href="15-FFmpeg.html">FFmpeg</a> | <a href="20-Systemd.html">Systemd</a> | <a href="25-Bugs.html">Bugs</a> | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>Network</h2>
+
+<hr>
+
+<h4>Firefox</h4>
+
+<ul>
+<li><p>References</p>
+
+<p><a href="https://wiki.debian.org/Firefox">https://wiki.debian.org/Firefox</a><br>
+<a href="https://wiki.archlinux.org/title/Firefox">https://wiki.archlinux.org/title/Firefox</a><br>
+<a href="https://www.mozilla.org/en-US/firefox/releases/">https://www.mozilla.org/en-US/firefox/releases/</a><br>
+<a href="https://support.mozilla.org/en-US/kb/install-firefox-linux">https://support.mozilla.org/en-US/kb/install-firefox-linux</a>  </p></li>
+<li><p>Install from mozilla</p>
+
+<p><a href="https://ftp.mozilla.org/pub/firefox/releases/">https://ftp.mozilla.org/pub/firefox/releases/</a>  </p>
+
+<p>Might require dbus-glib : <code>sudo apt install libdbus-glib-1-2</code></p>
+
+<pre><code>tar xf firefox-116.0.tar.bz2 &amp;&amp; sudo mv firefox /opt/firefox116_00/
+sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
+sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/install-firefox-linux/firefox.desktop -P /usr/local/share/applications
+</code></pre>
+
+<p>edit icon path : sudo nano /usr/local/share/applications/firefox.desktop</p></li>
+<li><p>Test Videos</p>
+
+<p><a href="https://www.youtube.com/watch?v=cuXsupMuik4">https://www.youtube.com/watch?v=cuXsupMuik4</a><br>
+<a href="https://www.youtube.com/watch?v=TVtoxUohG5E">https://www.youtube.com/watch?v=TVtoxUohG5E</a>  </p></li>
+<li><p>Change user agent</p>
+
+<p>Create the following key in <code>about:config</code> :</p>
+
+<p><code>general.useragent.override Mozilla/5.0 (X11; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0</code></p></li>
+<li><p>Fix Slow YouTube</p>
+
+<p><a href="https://lifehacker.com/tech/stop-google-slowing-down-youtube-firefox-edge">https://lifehacker.com/tech/stop-google-slowing-down-youtube-firefox-edge</a>  </p>
+
+<p><code>||googlevideo.com/videoplayback$xhr,3p,method=get,domain=www.youtube.com</code></p></li>
+<li><p>User Profiles</p>
+
+<p><a href="https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data">https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data</a>  </p>
+
+<p>Type <code>about:profiles</code> in the address bar.</p>
+
+<pre><code>~/.mozilla/firefox/
+~/.cache/mozilla/firefox/
+</code></pre></li>
+<li><p>Safe Mode</p>
+
+<p>In a terminal : <code>firefox --safe-mode</code></p></li>
+<li><p>Turn off ambient mode</p>
+
+<p><a href="https://www.popsci.com/diy/youtube-ambient-mode-off-on/">https://www.popsci.com/diy/youtube-ambient-mode-off-on/</a>  </p></li>
+<li><p>Turn off picture-in-picture mode</p>
+
+<p><a href="https://support.mozilla.org/en-US/kb/turn-picture-picture-mode">https://support.mozilla.org/en-US/kb/turn-picture-picture-mode</a>  </p></li>
+<li><p>Turn off updates</p>
+
+<p>Create a <code>policies.json</code> file in <code>firefox/distribution/</code> :</p>
+
+<pre><code>{
+    &quot;policies&quot;:
+    {
+        &quot;DisableAppUpdate&quot;: true,
+        &quot;ManualAppUpdateOnly&quot;: true
+    }
+}
+</code></pre>
+
+<pre><code>sudo mkdir -p /opt/firefox115esr/distribution/
+sudo cp ./policies.json /opt/firefox115esr/distribution/
+</code></pre></li>
+</ul>
+
+<h4>Network</h4>
+
+<ul>
+<li><p>Reference</p>
+
+<p><a href="https://wiki.debian.org/NetworkConfiguration">https://wiki.debian.org/NetworkConfiguration</a><br>
+<a href="https://wiki.debian.org/NetworkManager">https://wiki.debian.org/NetworkManager</a>  </p></li>
+<li><p>Read DNS servers</p>
+
+<pre><code>cat /etc/resolv.conf
+ls /etc/resolv.conf
+</code></pre></li>
+<li><p>Change DNS</p>
+
+<p><a href="https://serverfault.com/questions/810636/">https://serverfault.com/questions/810636/</a>  </p>
+
+<p>Get network connection name : <code>nmcli con</code></p>
+
+<pre><code>nmcli con mod &quot;Wired connection 1&quot; ipv4.dns &quot;8.8.8.8 8.8.4.4&quot;
+nmcli con mod &quot;Wired connection 1&quot; ipv4.ignore-auto-dns yes
+service NetworkManager restart
+cat /etc/resolv.conf
+</code></pre></li>
+<li><p>Read hostname and domain name</p>
+
+<pre><code>hostname
+hostname -d
+</code></pre></li>
+<li><p>Read network configuration</p>
+
+<pre><code>ip a
+ip route show default
+networkctl
+networkctl status
+</code></pre>
+
+<p>List interfaces : <code>ls /sys/class/net</code></p></li>
+<li><p>Change interface state</p>
+
+<pre><code>sudo ifdown eth0
+sudo ifup eth0
+</code></pre>
+
+<pre><code>sudo ip link set dev eth0 down
+sudo ip link set dev eth0 up
+</code></pre>
+
+<p><code>sudo systemctl restart networking</code></p></li>
+<li><p>Predictable Network Interface Names</p>
+
+<p><a href="https://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/">https://www.freedesktop.org/.../PredictableNetworkInterfaceNames</a>  </p>
+
+<p>Switch back to eth0 :</p>
+
+<p>Add <code>GRUB_CMDLINE_LINUX=&quot;net.ifnames=0&quot;</code> in <code>/etc/default/grub</code></p>
+
+<p>Execute <code>sudo update-grub</code></p></li>
+</ul>
+
+<h4>Switch to /etc/network/interfaces</h4>
+
+<ul>
+<li><p>Network Interfaces</p>
+
+<p>check interfaces names : <code>ifconfig</code></p>
+
+<p><code>sudo mv /etc/network/interfaces /etc/network/interfaces.bak</code></p>
+
+<p><code>sudo nano /etc/network/interfaces</code></p>
+
+<pre><code>auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+    address 192.168.1.132/24
+    netmask 255.255.255.0
+    broadcast 192.168.1.255
+    gateway 192.168.1.254
+    dns-nameservers 8.8.8.8 8.8.4.4
+</code></pre></li>
+<li><p>Install ifupdown</p>
+
+<p><code>sudo apt install ifupdown resolvconf</code></p></li>
+<li><p>Disable NetworkManager</p>
+
+<pre><code>sudo systemctl stop NetworkManager
+sudo systemctl disable NetworkManager
+</code></pre></li>
+<li><p>Disable systemd-networkd</p>
+
+<p>check service : <code>sudo systemctl status systemd-networkd</code></p>
+
+<pre><code>sudo systemctl stop systemd-networkd
+sudo systemctl disable systemd-networkd
+sudo rm /etc/systemd/network/00-eth0.network
+</code></pre></li>
+<li><p>Enable eth0</p>
+
+<p>check links : <code>ls -la /etc/systemd/network/</code></p>
+
+<p><code>sudo ln -s /dev/null /etc/systemd/network/99-default.link</code></p></li>
+<li><p>Configure eth0 using ifup :</p>
+
+<p><code>sudo ifup eth0</code></p></li>
+<li><p>Uninstall network manager</p>
+
+<p><code>sudo apt purge network-manager</code></p></li>
+</ul>
+
+<h4>Use systemd-networkd</h4>
+
+<ul>
+<li><p>Use systemd-networkd</p>
+
+<p><a href="https://linux.fernandocejas.com/docs/how-to/switch-from-network-manager-to-systemd-networkd">https://linux.fernandocejas.com/docs/...systemd-networkd</a>  </p>
+
+<p>Create a configuration file :</p>
+
+<p><code>/etc/systemd/network/00-eth0.network</code></p>
+
+<pre><code>[Match]
+Name=eth0
+
+[Network]
+Address=192.168.1.100/24
+Gateway=192.168.1.254
+DNS=8.8.8.8
+DNS=8.8.4.4
+</code></pre>
+
+<p>Start services :</p>
+
+<pre><code>sudo apt install systemd-resolved
+
+sudo systemctl stop NetworkManager
+sudo systemctl disable NetworkManager
+
+sudo systemctl enable systemd-networkd
+
+sudo systemctl enable systemd-resolved
+sudo systemctl start systemd-resolved
+
+networkctl
+</code></pre></li>
+</ul>

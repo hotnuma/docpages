@@ -1,0 +1,144 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | <a href="05-Xfce.html">Xfce</a> | <a href="10-Network.html">Network</a> | FFmpeg | <a href="20-Systemd.html">Systemd</a> | <a href="25-Bugs.html">Bugs</a> | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>FFmpeg</h2>
+
+<hr>
+
+<p><a href="https://ffmpeg.org/documentation.html">https://ffmpeg.org/documentation.html</a><br>
+<a href="https://ffmpeg.org/ffmpeg-filters.html">https://ffmpeg.org/ffmpeg-filters.html</a>  </p>
+
+<p><a href="https://www.codeproject.com/Tips/5356341/How-to-Compile-FFmpeg-6-0-in-Linux-and-What-New-Th">https://www.codeproject.com/Tips/5356341/</a>  </p>
+
+<h4>Audio/Video</h4>
+
+<ul>
+<li><p>Change aspect ratio</p>
+
+<p><code>ffmpeg -y -i &quot;input.mp4&quot; -aspect &quot;4:3&quot; -c copy &quot;output.mp4&quot;</code></p></li>
+<li><p>Get a 1 min sample from 2 min of the beginning</p>
+
+<p>ffmpeg -y -ss 00:02:00 -i &quot;input.mp4&quot; -t 00:01:00 -c copy &quot;output.mp4&quot;</p></li>
+<li><p>Get a 1 min sample with audio only</p>
+
+<p>ffmpeg -y -ss 00:02:00  -i &quot;input.mp4&quot; -t 00:01:00 -map 0:1 -c copy &quot;output.mp4&quot;</p></li>
+<li><p>Get a 1 min samle with video only</p>
+
+<p>ffmpeg -y -ss 00:02:00 -i &quot;input.mp4&quot; -t 00:01:00 -map 0:0 -c copy &quot;output.mp4&quot;</p></li>
+<li><p>Get file informations</p>
+
+<p><code>ffprobe -hide_banner &quot;input.mp4&quot;</code></p>
+
+<p><code>ffprobe -v quiet -show_format -show_streams &quot;input.mp4&quot;</code></p></li>
+</ul>
+
+<h4>Audio</h4>
+
+<ul>
+<li><p>Mp3 encoding</p>
+
+<p><code>ffmpeg -y -i &quot;input.m4a&quot; -c:a libmp3lame -b:a 192k &quot;output.mp3&quot;</code></p></li>
+<li><p>Keep left channel</p>
+
+<p><code>ffmpeg -y -i &quot;input.mp4&quot; -c:v copy -c:a libmp3lame -b:a 192k -af &quot;pan=stereo|c0=c0|c1=c0&quot; &quot;output.mp4&quot;</code></p></li>
+<li><p>Keep right channel</p>
+
+<p><code>ffmpeg -y -i &quot;input.mp4&quot; -c:v copy -c:a libmp3lame -b:a 192k -af &quot;pan=stereo|c0=c1|c1=c1&quot; &quot;output.mp4&quot;</code></p></li>
+<li><p>Audio normalize</p>
+
+<p><a href="http://superuser.com/questions/323119/">http://superuser.com/questions/323119/</a>  </p>
+
+<p>Analyze audio level with volumedetect</p>
+
+<p><code>ffmpeg -y -i &quot;input.mp4&quot; -af &quot;volumedetect&quot; -f null /dev/null</code></p>
+
+<p>Read &quot;max_volume&quot;, for example -22.5 dB, then amplify audio channel by +22.5dB.</p>
+
+<p><code>ffmpeg -y -i &quot;input.mp4&quot; -c:v copy -c:a libmp3lame -b:a 192k -af &quot;volume=22.5dB&quot; &quot;output.mp4&quot;</code></p></li>
+<li><p>Advance or delay audio by one second</p>
+
+<p><code>ffmpeg -y -i &quot;input.mp4&quot; -itsoffset -1.0 -i &quot;input.mp4&quot; -map 0:0 -map 1:1 -c copy &quot;output.mp4&quot;</code></p>
+
+<p><code>ffmpeg -y -i &quot;input.mp4&quot; -itsoffset +1.0 -i &quot;input.mp4&quot; -map 0:0 -map 1:1 -c copy &quot;output.mp4&quot;</code></p></li>
+<li><p>Choose default audio channel</p>
+
+<pre><code>ffmpeg -y -i &quot;input.mp4&quot; -map 0:0 -map 0:2 -map 0:1 \
+-disposition:a:0 default -disposition:a:1 none -c copy &quot;output.mp4&quot;
+</code></pre></li>
+<li><p>Change audio speed</p>
+
+<p><code>ffmpeg -y -i &quot;audio.mp3&quot; -af &quot;atempo=1.001&quot; -b:a 192k &quot;audio-faster.mp3&quot;</code></p></li>
+<li><p>Audio filter</p>
+
+<p><code>ffmpeg -y -i &quot;input.mp4&quot; -c:v copy -af &quot;highpass=f=100&quot; &quot;output.mp4&quot;</code></p></li>
+</ul>
+
+<h4>Images</h4>
+
+<ul>
+<li><p>Resize image</p>
+
+<pre><code>ffmpeg -hide_banner -loglevel error -y \
+-i &quot;input.jpg&quot; -q:v 1 -vf scale=1680:1050:flags=lanczos &quot;output.jpg&quot;
+</code></pre></li>
+</ul>
+
+<h4>Subtitles</h4>
+
+<ul>
+<li><p>Convert sub to srt online</p>
+
+<p><a href="https://subtitletools.com/convert-sub-idx-to-srt-online">https://subtitletools.com/convert-sub-idx-to-srt-online</a>  </p></li>
+<li><p>Extract subs with MKVToolNix</p>
+
+<p><code>mkvextract tracks &quot;input.mkv&quot; 2:out.idx</code></p></li>
+<li><p>Remove subtitles and chapters</p>
+
+<p><code>ffmpeg -y -i &quot;input.mp4&quot; -c copy -sn &quot;output.mp4&quot;</code></p>
+
+<p><code>ffmpeg -y -i &quot;input.mp4&quot; -c copy -map_chapters -1 &quot;output.mp4&quot;</code></p>
+
+<p><code>ffmpeg -y -i &quot;input.mp4&quot; -c copy -dn -map_metadata:c -1 &quot;output.mp4&quot;</code></p></li>
+</ul>
+
+<h4>yt-dlp</h4>
+
+<ul>
+<li><p>Download subtitles from YouTube</p>
+
+<pre><code>yt-dlp --list-subs &quot;URL&quot;
+yt-dlp --write-sub --sub-lang en --skip-download &quot;URL&quot;
+yt-dlp --write-sub --convert-subs=srt --skip-download &quot;URL&quot;
+yt-dlp --write-auto-sub --sub-lang fr --skip-download &quot;URL&quot;
+</code></pre></li>
+<li><p>Download thumbnail</p>
+
+<p><code>yt-dlp --write-thumbnail --skip-download &quot;URL&quot;</code></p></li>
+<li><p>Use cookies</p>
+
+<p><code>yt-dlp --cookies=cookies/youtube.txt &quot;URL&quot;</code></p></li>
+</ul>
+
+<h4>Other</h4>
+
+<ul>
+<li><p>Concatenating files</p>
+
+<p><a href="https://stackoverflow.com/questions/7333232/">https://stackoverflow.com/questions/7333232/</a><br>
+<a href="https://trac.ffmpeg.org/wiki/Concatenate">https://trac.ffmpeg.org/wiki/Concatenate</a>  </p>
+
+<p>Create a file containing the list of files to concatenate :</p>
+
+<pre><code>file &#39;part1.mp4&#39;
+file &#39;part2.mp4&#39;
+file &#39;part3.mp4&#39;
+</code></pre>
+
+<p>Then execute the concat command :</p>
+
+<p><code>ffmpeg -f concat -safe 0 -i &quot;input.txt&quot; -c copy &quot;output.mp4&quot;</code></p></li>
+<li><p>Write title metadata</p>
+
+<p><code>ffmpeg -y -i &quot;input.mp4&quot; -c copy -metadata title=&quot;Test title&quot; &quot;output.mp4&quot;</code></p></li>
+</ul>

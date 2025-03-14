@@ -1,0 +1,403 @@
+<p><link href="../style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ Home | <a href="05-Xfce.html">Xfce</a> | <a href="10-Network.html">Network</a> | <a href="15-FFmpeg.html">FFmpeg</a> | <a href="20-Systemd.html">Systemd</a> | <a href="25-Bugs.html">Bugs</a> | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>Docs Linux</h2>
+
+<hr>
+
+<h4>References</h4>
+
+<p><a href="https://wiki.debian.org/FrontPage">https://wiki.debian.org/FrontPage</a><br>
+<a href="https://wiki.debian.org/HardwareVideoAcceleration">https://wiki.debian.org/HardwareVideoAcceleration</a>  </p>
+
+<h4>System</h4>
+
+<ul>
+<li><p>Aliases</p>
+
+<p>list aliases : <code>alias</code><br>
+aliases file : <code>~/.bash_aliases</code><br>
+example : <code>alias cgrep=&#39;grep -rni --include=*.{h,c,cpp,cxx}&#39;</code>  </p></li>
+<li><p>Alternatives</p>
+
+<p><a href="https://wiki.debian.org/DebianAlternatives">https://wiki.debian.org/DebianAlternatives</a>  </p>
+
+<p>list alternatives : <code>update-alternatives --get-selections</code><br>
+list choices : <code>update-alternatives --list x-cursor-theme</code>  </p>
+
+<p>default session : <code>sudo update-alternatives --config x-session-manager</code><br>
+default terminal : <code>sudo update-alternatives --config x-terminal-emulator</code>  </p></li>
+<li><p>Boot target</p>
+
+<pre><code>sudo systemctl get-default
+sudo systemctl set-default graphical.target
+</code></pre></li>
+<li><p>Environment variables</p>
+
+<p><a href="https://wiki.archlinux.org/title/environment_variables">https://wiki.archlinux.org/title/environment_variables</a><br>
+<a href="https://askubuntu.com/questions/866161/">https://askubuntu.com/questions/866161/</a><br>
+<a href="https://askubuntu.com/questions/60218/">https://askubuntu.com/questions/60218/</a>  </p>
+
+<pre><code>/etc/environment
+$HOME/.profile
+/etc/profile
+</code></pre></li>
+<li><p>grub.conf</p>
+
+<p><a href="https://askubuntu.com/questions/575651/">https://askubuntu.com/questions/575651/</a>  </p>
+
+<p>edit config : <code>/etc/default/grub</code><br>
+update : <code>sudo update-grub</code>  </p></li>
+<li><p>Locale</p>
+
+<p><a href="https://wiki.archlinux.org/title/locale">https://wiki.archlinux.org/title/locale</a></p>
+
+<p><code>/etc/default/locale</code></p></li>
+<li><p>pkexec</p>
+
+<p><a href="https://unix.stackexchange.com/questions/203136/">https://unix.stackexchange.com/questions/203136/</a><br>
+<a href="https://askubuntu.com/questions/608419/">https://askubuntu.com/questions/608419/</a>  </p></li>
+<li><p>Reboot / Halt System</p>
+
+<pre><code>systemctl reboot
+systemctl poweroff
+</code></pre></li>
+<li><p>System Infos</p>
+
+<p><code>inxi -b</code><br>
+<code>glxinfo | egrep &quot;OpenGL vendor|OpenGL renderer&quot;</code><br>
+<code>vainfo</code></p></li>
+<li><p>User&#39;s groups</p>
+
+<p><code>groups username</code></p></li>
+</ul>
+
+<h4>Install</h4>
+
+<ul>
+<li><p>Source list</p>
+
+<p><code>/etc/apt/sources.list</code></p></li>
+<li><p>Check if reboot is needed</p>
+
+<p><a href="https://askubuntu.com/questions/164/">https://askubuntu.com/questions/164/</a>  </p></li>
+<li><p>Check which packages can be uodated</p>
+
+<p><code>sudo apt update &amp;&amp; apt list --upgradable</code></p></li>
+<li><p>Enable non-free-firmware</p>
+
+<p><a href="https://www.linuxtricks.fr/wiki/debian-configurer-les-sources-activer-non-free-et-contrib">https://www.linuxtricks.fr/wiki</a>  </p></li>
+<li><p>End of life releases</p>
+
+<p><a href="https://doc.ubuntu-fr.org/old-releases">https://doc.ubuntu-fr.org/old-releases</a>  </p></li>
+<li><p>Find the package that provides a file</p>
+
+<p><a href="https://askubuntu.com/questions/481/">https://askubuntu.com/questions/481/</a>  </p>
+
+<p><code>dpkg -S /bin/ls</code></p></li>
+<li><p>Get package version</p>
+
+<p><code>dpkg -l libgtk-3-0 | grep ^ii</code></p></li>
+<li><p>Get source of package</p>
+
+<p><a href="https://www.cyberciti.biz/faq/how-to-get-source-code-of-package-using-the-apt-command-on-debian-or-ubuntu/">https://www.cyberciti.biz/faq/how-to-get-source...</a>  </p>
+
+<p>check if <code>deb-src</code> is enabled : <code>cat /etc/apt/sources.list</code></p>
+
+<pre><code>sudo apt update
+apt source &lt;package&gt;
+</code></pre></li>
+<li><p>List installed packages</p>
+
+<p><code>dpkg -l</code></p>
+
+<p><code>dpkg -l | grep thunar</code></p>
+
+<p><code>apt list thunar</code></p>
+
+<p><code>apt list --installed | grep glib</code></p></li>
+<li><p>List files from a package</p>
+
+<p><a href="https://askubuntu.com/questions/32507/">https://askubuntu.com/questions/32507/</a>  </p>
+
+<p>installed package : <code>dpkg-query -L &lt;package_name&gt;</code></p></li>
+<li><p>Purge Apt Cache</p>
+
+<p><code>sudo apt clean; sudo apt autoclean</code></p></li>
+<li><p>Remove useless packages</p>
+
+<p><code>sudo apt autopurge</code></p>
+
+<p>or</p>
+
+<p><code>sudo apt autoremove</code></p>
+
+<p>or</p>
+
+<p><code>sudo apt autoremove --purge</code></p></li>
+<li><p>Search package name</p>
+
+<p><code>apt search thunar</code></p></li>
+<li><p>System upgrade</p>
+
+<pre><code>sudo apt update
+sudo apt upgrade
+</code></pre>
+
+<p>or
+<code>
+sudo apt update
+sudo apt full-upgrade
+</code></p></li>
+<li><p>Install python programs</p>
+
+<p><a href="https://stackoverflow.com/questions/58831133/">https://stackoverflow.com/questions/58831133/</a><br>
+<a href="https://luminousmen.com/post/why-use-pip-install-user">https://luminousmen.com/post/why-use-pip-install-user</a>  </p>
+
+<p>create an alias such as :  </p>
+
+<p><code>alias pyinst=&#39;python3 -m pip install --break-system-packages --user&#39;</code></p>
+
+<p>then run : <code>pyinst &lt;appname&gt;</code></p></li>
+<li><p>yt-dlp</p>
+
+<p><a href="https://github.com/yt-dlp/yt-dlp">https://github.com/yt-dlp/yt-dlp</a>  </p>
+
+<p>install or update : <code>pyinst -U yt-dlp</code><br>
+create a symlink : <code>sudo ln -s ~/.local/bin/yt-dlp /usr/local/bin/yt-dlp</code>  </p>
+
+<p>nightly releases : <a href="https://github.com/yt-dlp/yt-dlp-nightly-builds/releases">https://github.com/yt-dlp/yt-dlp-nightly-builds/releases</a>  </p></li>
+</ul>
+
+<h4>Drives</h4>
+
+<ul>
+<li><p>Check drive spin down</p>
+
+<p><a href="https://superuser.com/questions/173622/">https://superuser.com/questions/173622/</a>  </p>
+
+<p><code>hdparm -C /dev/sdX</code></p></li>
+<li><p>Eject USB drives</p>
+
+<p><a href="https://unix.stackexchange.com/questions/35508/">https://unix.stackexchange.com/questions/35508/</a>  </p>
+
+<p><code>sudo eject /dev/sdX</code></p></li>
+<li><p>Power Off Drive</p>
+
+<p><a href="https://askubuntu.com/questions/671683/">https://askubuntu.com/questions/671683/</a><br>
+<a href="https://forum.manjaro.org/t/eject-external-hard-drive-option-gone/61895/6">https://forum.manjaro.org/t/eject-external-hard-drive-option-gone/61895/6</a>  </p>
+
+<p><code>sync; udisksctl power-off -b /dev/sdX</code></p></li>
+<li><p>Read smart infos</p>
+
+<p><code>sudo smartctl -s on -a /dev/sdX</code></p></li>
+<li><p>I/O test</p>
+
+<p><a href="https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/">https://www.cyberciti.biz/howto-test-disk-performance...</a>  </p>
+
+<p><code>dd if=/dev/zero of=/tmp/test1.img bs=1G count=1 oflag=dsync</code></p></li>
+<li><p>Write an img file to a drive using systools</p>
+
+<p><a href="https://github.com/hotnuma/systools">https://github.com/hotnuma/systools</a>  </p>
+
+<pre><code>lsblk -p
+sudo umount /dev/sdX?
+rpimg &quot;file.img&quot; /dev/sdX
+</code></pre></li>
+<li><p>Write Debian Iso</p>
+
+<pre><code>lsblk -p
+sudo umount /dev/sdX?
+sudo cp &quot;debian.iso&quot; /dev/sdX
+sync
+</code></pre></li>
+</ul>
+
+<h4>Drives Partitions</h4>
+
+<ul>
+<li><p>Delete all partitions</p>
+
+<p><a href="https://serverfault.com/questions/250839/">https://serverfault.com/questions/250839/</a>  </p>
+
+<p><code>sudo dd if=/dev/zero of=/dev/sdX bs=512 count=1 conv=notrunc</code></p></li>
+<li><p>Fix NTFS partition</p>
+
+<p><code>sudo ntfsfix /dev/sdX1</code></p></li>
+<li><p>Format <code>/dev/sdX1</code> in Ext4</p>
+
+<pre><code>lsblk -p
+sudo umount /dev/sdX1
+sudo mkfs.ext4 -L &quot;Backup&quot; /dev/sdX1
+sudo chown $USER:$USER /media/$USER/Backup
+</code></pre></li>
+<li><p>Format <code>/dev/sdX1</code> in NTFS</p>
+
+<pre><code>lsblk -p
+sudo umount /dev/sdX1
+sudo mkfs.ntfs -f -L &quot;Backup&quot; /dev/sdX1
+</code></pre></li>
+<li><p>Read UUID</p>
+
+<p><code>sudo blkid</code></p></li>
+<li><p>Rename NTFS partition</p>
+
+<p><code>sudo ntfslabel -f /dev/sdX1 Backup1</code></p></li>
+<li><p>Unmount all</p>
+
+<p><code>umount /dev/sdX?</code></p></li>
+</ul>
+
+<h4>Directories</h4>
+
+<ul>
+<li><p>Top Directories</p>
+
+<p><a href="https://www.cyberciti.biz/faq/how-do-i-find-the-largest-filesdirectories-on-a-linuxunixbsd-filesystem/">https://www.cyberciti.biz/faq/how-do-i-find-the-largest-file</a>  </p>
+
+<p><code>sudo du / -xam --max-depth=2 2&gt;/dev/null | sort -nr | head -20</code><br>
+<code>sudo du / -ham 2&gt;/dev/null | sort -nr | head -n 20</code>  </p></li>
+<li><p>Compress a directory with 7zip</p>
+
+<p><code>7z a example.7z example/</code></p>
+
+<p>without compression :</p>
+
+<p><code>7z a -mx=0 example.7z example/</code></p></li>
+<li><p>Delete empty directories</p>
+
+<p><a href="https://unix.stackexchange.com/questions/46322/">https://unix.stackexchange.com/questions/46322/</a>  </p>
+
+<p>To check : <code>find . -type d -empty -print</code></p>
+
+<p>To delete : <code>find . -type d -empty -delete</code></p></li>
+<li><p>Recursive grep</p>
+
+<p><a href="https://stackoverflow.com/questions/12516937/">https://stackoverflow.com/questions/12516937/</a></p>
+
+<p><code>grep -r &quot;texthere&quot; .</code></p>
+
+<p><code>grep -rni --include=*.{h,c,cpp,cxx} &quot;texthere&quot;</code></p></li>
+</ul>
+
+<h4>Files</h4>
+
+<ul>
+<li><p>Change file owner</p>
+
+<p><code>sudo chown $USER:$USER &lt;filepath&gt;</code></p></li>
+<li><p>Check opened files</p>
+
+<p><a href="https://linuxhint.com/check-open-files-in-linux/">https://linuxhint.com/check-open-files-in-linux/</a>  </p></li>
+<li><p>Create a symbolic link</p>
+
+<p><code>ln -s target_path link_name</code></p></li>
+<li><p>Edit config files</p>
+
+<p><a href="https://unix.stackexchange.com/questions/642578/">https://unix.stackexchange.com/questions/642578/</a>  </p>
+
+<p><code>sed -i &#39;s/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/&#39; &quot;input.txt&quot;</code></p></li>
+<li><p>Extract lines</p>
+
+<pre><code>sed -n \
+-e &#39;/^\[Desktop Entry\]/p&#39; \
+-e &#39;/^Name=/p&#39; \
+-e &#39;/^Exec=/p&#39; \
+-e &#39;/^Type=/p&#39; \
+/usr/share/applications/firefox.desktop
+</code></pre></li>
+<li><p>Find biggest files in directory</p>
+
+<p><code>find . -type f -printf &quot;%s\t%p\n&quot; | sort -nr | head -10</code></p></li>
+<li><p>Find files not own by user</p>
+
+<p><code>find ~ ! -user $USER -o ! -group $USER</code></p></li>
+<li><p>Find ignore errors</p>
+
+<p><code>find / -name *.html 2&gt;/dev/null</code></p></li>
+<li><p>Find last modified files</p>
+
+<p><code>find ~ -cmin -5</code></p></li>
+<li><p>Find multiple pattern</p>
+
+<p><code>find . -type f -name &quot;*.h&quot; -o -name &quot;*.c&quot;</code></p></li>
+<li><p>Format text file to a specific line length</p>
+
+<p><a href="https://unix.stackexchange.com/questions/146089/">https://unix.stackexchange.com/questions/146089/</a>  </p>
+
+<p><code>fmt --width=120 input.txt &gt; output.txt</code></p></li>
+<li><p>Remove presentation mode in PDFs</p>
+
+<p><a href="https://unix.stackexchange.com/questions/754414/">https://unix.stackexchange.com/questions/754414/</a>  </p></li>
+<li><p>Replace multiple spaces</p>
+
+<p><a href="https://superuser.com/questions/241018/">https://superuser.com/questions/241018/</a>  </p>
+
+<p><code>sed -i &#39;s/&nbsp;&nbsp;&#42;/ /g&#39; &quot;input.txt&quot;</code><br>
+<code>sed -i &#39;s/&nbsp;&nbsp;&#42;/\t/g&#39; &quot;input.txt&quot;</code>  </p></li>
+</ul>
+
+<h4>Programs</h4>
+
+<ul>
+<li><p>bash</p>
+
+<p><a href="https://ss64.com/bash/syntax-keyboard.html">https://ss64.com/bash/syntax-keyboard.html</a>  </p></li>
+<li><p>feh</p>
+
+<p><a href="https://wiki.archlinux.org/title/Feh">https://wiki.archlinux.org/title/Feh</a>  </p>
+
+<p>open command : <code>feh --start-at</code></p></li>
+<li><p>libreoffice</p>
+
+<p>convert csv to odt : <code>soffice --convert-to ods example.csv --headless</code></p></li>
+<li><p>rofi</p>
+
+<p>delete entry : type shift+delete on the entry</p></li>
+<li><p>zathura</p>
+
+<p>copy to clipboard : <a href="https://unix.stackexchange.com/questions/339487/">https://unix.stackexchange.com/questions/339487/</a>  </p></li>
+<li><p>Additional programs</p>
+
+<pre><code>datamash
+evince
+exiv2
+freefilesync
+gnuplot
+greybird-gtk-theme
+libgd-dev
+lz4json
+plotutils
+sigil
+uchardet
+vainfo
+xfce4-screenshooter
+</code></pre></li>
+</ul>
+
+<h4>Misc</h4>
+
+<ul>
+<li><p>Delete thumbnails older than 30 days</p>
+
+<p><code>find ~/.cache/thumbnails/ -type f -iname \*.png -mtime +30 -delete</code></p></li>
+<li><p>Get installation date</p>
+
+<p><code>stat -c %w /</code></p></li>
+<li><p>Output command without localization</p>
+
+<p><code>LANGUAGE=C free -h</code></p>
+
+<p>or</p>
+
+<p><code>LANG=C free -h</code></p></li>
+<li><p>Switch to non-graphical</p>
+
+<p><a href="https://superuser.com/questions/100693/">https://superuser.com/questions/100693/</a>  </p>
+
+<p>console : <code>Ctrl+Alt+F1</code><br>
+graphical : <code>Ctrl+Alt+F7</code>  </p></li>
+</ul>
+
+<p><br/></p>

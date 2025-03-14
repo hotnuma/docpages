@@ -1,0 +1,63 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | <a href="05-Xfce.html">Xfce</a> | <a href="10-Network.html">Network</a> | <a href="15-FFmpeg.html">FFmpeg</a> | <a href="20-Systemd.html">Systemd</a> | Bugs | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>Bugs</h2>
+
+<hr>
+
+<h4>Firefox</h4>
+
+<ul>
+<li><p>Video stuttering regression</p>
+
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1939685">https://bugzilla.mozilla.org/show_bug.cgi?id=1939685</a><br>
+<a href="https://hg.mozilla.org/integration/autoland/pushloghtml?startdate=2023-07-13&amp;enddate=2023-07-16">https://hg.mozilla.org/integration/autoland/pushloghtml?startdate=2023-07-13&amp;enddate=2023-07-16</a><br>
+<a href="https://hg.mozilla.org/integration/autoland/rev/e1c387461f1491b8b63445d4505d5617392ed527">https://hg.mozilla.org/integration/autoland/rev/e1c387461f1491b8b63445d4505d5617392ed527</a>  </p>
+
+<p>fix : <code>user_pref(&quot;gfx.x11.glx_sgi_video_sync&quot;, true);</code></p></li>
+<li><p>DMZ Cursor bug</p>
+
+<p><a href="https://forums.linuxmint.com/viewtopic.php?t=414360">https://forums.linuxmint.com/viewtopic.php?t=414360</a><br>
+<a href="https://forums.linuxmint.com/viewtopic.php?t=414671">https://forums.linuxmint.com/viewtopic.php?t=414671</a>  </p>
+
+<p>change cursor to DMZ White if needed :</p>
+
+<p><code>sudo update-alternatives --config x-cursor-theme</code></p></li>
+</ul>
+
+<h4>Labwc</h4>
+
+<ul>
+<li><p>Dialog position</p>
+
+<p><a href="https://gitlab.xfce.org/xfce/thunar/-/issues/1439">https://gitlab.xfce.org/xfce/thunar/-/issues/1439</a>  </p></li>
+<li><p>Chromium geometry</p>
+
+<p><a href="https://github.com/labwc/labwc/issues/2327">https://github.com/labwc/labwc/issues/2327</a>  </p></li>
+</ul>
+
+<h4>XFCE</h4>
+
+<ul>
+<li><p>Xfwm4 Unmaximize</p>
+
+<p><a href="https://gitlab.xfce.org/xfce/xfwm4/-/issues/190">https://gitlab.xfce.org/xfce/xfwm4/-/issues/190</a>  </p></li>
+<li><p>/usr/share appears twice in XDG_DATA_DIRS</p>
+
+<p><a href="https://gitlab.xfce.org/xfce/xfce4-session/-/issues/111">https://gitlab.xfce.org/xfce/xfce4-session/-/issues/111</a><br>
+<a href="https://gitlab.xfce.org/xfce/xfce4-session/-/issues/50">https://gitlab.xfce.org/xfce/xfce4-session/-/issues/50</a>  </p></li>
+</ul>
+
+<h4>Other</h4>
+
+<ul>
+<li><p>clang-format</p>
+
+<p><a href="https://github.com/llvm/llvm-project/issues/58300">https://github.com/llvm/llvm-project/issues/58300</a>  </p></li>
+<li><p>Firmwares warnings</p>
+
+<p>Warning :
+update-initramfs: Generating /boot/initrd.img-6.1.0-28-amd64
+W: Possible missing firmware</p></li>
+</ul>

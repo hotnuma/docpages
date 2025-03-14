@@ -1,0 +1,156 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | <a href="05-Xfce.html">Xfce</a> | <a href="10-Network.html">Network</a> | <a href="15-FFmpeg.html">FFmpeg</a> | <a href="20-Systemd.html">Systemd</a> | <a href="25-Bugs.html">Bugs</a> | Other ]</strong></p>
+
+<h2>Other</h2>
+
+<hr>
+
+<h4>Shortcuts</h4>
+
+<ul>
+<li><p>Batocera</p>
+
+<p><a href="https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/">https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/</a>  </p></li>
+<li><p>Mpv</p>
+
+<p><a href="https://mpv.io/manual/master/">https://mpv.io/manual/master/</a>  </p></li>
+<li><p>MuPdf</p>
+
+<p><a href="https://askubuntu.com/questions/314802/">https://askubuntu.com/questions/314802/</a>  </p></li>
+<li><p>Zathura</p>
+
+<p><a href="https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/">https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/</a><br>
+<a href="https://unix.stackexchange.com/questions/497737/">https://unix.stackexchange.com/questions/497737/</a>  </p></li>
+</ul>
+
+<h4>System Processes on Debian 12</h4>
+
+<p><a href="https://debian-facile.org/viewtopic.php?pid=254022#p254022">https://debian-facile.org/viewtopic.php?pid=254022#p254022</a>  </p>
+
+<ul>
+<li><p>agetty</p>
+
+<p><a href="https://man.archlinux.org/man/agetty.8.en">https://man.archlinux.org/man/agetty.8.en</a>  </p>
+
+<p>Ctrl+Alt+F1 terminal started by getty@tty1 service :</p>
+
+<p><code>systemctl status getty@tty1</code></p>
+
+<p>mem : 358</p></li>
+<li><p>dbus-daemon</p>
+
+<p>System bus, two processes.</p>
+
+<p>mem : 2378</p></li>
+<li><p>gvfsd gvfsd-metadata gvfsd-trash</p>
+
+<p>Virtual file system.</p>
+
+<p>mem : 3623 + 3011 + 4035</p></li>
+<li><p>gvfs-udisks2-volume-monitor</p>
+
+<p>mem : 5571</p></li>
+<li><p>init</p>
+
+<p>mem : 3831</p></li>
+<li><p>polkitd polkit-gnome-authentication-agent-1</p>
+
+<p><a href="https://www.freedesktop.org/software/polkit/docs/latest/polkit.8.html">https://www.freedesktop.org/software/polkit/docs/latest/polkit.8.html</a><br>
+<a href="https://wiki.archlinux.org/title/Polkit">https://wiki.archlinux.org/title/Polkit</a>  </p>
+
+<p>Polkit is used for controlling system-wide privileges. It provides an organized way for non-privileged processes to communicate with privileged ones. In contrast to systems such as sudo, it does not grant root permission to an entire process, but rather allows a finer level of control of centralized system policy.</p>
+
+<p>mem : 2884 + 5509</p></li>
+<li><p>rtkit-daemon</p>
+
+<p>Realtime Kit enables realtime scheduling for the PulseAudio daemon.</p>
+
+<p>mem : 511</p></li>
+<li><p>(sd-pam)</p>
+
+<p><a href="https://www.reddit.com/r/linuxquestions/comments/n6akxv/">https://www.reddit.com/r/linuxquestions/comments/n6akxv/</a>  </p>
+
+<p>The sole purpose of this process is to wait for the service to terminate and to perform the &quot;close PAM session&quot; operations when that occurs.</p>
+
+<p>mem : 2239</p></li>
+<li><p>ssh-agent</p>
+
+<p><a href="https://docs.xfce.org/xfce/xfce4-session/advanced#ssh_and_gpg_agents">https://docs.xfce.org/xfce/xfce4-session/advanced#ssh_and_gpg_agents</a>  </p>
+
+<p>mem : 1074</p></li>
+<li><p>systemd</p>
+
+<p>mem : 3760</p></li>
+<li><p>systemd-journald</p>
+
+<p>mem : 13752</p></li>
+<li><p>systemd-logind</p>
+
+<p><a href="https://www.freedesktop.org/software/systemd/man/systemd-logind.service.html">https://www.freedesktop.org/software/systemd/man/systemd-logind.service.html</a>  </p>
+
+<p>A system service that manages user logins.</p>
+
+<p>mem : 2584</p></li>
+<li><p>systemd-timesyncd</p>
+
+<p>mem : 1826</p></li>
+<li><p>systemd-udevd</p>
+
+<p><a href="https://linuxembedded.fr/2018/03/kernel-udev-et-systemd-la-gestion-du-hotplug">https://linuxembedded.fr/2018/03/kernel-udev-et-systemd-la-gestion-du-hotplug</a>  </p>
+
+<p><code>systemd-udevd</code> listens to kernel uevents. For every event, systemd-udevd executes matching instructions specified in udev rules.</p>
+
+<p>mem : 4150</p></li>
+<li><p>udisksd</p>
+
+<p><a href="https://wiki.archlinux.org/title/udisks">https://wiki.archlinux.org/title/udisks</a>  </p>
+
+<p>udisks provides a daemon udisksd, that implements D-Bus interfaces used to query and manipulate storage devices, and a command-line tool udisksctl, used to query and use the daemon.</p>
+
+<p>mem : 10203</p></li>
+<li><p>upowerd</p>
+
+<p><a href="https://upower.freedesktop.org/">https://upower.freedesktop.org/</a><br>
+<a href="https://www.cyberciti.biz/faq/linux-upower-command-examples-and-syntax/">https://www.cyberciti.biz/faq/linux-upower-command-examples-and-syntax/</a>  </p>
+
+<p>UPower is an abstraction for enumerating power devices, listening to device events and querying history and statistics. Any application or service on the system can access the org.freedesktop.UPower service via the system message bus.</p>
+
+<p>mem : 3546</p></li>
+</ul>
+
+<h4>More System Processes on Ubuntu</h4>
+
+<ul>
+<li><p>accounts-daemon</p>
+
+<p><a href="https://www.freedesktop.org/wiki/Software/AccountsService/">https://www.freedesktop.org/wiki/Software/AccountsService/</a>  </p>
+
+<p>AccountsService is a D-Bus service for accessing the list of user accounts and information attached to those accounts.</p>
+
+<p>mem : 1604</p></li>
+<li><p>acpid</p>
+
+<p><a href="https://wiki.archlinux.org/title/acpid">https://wiki.archlinux.org/title/acpid</a>  </p>
+
+<p>A flexible and extensible daemon for delivering ACPI events. When an event occurs, it executes programs to handle the event.</p>
+
+<p>mem : 261</p></li>
+<li><p>gnome-keyring-daemon</p>
+
+<p><a href="https://wiki.archlinux.org/title/GNOME/Keyring">https://wiki.archlinux.org/title/GNOME/Keyring</a><br>
+<a href="https://docs.xfce.org/xfce/xfce4-session/advanced#ssh_and_gpg_agents">https://docs.xfce.org/xfce/xfce4-session/advanced#ssh_and_gpg_agents</a>  </p>
+
+<p>GNOME Keyring is a collection of components that store secrets, passwords, keys, certificates and make them available to applications.</p>
+
+<p>directory : <code>~/.local/share/keyrings</code></p>
+
+<p>mem : 2637</p></li>
+<li><p>irqbalance</p>
+
+<p><a href="https://linux.die.net/man/1/irqbalance">https://linux.die.net/man/1/irqbalance</a>  </p>
+
+<p>Distribute hardware interrupts across processors on a multiprocessor system.</p>
+
+<p>mem : 563</p></li>
+</ul>

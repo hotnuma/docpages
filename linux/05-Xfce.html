@@ -1,0 +1,242 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | Xfce | <a href="10-Network.html">Network</a> | <a href="15-FFmpeg.html">FFmpeg</a> | <a href="20-Systemd.html">Systemd</a> | <a href="25-Bugs.html">Bugs</a> | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>Xfce</h2>
+
+<hr>
+
+<h4>Reference</h4>
+
+<ul>
+<li><p>Links</p>
+
+<p><a href="https://wiki.xfce.org/start">https://wiki.xfce.org/start</a><br>
+<a href="https://wiki.archlinux.org/title/xfce">https://wiki.archlinux.org/title/xfce</a><br>
+<a href="https://wiki.xfce.org/releng/wayland_roadmap">https://wiki.xfce.org/releng/wayland_roadmap</a>  </p>
+
+<p><a href="https://forum.xfce.org/search.php?action=show_recent">https://forum.xfce.org/</a><br>
+<a href="https://gitlab.xfce.org/xfce">https://gitlab.xfce.org/xfce</a><br>
+<a href="https://gitlab.xfce.org/apps">https://gitlab.xfce.org/apps</a><br>
+<a href="https://developer.xfce.org/">https://developer.xfce.org/</a>  </p></li>
+<li><p>Xfce Dialogs</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Command</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">xfce4-settings-manager</td>
+<td style="text-align: left">Configuration Panel</td>
+</tr>
+<tr>
+<td style="text-align: left">xfce4-mime-settings</td>
+<td style="text-align: left">Default Apps</td>
+</tr>
+<tr>
+<td style="text-align: left">xfce4-keyboard-settings</td>
+<td style="text-align: left">Keyboard Settings</td>
+</tr>
+<tr>
+<td style="text-align: left">xfce4-mouse-settings</td>
+<td style="text-align: left">Mouse Settings</td>
+</tr>
+<tr>
+<td style="text-align: left">xfce4-notifyd-config</td>
+<td style="text-align: left">Notifications Settings</td>
+</tr>
+<tr>
+<td style="text-align: left">xfce4-panel --preferences</td>
+<td style="text-align: left">Panel Preferences</td>
+</tr>
+<tr>
+<td style="text-align: left">xfce4-session-settings</td>
+<td style="text-align: left">Session Settings</td>
+</tr>
+<tr>
+<td style="text-align: left">xfce4-settings-editor</td>
+<td style="text-align: left">Xfconf Editor</td>
+</tr>
+<tr>
+<td style="text-align: left">xfce4-appearance-settings</td>
+<td style="text-align: left">Appearance</td>
+</tr>
+<tr>
+<td style="text-align: left">xfce4-display-settings</td>
+<td style="text-align: left">Display Settings</td>
+</tr>
+<tr>
+<td style="text-align: left">xfwm4-settings</td>
+<td style="text-align: left">Window Manager Settings</td>
+</tr>
+<tr>
+<td style="text-align: left">xfwm4-tweaks-settings</td>
+<td style="text-align: left">Window Manager Tweaks</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+
+<h4>System Startup</h4>
+
+<ul>
+<li><p>systemd</p>
+
+<pre><code>/sbin/ini
+    dbus-demon
+    lightdm
+        /usr/share/xsessions/lightdm-xsession.desktop
+            startxfce4
+                Xorg
+        lightdm --session-child
+            xfce4-session
+    agetty
+    systemd/systemd --user
+</code></pre></li>
+<li><p>lightdm</p>
+
+<p>show config : <code>lightdm --show-config</code></p>
+
+<p>list sessions : <code>ls /usr/share/xsessions/</code></p>
+
+<p>current session : <code>cat ~/.dmrc</code></p>
+
+<pre><code>[Desktop]
+Session=lightdm-xsession
+</code></pre>
+
+<p>session file : <code>/usr/share/xsessions/lightdm-xsession.desktop</code></p>
+
+<pre><code>[Desktop Entry]
+Version=1.0
+Name=Default Xsession
+Exec=default
+Icon=
+Type=Application
+</code></pre>
+
+<p><code>Exec=default</code> means that the session is defined in alternatives :</p>
+
+<p><code>update-alternatives --config x-session-manager</code></p>
+
+<pre><code>------------------------------------------------------------
+* 0            /usr/bin/startxfce4      50        mode automatique
+  1            /usr/bin/startxfce4      50        mode manuel
+  2            /usr/bin/xfce4-session   40        mode manuel
+
+</code></pre></li>
+<li><p>xfce4-session</p>
+
+<p><a href="https://docs.xfce.org/xfce/xfce4-session/advanced">https://docs.xfce.org/xfce/xfce4-session/advanced</a>  </p></li>
+<li><p>Bash Startup Files</p>
+
+<p><a href="https://www.linuxfromscratch.org/blfs/view/11.0/postlfs/profile.html">https://www.linuxfromscratch.org/blfs/view/11.0/postlfs/prof</a>  </p></li>
+<li><p>Xsession xdg paths</p>
+
+<p><a href="https://askubuntu.com/questions/1179729/">https://askubuntu.com/questions/1179729/</a>  </p></li>
+</ul>
+
+<h4>Configuration</h4>
+
+<ul>
+<li><p>XFCE Config</p>
+
+<pre><code>$HOME/.config/xfce4/
+/etc/xdg/xfce4/
+</code></pre>
+
+<p>keyboard : <code>/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml</code><br>
+xfce4-session : <code>/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml</code><br>
+xsettings : <code>/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml</code>  </p></li>
+<li><p>xfconf-query</p>
+
+<p><a href="https://docs.xfce.org/xfce/xfconf/xfconf-query">https://docs.xfce.org/xfce/xfconf/xfconf-query</a><br>
+<a href="http://manpages.ubuntu.com/manpages/bionic/man1/xfconf-query.1.html">http://manpages.ubuntu.com/manpages/...</a>  </p></li>
+<li><p>Xdg menu</p>
+
+<p><code>/etc/xdg/menus/xfce-applications.menu</code></p></li>
+<li><p>Disable CSD</p>
+
+<p><a href="https://forum.xfce.org/viewtopic.php?pid=77880#p77880">https://forum.xfce.org/viewtopic.php?pid=77880#p77880</a>  </p></li>
+</ul>
+
+<h4>Applications</h4>
+
+<ul>
+<li><p>Launchers</p>
+
+<pre><code>$HOME/.local/share/applications/
+/usr/local/share/applications/
+/usr/share/applications/
+</code></pre></li>
+<li><p>File associations</p>
+
+<p><a href="https://wiki.debian.org/MIME">https://wiki.debian.org/MIME</a><br>
+<a href="https://wiki.debian.org/MimeTypesSupport">https://wiki.debian.org/MimeTypesSupport</a><br>
+<a href="https://wiki.archlinux.org/title/XDG_MIME_Applications">https://wiki.archlinux.org/title/XDG_MIME_Applications</a><br>
+<a href="https://unix.stackexchange.com/questions/507943/">https://unix.stackexchange.com/questions/507943/</a><br>
+<a href="https://unix.stackexchange.com/questions/114075/">https://unix.stackexchange.com/questions/114075/</a><br>
+<a href="https://stackoverflow.com/questions/2227182/">https://stackoverflow.com/questions/2227182/</a>  </p>
+
+<p>mime cache : <code>/usr/share/applications/mimeinfo.cache</code><br>
+default apps : <code>$HOME/.config/mimeapps.list</code>  </p>
+
+<p>regenerate mimeinfo.cache files :</p>
+
+<p>global files : <code>update-desktop-database</code><br>
+in user dir : <code>update-desktop-database ~/.local/share/applications</code>  </p></li>
+<li><p>Default applications</p>
+
+<pre><code>$HOME/.config/xfce4/helpers.rc
+/etc/xdg/xfce4/helpers.rc
+</code></pre></li>
+</ul>
+
+<h4>Themes</h4>
+
+<ul>
+<li><p>Location</p>
+
+<p><code>$HOME/.themes/</code></p></li>
+<li><p>Change desktop background</p>
+
+<p>Solid color : <code>hsetroot -solid &#39;#5e5c64&#39;</code>  </p>
+
+<p>Walpaper : <code>feh --bg-scale /usr/share/rpd-wallpaper/clouds.jpg</code>  </p>
+
+<p>Random walpaper : <code>feh --bg-scale --randomize /usr/share/rpd-wallpaper/</code>  </p></li>
+<li><p>Wallpapers</p>
+
+<p>system :</p>
+
+<pre><code>/usr/share/backgrounds/
+</code></pre>
+
+<p>xfce :</p>
+
+<pre><code>$HOME/.local/share/xfce4/backdrops/
+/usr/share/xfce4/backdrops/
+/usr/share/xfce4/backdrops/xfce/
+</code></pre></li>
+</ul>
+
+<h4>Other</h4>
+
+<ul>
+<li><p>Center window</p>
+
+<p><a href="https://superuser.com/questions/141032/">https://superuser.com/questions/141032/</a>  </p>
+
+<p><code>Alt+F7</code></p></li>
+<li><p>Thunar Custom Actions</p>
+
+<p><a href="https://docs.xfce.org/xfce/thunar/4.12/custom-actions">https://docs.xfce.org/xfce/thunar/4.12/custom-actions</a><br>
+<a href="https://forum.xfce.org/viewtopic.php?id=12633">https://forum.xfce.org/viewtopic.php?id=12633</a>  </p>
+
+<p><code>xfce4-terminal -e &#39;bash -c &quot;extract.sh %f; bash&quot;&#39;</code></p></li>
+</ul>
