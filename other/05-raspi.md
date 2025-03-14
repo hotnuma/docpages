@@ -50,9 +50,15 @@
     (select debian desktop and xfce)
     
     sudo systemctl set-default graphical.target
+    sudo apt purge plymouth
+    sudo apt install labwc swaybg kanshi
     reboot
     ```
-
+    
+    from XFCE desktop :
+    
+    create configuration files for labwc
+    
 
 #### Install Debian Trixie
 
@@ -77,6 +83,7 @@
 
     (log as new user)
     sudo tasksel
+    (select debian desktop and xfce)
     sudo reboot
     
     sudo apt purge plymouth
