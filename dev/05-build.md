@@ -1,6 +1,6 @@
 <link href="../style.css" rel="stylesheet"></link>
 
-**[ [Home](00-home.html) | Build | [Git](10-git.html) | [Bash](15-bash.html) | [Py](20-python.html) | [Cpp](25-cpp.html) | [Gtk](30-gtk.html) | [Other](99-other.html) ]**
+**[ [Home](../index.html) | [Dev](00-dev.html) | Build | [Git](10-git.html) | [Bash](15-bash.html) | [Py](20-python.html) | [Cpp](25-cpp.html) | [Gtk](30-gtk.html) | [Other](99-other.html) ]**
 
 ## Build
 
