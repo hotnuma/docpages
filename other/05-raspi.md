@@ -126,6 +126,12 @@
     gtk-button-images=1
     gtk-menu-images=1
     ```
+
+* XFCE panel
+
+    force all plugins to run as internal:
+
+    `xfconf-query -c xfce4-panel -p /force-all-internal -t bool -s true --create`
     
 <br/>
 
