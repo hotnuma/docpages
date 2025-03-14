@@ -1,4 +1,4 @@
-<link href="style.css" rel="stylesheet"></link>
+<link href="../style.css" rel="stylesheet"></link>
 
 **[ [Home](00-Home.html) | [Xfce](05-Xfce.html) | [Network](10-Network.html) | [FFmpeg](15-FFmpeg.html) | Systemd | [Bugs](25-Bugs.html) | [Other](99-Other.html) ]**
 
