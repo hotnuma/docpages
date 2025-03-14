@@ -1,0 +1,200 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | <a href="05-Build.html">Build</a> | <a href="10-Git.html">Git</a> | <a href="15-Bash.html">Bash</a> | <a href="20-Python.html">Py</a> | Cpp | <a href="30-Gtk.html">Gtk</a> | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>C/Cpp</h2>
+
+<hr>
+
+<h4>References</h4>
+
+<ul>
+<li><p>GCC cleanup attribute</p>
+
+<p><a href="https://blog.fishsoup.net/2015/11/05/attributecleanup-mixed-declarations-and-code-and-goto/">attribute-cleanup</a><br>
+<a href="https://blogs.gnome.org/desrt/2015/01/30/g_autoptr/">g_autoptr</a><br>
+<a href="http://echorand.me/site/notes/articles/c_cleanup/cleanup_attribute_c.html">echorand-cleanup</a>  </p></li>
+<li><p>Feature test macros</p>
+
+<p><a href="https://manpages.ubuntu.com/manpages/xenial/en/man7/feature_test_macros.7.html">feature_test_macros</a>  </p>
+
+<p><code>#define _GNU_SOURCE</code></p></li>
+<li><p>error functions</p>
+
+<pre><code>#define APPNAME &quot;appname&quot;
+
+static void error_exit(const char *msg)
+{
+    if (!msg || *msg == &#39;\0&#39;)
+    {
+        msg = &quot;an error occurred&quot;;
+    }
+
+    printf(&quot;*** %s\nabort...\n&quot;, msg);
+
+    exit(EXIT_FAILURE);
+}
+
+static void usage_exit()
+{
+    printf(&quot;*** usage :\n&quot;);
+    printf(&quot;%s param\n&quot;, APPNAME);
+    printf(&quot;abort...\n&quot;);
+
+    exit(EXIT_FAILURE);
+}
+</code></pre></li>
+<li><p>args parsing</p>
+
+<pre><code>int n = 1;
+
+while (n &lt; argc)
+{
+    if (strcmp(argv[n], &quot;-opt&quot;) == 0)
+    {
+        return EXIT_SUCCESS;
+    }
+    else if (strcmp(argv[n], &quot;-arg&quot;) == 0)
+    {
+        if (++n &gt;= argc)
+            usage_exit();
+
+        return EXIT_SUCCESS;
+    }
+    else
+    {
+        usage_exit();
+    }
+
+    ++n;
+}
+</code></pre></li>
+<li><p>Reporting information using syslog</p>
+
+<p><a href="https://stackoverflow.com/questions/18658429/">https://stackoverflow.com/questions/18658429/</a>  </p></li>
+<li><p>Current directory in C</p>
+
+<p><a href="https://stackoverflow.com/questions/298510/">https://stackoverflow.com/questions/298510/</a>  </p>
+
+<pre><code>#include &lt;unistd.h&gt;
+char *getcwd(char *buf, size_t size);
+</code></pre></li>
+<li><p>Parse html using C</p>
+
+<p><a href="https://stackoverflow.com/questions/1527883/">https://stackoverflow.com/questions/1527883/</a>  </p></li>
+<li><p>Execution time of C program</p>
+
+<p><a href="https://stackoverflow.com/questions/5248915/">https://stackoverflow.com/questions/5248915/</a><br>
+<a href="https://stackoverflow.com/questions/55344890/">https://stackoverflow.com/questions/55344890/</a>  </p></li>
+<li><p>Clear the console</p>
+
+<p><a href="https://stackoverflow.com/questions/228617/">https://stackoverflow.com/questions/228617/</a>  </p></li>
+<li><p>Polkit applications</p>
+
+<p><a href="https://www.freedesktop.org/software/polkit/docs/0.105/polkit-apps.html">https://www.freedesktop.org/software/polkit/docs/0.105/polkit-apps.html</a>  </p></li>
+</ul>
+
+<h4>Functions</h4>
+
+<ul>
+<li><p>string starts with</p>
+
+<p><a href="https://stackoverflow.com/questions/4770985/">https://stackoverflow.com/questions/4770985/</a>  </p></li>
+<li><p><code>_vscprintf</code></p>
+
+<p><a href="https://stackoverflow.com/questions/4785381/">https://stackoverflow.com/questions/4785381/</a>  </p></li>
+<li><p>stat, fstat, lstat</p>
+
+<p><a href="http://manpages.ubuntu.com/manpages/trusty/fr/man2/stat.2.html">http://manpages.ubuntu.com/manpages/trusty/fr/man2/stat.2.html</a>  </p></li>
+<li><p>open vs fopen</p>
+
+<p><a href="https://stackoverflow.com/questions/1658476/">https://stackoverflow.com/questions/1658476/</a>  </p></li>
+<li><p>fgets</p>
+
+<p><a href="https://www.tutorialspoint.com/c_standard_library/c_function_fgets.htm">https://www.tutorialspoint.com/c_standard_library/c_function</a><br>
+<a href="https://koor.fr/C/cstdio/fgets.wp">https://koor.fr/C/cstdio/fgets.wp</a>  </p></li>
+</ul>
+
+<h4>System</h4>
+
+<ul>
+<li><p>CPU getusage_c</p>
+
+<p><a href="https://github.com/fho/code_snippets/blob/master/c/getusage.c">https://github.com/fho/code_snippets/blob/master/c/getusage.c</a>  </p></li>
+<li><p>Audio playing detect</p>
+
+<p><a href="https://stackoverflow.com/questions/22144203/">https://stackoverflow.com/questions/22144203/</a>  </p></li>
+<li><p>GKeyFile</p>
+
+<p><a href="https://gist.github.com/zdxerr/709169">https://gist.github.com/zdxerr/709169</a>  </p></li>
+</ul>
+
+<h4>Process</h4>
+
+<ul>
+<li><p>Execute program in C</p>
+
+<p><a href="https://stackoverflow.com/questions/5237482/">https://stackoverflow.com/questions/5237482/</a></p></li>
+<li><p>popen</p>
+
+<p><a href="https://tldp.org/LDP/lpg/node12.html">https://tldp.org/LDP/lpg/node12.html</a>  </p></li>
+<li><p>posix_spawn</p>
+
+<p><a href="https://www.systutorials.com/a-posix_spawn-example-in-c-to-create-child-process-on-linux/">https://www.systutorials.com/a-posix_spawn-example-in-c-to-create-child-process-on-linux/</a>  </p></li>
+<li><p>Exit status code</p>
+
+<p><a href="https://stackoverflow.com/questions/27306764/">https://stackoverflow.com/questions/27306764/</a>  </p></li>
+<li><p>select</p>
+
+<p><a href="https://www.blaess.fr/christophe/2013/12/27/comprendre-le-fonctionnement-de-select/">https://www.blaess.fr/christophe/2013/12/27/comprendre-le-fonctionnement-de-select/</a>  </p></li>
+</ul>
+
+<h4>Daemon</h4>
+
+<ul>
+<li><p>Examples</p>
+
+<p><a href="https://gist.github.com/copyninja/1033862">https://gist.github.com/copyninja/1033862</a><br>
+<a href="https://www.thegeekstuff.com/2012/02/c-daemon-process/">https://www.thegeekstuff.com/2012/02/c-daemon-process/</a><br>
+<a href="https://www.google.com/search?channel=fs&amp;client=ubuntu&amp;q=daemon+example+in+c">https://www.google.com/search?channel=fs&amp;client=ubuntu&amp;q=daemon+example+in+c</a><br>
+<a href="http://netzmafia.de/skripten/unix/linux-daemon-howto.html">http://netzmafia.de/skripten/unix/linux-daemon-howto.html</a><br>
+<a href="https://lloydrochester.com/post/c/unix-daemon-example/">https://lloydrochester.com/post/c/unix-daemon-example/</a><br>
+<a href="https://github.com/pasce/daemon-skeleton-linux-c">https://github.com/pasce/daemon-skeleton-linux-c</a><br>
+<a href="https://gitlab.com/sulincix/fork/-/blob/master/src/pfork.c">https://gitlab.com/sulincix/fork/-/blob/master/src/pfork.c</a>  </p></li>
+</ul>
+
+<h4>Redirect IO</h4>
+
+<ul>
+<li><p>Reading from a pipe</p>
+
+<p><a href="https://stackoverflow.com/questions/1151029/">https://stackoverflow.com/questions/1151029/</a>  </p></li>
+<li><p>output of process in C</p>
+
+<p><a href="http://www.microhowto.info/howto/capture_the_output_of_a_child_process_in_c.html">http://www.microhowto.info/howto/capture_the_output_of_a_child_process_in_c.html</a>  </p></li>
+<li><p>Redirect pipe dup2</p>
+
+<p><a href="https://linuxfr.org/forums/programmation-c--2/posts/communication-entre-processus-avec-pipe-et-dup2">https://linuxfr.org/forums/programmation-c--2/posts/communication-entre-processus-avec-pipe-et-dup2</a>  </p></li>
+<li><p>Redirect to buffer or file</p>
+
+<p><a href="https://stackoverflow.com/questions/2605130/">https://stackoverflow.com/questions/2605130/</a>  </p></li>
+</ul>
+
+<h4>Articles</h4>
+
+<ul>
+<li><p>QtCreator printf</p>
+
+<p><a href="https://chowdera.com/2020/12/20201208210320326z.html">https://chowdera.com/2020/12/20201208210320326z.html</a>  </p>
+
+<p><code>setbuf(stdout, NULL);</code></p></li>
+<li><p>QtCreator per-project tab spacing</p>
+
+<p><a href="https://forum.qt.io/topic/86319/qt-creator-how-to-do-per-project-tab-spacing/4">https://forum.qt.io/topic/86319/qt-creator-how-to-do-per-pro</a></p></li>
+<li><p>Memory usage of current process</p>
+
+<p><a href="https://stackoverflow.com/questions/1558402/">https://stackoverflow.com/questions/1558402/</a>  </p></li>
+<li><p>RAM usage of a process using its ID</p>
+
+<p><a href="https://stackoverflow.com/questions/67224020/">https://stackoverflow.com/questions/67224020/</a>  </p></li>
+</ul>

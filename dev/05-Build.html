@@ -1,0 +1,219 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | Build | <a href="10-Git.html">Git</a> | <a href="15-Bash.html">Bash</a> | <a href="20-Python.html">Py</a> | <a href="25-Cpp.html">Cpp</a> | <a href="30-Gtk.html">Gtk</a> | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>Build</h2>
+
+<hr>
+
+<h4>References</h4>
+
+<p><a href="https://wiki.debian.org/BuildingTutorial">https://wiki.debian.org/BuildingTutorial</a>  </p>
+
+<h4>Gcc</h4>
+
+<ul>
+<li><p>simple commands</p>
+
+<p><a href="https://ioflood.com/blog/gcc-linux-command/">https://ioflood.com/blog/gcc-linux-command/</a>  </p>
+
+<p><code>gcc -o simple simple.c $(pkg-config --cflags --libs gtk+-3.0)</code>  </p>
+
+<p>using systools : <code>cbuild simple simple.c gtk+-3.0</code>  </p></li>
+</ul>
+
+<h4>Autotools</h4>
+
+<ul>
+<li><p>Install release version</p>
+
+<p><a href="https://stackoverflow.com/questions/4553735/">https://stackoverflow.com/questions/4553735/</a>  </p>
+
+<p><code>./autogen.sh --prefix=/usr/local --enable-debug=no</code></p>
+
+<p>or</p>
+
+<p><code>./configure --prefix=/usr/local --enable-debug=no</code></p>
+
+<p>and</p>
+
+<p><code>make -j 4</code></p>
+
+<p><code>sudo make install-strip</code></p></li>
+</ul>
+
+<h4>Meson</h4>
+
+<ul>
+<li><p>Basics</p>
+
+<p><a href="https://mesonbuild.com/IndepthTutorial.html">https://mesonbuild.com/IndepthTutorial.html</a><br>
+<a href="https://mesonbuild.com/Fs-module.html">https://mesonbuild.com/Fs-module.html</a>  </p></li>
+<li><p>Include a pre-compiled library</p>
+
+<p><a href="https://stackoverflow.com/questions/67925406/">https://stackoverflow.com/questions/67925406/</a>  </p></li>
+<li><p>Resolve home directory</p>
+
+<p><a href="https://github.com/mesonbuild/meson/issues/6318#issuecomment-563965061">https://github.com/mesonbuild/meson/issues/6318</a>  </p>
+
+<pre><code>fs = import(&#39;fs&#39;)
+config_dir = fs.expanduser(&#39;~/.config&#39;)
+install_subdir(&#39;assets&#39;, install_dir: config_dir)
+</code></pre></li>
+<li><p>Porting projects</p>
+
+<p><a href="https://mesonbuild.com/Porting-from-autotools.html">porting-from-autotools</a><br>
+<a href="https://nibblestew.blogspot.com/2016/09/how-to-convert-autotools-project-to.html">convert-autotools</a><br>
+<a href="https://github.com/mesonbuild/meson/tree/master/tools">meson-tools</a>  </p></li>
+<li><p>Examples</p>
+
+<p><a href="https://github.com/hellosiyan/Viewnior">viewnior</a><br>
+<a href="https://github.com/alexkdeveloper/desktop-files-creator">desktop-files-creator</a><br>
+<a href="https://github.com/krishenriksen/pibright/blob/master/meson.build">krishenriksen-pibright</a><br>
+<a href="https://discourse.gnome.org/t/installing-gsettings-schema-with-meson/13373">gsettings-schema</a>  </p></li>
+</ul>
+
+<h4>Dependencies</h4>
+
+<ul>
+<li><p>Find build dependencies</p>
+
+<p><a href="https://askubuntu.com/questions/172367/">https://askubuntu.com/questions/172367/</a><br>
+<a href="https://askubuntu.com/questions/481/">https://askubuntu.com/questions/481/</a><br>
+<a href="https://www.cyberciti.biz/faq/equivalent-of-rpm-qf-command/">https://www.cyberciti.biz/faq/equivalent-of-rpm-qf-command/</a><br>
+<a href="https://www.linuxuprising.com/2018/11/how-to-find-package-that-provides-file.html">https://www.linuxuprising.com/2018/11/</a>  </p>
+
+<p>installed : <code>apt-cache showsrc xfwm4 | grep &#39;^Build-Depends&#39;</code>  </p>
+
+<p>not installed : <code>apt-file search a_file.pc</code>  </p>
+
+<p><code>apt build-dep --dry-run xfwm4</code>  </p>
+
+<p><code>apt search xfwm4</code>  </p></li>
+<li><p>Find linked libraries</p>
+
+<p><a href="https://unix.stackexchange.com/questions/120015/">https://unix.stackexchange.com/questions/120015/</a>  </p></li>
+<li><p>Fix library error</p>
+
+<p><code>sudo /sbin/ldconfig -v</code></p></li>
+<li><p>pkg-config</p>
+
+<p><code>pkg-config --cflags --libs gtk+-3.0</code></p>
+
+<p>version : <code>pkg-config --modversion glib-2.0</code></p></li>
+<li><p>Common Dev Packages</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Package Name</th>
+<th style="text-align: left">PkgConfig</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">gettext</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">libdbus-1-dev</td>
+<td style="text-align: left">dbus-1</td>
+</tr>
+<tr>
+<td style="text-align: left">libexo-2-dev</td>
+<td style="text-align: left">exo-2</td>
+</tr>
+<tr>
+<td style="text-align: left">libexpat1-dev</td>
+<td style="text-align: left">expat</td>
+</tr>
+<tr>
+<td style="text-align: left">libgdk-pixbuf-2.0-dev</td>
+<td style="text-align: left">gdk-pixbuf-2.0</td>
+</tr>
+<tr>
+<td style="text-align: left">libglib2.0-dev</td>
+<td style="text-align: left">glib-2.0</td>
+</tr>
+<tr>
+<td style="text-align: left">libgtk2.0-dev</td>
+<td style="text-align: left">gtk+-2.0</td>
+</tr>
+<tr>
+<td style="text-align: left">libgtk-3-dev</td>
+<td style="text-align: left">gtk+-3.0</td>
+</tr>
+<tr>
+<td style="text-align: left">libgumbo-dev</td>
+<td style="text-align: left">gumbo</td>
+</tr>
+<tr>
+<td style="text-align: left">libmount-dev</td>
+<td style="text-align: left">mount</td>
+</tr>
+<tr>
+<td style="text-align: left">libnotify-dev</td>
+<td style="text-align: left">libnotify</td>
+</tr>
+<tr>
+<td style="text-align: left">libpcre3-dev (pcre)</td>
+<td style="text-align: left">libpcre</td>
+</tr>
+<tr>
+<td style="text-align: left">libpcre2-dev (pcre2)</td>
+<td style="text-align: left">libpcre2-8</td>
+</tr>
+<tr>
+<td style="text-align: left">libpng-dev</td>
+<td style="text-align: left">libpng</td>
+</tr>
+<tr>
+<td style="text-align: left">libpolkit-gobject-1-dev</td>
+<td style="text-align: left">polkit-gobject-1</td>
+</tr>
+<tr>
+<td style="text-align: left">libtinyxml-dev</td>
+<td style="text-align: left">tinyxml</td>
+</tr>
+<tr>
+<td style="text-align: left">libusb-dev</td>
+<td style="text-align: left">libusb</td>
+</tr>
+<tr>
+<td style="text-align: left">libwnck-3-dev</td>
+<td style="text-align: left">libwnck-3.0</td>
+</tr>
+<tr>
+<td style="text-align: left">libx11-dev</td>
+<td style="text-align: left">x11</td>
+</tr>
+<tr>
+<td style="text-align: left">libxfce4ui-2-dev</td>
+<td style="text-align: left">libxfce4ui-2</td>
+</tr>
+<tr>
+<td style="text-align: left">libxfce4util-dev</td>
+<td style="text-align: left">libxfce4util-1.0</td>
+</tr>
+<tr>
+<td style="text-align: left">libxfconf-0-dev</td>
+<td style="text-align: left">libxfconf-0</td>
+</tr>
+<tr>
+<td style="text-align: left">libxml2-dev</td>
+<td style="text-align: left">libxml-2.0</td>
+</tr>
+<tr>
+<td style="text-align: left">libz3-dev</td>
+<td style="text-align: left">z3</td>
+</tr>
+<tr>
+<td style="text-align: left">libzen-dev</td>
+<td style="text-align: left">libzen</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+
+<p><br/></p>

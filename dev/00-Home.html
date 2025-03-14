@@ -1,0 +1,71 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ Home | <a href="05-Build.html">Build</a> | <a href="10-Git.html">Git</a> | <a href="15-Bash.html">Bash</a> | <a href="20-Python.html">Py</a> | <a href="25-Cpp.html">Cpp</a> | <a href="30-Gtk.html">Gtk</a> | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>Docs Dev</h2>
+
+<hr>
+
+<h4>References</h4>
+
+<ul>
+<li><p>Freedesktop</p>
+
+<p><a href="https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html">freedesktop-desktop-entry</a><br>
+<a href="https://specifications.freedesktop.org/icon-naming-spec/latest/ar01s04.html">freedesktop-icon-naming</a>  </p></li>
+</ul>
+
+<h4>Code Formatting</h4>
+
+<ul>
+<li><p>astyle</p>
+
+<p>One file : <code>astyle -n --style=allman thunar-window.c</code></p>
+
+<p>Recursive : <code>astyle -nr --style=allman &quot;test/*.h&quot; &quot;test/*.c&quot;</code></p></li>
+<li><p>clang-format</p>
+
+<p><a href="https://clang.llvm.org/docs/ClangFormatStyleOptions.html">https://clang.llvm.org/docs/ClangFormatStyleOptions.html</a>  </p>
+
+<p>dump config : <code>clang-format -style=llvm -dump-config &gt; _clang-format</code><br>
+in current dir : <code>clang-format -i -style=WebKit *.c *.h</code>  </p></li>
+<li><p>Find lines longer than n chars</p>
+
+<p><code>grep -ni &#39;.\{80\}&#39; window.c</code></p></li>
+</ul>
+
+<h4>Geany</h4>
+
+<ul>
+<li><p>Generating tags</p>
+
+<p><a href="https://www.geany.org/manual/current/index.html#symbols-and-tags-files">https://www.geany.org/manual/current/index.html#symbols-and-tags-files</a>  </p>
+
+<p><code>CFLAGS=$(pkg-config --cflags tinyc) geany -g tinyc.c.tags /usr/local/include/tinyc/*.h</code></p></li>
+</ul>
+
+<h4>Markdown</h4>
+
+<ul>
+<li><p>Markdown</p>
+
+<p><a href="https://www.markdownguide.org/basic-syntax/">https://www.markdownguide.org/basic-syntax/</a><br>
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet">https://github.com/adam-p/markdown-here...</a><br>
+<a href="https://www.codecademy.com/resources/docs/markdown/tables">https://www.codecademy.com/resources/docs/markdown/tables</a><br>
+<a href="https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">https://docs.github.com/en/github/writing-on-github/</a>  </p></li>
+<li><p>Named anchor in markdown</p>
+
+<p><a href="https://stackoverflow.com/questions/5319754/">https://stackoverflow.com/questions/5319754/</a>  </p>
+
+<p><code>#### &lt;a name=&quot;tith&quot;&gt;&lt;/a&gt;This is the Heading</code></p></li>
+</ul>
+
+<h4>Patches</h4>
+
+<ul>
+<li><p>patch</p>
+
+<p>try : <code>patch -p 1 -i &#39;../dir/my_file.patch&#39; --dry-run</code>  </p>
+
+<p>do  : <code>patch -p 1 -i &#39;../dir/my_file.patch&#39;</code>  </p></li>
+</ul>

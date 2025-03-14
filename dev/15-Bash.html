@@ -1,0 +1,191 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | <a href="05-Build.html">Build</a> | <a href="10-Git.html">Git</a> | Bash | <a href="20-Python.html">Py</a> | <a href="25-Cpp.html">Cpp</a> | <a href="30-Gtk.html">Gtk</a> | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>Bash</h2>
+
+<hr>
+
+<h4>Reference</h4>
+
+<ul>
+<li><p>Advance Bash scripting</p>
+
+<p><a href="https://tldp.org/LDP/abs/html/index.html">https://tldp.org/LDP/abs/html/index.html</a>  </p></li>
+<li><p>ShellCheck</p>
+
+<p><a href="https://www.shellcheck.net/">https://www.shellcheck.net/</a>  </p></li>
+</ul>
+
+<h4>Helpers</h4>
+
+<ul>
+<li><p>Usefull functions</p>
+
+<pre><code>appname=${0##*/}
+
+error_exit()
+{
+    msg=&quot;$1&quot;
+    test &quot;$msg&quot; != &quot;&quot; || msg=&quot;an error occurred&quot;
+    printf &quot;*** $msg\nabort...\n&quot;
+    exit 1
+}
+
+usage_exit()
+{
+    echo &quot;*** usage :&quot;
+    echo &quot;$appname -opt1&quot;
+    echo &quot;$appname -opt2 bla&quot;
+    echo &quot;abort...&quot;
+    exit 1
+}
+
+ask_confirm()
+{
+    while true; do
+        read -p &quot;$1&quot; ret
+        case $ret in
+            [Yy]*)
+                return 0; break
+            ;;
+            [Nn]*)
+                return 1; break
+            ;;
+            *)
+                return 0; break
+            ;;
+        esac
+    done
+}
+</code></pre></li>
+</ul>
+
+<h4>Args</h4>
+
+<ul>
+<li><p>Check number of arguments</p>
+
+<p><a href="https://stackoverflow.com/questions/18568706/">https://stackoverflow.com/questions/18568706/</a>  </p>
+
+<p><code>test &quot;$#&quot; -eq 1 || error_exit &quot;Illegal number of parameters&quot;</code></p></li>
+<li><p>Parsing args</p>
+
+<p><a href="https://stackoverflow.com/questions/192249/">https://stackoverflow.com/questions/192249/</a>  </p>
+
+<pre><code>#!/usr/bin/bash
+
+opt_dev=0
+opt_name=&quot;&quot;
+
+while (($#)); do
+    case &quot;$1&quot; in
+        -dev)
+        opt_dev=1
+        ;;
+        -o)
+            test $# -gt 1 || error_exit &quot;*** missing option&quot;
+            shift
+            opt_name=&quot;$1&quot;
+        ;;
+        *)
+        opt_dev=0
+        ;;
+    esac
+    shift
+done
+
+if [[ $DEV == 1 ]]; then
+    echo ok
+fi
+</code></pre></li>
+</ul>
+
+<h4>Directories</h4>
+
+<ul>
+<li><p>Script directory</p>
+
+<p><a href="https://stackoverflow.com/questions/59895/">https://stackoverflow.com/questions/59895/</a>  </p>
+
+<p><code>basedir=&quot;$(dirname -- &quot;$(readlink -f -- &quot;$0&quot;;)&quot;)&quot;</code></p></li>
+<li><p>Parse sub directories</p>
+
+<pre><code>#!/usr/bin/bash
+
+for dir in $PWD/*; do
+    if [[ -d $dir ]]; then
+        echo $dir
+    fi
+done
+</code></pre></li>
+</ul>
+
+<h4>Files</h4>
+
+<ul>
+<li><p>Test file extension</p>
+
+<p><a href="https://stackoverflow.com/questions/21425006/">https://stackoverflow.com/questions/21425006/</a>  </p>
+
+<pre><code>#!/bin/bash
+
+inpath=&quot;file.html&quot;
+
+if [[ &quot;${inpath: -5}&quot; == &quot;.html&quot; ]];then
+    echo ok
+fi
+</code></pre></li>
+<li><p>Change file extension</p>
+
+<p><a href="https://stackoverflow.com/questions/1224766/">https://stackoverflow.com/questions/1224766/</a>  </p>
+
+<pre><code>inpath=file.md
+outpath=${inpath%.md}.html
+</code></pre></li>
+<li><p>Heredoc</p>
+
+<p><a href="https://linuxize.com/post/bash-heredoc/">https://linuxize.com/post/bash-heredoc/</a>  </p>
+
+<pre><code>dest=~/test.txt
+sudo tee $dest &gt; /dev/null &lt;&lt; EOF
+bla
+ble
+blie
+EOF
+</code></pre></li>
+<li><p>Output to file and stdout</p>
+
+<p><a href="https://stackoverflow.com/questions/418896/">https://stackoverflow.com/questions/418896/</a>  </p>
+
+<pre><code>program [arguments...] 2&gt;&amp;1 | tee -a &quot;$outfile&quot;
+</code></pre></li>
+</ul>
+
+<h4>Misc</h4>
+
+<ul>
+<li><p>Write functions</p>
+
+<p><a href="https://linuxize.com/post/bash-functions/">https://linuxize.com/post/bash-functions/</a>  </p></li>
+<li><p>Checking sudo</p>
+
+<p><a href="https://stackoverflow.com/questions/42875809/">https://stackoverflow.com/questions/42875809/</a>  </p>
+
+<pre><code>if [[ &quot;$EUID&quot; = 0 ]]; then
+    echo &quot;(1) already root&quot;
+else
+    sudo -k # make sure to ask for password on next sudo
+    if sudo true; then
+        echo &quot;(2) correct password&quot;
+    else
+        echo &quot;(3) wrong password&quot;
+        exit 1
+    fi
+fi
+</code></pre></li>
+</ul>
+
+<!--
+    `basedir="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"`  
+-->

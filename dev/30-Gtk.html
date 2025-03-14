@@ -1,0 +1,364 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | <a href="05-Build.html">Build</a> | <a href="10-Git.html">Git</a> | <a href="15-Bash.html">Bash</a> | <a href="20-Python.html">Py</a> | <a href="25-Cpp.html">Cpp</a> | Gtk | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>Gtk</h2>
+
+<hr>
+
+<h4>Reference</h4>
+
+<ul>
+<li><p>Docs</p>
+
+<form action="https://google.com/search" method="get">
+    <input type="hidden" name="sitesearch" value="www.manpagez.com" />
+    <input type="text" placeholder="Search Gtk..." name="q" />
+    <button>Search</button>
+</form>
+
+<p><a href="https://www.manpagez.com/html/glib/glib-2.56.0/index.php">https://www.manpagez.com/html/glib/glib-2.56.0/index.php</a>)<br>
+<a href="https://www.manpagez.com/html/gio/gio-2.56.0/index.php">https://www.manpagez.com/html/gio/gio-2.56.0/index.php</a>)<br>
+<a href="https://specifications.freedesktop.org/icon-naming-spec/latest/ar01s04.html">https://specifications.freedesktop.org/icon-naming-spec...</a>  </p></li>
+<li><p>Tutorial</p>
+
+<p><a href="https://zetcode.com/gui/gtk2/">https://zetcode.com/gui/gtk2/</a><br>
+<a href="https://github.com/RainMark/gtk3-tutorial/tree/master/_examples">https://github.com/RainMark/gtk3-tutorial...</a><br>
+<a href="https://python-gtk-3-tutorial.readthedocs.io/en/latest/gallery.html">https://python-gtk-3-tutorial</a><br>
+<a href="https://www.cc.gatech.edu/data_files/public/doc/gtk/tutorial/gtk_tut.html">https://www.cc.gatech.edu/data_files/public/doc/gtk...</a><br>
+<a href="https://toshiocp.github.io/Gtk4-tutorial/">https://toshiocp.github.io/Gtk4-tutorial/</a>  </p></li>
+<li><p>Build simple program</p>
+
+<p><code>gcc -o simple simple.c $(pkg-config --cflags --libs gtk+-3.0)</code></p></li>
+<li><p>Gtk/Glib version</p>
+
+<p><a href="https://askubuntu.com/questions/78377/">https://askubuntu.com/questions/78377/</a>  </p>
+
+<p><code>dpkg -l libglib2.0-0 libgtk-3-0 | grep ^ii</code>  </p></li>
+</ul>
+
+<h4>Articles</h4>
+
+<ul>
+<li><p>GObject</p>
+
+<p><a href="https://docs.gtk.org/gobject/tutorial.html">gobject-tutorial</a><br>
+<a href="https://stackoverflow.com/questions/2848273/">gobject-new-unref</a><br>
+<a href="https://docs.gtk.org/gobject/floating-refs.html">https://docs.gtk.org/gobject/floating-refs.html</a><br>
+<a href="https://blogs.gnome.org/desrt/2012/02/26/a-gentle-introduction-to-gobject-construction/">gobject-construction</a><br>
+<a href="https://stackoverflow.com/questions/24453266/">check-if-freed</a><br>
+<a href="https://discourse.gnome.org/t/when-should-i-use-g-object-unref/3834/6">object-unref</a><br>
+<a href="https://stackoverflow.com/questions/2848273/">object-unref</a>  </p>
+
+<p><a href="https://discourse.gnome.org/t/memory-leak-dispose-and-finalize-what-are-the-good-practices/11415/2">https://discourse.gnome.org/t/memory-leak-dispose-and-finalize-what-are-the-good-practices/11415/2</a>  </p></li>
+<li><p>GTK+ par l&#39;exemple.</p>
+
+<p><a href="https://nicolasj.developpez.com/gtk/cours/?page=les-raccourcis-clavier">https://nicolasj.developpez.com/gtk/cours/?page=les-raccourc</a>  </p></li>
+<li><p>Toolbar</p>
+
+<p><a href="https://stackoverflow.com/questions/10740967/how-to-add-gtkwidget-to-gtktoolbar">add-gtkwidget</a>  </p></li>
+<li><p>How to properly add images to buttons</p>
+
+<p><a href="https://discourse.gnome.org/t/how-to-properly-add-images-to-buttons/1185/2">add-images-to-buttons</a>  </p></li>
+<li><p>TreeView</p>
+
+<p><a href="https://docs.gtk.org/gtk3/treeview-tutorial.html">gtk3-treeview-tutorial</a><br>
+<a href="https://zetcode.com/gui/gtk2/gtktreeview/">zetcode-gtk2-treeview</a><br>
+<a href="https://en.wikibooks.org/wiki/GTK%2B_By_Example/Tree_View/Tree_Models">wikibooks-gtk-treeview</a>  </p></li>
+<li><p>GtkBox vs GtkGrid</p>
+
+<p><a href="https://www.manpagez.com/html/gtk3/gtk3-3.24.31/ch30s02.php">https://www.manpagez.com/html/gtk3/gtk3-3.24.31/ch30s02.php</a>  </p></li>
+<li><p>Alternative to deprecated gtk_alignment_new</p>
+
+<p><a href="https://stackoverflow.com/questions/58746046/">https://stackoverflow.com/questions/58746046/</a>  </p></li>
+</ul>
+
+<h4>Gtk custom widgets</h4>
+
+<ul>
+<li><p>Examples</p>
+
+<p><a href="https://www.cc.gatech.edu/data_files/public/doc/gtk/tutorial/gtk_tut-20.html">old-tutorial</a><br>
+<a href="https://wiki.gnome.org/HowDoI/CustomWidgets">examples</a><br>
+<a href="http://www.peteronion.org.uk/GtkExamples/GladeTutorials.html">examples</a><br>
+<a href="https://stackoverflow.com/questions/57699050/">create-object</a>  </p></li>
+</ul>
+
+<h4>Drag and Drop</h4>
+
+<ul>
+<li><p>Reference</p>
+
+<p><a href="https://wiki.gnome.org/Newcomers/OldDragNDropTutorial">https://wiki.gnome.org/Newcomers/OldDragNDropTutorial</a><br>
+<a href="https://wiki.gnome.org/HowDoI/DragAndDrop?action=AttachFile&amp;do=get&amp;target=dnd-overview.png">https://wiki.gnome.org/HowDoI/DragAndDrop</a><br>
+<a href="https://www.freedesktop.org/wiki/Specifications/direct-save/">https://www.freedesktop.org/wiki/Specifications/direct-save/</a>  </p>
+
+<table>
+
+    <tr>
+        <th style="width:50%">Source</th>
+
+        <th style="width:50%">Destination</th>
+    </tr>
+
+    <tr>
+        <td>
+            <b>Setup source</b><br>
+            <br>
+            <ul class="lidisc">
+                <li>
+                define a source target list using <b>GtkTargetEntry</b>
+                </li><br>
+
+                <li>
+                call <b>gtk_drag_source_set()</b>
+                </li><br>
+
+                <li>
+                connect handlers or use vfuncs or use default handlers<br>
+                </li><br>
+
+                <li>
+                it's also possible to start a drag manually using
+                a <b>GtkTargetList</b> and calling
+                <b>gtk_drag_begin_with_coordinates()</b>
+                </li>
+            </ul> 
+        </td>
+
+        <td>
+            <b>Setup destination</b><br>
+            <br>
+            <ul class="lidisc">
+                <li>
+                define a destination target list using <b>GtkTargetEntry</b>
+                </li><br>
+
+                <li>
+                call <b>gtk_drag_dest_set()</b><br>
+                </li><br>
+
+                <li>
+                connect handlers or use vfuncs or use default handlers<br>
+                </li>
+            </ul> 
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <b>1 - "drag-begin"</b><br>
+            <br>
+            <i>Drag operation triggered</i><br>
+            <br>
+            <ul class="lidisc">
+                <li>
+                set the drag icon<br>
+                </li><br>
+
+                <li>
+                setup of the current drag<br>
+                </li>
+            </ul> 
+        </td>
+
+        <td>
+            <b>2 - "drag-motion"</b><br>
+            <br>
+            <i>Cursor moves over the drop target, the handler is called for each
+            cursor movement</i><br>
+            <br>
+            <ul class="lidisc">
+                <li>
+                hightlight the drop zone
+                </li><br>
+
+                <li>
+                <div class="txgreen">can examine drag format and drag action :<br>
+                <br>
+                call <b>gtk_drag_dest_find_target()</b><br>
+                <br>
+                <b><-- "drag-data-get</b>"</div>
+                </li><br>
+
+                <li>
+                drop impossible :<br>
+                <br>
+                call <b>gtk_drag_status(context, 0, time)</b><br>
+                <br>
+                return <b>false</b>
+                </li><br>
+
+                <li>
+                <div class="txgreen">drop possible :<br><br>
+                call <b>gtk_drag_status(context, action, time)</b><br>
+                <br>
+                return <b>true</b></div>
+                </li>
+            </ul> 
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <b>4 - "drag-data-get"</b><br>
+            <br>
+            <i>Data requested from a drop destination</i><br>
+            <br>
+            <ul class="lidisc">
+                <li>
+                prepare data depending on the target<br>
+                </li><br>
+
+                <li>
+                <div class="txgreen">send data to the selection object :<br>
+                <br>
+                call <b>gtk_selection_data_set()</b><br>
+                <br>
+                <b>--> "drag-data-received"</b></div><br>
+                </li>
+            </ul> 
+        </td>
+
+        <td>
+            <b>3 - "drag-drop"</b><br>
+            <br>
+            <i>Button released over destination</i><br>
+            <br>
+            <ul class="lidisc">
+                <li>
+                check for a correct sub-drop zone
+                </li><br>
+
+                <li>
+                examine drag format and drag action
+                </li><br>
+
+                <li>
+                drop rejected : return <b>false</b>
+                </li><br>
+
+                <li>
+                <div class="txgreen">- drop accepted : <b>gtk_drag_get_data()</b><br>
+                <br>
+                <b><-- "drag-data-get"</b><br>
+                <br>
+                return <b>true</b></div>
+                </li>
+            </ul> 
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <b>"drag-failed"</b><br>
+            <br>
+            <ul class="lidisc">
+                <li>
+                end the DnD operation
+                </li><br>
+
+                <li>
+                free resources<br>
+                <br>
+                <b>--> "drag-end"</b></div>
+                </li>
+            </ul> 
+        </td>
+
+        <td rowspan="3">
+            <b>5 - "drag-data-received"</b><br>
+            <br>
+            <i>Button release over destination</i><br>
+            <br>
+            <ul class="lidisc">
+                <li>
+                get the data received :
+                <b>gtk_selection_data_get()</b><br>
+                </li><br>
+
+                <li>
+                <div class="txgreen">data rejected :<br>
+                <br>
+                call <b>gtk_drag_data_finish(false)</b><br>
+                <br>
+                <b><-- "drag-failed"</b></div><br>
+                </li><br>
+
+                <li>
+                <div class="txgreen">data accepted :<br>
+                <br>
+                copy data<br>
+                <br>
+                free destination resources<br>
+                <br>
+                call <b>gtk_drag_data_finish(true, delete)</b><br>
+                <br>
+                <b><-- "drag-data-delete"</b><br>
+                <br>
+                <b><-- "drag-end"</b></div>
+                </li>
+            </ul> 
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <b>"drag-data-delete"</b><br>
+            <br>
+            <ul class="lidisc">
+                <li>
+                delete the moved data<br>
+                <br>
+                <b>--> "drag-end"</b></div>
+                </li>
+            </ul> 
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <b>"drag-end"</b><br>
+            <br>
+            <ul class="lidisc">
+                <li>
+                end the DnD operation
+                </li><br>
+
+                <li>
+                free resources
+                </li>
+            </ul> 
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+        </td>
+        <td>
+            <b>"drag-leave"</b><br>
+            <br>
+            <ul class="lidisc">
+                <li>
+                un-highlight the drop zone
+                </li>
+            </ul> 
+        </td>
+    </tr>
+</table></li>
+</ul>
+
+<h4>Other</h4>
+
+<ul>
+<li><p>Drop down menu to Toolbar Item</p>
+
+<p><a href="https://stackoverflow.com/questions/9132440/gtk-drop-down-menu-to-toolbar-item">https://stackoverflow.com/questions/9132440/gtk-drop-down-me</a>  </p></li>
+<li><p>GTK3 and multithreading</p>
+
+<p><a href="https://stackoverflow.com/questions/30607429/">https://stackoverflow.com/questions/30607429/</a>  </p></li>
+<li><p>Redirect stdout in a text window</p>
+
+<p><a href="https://stackoverflow.com/questions/48478615/how-to-rediredt-the-stdout-in-a-text-window-c-programming">https://stackoverflow.com/questions/48478615/how-to-rediredt</a><br>
+<a href="https://mail.gnome.org/archives/gtk-list/2006-February/msg00040.html">https://mail.gnome.org/archives/gtk-list/2006-February/msg00</a>  </p></li>
+</ul>

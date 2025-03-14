@@ -1,0 +1,76 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | <a href="05-Build.html">Build</a> | Git | <a href="15-Bash.html">Bash</a> | <a href="20-Python.html">Py</a> | <a href="25-Cpp.html">Cpp</a> | <a href="30-Gtk.html">Gtk</a> | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>Git</h2>
+
+<hr>
+
+<h4>Basics</h4>
+
+<ul>
+<li><p>clone</p>
+
+<p><code>git clone https://github.com/hotnuma/libtinyc.git</code></p>
+
+<p>with OAuth key :</p>
+
+<p><code>git clone https://OAUTH_KEY@github.com/hotnuma/libtinyc.git</code></p>
+
+<p>without history :</p>
+
+<p><code>git clone --depth 1 https://github.com/hotnuma/libtinyc.git</code></p>
+
+<p>one branch :</p>
+
+<p><code>git clone -b master --single-branch https://github.com/hotnuma/libtinyc.git</code></p>
+
+<p>specific tag :</p>
+
+<p><code>git clone --branch thunar-4.16.6 --depth 1 https://gitlab.xfce.org/xfce/thunar.git</code></p></li>
+<li><p>Push an existing repository</p>
+
+<pre><code>git remote add origin https://OAUTH_KEY@github.com/hotnuma/testcmd.git
+git branch -M master
+git push -u origin master
+</code></pre></li>
+<li><p>Check Remote</p>
+
+<p><code>git remote -v</code></p></li>
+<li><p>Remove a subdir</p>
+
+<p><code>git rm -r --cached dir_name</code></p></li>
+</ul>
+
+<h4>History</h4>
+
+<ul>
+<li><p>Reset last changes</p>
+
+<p><a href="https://stackoverflow.com/questions/4630312/">https://stackoverflow.com/questions/4630312/</a>  </p>
+
+<p>reset : <code>git reset HEAD --hard</code></p>
+
+<p>remove new files : <code>git clean -fd</code></p></li>
+<li><p>Commit history</p>
+
+<p><a href="https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History</a>  </p>
+
+<p>example : <code>git log --pretty=oneline --since=2021-03-21</code></p></li>
+<li><p>Diff from commit</p>
+
+<p><a href="https://stackoverflow.com/questions/17563726/">https://stackoverflow.com/questions/17563726/</a>  </p>
+
+<p><code>git diff COMMIT~ COMMIT</code></p></li>
+</ul>
+
+<h4>Configuration</h4>
+
+<ul>
+<li><p>Generate access token</p>
+
+<p><a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token</a>  </p></li>
+<li><p>Configure line endings</p>
+
+<p><a href="https://docs.github.com/en/github/getting-started-with-github/configuring-git-to-handle-line-endings">https://docs.github.com/en/github/...</a>  </p></li>
+</ul>

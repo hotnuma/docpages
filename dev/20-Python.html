@@ -1,0 +1,62 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | <a href="05-Build.html">Build</a> | <a href="10-Git.html">Git</a> | <a href="15-Bash.html">Bash</a> | Py | <a href="25-Cpp.html">Cpp</a> | <a href="30-Gtk.html">Gtk</a> | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>Python</h2>
+
+<hr>
+
+<h4>Howto</h4>
+
+<ul>
+<li><p>Get script name</p>
+
+<p><code>appname = os.path.basename(__file__)</code></p></li>
+<li><p>Error messages</p>
+
+<pre><code>def error_exit(msg):
+    if msg == &quot;&quot;: msg = &quot;an error occurred&quot;
+    print(&quot;*** %s\nabort...&quot; % msg)
+    exit(1)
+
+def usage_exit():
+    print(&quot;*** usage :&quot;)
+    print(&quot;%s -opt1&quot; % appname)
+    print(&quot;%s -opt2 bla&quot; % appname)
+    print(&quot;abort...&quot;)
+    exit(1)
+</code></pre></li>
+<li><p>Read args</p>
+
+<pre><code>import os, sys
+
+args = sys.argv
+size = len(args)
+if size &lt; 2: exit(1)
+
+opt_val = &quot;&quot;
+i = 1
+while i &lt; size:
+    if args[i] == &quot;-opt&quot;:
+        i += 1
+        if i &gt;= size: exit(1)
+        opt_val = args[i]
+    else:
+        exit(1)
+    i += 1
+
+print(opt_val)
+</code></pre></li>
+<li><p>Execute process</p>
+
+<pre><code>import os, sys, subprocess
+
+def runcmd(cmd):
+    ret = subprocess.run(cmd, shell=True, capture_output=True)
+    result = ret.stdout.decode()
+    return (result, ret.returncode)
+
+cmd = &quot;ls -la&quot;
+result, ret = runcmd(cmd)
+</code></pre></li>
+</ul>
