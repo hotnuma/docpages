@@ -381,6 +381,10 @@ https://wiki.debian.org/HardwareVideoAcceleration
     
     `fmt --width=120 input.txt > output.txt`
 
+* Remove execute flag
+    
+    `find . -type f -exec chmod -x {} \;`
+
 * Remove presentation mode in PDFs
     
     https://unix.stackexchange.com/questions/754414/  
