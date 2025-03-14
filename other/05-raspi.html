@@ -1,0 +1,72 @@
+<p><link href="../style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="../index.html">Home</a> | Raspi ]</strong></p>
+
+<h3>Raspi</h3>
+
+<hr>
+
+<h4>Install RaspiOS Lite XFCE</h4>
+
+<ul>
+<li><p>Copy image</p>
+
+<p><em>replace sdX with the corresponding device, for example sdc</em></p>
+
+<pre><code>unxz ./raspios64-lite.img.xz
+lsblk
+umount /dev/sdX?
+rpimg ./raspios64-lite.img /dev/sdX
+</code></pre>
+
+<p>configure and upgrade :</p>
+
+<pre><code>sudo raspi-config
+(change locale and timezone)
+sudo apt update &amp;&amp; sudo apt upgrade
+reboot
+</code></pre>
+
+<p>install xfce</p>
+
+<pre><code>sudo tasksel
+(select debian desktop and xfce)
+</code></pre></li>
+</ul>
+
+<h4>Install Debian Trixie</h4>
+
+<ul>
+<li><p>Installation</p>
+
+<p>Download an image from daily builds : <a href="https://raspi.debian.net/daily-images/">https://raspi.debian.net/daily-images/</a>  </p>
+
+<pre><code>user : root
+passwd : &lt;empty&gt;
+
+apt update &amp;&amp; apt upgrade
+apt install sudo debconf kbd locales
+
+dpkg-reconfigure tzdata
+dpkg-reconfigure locales
+
+useradd -s /bin/bash -d /home/&lt;username&gt; -m &lt;username&gt;
+passwd &lt;username&gt;
+usermod -aG sudo &lt;username&gt;
+reboot
+
+(log as new user)
+sudo tasksel
+sudo reboot
+
+sudo apt purge plymouth
+
+Add hostname manually in /etc/hosts :
+
+127.0.0.1   localhost
+127.0.1.1   &lt;hostname&gt;
+::1 localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+</code></pre></li>
+</ul>
