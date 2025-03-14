@@ -6,7 +6,7 @@
 
 <hr>
 
-<h4>Install RaspiOS Lite XFCE</h4>
+<h4>Install RaspiOS Lite 64</h4>
 
 <ul>
 <li><p>Copy image</p>
@@ -16,7 +16,7 @@
 <pre><code>unxz ./raspios64-lite.img.xz
 lsblk
 umount /dev/sdX?
-rpimg ./raspios64-lite.img /dev/sdX
+sudo dd if=./raspios64-lite.img of=/dev/sdX bs=4M conv=fsync status=progress
 </code></pre>
 
 <p>configure and upgrade :</p>
@@ -25,14 +25,33 @@ rpimg ./raspios64-lite.img /dev/sdX
 (change locale and timezone)
 sudo apt update &amp;&amp; sudo apt upgrade
 reboot
-</code></pre>
-
-<p>install xfce</p>
-
-<pre><code>sudo tasksel
-(select debian desktop and xfce)
 </code></pre></li>
 </ul>
+
+<h4>Switch to Trixie</h4>
+
+<pre><code>```
+sudo nano /etc/apt/....
+comment raspi
+save close
+cat file
+sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list
+cat /etc/apt/sources.list
+```
+</code></pre>
+
+<h4>Install XFCE</h4>
+
+<pre><code>install xfce
+
+```
+sudo tasksel
+(select debian desktop and xfce)
+
+sudo systemctl set-default graphical.target
+reboot
+```
+</code></pre>
 
 <h4>Install Debian Trixie</h4>
 

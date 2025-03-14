@@ -6,7 +6,7 @@
 
 ---
 
-#### Install RaspiOS Lite XFCE
+#### Install RaspiOS Lite 64
 
 * Copy image
 
@@ -16,7 +16,7 @@
     unxz ./raspios64-lite.img.xz
     lsblk
     umount /dev/sdX?
-    rpimg ./raspios64-lite.img /dev/sdX
+    sudo dd if=./raspios64-lite.img of=/dev/sdX bs=4M conv=fsync status=progress
     ```
 
     configure and upgrade :
@@ -27,14 +27,33 @@
     sudo apt update && sudo apt upgrade
     reboot
     ```
+
+
+#### Switch to Trixie
     
+    ```
+    sudo nano /etc/apt/....
+    comment raspi
+    save close
+    cat file
+    sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list
+    cat /etc/apt/sources.list
+    ```
+
+
+#### Install XFCE
+
     install xfce
     
     ```
     sudo tasksel
     (select debian desktop and xfce)
-    ```
     
+    sudo systemctl set-default graphical.target
+    reboot
+    ```
+
+
 #### Install Debian Trixie
 
 * Installation
