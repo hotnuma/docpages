@@ -19,7 +19,7 @@
     sudo dd if=./raspios64-lite.img of=/dev/sdX bs=4M conv=fsync status=progress
     ```
 
-    configure and upgrade :
+* Upgrade
 
     ```
     sudo raspi-config
@@ -28,16 +28,26 @@
     reboot
     ```
 
+* Switch to Trixie
 
-#### Switch to Trixie
+    `sudo nano /etc/apt/sources.list.d/raspi.list`
+    
+    comment the repository like so :
     
     ```
-    sudo nano /etc/apt/....
-    comment raspi
-    save close
-    cat file
-    sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list
-    cat /etc/apt/sources.list
+    #deb http://archive.raspberrypi.com/debian/ bookworm main
+    # Uncomment line below then 'apt-get update' to enable 'apt-get source'
+    #deb-src http://archive.raspberrypi.com/debian/ bookworm main
+    ```
+
+    edit sources.list : 
+    
+    `sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list`
+    
+    ```
+    sudo apt update && sudo apt upgrade
+    sudo apt full-upgrade
+    reboot
     ```
 
 
@@ -57,7 +67,10 @@
     
     from XFCE desktop :
     
-    create configuration files for labwc
+    https://labwc.github.io/getting-started.html  
+    
+    create configuration files for labwc in ~/.config/labwc  
+    reboot and select the labwc session  
     
 
 #### Install Debian Trixie
@@ -87,7 +100,11 @@
     sudo reboot
     
     sudo apt purge plymouth
+    sudo apt install labwc swaybg kanshi
 
+    https://labwc.github.io/getting-started.html  
+    create configuration files for labwc in ~/.config/labwc  
+    
     Add hostname manually in /etc/hosts :
 
     127.0.0.1	localhost
@@ -95,6 +112,8 @@
     ::1	localhost ip6-localhost ip6-loopback
     ff02::1	ip6-allnodes
     ff02::2	ip6-allrouters
+    
+    reboot and use labwc session on startup
     ```
 
 
