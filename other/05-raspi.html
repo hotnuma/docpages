@@ -44,29 +44,24 @@ reboot
 sudo apt full-upgrade
 reboot
 </code></pre></li>
-</ul>
+<li><p>Install XFCE</p>
 
-<h4>Install XFCE</h4>
-
-<pre><code>install xfce
-
-```
-sudo tasksel
+<pre><code>sudo tasksel
 (select debian desktop and xfce)
 
 sudo systemctl set-default graphical.target
 sudo apt purge plymouth
 sudo apt install labwc swaybg kanshi
 reboot
-```
-
-from XFCE desktop :
-
-https://labwc.github.io/getting-started.html  
-
-create configuration files for labwc in ~/.config/labwc  
-reboot and select the labwc session  
 </code></pre>
+
+<p>from XFCE desktop :</p>
+
+<p><a href="https://labwc.github.io/getting-started.html">https://labwc.github.io/getting-started.html</a>  </p>
+
+<p>create configuration files for labwc in ~/.config/labwc<br>
+reboot and select the labwc session  </p></li>
+</ul>
 
 <h4>Install Debian Trixie</h4>
 
@@ -75,10 +70,9 @@ reboot and select the labwc session
 
 <p>Download an image from daily builds : <a href="https://raspi.debian.net/daily-images/">https://raspi.debian.net/daily-images/</a>  </p>
 
-<pre><code>user : root
-passwd : &lt;empty&gt;
+<p>Default user is <strong>root</strong> with empty password.</p>
 
-apt update &amp;&amp; apt upgrade
+<pre><code>apt update &amp;&amp; apt upgrade
 apt install sudo debconf kbd locales
 
 dpkg-reconfigure tzdata
@@ -96,18 +90,21 @@ sudo reboot
 
 sudo apt purge plymouth
 sudo apt install labwc swaybg kanshi
+</code></pre>
 
-https://labwc.github.io/getting-started.html  
-create configuration files for labwc in ~/.config/labwc  
+<p><a href="https://labwc.github.io/getting-started.html">https://labwc.github.io/getting-started.html</a><br>
+create configuration files for labwc in ~/.config/labwc  </p>
 
-Add hostname manually in /etc/hosts :
+<p>Add hostname manually in /etc/hosts :</p>
 
-127.0.0.1   localhost
+<pre><code>127.0.0.1   localhost
 127.0.1.1   &lt;hostname&gt;
 ::1 localhost ip6-localhost ip6-loopback
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
+</code></pre>
 
-reboot and use labwc session on startup
-</code></pre></li>
+<p>reboot and use labwc session on startup</p></li>
 </ul>
+
+<p><br/></p>

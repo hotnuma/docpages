@@ -50,11 +50,8 @@
     reboot
     ```
 
+* Install XFCE
 
-#### Install XFCE
-
-    install xfce
-    
     ```
     sudo tasksel
     (select debian desktop and xfce)
@@ -79,10 +76,9 @@
     
     Download an image from daily builds : https://raspi.debian.net/daily-images/  
     
-    ```
-    user : root
-    passwd : <empty>
+    Default user is **root** with empty password.
 
+    ```
     apt update && apt upgrade
     apt install sudo debconf kbd locales
 
@@ -101,19 +97,23 @@
     
     sudo apt purge plymouth
     sudo apt install labwc swaybg kanshi
+    ```
 
     https://labwc.github.io/getting-started.html  
     create configuration files for labwc in ~/.config/labwc  
     
     Add hostname manually in /etc/hosts :
 
+    ```
     127.0.0.1	localhost
     127.0.1.1	<hostname>
     ::1	localhost ip6-localhost ip6-loopback
     ff02::1	ip6-allnodes
     ff02::2	ip6-allrouters
+    ```
     
     reboot and use labwc session on startup
-    ```
+
+<br/>
 
 
