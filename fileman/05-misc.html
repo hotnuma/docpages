@@ -1,0 +1,119 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | <a href="01-Core.html">Core</a> | <a href="02-Dialog.html">Dialog</a> | <a href="03-Job.html">Job</a> | <a href="04-Libext.html">Libext</a> | Misc | <a href="06-Side.html">Side</a> | <a href="07-View.html">View</a> | <a href="08-Widget.html">Widget</a> | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>Misc</h2>
+
+<hr>
+
+<h4>Files</h4>
+
+<pre><code>    + misc/navigator.c
+    + misc/history.c
+    + misc/component.c
+    + misc/browser.c
+    + misc/iconfactory.c
+    + misc/iconrender.c
+    + misc/shortrender.c
+    + misc/enumtypes.c
+</code></pre>
+
+<h4>ThunarNavigator</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>GTypeInterface to handle current directory. Launcher, History, TreePane
+TreeView, StandardView, LocationBar and LocationEntry, implement it.</p></li>
+</ul>
+
+<h4>ThunarHistory</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GObject to handle back, forward browse history. ThunarHistory
+implements a ThunarNavigator interface.</p></li>
+</ul>
+
+<h4>ThunarComponent</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GInterface to store selected files. Launcher, TreePane and StandardView
+implement it.</p></li>
+</ul>
+
+<h4>ThunarBrowser</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GInterface used by Application, LocationEntry and Launcher to
+resolve a file before launching it. For example, Application calls
+browser_poke_file to resolve a file given on the command line and
+then launch it in a callback using th_file_launch.</p></li>
+</ul>
+
+<h4>IconFactory</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GObject to cache icons and thumbnails.</p></li>
+</ul>
+
+<h4>IconRenderer</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GtkCellRenderer to display TreeView and ListView icons.</p></li>
+<li><p>Shortcut arrow in Thunar</p>
+
+<p>Thunar renders shortcut arrows the same way as emblems.
+thunar_icon_renderer_render calls thunar_file_get_emblem_names which
+adds a symbolic link emblem name.</p>
+
+<pre><code>thunar_icon_renderer_render :
+    if (G_LIKELY (icon_renderer-&gt;emblems))
+        emblems = thunar_file_get_emblem_names (icon_renderer-&gt;file);
+
+thunar_file_get_emblem_names :
+    if (thunar_file_is_symlink(file))
+        emblems = g_list_prepend(emblems, THUNAR_FILE_EMBLEM_NAME_SYMBOLIC_LINK);
+</code></pre></li>
+</ul>
+
+<h4>ShortcutRenderer</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>An IconRenderer used in the TreeView.</p></li>
+</ul>
+
+<h4>enumtypes</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>Application&#39;s enums.</p>
+
+<pre><code>ThunarColumn
+ThunarDateStyle
+ThunarFileMode
+ThunarJobResponse
+ParallelCopyMode
+ThunarRecursivePermissionsMode
+ThunarIconSize
+ThunarZoomLevel
+ThunarThumbnailMode
+ThunarThumbnailSize
+</code></pre></li>
+</ul>
+
+<p><br>
+<br>
+<br></p>

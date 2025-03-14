@@ -1,0 +1,119 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | Core | <a href="02-Dialog.html">Dialog</a> | <a href="03-Job.html">Job</a> | <a href="04-Libext.html">Libext</a> | <a href="05-Misc.html">Misc</a> | <a href="06-Side.html">Side</a> | <a href="07-View.html">View</a> | <a href="08-Widget.html">Widget</a> | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>Core</h2>
+
+<hr>
+
+<h4>Files</h4>
+
+<pre><code>    + core/appnotify.c
+    + core/clipboard.c
+    + core/dnd.c
+    + core/user.c
+    
+    + core/devmonitor.c
+    + core/th_device.c
+    
+    + core/filemonitor.c
+    + core/th_folder.c
+    + core/th_file.c
+    + core/fileinfo.c
+</code></pre>
+
+<h4>app_notify</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>Functions to display notification message, ThunarDevice uses it
+to display unmount and ejects notifications.</p></li>
+</ul>
+
+<h4>ClipboardManager</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GObject to handle cut, copy, paste clipboard operations on files,
+it uses GtkClipboard internally.</p></li>
+</ul>
+
+<h4>DnD</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>dnd_ask</p>
+
+<p>dnd_perform</p></li>
+</ul>
+
+<h4>User</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>This module provides three objects, a global UserManager,
+a ThunarGroup and ThunarUser. The PermissionBox uses it.</p></li>
+</ul>
+
+<h4>DeviceMonitor</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A global GObject to handle device events, it uses GVolumeMonitor
+internally. ThunarDevice, TreeModel and Window use it.</p></li>
+</ul>
+
+<h4>ThunarDevice</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GObject which uses a GVolume, GMount or GDrive to handle devices.</p></li>
+</ul>
+
+<h4>FileMonitor</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A global GObject to handle file events.</p></li>
+</ul>
+
+<h4>ThunarFolder</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GObject to handle folders which uses a ThunarJob, ThunarFile,
+FileMonitor and GFileMonitor.</p></li>
+</ul>
+
+<h4>FileInfo</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GTypeInterface to handle file infos using GFile and GFileInfo.</p></li>
+</ul>
+
+<h4>ThunarFile</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>An implementation of FileInfo. _th_file_load and _th_file_info_load functions
+load these informations.</p></li>
+<li><p>File sorting</p>
+
+<p>The th_file_compare_by_name function calls g_utf8_collate_key_for_filename
+to compare file names.</p></li>
+</ul>
+
+<p><br>
+<br>
+<br></p>

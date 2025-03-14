@@ -1,0 +1,91 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | <a href="01-Core.html">Core</a> | Dialog | <a href="03-Job.html">Job</a> | <a href="04-Libext.html">Libext</a> | <a href="05-Misc.html">Misc</a> | <a href="06-Side.html">Side</a> | <a href="07-View.html">View</a> | <a href="08-Widget.html">Widget</a> | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>Dialog</h2>
+
+<hr>
+
+<h4>Files</h4>
+
+<pre><code>    + dialog/dialogs.c
+    + dialog/progressdlg.c
+    + dialog/progressview.c
+    + dialog/appchooser.c
+    + dialog/appmodel.c
+    + dialog/appcombo.c
+    + dialog/propsdlg.c
+    + dialog/permbox.c
+</code></pre>
+
+<h4>Dialogs</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>Several application dialogs such as dialog_insecure_program,
+dialog_file_create, dialog_file_rename, dialog_folder_trash, etc...</p></li>
+</ul>
+
+<h4>ProgressDialog</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GtkWindow for file operation progress dialog.</p></li>
+</ul>
+
+<h4>ProgressView</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GtkBox for file operation progress.</p></li>
+</ul>
+
+<h4>AppChooserDialog</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GtkDialog to select an application.</p></li>
+</ul>
+
+<h4>AppChooserModel</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GtkTreeStore to handle applications. The appmodel_load function
+fills the model using g_app_info_get_all_for_type.</p></li>
+</ul>
+
+<h4>AppCombo</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GtkComboBox to select an application, it calls
+g_app_info_get_default_for_type and stores infos in a GtkListStore.
+It&#39;s used in the properties dialog box.</p></li>
+</ul>
+
+<h4>PropertiesDialog</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GtkDialog created from the contextual popup menu.</p></li>
+</ul>
+
+<h4>PermissionBox</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GtkBox to display permission settings in the PropertiesDialog.</p></li>
+</ul>
+
+<p><br>
+<br>
+<br></p>

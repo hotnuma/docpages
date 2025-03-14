@@ -1,0 +1,147 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | <a href="01-Core.html">Core</a> | <a href="02-Dialog.html">Dialog</a> | <a href="03-Job.html">Job</a> | <a href="04-Libext.html">Libext</a> | <a href="05-Misc.html">Misc</a> | <a href="06-Side.html">Side</a> | <a href="07-View.html">View</a> | <a href="08-Widget.html">Widget</a> | Other ]</strong></p>
+
+<h2>Other</h2>
+
+<hr>
+
+<h4>References</h4>
+
+<ul>
+<li><p>Docs</p>
+
+<p><a href="https://developer.xfce.org/thunar/index.html">https://developer.xfce.org/thunar/index.html</a><br>
+<a href="https://wiki.xfce.org/thunar/dev/build_and_run">https://wiki.xfce.org/thunar/dev/build_and_run</a><br>
+<a href="https://gitlab.xfce.org/xfce/thunar">https://gitlab.xfce.org/xfce/thunar</a><br>
+<a href="https://docs.xfce.org/xfce/thunar/start">https://docs.xfce.org/xfce/thunar/start</a>  </p></li>
+<li><p>Build deps</p>
+
+<pre><code>libxfce4ui-2-dev
+
+libexo-2-dev
+libgudev-1.0-dev
+libnotify-dev
+libthunarx-3-dev
+libxfce4util-dev
+libxfconf-0-dev
+</code></pre></li>
+</ul>
+
+<h4>Project files</h4>
+
+<pre><code>find . -type f -name &quot;*.c&quot; | sort
+
+./core/clipboard.c
+./core/devmonitor.c
+./core/dnd.c
+./core/fileinfo.c
+./core/filemonitor.c
+./core/th_device.c
+./core/th_file.c
+./core/th_folder.c
+./core/usermanager.c
+
+./dialog/appchooser.c
+./dialog/appcombo.c
+./dialog/appmodel.c
+./dialog/dialogs.c
+./dialog/permbox.c
+./dialog/progressdlg.c
+./dialog/progressview.c
+./dialog/propsdlg.c
+
+./job/dcountjob.c
+./job/exo_job.c
+./job/io_jobs.c
+./job/io_scandir.c
+./job/job.c
+./job/jobutils.c
+./job/simplejob.c
+./job/transferjob.c
+
+./libext/gdk_ext.c
+./libext/gio_ext.c
+./libext/gtk_ext.c
+./libext/pango_ext.c
+./libext/pixbuf_ext.c
+./libext/utils.c
+
+./misc/appnotify.c
+./misc/browser.c
+./misc/component.c
+./misc/enumtypes.c
+./misc/history.c
+./misc/iconfactory.c
+./misc/iconrender.c
+./misc/navigator.c
+./misc/shortrender.c
+
+./side/sidepane.c
+./side/treemodel.c
+./side/treepane.c
+./side/treeview.c
+
+./view/baseview.c
+./view/columnmodel.c
+./view/detailview.c
+./view/exotreeview.c
+./view/listmodel.c
+./view/standardview.c
+
+./widget/locationbar.c
+./widget/locationentry.c
+./widget/pathentry.c
+./widget/sizelabel.c
+./widget/statusbar.c
+./widget/th_image.c
+
+./application.c
+./appmenu.c
+./config.h
+./debug.h
+./launcher.c
+./main.c
+./marshal.c
+./preferences.c
+./window.c
+</code></pre>
+
+<h4>Biggest files</h4>
+
+<pre><code>find . -type f -name &quot;*.c&quot; -printf &quot;%s\t%p\n&quot; | sort -nr | head -10
+
+127510  ./view/standardview.c
+102177  ./core/th_file.c
+95904   ./menu/launcher.c
+70707   ./view/listmodel.c
+70126   ./side/treeview.c
+68427   ./window.c
+60747   ./side/treemodel.c
+60213   ./job/transferjob.c
+54371   ./application.c
+50846   ./dialog/permbox.c
+</code></pre>
+
+<h4>Notes</h4>
+
+<ul>
+<li><p>selection change</p>
+
+<p><code>standard_view_selection_changed</code></p></li>
+<li><p>double clic detail view</p>
+
+<p>details_view_row_activated</p>
+
+<pre><code>launcher_activate_selected_files (launcher, THUNAR_LAUNCHER_CHANGE_DIRECTORY, NULL);
+</code></pre></li>
+<li><p>Custom Actions</p>
+
+<p>xfce_spawn_on_screen_with_child_watch : executes external program</p>
+
+<p>match patterns : g_pattern_match_simple</p></li>
+</ul>
+
+<p><br>
+<br>
+<br></p>

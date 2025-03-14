@@ -1,0 +1,145 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ Home | <a href="01-Core.html">Core</a> | <a href="02-Dialog.html">Dialog</a> | <a href="03-Job.html">Job</a> | <a href="04-Libext.html">Libext</a> | <a href="05-Misc.html">Misc</a> | <a href="06-Side.html">Side</a> | <a href="07-View.html">View</a> | <a href="08-Widget.html">Widget</a> | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>Fileman</h2>
+
+<hr>
+
+<h4>Files</h4>
+
+<pre><code>
+    +   main.c
+    +   application.c
+    +   window.c
+    +   appmenu.c
+    +   launcher.c
+        preferences.c
+
+</code></pre>
+
+<ul>
+<li><p>Description</p>
+
+<p>When the application starts, <strong>application_command_line</strong> si called and
+parses the command line. Then the following are called,
+<strong>application_process_filenames</strong>, <strong>_application_process_files</strong>,
+<strong>browser_poke_file</strong>, <strong>_application_process_files_finish</strong>,
+<strong>th_file_launch</strong>.</p>
+
+<p>Then <strong>application_open_window</strong> is called with the current directory
+to parse. The AppWindow is created and <strong>window_set_current_directory</strong>
+is called.</p></li>
+<li><p>Interfaces</p>
+
+<p>FileInfo : base class for ThunarFile</p>
+
+<p>ThunarBrowser : base class to browse, file, device and location</p>
+
+<p>ThunarComponent : handles selected files</p>
+
+<p>ThunarNavigator : handles the current directory</p>
+
+<p>SidePane : base class to handle show/hide property</p>
+
+<p>BaseView : base class for the StandardView</p></li>
+</ul>
+
+<h4>Main</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>The main function sets the application name, initializes libnotify and
+runs the application.</p></li>
+</ul>
+
+<h4>Application</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>Application object is a GtkApplication, it contains functions to
+execute file operations.</p>
+
+<pre><code>
+    application_process_filenames
+
+    application_mkdir
+    application_creat
+
+    application_copy_into
+    application_link_into
+    application_move_into
+
+    application_unlink_files
+    application_trash
+    application_restore_files
+    application_empty_trash
+
+</code></pre>
+
+<p>For example, LAUNCHER_ACTION_CREATE_FOLDER menu item calls
+_launcher_action_create_folder then calls application_mkdir.</p></li>
+</ul>
+
+<h4>AppWindow</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GtkWindow.</p>
+
+<pre><code>
+    GtkWindow
+        GtkGrid
+            ------------------------------------------------
+            GtkToolbar
+                GtkToolItem
+                    LocationBar (GtkBox)
+                        PathEntry (GtkEntry)
+            ------------------------------------------------
+            GtkPaned
+                pane1
+                    SidePane (window_install_sidepane)
+                pane2
+                    DetailView (_window_create_detailview)
+            ------------------------------------------------
+            GtkStatusbar
+
+</code></pre></li>
+</ul>
+
+<h4>ThunarLauncher</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GObject used to execute actions from particular widgets. Window,
+and TreeView have a ThunarLauncher.</p></li>
+</ul>
+
+<h4>AppMenu</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p><a href="https://alexxcons.github.io/blogpost_1.html">https://alexxcons.github.io/blogpost_1.html</a>  </p>
+
+<p>AppMenu is a GtkMenu used as a popup menu in the TreeView and the
+StandardView. It&#39;s created using g_object_new and filled with
+appmenu_add_sections. First, the Launcher informations are filled,
+then the popup is created, then selecting an item will call a launcher
+function on the corresponding Launcher object.</p></li>
+<li><p>TreeView</p>
+
+<p>The menu is created from the widget&#39;s popup handler which calls the
+treeview_popup_menu function and then <strong>_treeview_context_menu</strong>.</p></li>
+<li><p>StandardView</p>
+
+<p>The widget creates its popup in response to a button-release-event signal,
+it calls the _standard_view_button_release_event function and then it
+calls <strong>standard_view_context_menu</strong>.</p></li>
+</ul>
+
+<p><br></p>

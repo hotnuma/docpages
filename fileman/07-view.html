@@ -1,0 +1,73 @@
+<p><link href="style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="00-Home.html">Home</a> | <a href="01-Core.html">Core</a> | <a href="02-Dialog.html">Dialog</a> | <a href="03-Job.html">Job</a> | <a href="04-Libext.html">Libext</a> | <a href="05-Misc.html">Misc</a> | <a href="06-Side.html">Side</a> | View | <a href="08-Widget.html">Widget</a> | <a href="99-Other.html">Other</a> ]</strong></p>
+
+<h2>View</h2>
+
+<hr>
+
+<h4>Files</h4>
+
+<pre><code>    + view/baseview.c
+    + view/standardview.c
+    + view/exotreeview.c
+    + view/detailview.c
+    + view/listmodel.c
+    + view/columnmodel.c
+</code></pre>
+
+<h4>BaseView</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GTypeInterface to implement a base list view.</p></li>
+</ul>
+
+<h4>StandardView</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GtkScrolledWindow which implements a Navigator, Component
+and BaseView interface. It contains a DetailView, it can create
+a select by pattern dialog box.</p></li>
+</ul>
+
+<h4>ExoTreeView</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GtkTreeView with extended rubber banding and single click activate.</p></li>
+</ul>
+
+<h4>DetailView</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A StandardView containing an ExoTreeView.</p></li>
+</ul>
+
+<h4>ListModel</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GObject which implements GtkTreeModel, GtkTreeDragDest,
+and GtkTreeSortable. It&#39;s the model used by the ExoTreeView
+to display files.</p></li>
+</ul>
+
+<h4>ColumnModel</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A GObject which implements GtkTreeModel.</p></li>
+</ul>
+
+<p><br>
+<br>
+<br></p>
