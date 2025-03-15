@@ -79,13 +79,15 @@ sudo meson install -C build
 </code></pre></li>
 <li><p>labwc</p>
 
+<p>needed ? librsvg-2.0 scdoc</p>
+
 <p><a href="https://github.com/labwc/labwc?tab=readme-ov-file#2-build-and-installation">https://github.com/labwc/labwc?tab=readme-ov-file#2-build-and-installation</a><br>
 (depends on wlroots-0.18)</p>
 
 <pre><code>git clone https://github.com/labwc/labwc.git &amp;&amp; cd labwc
-meson setup build --wrap-mode=nodownload -Dxwayland=disabled
+meson setup build -Dxwayland=disabled
 meson compile -C build
-sudo meson install -C build --skip-subprojects
+sudo meson install -C build
 </code></pre>
 
 <p><br/></p></li>
