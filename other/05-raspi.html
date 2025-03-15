@@ -6,12 +6,6 @@
 
 <hr>
 
-<!--
-https://askubuntu.com/questions/98223/  
-https://www.guyrutenberg.com/2022/03/19/list-obsolete-packages-using-apt/  
-https://linux.debian.bugs.dist.narkive.com/bpw1NCJt/  
--->
-
 <h4>Install RaspiOS Lite 64</h4>
 
 <ul>
@@ -49,7 +43,9 @@ reboot
 <pre><code>sudo apt update &amp;&amp; sudo apt upgrade
 sudo apt full-upgrade
 reboot
-</code></pre></li>
+</code></pre>
+
+<p>list raspi packages : <code>apt list ?obsolete</code></p></li>
 <li><p>Install XFCE</p>
 
 <pre><code>sudo tasksel
@@ -57,16 +53,8 @@ reboot
 
 sudo systemctl set-default graphical.target
 sudo apt purge plymouth
-sudo apt install labwc swaybg kanshi
 reboot
-</code></pre>
-
-<p>from XFCE desktop :</p>
-
-<p><a href="https://labwc.github.io/getting-started.html">https://labwc.github.io/getting-started.html</a>  </p>
-
-<p>create configuration files for labwc in ~/.config/labwc<br>
-reboot and select the labwc session  </p></li>
+</code></pre></li>
 </ul>
 
 <h4>Install Debian Trixie</h4>
@@ -74,7 +62,8 @@ reboot and select the labwc session  </p></li>
 <ul>
 <li><p>Installation</p>
 
-<p>Download an image from daily builds : <a href="https://raspi.debian.net/daily-images/">https://raspi.debian.net/daily-images/</a>  </p>
+<p>Download an image from daily builds :<br>
+<a href="https://raspi.debian.net/daily-images/">https://raspi.debian.net/daily-images/</a>  </p>
 
 <p>Default user is <strong>root</strong> with empty password.</p>
 
@@ -90,35 +79,38 @@ usermod -aG sudo &lt;username&gt;
 reboot
 
 (log as new user)
+
 sudo tasksel
 (select debian desktop and xfce)
-sudo reboot
 
 sudo apt purge plymouth
-sudo apt install labwc swaybg kanshi
+sudo reboot
 </code></pre>
 
-<p><a href="https://labwc.github.io/getting-started.html">https://labwc.github.io/getting-started.html</a><br>
-create configuration files for labwc in ~/.config/labwc  </p>
-
-<p>Add hostname manually in /etc/hosts :</p>
+<p>Add hostname manually in <code>/etc/hosts</code> :</p>
 
 <pre><code>127.0.0.1   localhost
 127.0.1.1   &lt;hostname&gt;
 ::1 localhost ip6-localhost ip6-loopback
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
-</code></pre>
-
-<p>reboot and use labwc session on startup</p></li>
+</code></pre></li>
 </ul>
 
 <h4>Manual configuration</h4>
 
 <ul>
+<li><p>Install labwc</p>
+
+<p><code>sudo apt install labwc swaybg kanshi</code></p>
+
+<p><a href="https://labwc.github.io/getting-started.html">https://labwc.github.io/getting-started.html</a>  </p>
+
+<p>create configuration files for labwc in <code>~/.config/labwc</code><br>
+reboot and select the labwc session  </p></li>
 <li><p>Menu icons</p>
 
-<p>create settings.ini into ~/.config/gtk-3.0 :</p>
+<p>create settings.ini into <code>~/.config/gtk-3.0</code> :</p>
 
 <pre><code>[Settings]
 gtk-button-images=1

@@ -6,12 +6,6 @@
 
 ---
 
-<!--
-https://askubuntu.com/questions/98223/  
-https://www.guyrutenberg.com/2022/03/19/list-obsolete-packages-using-apt/  
-https://linux.debian.bugs.dist.narkive.com/bpw1NCJt/  
--->
-
 #### Install RaspiOS Lite 64
 
 * Copy image
@@ -55,6 +49,8 @@ https://linux.debian.bugs.dist.narkive.com/bpw1NCJt/
     sudo apt full-upgrade
     reboot
     ```
+    
+    list raspi packages : `apt list ?obsolete`
 
 * Install XFCE
 
@@ -64,23 +60,16 @@ https://linux.debian.bugs.dist.narkive.com/bpw1NCJt/
     
     sudo systemctl set-default graphical.target
     sudo apt purge plymouth
-    sudo apt install labwc swaybg kanshi
     reboot
     ```
-    
-    from XFCE desktop :
-    
-    https://labwc.github.io/getting-started.html  
-    
-    create configuration files for labwc in ~/.config/labwc  
-    reboot and select the labwc session  
-    
+
 
 #### Install Debian Trixie
 
 * Installation
     
-    Download an image from daily builds : https://raspi.debian.net/daily-images/  
+    Download an image from daily builds :  
+    https://raspi.debian.net/daily-images/  
     
     Default user is **root** with empty password.
 
@@ -97,18 +86,15 @@ https://linux.debian.bugs.dist.narkive.com/bpw1NCJt/
     reboot
 
     (log as new user)
+    
     sudo tasksel
     (select debian desktop and xfce)
-    sudo reboot
     
     sudo apt purge plymouth
-    sudo apt install labwc swaybg kanshi
+    sudo reboot
     ```
 
-    https://labwc.github.io/getting-started.html  
-    create configuration files for labwc in ~/.config/labwc  
-    
-    Add hostname manually in /etc/hosts :
+    Add hostname manually in `/etc/hosts` :
 
     ```
     127.0.0.1	localhost
@@ -117,15 +103,22 @@ https://linux.debian.bugs.dist.narkive.com/bpw1NCJt/
     ff02::1	ip6-allnodes
     ff02::2	ip6-allrouters
     ```
-    
-    reboot and use labwc session on startup
 
 
 #### Manual configuration
 
+* Install labwc
+
+    `sudo apt install labwc swaybg kanshi`
+    
+    https://labwc.github.io/getting-started.html  
+    
+    create configuration files for labwc in `~/.config/labwc`  
+    reboot and select the labwc session  
+
 * Menu icons
     
-    create settings.ini into ~/.config/gtk-3.0 :
+    create settings.ini into `~/.config/gtk-3.0` :
     
     ```
     [Settings]
