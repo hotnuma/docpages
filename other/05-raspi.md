@@ -6,10 +6,14 @@
 
 ---
 
-#### Install RaspiOS Lite 64
+#### RaspiOS Lite 64
 
-* Copy image
+* Installation
 
+    [raspberry-pi-os-64-bit](https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit)  
+    
+    Download RaspiOS Lite 64 bits and copy the image :
+    
     *replace sdX with the corresponding device, for example sdc*
 
     ```
@@ -51,6 +55,8 @@
     ```
     
     list raspi packages : `apt list ?obsolete`
+    
+    *not really obsolete, rather locally installed*
 
 * Install XFCE
 
@@ -64,12 +70,14 @@
     ```
 
 
-#### Install Debian Trixie
+#### Debian Trixie
 
 * Installation
     
     Download an image from daily builds :  
     https://raspi.debian.net/daily-images/  
+    
+    *the FAQ says these images are not compatible with the RPI 5*
     
     Default user is **root** with empty password.
 
@@ -84,9 +92,11 @@
     passwd <username>
     usermod -aG sudo <username>
     reboot
+    ```
 
-    (log as new user)
+    log as new user
     
+    ```
     sudo tasksel
     (select debian desktop and xfce)
     
@@ -114,6 +124,13 @@
     https://labwc.github.io/getting-started.html  
     
     create configuration files for labwc in `~/.config/labwc`  
+    
+    configs and themes : 
+    
+    https://github.com/hotnuma/sysconfig/tree/master/labwc  
+    
+    *these need tweaking, for example "environment" has an Azerty keyboard*
+    
     reboot and select the labwc session  
 
 * Menu icons
