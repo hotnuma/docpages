@@ -6,6 +6,12 @@
 
 ---
 
+<!--
+https://askubuntu.com/questions/98223/  
+https://www.guyrutenberg.com/2022/03/19/list-obsolete-packages-using-apt/  
+https://linux.debian.bugs.dist.narkive.com/bpw1NCJt/  
+-->
+
 #### Install RaspiOS Lite 64
 
 * Copy image
