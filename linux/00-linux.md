@@ -144,6 +144,12 @@ https://wiki.debian.org/HardwareVideoAcceleration
     
     installed package : `dpkg-query -L <package_name>`
 
+* List obsolete packages
+    
+    https://www.guyrutenberg.com/2022/03/19/list-obsolete-packages-using-apt/  
+    
+    `apt list ?obsolete`
+
 * Purge Apt Cache
 
     `sudo apt clean; sudo apt autoclean`
@@ -151,15 +157,6 @@ https://wiki.debian.org/HardwareVideoAcceleration
 * Remove useless packages
 
     `sudo apt autopurge`
-    
-    or
-    
-    `sudo apt autoremove`
-    
-    or
-    
-    `sudo apt autoremove --purge`
-    
 
 * Search package name
 
