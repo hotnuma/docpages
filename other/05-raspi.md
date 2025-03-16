@@ -8,13 +8,6 @@
 
 #### References
 
-* Rpi
-
-    https://github.com/orgs/raspberrypi-ui/repositories  
-    https://github.com/orgs/RPi-Distro/repositories  
-    https://github.com/orgs/raspberrypi/repositories  
-    https://github.com/raspberrypi/bookworm-feedback/issues  
-    
 * Labwc
     
     https://labwc.github.io/getting-started.html  
@@ -280,8 +273,12 @@
 
 #### Old raspi docs
 
-* rpi links
+* Rpi
 
+    https://github.com/orgs/raspberrypi-ui/repositories  
+    https://github.com/orgs/RPi-Distro/repositories  
+    https://github.com/orgs/raspberrypi/repositories  
+    https://github.com/raspberrypi/bookworm-feedback/issues  
     https://www.raspberrypi.com/documentation/  
     https://www.raspberrypi.com/documentation/computers/raspberry-pi.html  
     https://linuxhint.com/gpio-pinout-raspberry-pi/  
