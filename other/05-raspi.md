@@ -83,9 +83,8 @@
     reboot
     ```
 
-* Upgrade errors
+* Upgrade error
     
-    https://askubuntu.com/questions/16007/  
     https://serverfault.com/questions/905921/  
     
     ```
@@ -95,9 +94,11 @@
     grep -r MODULES /etc/initramfs-tools
     ```
     
+    check MODULES : `grep -r MODULES= /etc/initramfs-tools`
+    
     `sudo nano /etc/initramfs-tools/initramfs.conf`
     
-    change **MODULES=most** to **MODULES=dep**
+    change **MODULES=dep** to **MODULES=most**
     
     `update-initramfs -u`
 
