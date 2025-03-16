@@ -7,20 +7,10 @@
 <hr>
 
 <ul>
-<li><p>libsfdo</p>
+<li><p>labwc</p>
 
-<p><a href="https://gitlab.freedesktop.org/vyivel/libsfdo">https://gitlab.freedesktop.org/vyivel/libsfdo</a>  </p>
-
-<pre><code>git clone https://gitlab.freedesktop.org/vyivel/libsfdo.git
-cd libsfdo
-meson setup build
-meson compile -C build
-sudo meson install -C build
-</code></pre></li>
-<li><p>wlroots</p>
-
-<p><a href="https://gitlab.freedesktop.org/wlroots/wlroots">https://gitlab.freedesktop.org/wlroots/wlroots</a><br>
-<a href="https://packages.debian.org/trixie/libwlroots-0.18">https://packages.debian.org/trixie/libwlroots-0.18</a>  </p>
+<p><a href="https://github.com/labwc/labwc?tab=readme-ov-file#2-build-and-installation">https://github.com/labwc/labwc?tab=readme-ov-file#2-build-and-installation</a><br>
+(depends on wlroots-0.18)</p>
 
 <pre><code>builddep libwlroots-0.18
 
@@ -49,8 +39,10 @@ pkgconf \
 wayland-protocols \
 </code></pre>
 
-<pre><code>git clone https://gitlab.freedesktop.org/wlroots/wlroots.git &amp;&amp; cd wlroots
-meson setup build -Dexamples=false -Dxwayland=disabled
+<pre><code>git clone https://github.com/labwc/labwc.git &amp;&amp; cd labwc
+meson setup build -Dxwayland=disabled
+meson compile -C build
+sudo meson install -C build
 </code></pre>
 
 <p>wlroots 0.19.0-dev</p>
@@ -72,23 +64,37 @@ meson setup build -Dexamples=false -Dxwayland=disabled
   User defined options
     examples         : false
     xwayland         : disabled
-</code></pre>
-
-<pre><code>meson compile -C build
-sudo meson install -C build
 </code></pre></li>
-<li><p>labwc</p>
-
-<p>needed ? librsvg-2.0 scdoc</p>
-
-<p><a href="https://github.com/labwc/labwc?tab=readme-ov-file#2-build-and-installation">https://github.com/labwc/labwc?tab=readme-ov-file#2-build-and-installation</a><br>
-(depends on wlroots-0.18)</p>
-
-<pre><code>git clone https://github.com/labwc/labwc.git &amp;&amp; cd labwc
-meson setup build -Dxwayland=disabled
-meson compile -C build
-sudo meson install -C build
-</code></pre>
-
-<p><br/></p></li>
 </ul>
+
+<!--
+
+* libsfdo
+
+    https://gitlab.freedesktop.org/vyivel/libsfdo  
+    
+    ```
+    git clone https://gitlab.freedesktop.org/vyivel/libsfdo.git
+    cd libsfdo
+    meson setup build
+    meson compile -C build
+    sudo meson install -C build
+    ```
+
+* wlroots
+
+    https://gitlab.freedesktop.org/wlroots/wlroots  
+    https://packages.debian.org/trixie/libwlroots-0.18  
+
+    ```
+    git clone https://gitlab.freedesktop.org/wlroots/wlroots.git && cd wlroots
+    meson setup build -Dexamples=false -Dxwayland=disabled
+    ```
+
+    ```
+    meson compile -C build
+    sudo meson install -C build
+    ```
+-->
+
+<p><br/></p>

@@ -8,6 +8,13 @@
 
 #### References
 
+* Rpi
+
+    https://github.com/orgs/raspberrypi-ui/repositories  
+    https://github.com/orgs/RPi-Distro/repositories  
+    https://github.com/orgs/raspberrypi/repositories  
+    https://github.com/raspberrypi/bookworm-feedback/issues  
+    
 * Labwc
     
     https://labwc.github.io/getting-started.html  
@@ -63,9 +70,7 @@
     reboot
     ```
     
-    list raspi packages : `apt list ?obsolete`
-    
-    *not really obsolete, rather locally installed*
+    list local raspi packages : `apt list ?obsolete`
 
 * Install XFCE
 
@@ -163,7 +168,7 @@
     https://hotnuma.github.io/docpages/linux/10-network.html  
 
 
-#### Startup
+#### System Startup
 
 * Lightdm config
 
@@ -204,6 +209,10 @@
     sudo apt install apt-file
     sudo apt-file update
     ```
+    
+* Other programs
+    
+    `sudo apt install hardinfo inxi`
 
 * Read CPU temperature
 
@@ -231,6 +240,15 @@
     fine with Pi computers. It supports UASP in RPiOS, and TRIM works
     with a udev rule.
     ```
+    
+* Board model
+    
+    `cat /sys/firmware/devicetree/base/model`
+
+* Release notes : 
+    
+    https://downloads.raspberrypi.org/raspios_arm64/release_notes.txt  
+
 
 
 <br/>
@@ -243,64 +261,15 @@
 
 #### Old raspi docs
 
- `sudo apt install xfce4`
- 
-* Images
-    
-    [raspberry-pi-os-64-bit](https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit)  
-    https://raspi.debian.net/daily-images/  
+* rpi links
 
-* Rpi
-
-    https://github.com/orgs/raspberrypi-ui/repositories  
-    https://github.com/orgs/RPi-Distro/repositories  
-    https://github.com/orgs/raspberrypi/repositories  
-    https://github.com/raspberrypi/bookworm-feedback/issues  
-    
-* gvfs-backends
-    
-    `sudo apt purge gvfs-backends`
-
-* Startup script
-
-    ```
-    cat /usr/share/wayland-sessions/LXDE-pi-labwc.desktop | grep Exec
-    
-    Exec=/usr/bin/labwc-pi
-    ```
-
-* Board model
-    
-    `cat /sys/firmware/devicetree/base/model`
-
-* Release notes : 
-    
-    https://downloads.raspberrypi.org/raspios_arm64/release_notes.txt  
-
-* desktop portals
-
-    `sudo apt purge xdg-desktop-portal*`
-    
-* other programs
-    
-    `sudo apt install hardinfo inxi`
-
-* build labwc
-
-    ```
-    dest=/usr/local/bin/labwc
-    if [[ ! -f "$dest" ]]; then
-        echo "*** build labwc" | tee -a "$outfile"
-        # sudo apt install libdrm-dev libinput-dev
-        git clone https://github.com/labwc/labwc.git \
-        && pushd labwc 1>/dev/null
-        meson setup build -Dxwayland=disabled | tee -a "$outfile"
-        meson compile -C build | tee -a "$outfile"
-        sudo meson install --skip-subprojects -C build | tee -a "$outfile"
-        test "$?" -eq 0 || error_exit "installation failed"
-        popd 1>/dev/null
-    fi
-    ```
+    https://www.raspberrypi.com/documentation/  
+    https://www.raspberrypi.com/documentation/computers/raspberry-pi.html  
+    https://linuxhint.com/gpio-pinout-raspberry-pi/  
+    [tearing_test](https://www.youtube.com/watch?v=cuXsupMuik4)  
+    [howto_desktops](https://forums.raspberrypi.com/viewtopic.php?t=133691)  
+    [howto_autostart](https://forums.raspberrypi.com/viewtopic.php?t=294014)  
+    https://github.com/raspberrypi/rpi-eeprom  
 
 * Install Thorium Browser
 
@@ -309,7 +278,6 @@
     `sudo unzip -d /opt/thorium thorium-browser_128.0.6613.194_arm64.zip`
     
     under wayland : `/opt/thorium/thorium --ozone-platform=wayland`
-
 
 * Avoid keyring password
     
@@ -323,13 +291,6 @@
 
     [best-ssd-storage](https://jamesachambers.com/best-ssd-storage-adapters-for-raspberry-pi-4-400/)  
 
-* Session
-
-    https://askubuntu.com/questions/77191/  
-
-    _The Name entry is what lightdm would display for this session. The Exec entry is the important thing, and it should be the name of the program that starts the actual session. When you log in, lightdm calls the /etc/X11/Xsession script, passing it the value of Exec as an argument, and Xsession will, eventually, execute this program (for example, it could be startxfce4 for starting a xfce4 session). If the Exec entry is the special string default, then Xsession will execute the user's ~/.xsession file. (Xsession would also execute ~/.xsession if it's called without arguments.)_
-
-
 * Revert to specific firmware using git commit hash
 
     https://www.raspberrypi.com/documentation/computers/os.html  
@@ -342,31 +303,6 @@
     sudo apt update
     sudo apt install --reinstall libraspberrypi0 libraspberrypi-{bin,dev,doc} raspberrypi-bootloader raspberrypi-kernel
     ```
-
-* OpenBox Config
-
-    Openbox is set in `~/config/lxsession/LXDE-pi/desktop.conf` using a wrapper script.
-
-    ```
-    cat /usr/bin/openbox-lxde-pi 
-    #!/bin/sh
-    exec openbox --config-file $XDG_CONFIG_HOME/openbox/lxde-pi-rc.xml $@
-    ```
-
-    The default config file should be `$HOME/.config/openbox/lxde-pi-rc.xml` but it's possible to set openbox in `desktop.conf` and use `/home/pi/.config/openbox/rc.xml`
-
-    ```
-    [Session]
-    window_manager=openbox
-    ```
-
-    reload config : `openbox --reconfigure`
-
-* Picom
-    
-    https://wiki.archlinux.org/title/picom  
-    
-    `picom --backend glx`
 
 * Fix screen tearing
     
@@ -413,10 +349,6 @@
     
     `video=HDMI-1:800x480@60`
 
-* Glamor
-    
-    `/usr/share/X11/xorg.conf.d/20-noglamor.conf`
-
 * Test RPi version
 
     https://forums.raspberrypi.com/viewtopic.php?t=34678  
@@ -438,19 +370,6 @@
     cat /sys/firmware/devicetree/base/model
     ```
 
-* Transfer Data Through Bluetooth
-    
-    [https://linuxhint.com/transfer-data-through-bluetooth-raspbe](https://linuxhint.com/transfer-data-through-bluetooth-raspberry-pi/)  
-
-* GPIO Programming
-
-    https://forums.raspberrypi.com/viewtopic.php?t=327539  
-
-* C++ SSD1306 I2C LCD
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=224984  
-    https://forums.raspberrypi.com/viewtopic.php?t=171817  
-
 * Anti-rpi
 
     https://www.fsf.org/resources/hw/single-board-computers  
@@ -458,7 +377,6 @@
 
     Limitations
     
-    - no real time clock
     - 1.2A current limit for all USB plugs
     - slow SD controller (40 MB/s)
     - incompatible usb to sata controllers
@@ -474,39 +392,6 @@
     https://gist.github.com/jauderho/6b7d42030e264a135450ecc0ba521bd8  
     https://raspberrytips.com/update-raspberry-pi-latest-version/  
 
-* Install previous version
-    
-    https://unix.stackexchange.com/questions/242014/  
-    
-    `sudo apt install openbox=3.6.1-9+rpt1+deb11u1`
-
-    https://forums.raspberrypi.com/search.php?search_id=newposts  
-
-    https://www.raspberrypi.com/documentation/  
-    https://www.raspberrypi.com/documentation/computers/raspberry-pi.html  
-    https://linuxhint.com/gpio-pinout-raspberry-pi/  
-    [tearing_test](https://www.youtube.com/watch?v=cuXsupMuik4)  
-    [howto_desktops](https://forums.raspberrypi.com/viewtopic.php?t=133691)  
-    [howto_autostart](https://forums.raspberrypi.com/viewtopic.php?t=294014)  
-
-    https://downloads.raspberrypi.org/raspios_arm64/images/  
-    https://github.com/raspberrypi/rpi-eeprom  
-
-    STATUS="Labwc on Wayland"
-    autologin-session=LXDE-pi-labwc/"
-    if [ -e "/var/lib/AccountsService/users/$USER" ] ; then
-      sed "/var/lib/AccountsService/users/$USER" -i -e "s/XSession=.*/XSession=LXDE-pi-wayfire/"
-    fi
-
-* Compton
-
-    https://www.youtube.com/watch?v=3esPpe-fclI  
-    https://gist.github.com/kelleyk/6beba22586ac0c40aa30  
-    
-    ```
-    compton --backend glx --unredir-if-possible --vsync opengl-swc
-    compton --backend glx --vsync opengl-swc
-    ```
 -->
 
 

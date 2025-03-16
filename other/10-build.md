@@ -6,22 +6,10 @@
 
 ---
 
-* libsfdo
+* labwc
 
-    https://gitlab.freedesktop.org/vyivel/libsfdo  
-    
-    ```
-    git clone https://gitlab.freedesktop.org/vyivel/libsfdo.git
-    cd libsfdo
-    meson setup build
-    meson compile -C build
-    sudo meson install -C build
-    ```
-
-* wlroots
-
-    https://gitlab.freedesktop.org/wlroots/wlroots  
-    https://packages.debian.org/trixie/libwlroots-0.18  
+    https://github.com/labwc/labwc?tab=readme-ov-file#2-build-and-installation  
+    (depends on wlroots-0.18)
 
     ```
     builddep libwlroots-0.18
@@ -52,10 +40,12 @@
     ```
 
     ```
-    git clone https://gitlab.freedesktop.org/wlroots/wlroots.git && cd wlroots
-    meson setup build -Dexamples=false -Dxwayland=disabled
+    git clone https://github.com/labwc/labwc.git && cd labwc
+    meson setup build -Dxwayland=disabled
+    meson compile -C build
+    sudo meson install -C build
     ```
-
+    
     wlroots 0.19.0-dev
 
     ```
@@ -78,23 +68,36 @@
         xwayland         : disabled
     ```
 
+<!--
+
+* libsfdo
+
+    https://gitlab.freedesktop.org/vyivel/libsfdo  
+    
     ```
+    git clone https://gitlab.freedesktop.org/vyivel/libsfdo.git
+    cd libsfdo
+    meson setup build
     meson compile -C build
     sudo meson install -C build
     ```
 
-* labwc
-    
-    needed ? librsvg-2.0 scdoc
-    
-    https://github.com/labwc/labwc?tab=readme-ov-file#2-build-and-installation  
-    (depends on wlroots-0.18)
+* wlroots
+
+    https://gitlab.freedesktop.org/wlroots/wlroots  
+    https://packages.debian.org/trixie/libwlroots-0.18  
 
     ```
-    git clone https://github.com/labwc/labwc.git && cd labwc
-    meson setup build -Dxwayland=disabled
+    git clone https://gitlab.freedesktop.org/wlroots/wlroots.git && cd wlroots
+    meson setup build -Dexamples=false -Dxwayland=disabled
+    ```
+
+    ```
     meson compile -C build
     sudo meson install -C build
     ```
+-->
+
 <br/>
+
 

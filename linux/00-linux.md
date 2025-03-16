@@ -465,6 +465,10 @@ https://wiki.debian.org/HardwareVideoAcceleration
     console : `Ctrl+Alt+F1`  
     graphical : `Ctrl+Alt+F7`  
 
+* Uninstall desktop portals
+
+    `sudo apt purge xdg-desktop-portal*`
+
 <br/>
 
 
