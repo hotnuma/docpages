@@ -11,10 +11,16 @@
     ```
     sudo apt install \
     apt-file build-essential clang-format gettext git gtk-3-examples \
-    libgd-dev libglib2.0-doc libgtk-3-dev libgtk-3-doc libgudev-1.0-dev \
-    libgumbo-dev libmediainfo-dev libnotify-dev libwnck-3-dev \
-    libxfce4ui-2-dev libxfconf-0-dev libxml2-dev libxmu-dev libxss-dev meson \
-    ninja-build pkg-config xfce4-dev-tools
+    libglib2.0-doc libgtk-3-dev libgtk-3-doc libxml2-dev meson
+    ```
+
+* common libraries
+
+    ```
+    sudo apt install \
+    libgd-dev libgudev-1.0-dev libgumbo-dev libmediainfo-dev libnotify-dev \
+    libwnck-3-dev libxfce4ui-2-dev libxfconf-0-dev libxmu-dev libxss-dev \
+    xfce4-dev-tools
     ```
 
 * build instructions
