@@ -1,0 +1,66 @@
+<link href="../style.css" rel="stylesheet"></link>
+
+**[ [Home](../index.html) | [Build](10-build.html) ]**
+
+## Labwc
+
+---
+
+* labwc
+
+    https://github.com/labwc/labwc?tab=readme-ov-file#2-build-and-installation  
+    (depends on wlroots-0.18)
+
+    ```
+    builddep libwlroots-0.18
+
+    sudo apt install \
+    dpkg-dev glslang-tools hwdata libcap-dev libcairo2-dev \
+    libdisplay-info-dev libdrm-dev libegl1-mesa-dev libegl-dev libgbm-dev \
+    libgles2-mesa-dev libinput-dev liblcms2-dev libliftoff-dev \
+    libpixman-1-dev libpng-dev libseat-dev libsystemd-dev libvulkan-dev \
+    libwayland-dev pkgconf wayland-protocols
+    ```
+
+    ```
+    git clone https://github.com/labwc/labwc.git && cd labwc
+    meson setup build -Dxwayland=disabled
+    meson compile -C build
+    sudo meson install -C build
+    ```
+    
+    wlroots 0.19.0-dev
+
+    ```
+        drm-backend      : YES
+        x11-backend      : NO
+        libinput-backend : YES
+        xwayland         : NO
+        gles2-renderer   : YES
+        vulkan-renderer  : YES
+        gbm-allocator    : YES
+        udmabuf-allocator: YES
+        session          : YES
+        color-management : YES
+        xcb-errors       : NO
+        egl              : YES
+        libliftoff       : YES
+
+      User defined options
+        examples         : false
+        xwayland         : disabled
+    ```
+
+* labwc-tweaks-gtk
+
+    ```
+    git clone https://github.com/labwc/labwc-tweaks-gtk.git
+    cd labwc-tweaks-gtk
+    meson setup build
+    meson compile -C build
+    sudo meson install -C build
+    ```
+
+<br/>
+
+

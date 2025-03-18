@@ -1,0 +1,19 @@
+<p><link href="../style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="../index.html">Home</a> | <a href="10-build.html">Build</a> ]</strong></p>
+
+<h2>Rofi</h2>
+
+<hr>
+
+<ul>
+<li><p>rofi</p>
+
+<pre><code>git clone https://github.com/lbonn/rofi.git &amp;&amp; cd rofi
+meson setup build -Dcheck=disabled -Dxcb=disabled
+meson compile -C build
+sudo meson install -C build
+</code></pre></li>
+</ul>
+
+<p><br/></p>

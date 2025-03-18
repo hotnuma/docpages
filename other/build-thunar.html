@@ -1,0 +1,28 @@
+<p><link href="../style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="../index.html">Home</a> | <a href="10-build.html">Build</a> ]</strong></p>
+
+<h2>Thunar</h2>
+
+<hr>
+
+<ul>
+<li><p>thunar</p>
+
+<pre><code>sudo apt install \
+gettext libexif-dev libexo-2-dev libglib2.0-dev libgtk-3-dev \
+libgudev-1.0-dev libjpeg-dev libnotify-dev libpcre2-dev \
+libxfce4panel-2.0-dev libxfce4ui-2-dev libxfce4util-dev libxfconf-0-dev \
+xfce4-dev-tools gtk-doc-tools autopoint
+</code></pre>
+
+<pre><code>git clone https://gitlab.xfce.org/xfce/thunar &amp;&amp; cd thunar
+# optional step. Per default master is checked out
+git checkout &lt;branch|tag&gt;
+./autogen.sh
+make -j 4
+sudo make install
+</code></pre></li>
+</ul>
+
+<p><br/></p>
