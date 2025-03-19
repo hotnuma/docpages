@@ -88,9 +88,6 @@ systemctl poweroff
 <li><p>Enable non-free-firmware</p>
 
 <p><a href="https://www.linuxtricks.fr/wiki/debian-configurer-les-sources-activer-non-free-et-contrib">https://www.linuxtricks.fr/wiki</a>  </p></li>
-<li><p>End of life releases</p>
-
-<p><a href="https://doc.ubuntu-fr.org/old-releases">https://doc.ubuntu-fr.org/old-releases</a>  </p></li>
 <li><p>Find the package that provides a file</p>
 
 <p><a href="https://askubuntu.com/questions/481/">https://askubuntu.com/questions/481/</a>  </p>
@@ -108,6 +105,33 @@ systemctl poweroff
 <pre><code>sudo apt update
 apt source &lt;package&gt;
 </code></pre></li>
+<li><p>Install python programs</p>
+
+<p><a href="https://stackoverflow.com/questions/58831133/">https://stackoverflow.com/questions/58831133/</a><br>
+<a href="https://luminousmen.com/post/why-use-pip-install-user">https://luminousmen.com/post/why-use-pip-install-user</a>  </p>
+
+<p>create an alias such as :  </p>
+
+<p><code>alias pyinst=&#39;python3 -m pip install --break-system-packages --user&#39;</code></p>
+
+<p>then run : <code>pyinst &lt;appname&gt;</code></p></li>
+<li><p>List dependencies</p>
+
+<p><a href="https://askubuntu.com/questions/80655/">https://askubuntu.com/questions/80655/</a>  </p>
+
+<p><code>apt-cache depends &lt;package&gt;</code></p>
+
+<p><code>apt-cache rdepends &lt;package&gt;</code></p>
+
+<p><code>apt-cache rdepends --installed &lt;package&gt;</code></p></li>
+<li><p>List files from a package</p>
+
+<p><a href="https://serverfault.com/questions/96964/">https://serverfault.com/questions/96964/</a><br>
+<a href="https://askubuntu.com/questions/32507/">https://askubuntu.com/questions/32507/</a>  </p>
+
+<p><code>dpkg -L &lt;package&gt;</code></p>
+
+<p><code>dpkg-query -L &lt;package_name&gt;</code></p></li>
 <li><p>List installed packages</p>
 
 <p><code>dpkg -l</code></p>
@@ -117,11 +141,6 @@ apt source &lt;package&gt;
 <p><code>apt list thunar</code></p>
 
 <p><code>apt list --installed | grep glib</code></p></li>
-<li><p>List files from a package</p>
-
-<p><a href="https://askubuntu.com/questions/32507/">https://askubuntu.com/questions/32507/</a>  </p>
-
-<p>installed package : <code>dpkg-query -L &lt;package_name&gt;</code></p></li>
 <li><p>List obsolete packages</p>
 
 <p><a href="https://www.guyrutenberg.com/2022/03/19/list-obsolete-packages-using-apt/">https://www.guyrutenberg.com/2022/03/19/list-obsolete-packages-using-apt/</a>  </p>
@@ -138,25 +157,11 @@ apt source &lt;package&gt;
 <p><code>apt search thunar</code></p></li>
 <li><p>System upgrade</p>
 
-<pre><code>sudo apt update
-sudo apt upgrade
-</code></pre>
+<p><code>sudo apt update &amp;&amp; sudo apt upgrade</code></p>
 
-<p>or
-<code>
-sudo apt update
-sudo apt full-upgrade
-</code></p></li>
-<li><p>Install python programs</p>
+<p>or</p>
 
-<p><a href="https://stackoverflow.com/questions/58831133/">https://stackoverflow.com/questions/58831133/</a><br>
-<a href="https://luminousmen.com/post/why-use-pip-install-user">https://luminousmen.com/post/why-use-pip-install-user</a>  </p>
-
-<p>create an alias such as :  </p>
-
-<p><code>alias pyinst=&#39;python3 -m pip install --break-system-packages --user&#39;</code></p>
-
-<p>then run : <code>pyinst &lt;appname&gt;</code></p></li>
+<p><code>sudo apt update &amp;&amp; sudo apt full-upgrade</code></p></li>
 <li><p>yt-dlp</p>
 
 <p><a href="https://github.com/yt-dlp/yt-dlp">https://github.com/yt-dlp/yt-dlp</a>  </p>
@@ -402,5 +407,11 @@ graphical : <code>Ctrl+Alt+F7</code>  </p></li>
 
 <p><code>sudo apt purge xdg-desktop-portal*</code></p></li>
 </ul>
+
+<!--
+* End of life releases
+    
+    https://doc.ubuntu-fr.org/old-releases  
+-->
 
 <p><br/></p>

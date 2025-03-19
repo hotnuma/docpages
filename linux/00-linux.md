@@ -103,10 +103,6 @@ https://wiki.debian.org/HardwareVideoAcceleration
     
     [https://www.linuxtricks.fr/wiki](https://www.linuxtricks.fr/wiki/debian-configurer-les-sources-activer-non-free-et-contrib)  
 
-* End of life releases
-    
-    https://doc.ubuntu-fr.org/old-releases  
-    
 * Find the package that provides a file
     
     https://askubuntu.com/questions/481/  
@@ -128,6 +124,36 @@ https://wiki.debian.org/HardwareVideoAcceleration
     apt source <package>
     ```
 
+* Install python programs
+    
+    https://stackoverflow.com/questions/58831133/  
+    https://luminousmen.com/post/why-use-pip-install-user  
+    
+    create an alias such as :  
+    
+    `alias pyinst='python3 -m pip install --break-system-packages --user'`
+    
+    then run : `pyinst <appname>`
+    
+* List dependencies
+    
+    https://askubuntu.com/questions/80655/  
+    
+    `apt-cache depends <package>`
+
+    `apt-cache rdepends <package>`
+    
+    `apt-cache rdepends --installed <package>`
+
+* List files from a package
+    
+    https://serverfault.com/questions/96964/  
+    https://askubuntu.com/questions/32507/  
+    
+    `dpkg -L <package>`
+    
+    `dpkg-query -L <package_name>`
+
 * List installed packages
     
     `dpkg -l`
@@ -138,12 +164,6 @@ https://wiki.debian.org/HardwareVideoAcceleration
     
     `apt list --installed | grep glib`
     
-* List files from a package
-    
-    https://askubuntu.com/questions/32507/  
-    
-    installed package : `dpkg-query -L <package_name>`
-
 * List obsolete packages
     
     https://www.guyrutenberg.com/2022/03/19/list-obsolete-packages-using-apt/  
@@ -164,27 +184,12 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
 * System upgrade
 
-    ```
-    sudo apt update
-    sudo apt upgrade
-    ```
+    `sudo apt update && sudo apt upgrade`
+    
     or
-    ```
-    sudo apt update
-    sudo apt full-upgrade
-    ```
+    
+    `sudo apt update && sudo apt full-upgrade`
 
-* Install python programs
-    
-    https://stackoverflow.com/questions/58831133/  
-    https://luminousmen.com/post/why-use-pip-install-user  
-    
-    create an alias such as :  
-    
-    `alias pyinst='python3 -m pip install --break-system-packages --user'`
-    
-    then run : `pyinst <appname>`
-    
 * yt-dlp
     
     https://github.com/yt-dlp/yt-dlp  
@@ -465,6 +470,12 @@ https://wiki.debian.org/HardwareVideoAcceleration
 * Uninstall desktop portals
 
     `sudo apt purge xdg-desktop-portal*`
+
+<!--
+* End of life releases
+    
+    https://doc.ubuntu-fr.org/old-releases  
+-->
 
 <br/>
 
