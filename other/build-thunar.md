@@ -19,6 +19,16 @@
     git clone https://gitlab.xfce.org/xfce/thunar && cd thunar
     # optional step. Per default master is checked out
     git checkout <branch|tag>
+    ```
+    
+    ```
+    meson setup build -Dbuildtype=release -Dintrospection=false \
+    -Dvisibility=false
+    meson compile -C build
+    sudo meson install -C build
+    ```
+    
+    ```
     ./autogen.sh
     make -j 4
     sudo make install
