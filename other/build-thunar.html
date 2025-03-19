@@ -21,15 +21,19 @@ xfce4-dev-tools gtk-doc-tools autopoint
 git checkout &lt;branch|tag&gt;
 </code></pre>
 
+<p>with autotools</p>
+
+<pre><code>./autogen.sh
+LANG=C make -j 4
+sudo make install
+</code></pre>
+
+<p>with meson</p>
+
 <pre><code>meson setup build -Dbuildtype=release -Dintrospection=false \
 -Dvisibility=false
 meson compile -C build
 sudo meson install -C build
-</code></pre>
-
-<pre><code>./autogen.sh
-make -j 4
-sudo make install
 </code></pre></li>
 </ul>
 

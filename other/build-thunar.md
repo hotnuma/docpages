@@ -21,6 +21,16 @@
     git checkout <branch|tag>
     ```
     
+    with autotools
+    
+    ```
+    ./autogen.sh
+    LANG=C make -j 4
+    sudo make install
+    ```
+
+    with meson
+    
     ```
     meson setup build -Dbuildtype=release -Dintrospection=false \
     -Dvisibility=false
@@ -28,11 +38,5 @@
     sudo meson install -C build
     ```
     
-    ```
-    ./autogen.sh
-    make -j 4
-    sudo make install
-    ```
-
 <br/>
 
