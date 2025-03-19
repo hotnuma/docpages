@@ -24,7 +24,7 @@
 
     ```
     git clone https://github.com/labwc/labwc.git && cd labwc
-    meson setup build -Dxwayland=disabled
+    meson setup build -Dbuildtype=release -Dxwayland=disabled
     meson compile -C build
     sudo meson install -C build
     ```
@@ -56,7 +56,7 @@
     ```
     git clone https://github.com/labwc/labwc-tweaks-gtk.git
     cd labwc-tweaks-gtk
-    meson setup build
+    meson setup build -Dbuildtype=release
     meson compile -C build
     sudo meson install -C build
     ```

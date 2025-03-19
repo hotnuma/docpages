@@ -23,7 +23,7 @@ libwayland-dev pkgconf wayland-protocols
 </code></pre>
 
 <pre><code>git clone https://github.com/labwc/labwc.git &amp;&amp; cd labwc
-meson setup build -Dxwayland=disabled
+meson setup build -Dbuildtype=release -Dxwayland=disabled
 meson compile -C build
 sudo meson install -C build
 </code></pre>
@@ -52,7 +52,7 @@ sudo meson install -C build
 
 <pre><code>git clone https://github.com/labwc/labwc-tweaks-gtk.git
 cd labwc-tweaks-gtk
-meson setup build
+meson setup build -Dbuildtype=release
 meson compile -C build
 sudo meson install -C build
 </code></pre></li>
