@@ -15,9 +15,19 @@
     libxfce4panel-2.0-dev libxfce4ui-2-dev libxfce4util-dev libxfconf-0-dev \
     xfce4-dev-tools gtk-doc-tools autopoint
     ```
+    
     ```
     git clone https://gitlab.xfce.org/xfce/thunar && cd thunar
     git checkout <branch|tag>
+    ```
+    
+    with meson
+    
+    ```
+    meson setup build -Dbuildtype=release -Dintrospection=false \
+    -Dvisibility=false
+    meson compile -C build
+    sudo meson install -C build
     ```
     
     with autotools
@@ -28,14 +38,5 @@
     sudo make install
     ```
 
-    with meson
-    
-    ```
-    meson setup build -Dbuildtype=release -Dintrospection=false \
-    -Dvisibility=false
-    meson compile -C build
-    sudo meson install -C build
-    ```
-    
 <br/>
 
