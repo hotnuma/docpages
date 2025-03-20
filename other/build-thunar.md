@@ -17,7 +17,6 @@
     ```
     ```
     git clone https://gitlab.xfce.org/xfce/thunar && cd thunar
-    # optional step. Per default master is checked out
     git checkout <branch|tag>
     ```
     
