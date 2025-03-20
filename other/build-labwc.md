@@ -50,6 +50,8 @@
         examples         : false
         xwayland         : disabled
     ```
+    
+    update : `git pull && meson subprojects update`
 
 * labwc-tweaks-gtk
 
