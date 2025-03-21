@@ -178,7 +178,7 @@ gtk-menu-images=1
 
 [Seat:*]
 autologin-guest=false
-autologin-user=hotnuma
+autologin-user=&lt;username&gt;
 autologin-user-timeout=0
 autologin-session=labwc
 </code></pre>
@@ -204,12 +204,9 @@ labwc.desktop
 <pre><code>sudo apt install apt-file
 sudo apt-file update
 </code></pre></li>
-<li><p>Other programs</p>
+<li><p>Board model</p>
 
-<p><code>sudo apt install hardinfo inxi</code></p></li>
-<li><p>Read CPU temperature</p>
-
-<p><code>vcgencmd measure_temp</code></p></li>
+<p><code>cat /sys/firmware/devicetree/base/model</code></p></li>
 <li><p>kernel, firmware, bootloader, eeprom</p>
 
 <pre><code>uname -a
@@ -218,6 +215,24 @@ vcgencmd bootloader_version
 vcgencmd bootloader_config
 rpi-eeprom-config
 </code></pre></li>
+<li><p>Need to run as sudo</p>
+
+<p><a href="https://forums.raspberrypi.com/viewtopic.php?t=384959">https://forums.raspberrypi.com/viewtopic.php?t=384959</a>  </p></li>
+<li><p>Oak Raspberry Pi Case</p>
+
+<p><a href="https://www.instructables.com/Oak-Raspberry-Pi-case-for-under-10/">https://www.instructables.com/Oak-Raspberry-Pi...</a>  </p></li>
+<li><p>Other programs</p>
+
+<p><code>sudo apt install hardinfo inxi</code></p></li>
+<li><p>Read CPU temperature</p>
+
+<p><code>vcgencmd measure_temp</code></p></li>
+<li><p>Release notes : </p>
+
+<p><a href="https://downloads.raspberrypi.org/raspios_arm64/release_notes.txt">https://downloads.raspberrypi.org/raspios_arm64/release_notes.txt</a>  </p></li>
+<li><p>RPI5 USB max current</p>
+
+<p>Set <code>usb_max_current_enable=1</code> in <code>/boot/firmware/config.txt</code></p></li>
 <li><p>USB Chipset</p>
 
 <p><a href="https://forums.raspberrypi.com/viewtopic.php?t=245931">https://forums.raspberrypi.com/viewtopic.php?t=245931</a><br>
@@ -229,12 +244,9 @@ I have a USB 3.1 Gen 2 enclosure with a JMS583 chip that works
 fine with Pi computers. It supports UASP in RPiOS, and TRIM works
 with a udev rule.
 </code></pre></li>
-<li><p>Board model</p>
+<li><p>XL4016E1 Buck converter</p>
 
-<p><code>cat /sys/firmware/devicetree/base/model</code></p></li>
-<li><p>Release notes : </p>
-
-<p><a href="https://downloads.raspberrypi.org/raspios_arm64/release_notes.txt">https://downloads.raspberrypi.org/raspios_arm64/release_notes.txt</a>  </p></li>
+<p><a href="https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-down-xl4016e1-poti">https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-do</a>  </p></li>
 </ul>
 
 <p><br/></p>

@@ -191,7 +191,7 @@
     
     [Seat:*]
     autologin-guest=false
-    autologin-user=hotnuma
+    autologin-user=<username>
     autologin-user-timeout=0
     autologin-session=labwc
     ```
@@ -222,13 +222,9 @@
     sudo apt-file update
     ```
     
-* Other programs
+* Board model
     
-    `sudo apt install hardinfo inxi`
-
-* Read CPU temperature
-
-    `vcgencmd measure_temp`
+    `cat /sys/firmware/devicetree/base/model`
 
 * kernel, firmware, bootloader, eeprom
 
@@ -239,6 +235,30 @@
     vcgencmd bootloader_config
     rpi-eeprom-config
     ```
+
+* Need to run as sudo
+    
+    https://forums.raspberrypi.com/viewtopic.php?t=384959  
+
+* Oak Raspberry Pi Case
+    
+    [https://www.instructables.com/Oak-Raspberry-Pi...](https://www.instructables.com/Oak-Raspberry-Pi-case-for-under-10/)  
+
+* Other programs
+    
+    `sudo apt install hardinfo inxi`
+
+* Read CPU temperature
+
+    `vcgencmd measure_temp`
+
+* Release notes : 
+    
+    https://downloads.raspberrypi.org/raspios_arm64/release_notes.txt  
+
+* RPI5 USB max current
+    
+    Set `usb_max_current_enable=1` in `/boot/firmware/config.txt`
 
 * USB Chipset
     
@@ -253,13 +273,9 @@
     with a udev rule.
     ```
     
-* Board model
+* XL4016E1 Buck converter
     
-    `cat /sys/firmware/devicetree/base/model`
-
-* Release notes : 
-    
-    https://downloads.raspberrypi.org/raspios_arm64/release_notes.txt  
+    [https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-do](https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-down-xl4016e1-poti)  
 
 <br/>
 
