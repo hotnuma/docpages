@@ -62,10 +62,11 @@ reboot
 <p>list local raspi packages : <code>apt list ?obsolete</code></p></li>
 <li><p>Install XFCE</p>
 
-<pre><code>sudo tasksel
-(select debian desktop and xfce)
+<p><code>sudo tasksel</code></p>
 
-sudo systemctl set-default graphical.target
+<p>(select debian desktop and xfce)</p>
+
+<pre><code>sudo systemctl set-default graphical.target
 sudo apt purge plymouth
 reboot
 </code></pre></li>

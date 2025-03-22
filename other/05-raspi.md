@@ -67,10 +67,11 @@
 
 * Install XFCE
 
-    ```
-    sudo tasksel
+    `sudo tasksel`
+    
     (select debian desktop and xfce)
     
+    ```
     sudo systemctl set-default graphical.target
     sudo apt purge plymouth
     reboot
