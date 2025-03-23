@@ -40,7 +40,7 @@
     
     `sudo apt update && sudo apt upgrade`
     
-    if we don't need a camera : `sudo apt purge rpicam-apps-lite`
+    if we don't need a camera : `sudo apt purge rpicam-apps-lite libpisp1`
 
     `reboot`
 
