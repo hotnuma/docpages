@@ -34,14 +34,17 @@
 
 * Upgrade
 
-    ```
-    sudo raspi-config
-    (change locale and timezone)
-    sudo apt update && sudo apt upgrade
-    reboot
-    ```
+    `sudo raspi-config`
+    
+    change locale and timezone
+    
+    `sudo apt update && sudo apt upgrade`
+    
+    if we don't need a camera : `sudo apt purge rpicam-apps-lite`
 
-* Switch to Trixie
+    `reboot`
+
+* Disable raspi repository
 
     `sudo nano /etc/apt/sources.list.d/raspi.list`
     
@@ -53,8 +56,8 @@
     #deb-src http://archive.raspberrypi.com/debian/ bookworm main
     ```
 
-    edit sources.list : 
-    
+* Switch to Trixie
+
     `sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list`
     
     ```
@@ -63,7 +66,21 @@
     reboot
     ```
     
-    list local raspi packages : `apt list ?obsolete`
+* Switch to Unstable
+
+    `sed -i.bak s/bookworm/unstable/g /etc/apt/sources.list`
+    
+    comment security and updates
+    
+    ```
+    sudo apt update && sudo apt upgrade
+    sudo apt full-upgrade
+    reboot
+    ```
+
+* List raspi packages
+
+    `apt list ?obsolete`
 
 * Install XFCE
 

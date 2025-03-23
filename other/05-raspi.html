@@ -34,12 +34,16 @@ sudo dd if=./raspios64-lite.img of=/dev/sdX bs=4M conv=fsync status=progress
 </code></pre></li>
 <li><p>Upgrade</p>
 
-<pre><code>sudo raspi-config
-(change locale and timezone)
-sudo apt update &amp;&amp; sudo apt upgrade
-reboot
-</code></pre></li>
-<li><p>Switch to Trixie</p>
+<p><code>sudo raspi-config</code></p>
+
+<p>change locale and timezone</p>
+
+<p><code>sudo apt update &amp;&amp; sudo apt upgrade</code></p>
+
+<p>if we don&#39;t need a camera : <code>sudo apt purge rpicam-apps-lite</code></p>
+
+<p><code>reboot</code></p></li>
+<li><p>Disable raspi repository</p>
 
 <p><code>sudo nano /etc/apt/sources.list.d/raspi.list</code></p>
 
@@ -48,18 +52,28 @@ reboot
 <pre><code>#deb http://archive.raspberrypi.com/debian/ bookworm main
 # Uncomment line below then &#39;apt-get update&#39; to enable &#39;apt-get source&#39;
 #deb-src http://archive.raspberrypi.com/debian/ bookworm main
-</code></pre>
-
-<p>edit sources.list : </p>
+</code></pre></li>
+<li><p>Switch to Trixie</p>
 
 <p><code>sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list</code></p>
 
 <pre><code>sudo apt update &amp;&amp; sudo apt upgrade
 sudo apt full-upgrade
 reboot
-</code></pre>
+</code></pre></li>
+<li><p>Switch to Unstable</p>
 
-<p>list local raspi packages : <code>apt list ?obsolete</code></p></li>
+<p><code>sed -i.bak s/bookworm/unstable/g /etc/apt/sources.list</code></p>
+
+<p>comment security and updates</p>
+
+<pre><code>sudo apt update &amp;&amp; sudo apt upgrade
+sudo apt full-upgrade
+reboot
+</code></pre></li>
+<li><p>List raspi packages</p>
+
+<p><code>apt list ?obsolete</code></p></li>
 <li><p>Install XFCE</p>
 
 <p><code>sudo tasksel</code></p>
