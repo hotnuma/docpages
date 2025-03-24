@@ -189,12 +189,12 @@
     Version Control
     ```
     
-    In the `Project Page`, select : `Manage kits...`
+    In `Edit/Preferences/Kits`.
     
     In `Qt Version`, browse to qmake path, such as :  
     `/usr/lib/qt6/bin/qmake`
     
-    In the `Kits tab`, select the previously detected `Qt Version`.
+    In the `Kits` tab, select the previously detected `Qt Version`.
     
     In the preferences of the editor, `Fonts and Colors`, set font
     size to 11 and select the `Default Classic` color scheme.
