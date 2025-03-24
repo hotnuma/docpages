@@ -24,6 +24,8 @@
     change cursor to DMZ White if needed :
     
     `sudo update-alternatives --config x-cursor-theme`
+    
+    https://gitlab.com/donut2/notwaita-cursor-theme  
 
 
 #### Labwc
