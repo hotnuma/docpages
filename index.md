@@ -1,8 +1,8 @@
 <link href="style.css" rel="stylesheet"></link>
 
 **[ [Linux](linux/00-linux.html) | [Dev](dev/00-dev.html)
-| [Fileman](fileman/00-fileman.html) | [Raspi](other/05-raspi.html)
-| [Build](other/10-build.html) ]**
+| [Fileman](fileman/00-fileman.html) | [Install](other/05-install.html)
+| [Raspi](other/10-raspi.html) | [Build](other/15-build.html) ]**
 
 ## index
 

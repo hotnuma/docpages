@@ -1,0 +1,215 @@
+<p><link href="../style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="../index.html">Home</a> | Install ]</strong></p>
+
+<h2>Install</h2>
+
+<hr>
+
+<h4>System Install</h4>
+
+<ul>
+<li><p>Install Debian</p>
+
+<p><a href="https://www.debian.org/distrib/">https://www.debian.org/distrib/</a><br>
+<a href="https://www.debian.org/releases/stable/amd64/ch04s03.fr.html">https://www.debian.org/releases/stable/amd64/ch04s03.fr.html</a>  </p>
+
+<p>Download an ISO file and copy it to a USB drive :</p>
+
+<p><code>sudo dd if=&lt;file&gt; of=&lt;device&gt; bs=16M status=progress oflag=sync</code></p>
+
+<p>or</p>
+
+<p><code>sudo cp &lt;file&gt; &lt;device&gt; &amp;&amp; sudo sync</code></p>
+
+<p>where <device> is the all device such as <code>/dev/sdc</code>, not a partition.</p>
+
+<p><a href="https://www.youtube.com/watch?v=gddlhr9ST9Y">https://www.youtube.com/watch?v=gddlhr9ST9Y</a>  </p>
+
+<p>choose <code>Install</code> for the text based installer<br>
+let the domain name blank or enter a local domain such as : <code>mydomain.local</code><br>
+let the root password blank in order to use <code>sudo</code>.  </p></li>
+<li><p>Upgrade packages</p>
+
+<p><code>sudo apt update &amp;&amp; sudo apt upgrade</code></p></li>
+<li><p>Install and Configure Git</p>
+
+<pre><code>sudo apt install git
+git config --global user.name &quot;My Name&quot;
+git config --global user.email mymail@example.com
+</code></pre></li>
+<li><p>Execute the post-install script</p>
+
+<pre><code>mkdir ~/DevFiles &amp;&amp; cd ~/DevFiles
+git clone https://github.com/hotnuma/sysconfig.git
+cd sysconfig
+./sysconfig.sh
+reboot
+</code></pre></li>
+</ul>
+
+<h4><a name="disable"></a> Manual configuration</h4>
+
+<ul>
+<li><p>Firefox</p>
+
+<p>Install uBlock Origin, SingleFile, cookies.txt.<br>
+Restore bookmarks, passwords, filters and user.js.  </p>
+
+<p>Test videos :  </p>
+
+<p><a href="https://www.youtube.com/watch?v=cuXsupMuik4">https://www.youtube.com/watch?v=cuXsupMuik4</a><br>
+<a href="https://www.youtube.com/watch?v=TVtoxUohG5E">https://www.youtube.com/watch?v=TVtoxUohG5E</a>  </p>
+
+<p>Disable Filemanager service :</p>
+
+<p><a href="https://bbs.archlinux.org/viewtopic.php?id=255794">https://bbs.archlinux.org/viewtopic.php?id=255794</a><br>
+<a href="https://unix.stackexchange.com/questions/66662/">https://unix.stackexchange.com/questions/66662/</a><br>
+<a href="https://askubuntu.com/questions/530779/">https://askubuntu.com/questions/530779/</a>  </p>
+
+<pre><code>sudo mv /usr/share/dbus-1/services/org.xfce.FileManager.service .
+sudo mv /usr/share/dbus-1/services/org.xfce.Thunar.FileManager1.service .
+sudo mv /usr/share/dbus-1/services/org.xfce.Thunar.service .
+</code></pre></li>
+<li><p>Configure Terminal</p>
+
+<p>Font :      DejaVu Sans Mono Book 11
+Geometry :  90 x 35</p></li>
+<li><p>XFCE Session</p>
+
+<p>On log out, set don&#39;t save session, delete saved sessions.</p></li>
+<li><p>Mount internal drives</p>
+
+<p><code>sudo nano /usr/share/polkit-1/actions/org.freedesktop.UDisks2.policy</code></p>
+
+<p>In the excerpt <action id=“org.freedesktop.udisks2.filesystem-mount-system”> in the defaults tag replace <code>allow_active</code> with yes :  </p>
+
+<p><code>&lt;allow_active&gt;yes&lt;/allow_active&gt;</code></p></li>
+<li><p>USB keys access rights</p>
+
+<p>If needed, set user right to the drive mount point :</p>
+
+<p><code>sudo chown -R $USER:$USER /media/$USER/Data/</code></p></li>
+<li><p>Disable grub background</p>
+
+<pre><code>cat /etc/default/grub
+
+GRUB_DEFAULT=0
+GRUB_TIMEOUT=0
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2&gt; /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet&quot;
+GRUB_CMDLINE_LINUX=&quot;&quot;
+GRUB_BACKGROUND=
+</code></pre></li>
+<li><p>Install Adwaita-xfwm4 theme</p>
+
+<pre><code>wget https://github.com/hotnuma/Adwaita-xfwm4/archive/refs/heads/master.tar.gz
+tar xzf master.tar.gz
+mkdir $HOME/.themes
+mv ./Adwaita-xfwm4-master $HOME/.themes/Adwaita-xfwm4
+</code></pre></li>
+<li><p>Panel dark mode</p>
+
+<p>Run <code>xfce4-appearance-settings</code>, select adwata dark and then clair theme to
+have dark panel working.</p></li>
+<li><p>Icon theme</p>
+
+<p>set icon theme  elementary xfce  </p></li>
+<li><p>Disable log messages</p>
+
+<p><a href="https://github.com/hotnuma/doclinux/blob/master/01-Systemd.md#disable">https://github.com/hotnuma/doclinux/blob/master/01-Systemd.md#disable</a>  </p></li>
+<li><p>User dirs</p>
+
+<p>edit user dirs .config/user-dirs.dirs</p></li>
+<li><p>Progams settings</p>
+
+<p>copy restore geany settings<br>
+copy mpv settings  </p></li>
+<li><p>Xfwm4</p>
+
+<p>Use resistance instead of magnet.</p>
+
+<p>If the panel is on top, disable drop down shasows :</p>
+
+<p><a href="https://stackoverflow.com/questions/53725696/">https://stackoverflow.com/questions/53725696/</a>  </p></li>
+<li><p>Install yt-dlp</p>
+
+<p><a href="https://github.com/yt-dlp/yt-dlp/wiki/Installation">https://github.com/yt-dlp/yt-dlp/wiki/Installation</a>  </p>
+
+<pre><code>wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
+chmod a+rx ./yt-dlp
+sudo mv ./yt-dlp /usr/local/bin/
+</code></pre>
+
+<p>To upgrade download the program again.</p></li>
+<li><p>Install QtCreator</p>
+
+<p><a href="https://unix.stackexchange.com/questions/752145/">https://unix.stackexchange.com/questions/752145/</a><br>
+<a href="https://packages.debian.org/bookworm/qtcreator">https://packages.debian.org/bookworm/qtcreator</a><br>
+<a href="https://packages.debian.org/source/bookworm/qt6-base">https://packages.debian.org/source/bookworm/qt6-base</a>  </p>
+
+<p><code>./sysconfig qtcreator</code>  </p>
+
+<p>additional packages : <code>qtchooser qt6-tools-dev</code></p>
+
+<p>Disable unneeded plugins :</p>
+
+<pre><code>QbsProjectManager
+Help
+Welcome
+Android
+Qnx
+RemoteLinux
+Modeling
+GLSLEditor
+Qt Quick
+FakeVim
+Version Control
+</code></pre>
+
+<p>In the <code>Project Page</code>, select : <code>Manage kits...</code></p>
+
+<p>In <code>Qt Version</code>, browse to qmake path, such as :<br>
+<code>/usr/lib/qt6/bin/qmake</code></p>
+
+<p>In the <code>Kits tab</code>, select the previously detected <code>Qt Version</code>.</p>
+
+<p>In the preferences of the editor, <code>Fonts and Colors</code>, set font
+size to 11 and select the <code>Default Classic</code> color scheme.</p></li>
+<li><p>gvfs-backends</p>
+
+<p>Provides <code>gvfs-mtp-volume-monitor</code> which permits to mount Android devices.</p>
+
+<p>Install <code>sudo apt install gvfs-backends</code></p>
+
+<p>Mask service :</p>
+
+<pre><code>systemctl --user stop gvfs-mtp-volume-monitor
+systemctl --user mask gvfs-mtp-volume-monitor
+</code></pre>
+
+<p>Unmask service :</p>
+
+<p><code>rm $HOME/.config/systemd/user/gvfs-mtp-volume-monitor.service</code></p></li>
+</ul>
+
+<h4>Graphic card</h4>
+
+<ul>
+<li><p>Video test</p>
+
+<p><a href="https://www.youtube.com/watch?v=cuXsupMuik4">https://www.youtube.com/watch?v=cuXsupMuik4</a>  </p></li>
+<li><p>Device nformations</p>
+
+<p><code>sudo lspci -k | grep -EA3 &#39;VGA|3D|Display&#39;</code></p></li>
+<li><p>Intel GPU</p>
+
+<p><a href="https://wiki.debian.org/Firefox">https://wiki.debian.org/Firefox</a><br>
+<a href="https://wiki.debian.org/HardwareVideoAcceleration">https://wiki.debian.org/HardwareVideoAcceleration</a><br>
+<a href="https://christitus.com/fix-screen-tearing-linux/">https://christitus.com/fix-screen-tearing-linux/</a><br>
+<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1710400">https://bugzilla.mozilla.org/show_bug.cgi?id=1710400</a>  </p>
+
+<p><code>sudo apt purge xserver-xorg-video-intel</code></p></li>
+</ul>
+
+<p><br/></p>
