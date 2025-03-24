@@ -264,9 +264,15 @@
 
     `vcgencmd measure_temp`
 
-* Release notes : 
+* Release notes
     
     https://downloads.raspberrypi.org/raspios_arm64/release_notes.txt  
+
+* Remove unused kernels
+    
+    https://forums.raspberrypi.com/viewtopic.php?t=371710  
+    
+    for rpi4 : `sudo apt --autoremove remove linux-image-*-2712`
 
 * RPI5 USB max current
     

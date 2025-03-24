@@ -238,9 +238,14 @@ rpi-eeprom-config
 <li><p>Read CPU temperature</p>
 
 <p><code>vcgencmd measure_temp</code></p></li>
-<li><p>Release notes : </p>
+<li><p>Release notes</p>
 
 <p><a href="https://downloads.raspberrypi.org/raspios_arm64/release_notes.txt">https://downloads.raspberrypi.org/raspios_arm64/release_notes.txt</a>  </p></li>
+<li><p>Remove unused kernels</p>
+
+<p><a href="https://forums.raspberrypi.com/viewtopic.php?t=371710">https://forums.raspberrypi.com/viewtopic.php?t=371710</a>  </p>
+
+<p>for rpi4 : <code>sudo apt --autoremove remove linux-image-*-2712</code></p></li>
 <li><p>RPI5 USB max current</p>
 
 <p>Set <code>usb_max_current_enable=1</code> in <code>/boot/firmware/config.txt</code></p></li>
