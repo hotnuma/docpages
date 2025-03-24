@@ -224,12 +224,6 @@
     labwc.desktop
     ```
 
-* Processes
-    
-    ```
-    total : 233156 kB / 35 prc
-    ```
-
 
 #### Other
 
