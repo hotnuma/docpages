@@ -1,8 +1,8 @@
 <link href="../style.css" rel="stylesheet"></link>
 
-**[ [Home](../index.html) | ImgView ]**
+**[ [Home](../index.html) | [ImgView](05-imgview.html) | [Dlg](10-dlg.html) | Uni | [Vnr](20-vnr.html) ]**
 
-## ImgView
+## Uni
 
 ---
 
@@ -19,27 +19,10 @@
     uni/uni-scroll-win.c
     uni/uni-utils.c
     uni/uni-zoom.h
-    
-    vnr/vnr-crop.c
-    vnr/vnr-message-area.c
-    vnr/vnr-properties-dialog.c
-    vnr/vnr-tools.c
-    vnr/xfce-filename-input.c
-    
-    dialog.c
-    file.c
-    list.c
-    main.c
-    preferences.c
-    window.c
 
 ```
 
 * Description
     
-    
-
-#### Main
-
 <br>
 
