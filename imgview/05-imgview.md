@@ -10,15 +10,39 @@
 
 ```
 
-    file.c
-    list.c
     main.c
-    preferences.c
     window.c
+    preferences.c
+    list.c
+    file.c
 
 ```
 
 * Description
+
+
+#### Main
+
+* Description
     
+
+#### VnrWindow
+
+* Description
+    
+    The application window is a GtkWindow. 
+
+    ```
+    
+        GtkWindow
+            GtkBox
+                ------------------------------------------------
+                VnrMessageArea
+                ------------------------------------------------
+                UniScrollView
+                    UniAnimView
+            
+    ```
+
 <br>
 
