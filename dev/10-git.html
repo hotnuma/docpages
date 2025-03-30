@@ -9,7 +9,10 @@
 <h4>Basics</h4>
 
 <ul>
-<li><p>clone</p>
+<li><p>Check Remote</p>
+
+<p><code>git remote -v</code></p></li>
+<li><p>Clone</p>
 
 <p><code>git clone https://github.com/hotnuma/libtinyc.git</code></p>
 
@@ -34,9 +37,6 @@
 git branch -M master
 git push -u origin master
 </code></pre></li>
-<li><p>Check Remote</p>
-
-<p><code>git remote -v</code></p></li>
 <li><p>Remove a subdir</p>
 
 <p><code>git rm -r --cached dir_name</code></p></li>
@@ -45,13 +45,6 @@ git push -u origin master
 <h4>History</h4>
 
 <ul>
-<li><p>Reset last changes</p>
-
-<p><a href="https://stackoverflow.com/questions/4630312/">https://stackoverflow.com/questions/4630312/</a>  </p>
-
-<p>reset : <code>git reset HEAD --hard</code></p>
-
-<p>remove new files : <code>git clean -fd</code></p></li>
 <li><p>Commit history</p>
 
 <p><a href="https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History</a>  </p>
@@ -62,15 +55,25 @@ git push -u origin master
 <p><a href="https://stackoverflow.com/questions/17563726/">https://stackoverflow.com/questions/17563726/</a>  </p>
 
 <p><code>git diff COMMIT~ COMMIT</code></p></li>
+<li><p>Reset last changes</p>
+
+<p><a href="https://stackoverflow.com/questions/4630312/">https://stackoverflow.com/questions/4630312/</a>  </p>
+
+<p>reset to head : <code>git reset --hard HEAD</code><br>
+reset to hash : <code>git reset --hard &lt;hash&gt;</code>  </p>
+
+<p>remove new files : <code>git clean -fd</code></p></li>
 </ul>
 
-<h4>Configuration</h4>
+<h4>Other</h4>
 
 <ul>
-<li><p>Generate access token</p>
-
-<p><a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token</a>  </p></li>
 <li><p>Configure line endings</p>
 
-<p><a href="https://docs.github.com/en/github/getting-started-with-github/configuring-git-to-handle-line-endings">https://docs.github.com/en/github/...</a>  </p></li>
+<p><a href="https://docs.github.com/en/github/getting-started-with-github/configuring-git-to-handle-line-endings">https://docs.github.com/en/github/configure...</a>  </p></li>
+<li><p>Generate access token</p>
+
+<p><a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">https://docs.github.com/en/github/authenticating...</a>  </p></li>
 </ul>
+
+<p><br/></p>

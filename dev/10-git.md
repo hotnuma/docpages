@@ -8,7 +8,11 @@
 
 #### Basics
 
-* clone
+* Check Remote
+
+    `git remote -v`
+
+* Clone
 
     `git clone https://github.com/hotnuma/libtinyc.git`
     
@@ -36,24 +40,13 @@
     git push -u origin master
     ```
 
-* Check Remote
-
-    `git remote -v`
-
 * Remove a subdir
 
     `git rm -r --cached dir_name`
 
+
 #### History
 
-* Reset last changes
-    
-    https://stackoverflow.com/questions/4630312/  
-    
-    reset : `git reset HEAD --hard`
-    
-    remove new files : `git clean -fd`
-    
 * Commit history
     
     https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History  
@@ -66,14 +59,26 @@
     
     `git diff COMMIT~ COMMIT`
 
-#### Configuration
-
-* Generate access token
+* Reset last changes
     
-    https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token  
+    https://stackoverflow.com/questions/4630312/  
+    
+    reset to head : `git reset --hard HEAD`  
+    reset to hash : `git reset --hard <hash>`  
+    
+    remove new files : `git clean -fd`
+
+
+#### Other
 
 * Configure line endings
     
-    [https://docs.github.com/en/github/...](https://docs.github.com/en/github/getting-started-with-github/configuring-git-to-handle-line-endings)  
+    [https://docs.github.com/en/github/configure...](https://docs.github.com/en/github/getting-started-with-github/configuring-git-to-handle-line-endings)  
+
+* Generate access token
+    
+    [https://docs.github.com/en/github/authenticating...](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)  
+
+<br/>
 
 
