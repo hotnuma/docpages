@@ -238,16 +238,6 @@
     
     `cat /sys/firmware/devicetree/base/model`
 
-* kernel, firmware, bootloader, eeprom
-
-    ```
-    uname -a
-    vcgencmd version
-    vcgencmd bootloader_version
-    vcgencmd bootloader_config
-    rpi-eeprom-config
-    ```
-
 * Need to run as sudo
     
     https://forums.raspberrypi.com/viewtopic.php?t=384959  
@@ -263,6 +253,16 @@
 * Read CPU temperature
 
     `vcgencmd measure_temp`
+
+* Read system infos
+
+    ```
+    uname -a
+    vcgencmd version
+    vcgencmd bootloader_version
+    vcgencmd bootloader_config
+    rpi-eeprom-config
+    ```
 
 * Release notes
     
@@ -291,6 +291,10 @@
     with a udev rule.
     ```
     
+* Wrong keyboard on Wayfire
+    
+    https://github.com/raspberrypi/bookworm-feedback/issues/119  
+
 * XL4016E1 Buck converter
     
     [https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-do](https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-down-xl4016e1-poti)  

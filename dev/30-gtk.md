@@ -368,4 +368,10 @@
     [https://stackoverflow.com/questions/48478615/how-to-rediredt](https://stackoverflow.com/questions/48478615/how-to-rediredt-the-stdout-in-a-text-window-c-programming)  
     [https://mail.gnome.org/archives/gtk-list/2006-February/msg00](https://mail.gnome.org/archives/gtk-list/2006-February/msg00040.html)  
 
+* Popup menu destruction
+    
+    https://discourse.gnome.org/t/gtk-popup-menu-position-and-destroy/4367  
+
+<br/>
+
 

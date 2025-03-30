@@ -218,14 +218,6 @@ sudo apt-file update
 <li><p>Board model</p>
 
 <p><code>cat /sys/firmware/devicetree/base/model</code></p></li>
-<li><p>kernel, firmware, bootloader, eeprom</p>
-
-<pre><code>uname -a
-vcgencmd version
-vcgencmd bootloader_version
-vcgencmd bootloader_config
-rpi-eeprom-config
-</code></pre></li>
 <li><p>Need to run as sudo</p>
 
 <p><a href="https://forums.raspberrypi.com/viewtopic.php?t=384959">https://forums.raspberrypi.com/viewtopic.php?t=384959</a>  </p></li>
@@ -238,6 +230,14 @@ rpi-eeprom-config
 <li><p>Read CPU temperature</p>
 
 <p><code>vcgencmd measure_temp</code></p></li>
+<li><p>Read system infos</p>
+
+<pre><code>uname -a
+vcgencmd version
+vcgencmd bootloader_version
+vcgencmd bootloader_config
+rpi-eeprom-config
+</code></pre></li>
 <li><p>Release notes</p>
 
 <p><a href="https://downloads.raspberrypi.org/raspios_arm64/release_notes.txt">https://downloads.raspberrypi.org/raspios_arm64/release_notes.txt</a>  </p></li>
@@ -260,6 +260,9 @@ I have a USB 3.1 Gen 2 enclosure with a JMS583 chip that works
 fine with Pi computers. It supports UASP in RPiOS, and TRIM works
 with a udev rule.
 </code></pre></li>
+<li><p>Wrong keyboard on Wayfire</p>
+
+<p><a href="https://github.com/raspberrypi/bookworm-feedback/issues/119">https://github.com/raspberrypi/bookworm-feedback/issues/119</a>  </p></li>
 <li><p>XL4016E1 Buck converter</p>
 
 <p><a href="https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-down-xl4016e1-poti">https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-do</a>  </p></li>
