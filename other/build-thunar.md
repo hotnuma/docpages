@@ -7,6 +7,8 @@
 ---
 
 * thunar
+    
+    https://gitlab.xfce.org/xfce/thunar  
 
     ```
     sudo apt install \
