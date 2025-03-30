@@ -114,8 +114,8 @@
 
 * Description
     
-    A GObject used to execute actions from particular widgets. Window,
-    and TreeView have a ThunarLauncher.
+    A GObject used to execute actions from particular widgets. `Window`,
+    and `TreeView` have a `ThunarLauncher`.
 
 
 #### AppMenu
