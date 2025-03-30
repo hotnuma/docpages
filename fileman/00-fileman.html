@@ -133,13 +133,14 @@ then the popup is created, then selecting an item will call a launcher
 function on the corresponding Launcher object.</p></li>
 <li><p>TreeView</p>
 
-<p>The menu is created from the widget&#39;s popup handler which calls the
-treeview_popup_menu function and then <strong>_treeview_context_menu</strong>.</p></li>
+<p>The menu is created from the widget&#39;s <code>button_press_event</code> handler
+which calls the <code>treeview_popup_menu</code> function and then
+<code>_treeview_context_menu</code>.</p></li>
 <li><p>StandardView</p>
 
 <p>The widget creates its popup in response to a button-release-event signal,
-it calls the _standard_view_button_release_event function and then it
-calls <strong>standard_view_context_menu</strong>.</p></li>
+it calls the <code>_standard_view_button</code>_release_event function and then it
+calls <code>standard_view_context_menu</code>.</p></li>
 </ul>
 
 <p><br></p>

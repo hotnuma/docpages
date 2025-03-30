@@ -132,15 +132,15 @@
 
 * TreeView
     
-    The menu is created from the widget's popup handler which calls the
-    treeview_popup_menu function and then **_treeview_context_menu**.
+    The menu is created from the widget's `button_press_event` handler
+    which calls the `treeview_popup_menu` function and then
+    `_treeview_context_menu`.
     
 * StandardView
 
     The widget creates its popup in response to a button-release-event signal,
-    it calls the _standard_view_button_release_event function and then it
-    calls **standard_view_context_menu**.
-
+    it calls the `_standard_view_button`_release_event function and then it
+    calls `standard_view_context_menu`.
 
 <br>
 
