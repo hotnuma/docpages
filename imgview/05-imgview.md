@@ -40,7 +40,7 @@
                 VnrMessageArea
                 ------------------------------------------------
                 UniScrollView
-                    UniAnimView
+                    UniAnimView (derives from UniImageView)
             
     ```
 
