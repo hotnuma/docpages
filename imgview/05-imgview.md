@@ -1,6 +1,6 @@
 <link href="../style.css" rel="stylesheet"></link>
 
-**[ [Home](../index.html) | ImgView | [Dlg](10-dlg.html) | [Uni](15-uni.html) | [Vnr](20-vnr.html) ]**
+**[ [Home](../index.html) | ImgView | [Dlg](10-dlg.html) | [Uni](15-uni.html) ]**
 
 ## ImgView
 
@@ -10,11 +10,13 @@
 
 ```
 
-    main.c
-    window.c
-    preferences.c
-    list.c
-    file.c
+    + main.c
+      window.c
+      message-area.c
+      list.c
+      file.c
+      preferences.c
+      vnr-tools.c
 
 ```
 
@@ -25,12 +27,14 @@
 
 * Description
     
+    Parse options and create the application window.
+    
 
 #### VnrWindow
 
 * Description
     
-    The application window is a GtkWindow. 
+    `VnrWindow` is a `GtkWindow`. 
 
     ```
     
@@ -39,7 +43,7 @@
                 ------------------------------------------------
                 VnrMessageArea
                 ------------------------------------------------
-                UniScrollView
+                UniScrollView (GtkGrid)
                     UniAnimView (derives from UniImageView)
             
     ```
