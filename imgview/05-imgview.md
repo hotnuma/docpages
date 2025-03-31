@@ -20,8 +20,6 @@
 
 ```
 
-* Description
-
 
 #### Main
 
@@ -38,7 +36,7 @@
 
     ```
     
-        GtkWindow
+        VnrWindow (GtkWindow)
             GtkBox
                 ------------------------------------------------
                 VnrMessageArea
