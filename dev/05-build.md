@@ -62,6 +62,10 @@ https://wiki.debian.org/BuildingTutorial
     install_subdir('assets', install_dir: config_dir)
     ```
 
+* meson define macros
+    
+    https://github.com/mesonbuild/meson/discussions/10608  
+
 * Porting projects
     
     [porting-from-autotools](https://mesonbuild.com/Porting-from-autotools.html)  

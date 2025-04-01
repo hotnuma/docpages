@@ -444,6 +444,10 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
 #### Misc
 
+* Copy to clipboard
+    
+    https://stackoverflow.com/questions/5130968/  
+
 * Delete thumbnails older than 30 days
 
     `find ~/.cache/thumbnails/ -type f -iname \*.png -mtime +30 -delete`
@@ -470,12 +474,6 @@ https://wiki.debian.org/HardwareVideoAcceleration
 * Uninstall desktop portals
 
     `sudo apt purge xdg-desktop-portal*`
-
-<!--
-* End of life releases
-    
-    https://doc.ubuntu-fr.org/old-releases  
--->
 
 <br/>
 
