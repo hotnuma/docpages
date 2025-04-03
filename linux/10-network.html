@@ -23,8 +23,10 @@
 
 <pre><code>tar xvf firefox-137.0.tar.bz2 &amp;&amp; sudo mv firefox /opt/
 sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
-sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/install-firefox-linux/firefox.desktop -P /usr/local/share/applications
 </code></pre>
+
+<p>Copy <code>firefox-opt.desktop</code> from <a href="https://github.com/hotnuma/sysconfig/tree/master/home">sysconfig</a>
+to <code>/usr/local/share/applications/</code></p>
 
 <p>edit icon path : sudo nano /usr/local/share/applications/firefox-opt.desktop</p></li>
 <li><p>Test Videos</p>
@@ -223,3 +225,7 @@ sudo systemctl start systemd-resolved
 networkctl
 </code></pre></li>
 </ul>
+
+<!--
+    sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/install-firefox-linux/firefox.desktop -P /usr/local/share/applications
+-->

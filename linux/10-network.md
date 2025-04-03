@@ -24,8 +24,10 @@
     ```
     tar xvf firefox-137.0.tar.bz2 && sudo mv firefox /opt/
     sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
-    sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/install-firefox-linux/firefox.desktop -P /usr/local/share/applications
     ```
+    
+    Copy `firefox-opt.desktop` from [sysconfig](https://github.com/hotnuma/sysconfig/tree/master/home)
+    to `/usr/local/share/applications/`
     
     edit icon path : sudo nano /usr/local/share/applications/firefox-opt.desktop
 
@@ -254,5 +256,9 @@
 
     networkctl
     ```
+
+<!--
+    sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/install-firefox-linux/firefox.desktop -P /usr/local/share/applications
+-->
 
 
