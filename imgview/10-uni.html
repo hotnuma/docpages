@@ -25,20 +25,24 @@
 <ul>
 <li><p>Description</p>
 
-<p>A GtkGrid which contains scrollbars and a UniAnimView widget to display
+<p>A <code>GtkGrid</code> which contains scrollbars and a <code>UniAnimView</code> widget to display
 images.</p></li>
 </ul>
 
 <h4>UniAnimView</h4>
 
 <ul>
-<li>Description</li>
+<li><p>Description</p>
+
+<p>An <code>UniImageView</code> which can display animated images.</p></li>
 </ul>
 
 <h4>UniImageView</h4>
 
 <ul>
-<li>Description</li>
+<li><p>Description</p>
+
+<p>A custom GtkWidget which display an image.</p></li>
 </ul>
 
 <h4>UniDragger</h4>
@@ -52,9 +56,16 @@ images.</p></li>
 <h4>UniPixbufDrawCache</h4>
 
 <ul>
+<li>Description</li>
+</ul>
+
+<h4>Move image</h4>
+
+<ul>
 <li><p>Description</p>
 
-<p>A GObject which contains an UniPixbufDrawCache.</p></li>
+<p><code>widget_motion_notify</code> handler calls <code>uni_dragger_motion_notify</code> which
+calls <code>uni_image_view_set_offset</code>.</p></li>
 </ul>
 
 <p><br></p>

@@ -26,7 +26,7 @@
 
 * Description
     
-    A GtkGrid which contains scrollbars and a UniAnimView widget to display
+    A `GtkGrid` which contains scrollbars and a `UniAnimView` widget to display
     images.
 
 
@@ -34,15 +34,15 @@
 
 * Description
     
-    
+    An `UniImageView` which can display animated images.
 
 
 #### UniImageView
 
 * Description
     
+    A custom GtkWidget which display an image.
     
-
 
 #### UniDragger
 
@@ -55,7 +55,15 @@
 
 * Description
     
-    A GObject which contains an UniPixbufDrawCache.
+    
+
+
+#### Move image
+
+* Description
+    
+    `widget_motion_notify` handler calls `uni_dragger_motion_notify` which
+    calls `uni_image_view_set_offset`.
 
 
 <br>
