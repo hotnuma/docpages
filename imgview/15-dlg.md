@@ -1,6 +1,6 @@
 <link href="../style.css" rel="stylesheet"></link>
 
-**[ [Home](../index.html) | [ImgView](05-imgview.html) | Dlg | [Uni](15-uni.html) ]**
+**[ [Home](../index.html) | [ImgView](05-imgview.html) | [Uni](10-uni.html) | Dlg ]**
 
 ## Dlg
 
