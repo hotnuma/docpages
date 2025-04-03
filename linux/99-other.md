@@ -6,26 +6,6 @@
 
 ---
 
-#### Shortcuts
-
-* Batocera
-    
-    https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/  
-
-* Mpv
-    
-    https://mpv.io/manual/master/  
-
-* MuPdf
-    
-    https://askubuntu.com/questions/314802/  
-
-* Zathura
-    
-    https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/  
-    https://unix.stackexchange.com/questions/497737/  
-
-
 #### System Processes on Debian 12
 
 https://debian-facile.org/viewtopic.php?pid=254022#p254022  

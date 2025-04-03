@@ -401,28 +401,6 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
 #### Programs
 
-* bash
-    
-    https://ss64.com/bash/syntax-keyboard.html  
-
-* feh
-    
-    https://wiki.archlinux.org/title/Feh  
-    
-    open command : `feh --start-at`
-
-* libreoffice
-    
-    convert csv to odt : `soffice --convert-to ods example.csv --headless`
-
-* rofi
-    
-    delete entry : type shift+delete on the entry
-
-* zathura
-
-    copy to clipboard : https://unix.stackexchange.com/questions/339487/  
-
 * Additional programs
 
     ```
@@ -440,6 +418,38 @@ https://wiki.debian.org/HardwareVideoAcceleration
     vainfo
     xfce4-screenshooter
     ```
+
+* bash
+    
+    https://ss64.com/bash/syntax-keyboard.html  
+
+* libreoffice
+    
+    convert csv to odt : `soffice --convert-to ods example.csv --headless`
+
+* rofi
+    
+    delete entry : type shift+delete on the entry
+
+* zathura
+
+    copy to clipboard : https://unix.stackexchange.com/questions/339487/  
+
+
+#### Shortcuts
+
+* Batocera
+    
+    https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/  
+
+* Mpv
+    
+    https://mpv.io/manual/master/  
+
+* Zathura
+    
+    https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/  
+    https://unix.stackexchange.com/questions/497737/  
 
 
 #### Misc
