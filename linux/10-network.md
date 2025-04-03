@@ -22,12 +22,12 @@
     Might require dbus-glib : `sudo apt install libdbus-glib-1-2`
     
     ```
-    tar xf firefox-116.0.tar.bz2 && sudo mv firefox /opt/firefox116_00/
+    tar xvf firefox-137.0.tar.bz2 && sudo mv firefox /opt/
     sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
     sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/install-firefox-linux/firefox.desktop -P /usr/local/share/applications
     ```
     
-    edit icon path : sudo nano /usr/local/share/applications/firefox.desktop
+    edit icon path : sudo nano /usr/local/share/applications/firefox-opt.desktop
 
 * Test Videos
     
