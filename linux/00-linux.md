@@ -444,6 +444,13 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
 #### Misc
 
+* Change border size with Labwc
+    
+    ```
+    cat $HOME/.config/labwc/themerc-override
+    border.width: 3
+    ```
+
 * Copy to clipboard
     
     https://stackoverflow.com/questions/5130968/  
