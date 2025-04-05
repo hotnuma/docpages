@@ -39,6 +39,13 @@
     https://github.com/labwc/labwc/issues/2327  
 
 
+#### Mpv
+
+* Fullscreen freeze
+    
+    add `gpu-api=opengl` in `mpv.conf`
+
+
 #### XFCE
 
 * Xfwm4 Unmaximize
