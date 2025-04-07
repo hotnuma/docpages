@@ -15,7 +15,7 @@
     gettext libexif-dev libexo-2-dev libglib2.0-dev libgtk-3-dev \
     libgudev-1.0-dev libjpeg-dev libnotify-dev libpcre2-dev \
     libxfce4panel-2.0-dev libxfce4ui-2-dev libxfce4util-dev libxfconf-0-dev \
-    xfce4-dev-tools gtk-doc-tools autopoint
+    xfce4-dev-tools gtk-doc-tools
     ```
     
     ```
@@ -31,14 +31,18 @@
     meson compile -C build
     sudo meson install -C build
     ```
-    
+
+<!--
     with autotools
+    
+    `sudo apt install autopoint`
     
     ```
     ./autogen.sh
     LANG=C make -j 4
     sudo make install
     ```
+-->
 
 <br/>
 
