@@ -23,8 +23,6 @@
     git checkout <branch|tag>
     ```
     
-    with meson
-    
     ```
     meson setup build -Dbuildtype=release -Dintrospection=false \
     -Dvisibility=false
