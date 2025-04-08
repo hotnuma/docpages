@@ -6,21 +6,14 @@
 
 ---
 
-#### References
+#### Sources
 
-* Freedesktop
+* Repositories
     
-    [freedesktop-desktop-entry](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html)  
-    [freedesktop-icon-naming](https://specifications.freedesktop.org/icon-naming-spec/latest/ar01s04.html)  
+    https://gitlab.xfce.org/xfce/thunar/-/commits/master?ref_type=HEADS  
 
 
 #### Code Formatting
-
-* astyle
-    
-    One file : `astyle -n --style=allman thunar-window.c`
-
-    Recursive : `astyle -nr --style=allman "test/*.h" "test/*.c"`
 
 * clang-format
     
@@ -66,5 +59,7 @@
     try : `patch -p 1 -i '../dir/my_file.patch' --dry-run`  
     
     do  : `patch -p 1 -i '../dir/my_file.patch'`  
+
+<br/>
 
 

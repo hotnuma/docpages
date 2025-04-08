@@ -492,6 +492,10 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
     `sudo apt purge xdg-desktop-portal*`
 
+* Using Wget with Cookies
+    
+    [https://www.apharmony.com/software-sagacity/](https://www.apharmony.com/software-sagacity/2014/10/using-wget-with-cookies/)  
+
 <br/>
 
 
