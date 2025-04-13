@@ -6,39 +6,43 @@
 
 <hr>
 
+<pre><code>```
+sudo apt install \
+gettext libexif-dev libexo-2-dev libgtk-3-dev \
+libgudev-1.0-dev libjpeg-dev libnotify-dev libpcre2-dev \
+libxfce4panel-2.0-dev libxfce4ui-2-dev libxfce4util-dev libxfconf-0-dev \
+xfce4-dev-tools gtk-doc-tools
+```
+</code></pre>
+
 <ul>
+<li><p>xfce4ui</p>
+
+<p><a href="https://gitlab.xfce.org/xfce/libxfce4ui">https://gitlab.xfce.org/xfce/libxfce4ui</a>  </p>
+
+<pre><code>git clone https://gitlab.xfce.org/xfce/libxfce4ui.git
+cd libxfce4ui
+meson setup build -Dbuildtype=release \
+-Dintrospection=false -Dvisibility=false
+meson compile -C build
+sudo meson install -C build
+</code></pre>
+
+<p><code>thunar: symbol lookup error: thunar: undefined symbol: xfce_icon_view_new</code></p></li>
 <li><p>thunar</p>
 
 <p><a href="https://gitlab.xfce.org/xfce/thunar">https://gitlab.xfce.org/xfce/thunar</a>  </p>
 
-<pre><code>sudo apt install \
-gettext libexif-dev libexo-2-dev libglib2.0-dev libgtk-3-dev \
-libgudev-1.0-dev libjpeg-dev libnotify-dev libpcre2-dev \
-libxfce4panel-2.0-dev libxfce4ui-2-dev libxfce4util-dev libxfconf-0-dev \
-xfce4-dev-tools gtk-doc-tools
-</code></pre>
-
-<pre><code>git clone https://gitlab.xfce.org/xfce/thunar &amp;&amp; cd thunar
+<pre><code>git clone https://gitlab.xfce.org/xfce/thunar
+cd thunar
 git checkout &lt;branch|tag&gt;
 </code></pre>
 
-<pre><code>meson setup build -Dbuildtype=release -Dintrospection=false \
--Dvisibility=false
+<pre><code>meson setup build -Dbuildtype=release \
+-Dintrospection=false -Dvisibility=false
 meson compile -C build
 sudo meson install -C build
 </code></pre></li>
 </ul>
-
-<!--
-    with autotools
-    
-    `sudo apt install autopoint`
-    
-    ```
-    ./autogen.sh
-    LANG=C make -j 4
-    sudo make install
-    ```
--->
 
 <p><br/></p>
