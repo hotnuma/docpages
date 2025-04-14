@@ -68,6 +68,13 @@ systemctl poweroff
 <p><code>inxi -b</code><br>
 <code>glxinfo | egrep &quot;OpenGL vendor|OpenGL renderer&quot;</code><br>
 <code>vainfo</code></p></li>
+<li><p>System CPU usage</p>
+
+<p><code>ps -Ao user,uid,comm,pid,pcpu --sort=-pcpu | head -n 11</code><br>
+<code>top -n2</code></p></li>
+<li><p>System memory usage</p>
+
+<p><code>top -n 2 -o %MEM</code></p></li>
 <li><p>User&#39;s groups</p>
 
 <p><code>groups username</code></p></li>

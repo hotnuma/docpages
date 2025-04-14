@@ -80,6 +80,15 @@ https://wiki.debian.org/HardwareVideoAcceleration
     `glxinfo | egrep "OpenGL vendor|OpenGL renderer"`  
     `vainfo`
 
+* System CPU usage
+    
+    `ps -Ao user,uid,comm,pid,pcpu --sort=-pcpu | head -n 11`  
+    `top -n2`
+
+* System memory usage
+    
+    `top -n 2 -o %MEM`
+    
 * User's groups
     
     `groups username`
