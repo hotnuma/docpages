@@ -19,17 +19,15 @@
     
     https://ftp.mozilla.org/pub/firefox/releases/  
     
-    Might require dbus-glib : `sudo apt install libdbus-glib-1-2`
+    might require dbus-glib : `sudo apt install libdbus-glib-1-2`
     
     ```
-    tar xvf firefox-137.0.tar.bz2 && sudo mv firefox /opt/
+    tar xvf firefox-*.tar.xz && sudo mv firefox /opt/
     sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
     ```
     
-    Copy `firefox-opt.desktop` from [sysconfig](https://github.com/hotnuma/sysconfig/tree/master/home)
+    copy [firefox-opt.desktop](https://hotnuma.github.io/docpages/linux/firefox-opt.desktop)
     to `/usr/local/share/applications/`
-    
-    edit icon path : sudo nano /usr/local/share/applications/firefox-opt.desktop
 
 * Test Videos
     
