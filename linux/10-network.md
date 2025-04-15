@@ -26,8 +26,8 @@
     sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
     ```
     
-    copy [firefox-opt.desktop](https://hotnuma.github.io/docpages/linux/firefox-opt.desktop)
-    to `/usr/local/share/applications/`
+    download : [firefox-opt.desktop](https://hotnuma.github.io/docpages/linux/firefox-opt.desktop)  
+    `sudo mv ./firefox-opt.desktop /usr/local/share/applications/`
 
 * Test Videos
     
