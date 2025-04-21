@@ -11,6 +11,9 @@
 * Repositories
     
     https://gitlab.xfce.org/xfce/thunar/-/commits/master?ref_type=HEADS  
+    https://github.com/labwc/labwc  
+    https://gitlab.freedesktop.org/wlroots  
+    https://gitlab.gnome.org/GNOME/shotwell  
 
 
 #### Code Formatting
