@@ -1,6 +1,6 @@
 <link href="../style.css" rel="stylesheet"></link>
 
-**[ [Home](../index.html) | [ImgView](05-imgview.html) | [Uni](10-uni.html) | Dlg ]**
+**[ [Home](../index.html) | [ImgView](05-imgview.html) | [Uni](10-uni.html) | Dialog ]**
 
 ## Dlg
 
@@ -10,10 +10,12 @@
 
 ```
 
-    dialog.c
-    vnr-crop.c
+    preferences.c
     vnr-properties-dialog.c
+    dialog.c
     xfce-filename-input.c
+    vnr-crop.c
+    message-area.c
 
 ```
 

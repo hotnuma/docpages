@@ -1,6 +1,6 @@
 <p><link href="../style.css" rel="stylesheet"></link></p>
 
-<p><strong>[ <a href="../index.html">Home</a> | ImgView | <a href="10-uni.html">Uni</a> | <a href="15-dlg.html">Dlg</a> ]</strong></p>
+<p><strong>[ <a href="../index.html">Home</a> | ImgView | <a href="10-uni.html">Uni</a> | <a href="20-dialog.html">Dialog</a> ]</strong></p>
 
 <h2>ImgView</h2>
 
@@ -10,11 +10,9 @@
 
 <pre><code>
     + main.c
-      window.c
-      message-area.c
+    + window.c
       list.c
       file.c
-      preferences.c
       vnr-tools.c
 
 </code></pre>
@@ -32,18 +30,40 @@
 <ul>
 <li><p>Description</p>
 
-<p><code>VnrWindow</code> is a <code>GtkWindow</code>. </p>
+<p><code>VnrWindow</code> is a <code>GtkWindow</code>. It contains a <code>UniScrollView</code> which contains
+an <code>UniAnimView</code> to display the current image.</p>
+
+<p><code>UniAnimView</code> is a <code>UniImageView</code> widget, it can display a
+<code>GdkPixbufAnimation</code> or a static <code>GdkPixbuf</code>.</p>
+
+<p><code>UniImageView</code> contains a <code>UniDragger</code> to move the current image,
+<code>UniDragger</code> contains a <code>UniPixbufDrawCache</code>.</p>
 
 <pre><code>
     VnrWindow (GtkWindow)
         GtkBox
-            ------------------------------------------------
+        -------------------------------------------------------------------
             VnrMessageArea
-            ------------------------------------------------
+        -------------------------------------------------------------------
             UniScrollView (GtkGrid)
-                UniAnimView (derives from UniImageView)
+                UniAnimView (UniImageView)
+                    GdkPixbufAnimation, GdkPixbuf, UniDragger
+        -------------------------------------------------------------------
 
 </code></pre></li>
 </ul>
+
+<h4>vnr_list</h4>
+
+<pre><code>`vnr_list_*` methods uses a `GList` to create and store `VnrFile` objects.
+</code></pre>
+
+<h4>VnrFile</h4>
+
+<h4>message-view</h4>
+
+<h4>preferences</h4>
+
+<h4>tools</h4>
 
 <p><br></p>
