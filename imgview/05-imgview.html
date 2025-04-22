@@ -37,33 +37,42 @@ an <code>UniAnimView</code> to display the current image.</p>
 <code>GdkPixbufAnimation</code> or a static <code>GdkPixbuf</code>.</p>
 
 <p><code>UniImageView</code> contains a <code>UniDragger</code> to move the current image,
-<code>UniDragger</code> contains a <code>UniPixbufDrawCache</code>.</p>
+<code>UniDragger</code> contains a <code>UniDrawCache</code>.</p>
 
 <pre><code>
     VnrWindow (GtkWindow)
         GtkBox
-        -------------------------------------------------------------------
+        ---------------------------------------------------------------
             VnrMessageArea
-        -------------------------------------------------------------------
+        ---------------------------------------------------------------
             UniScrollView (GtkGrid)
                 UniAnimView (UniImageView)
                     GdkPixbufAnimation, GdkPixbuf, UniDragger
-        -------------------------------------------------------------------
+        ---------------------------------------------------------------
 
 </code></pre></li>
 </ul>
 
 <h4>vnr_list</h4>
 
-<pre><code>`vnr_list_*` methods uses a `GList` to create and store `VnrFile` objects.
-</code></pre>
+<ul>
+<li><p>Description</p>
+
+<p><code>vnr_list_*</code> methods extend <code>GList</code> to create and store <code>VnrFile</code> objects.</p></li>
+</ul>
 
 <h4>VnrFile</h4>
 
-<h4>message-view</h4>
+<ul>
+<li><p>Description</p>
 
-<h4>preferences</h4>
+<p>A <code>GObject</code> to store file path and display name.</p></li>
+</ul>
 
 <h4>tools</h4>
+
+<ul>
+<li>Description</li>
+</ul>
 
 <p><br></p>

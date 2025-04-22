@@ -36,38 +36,40 @@
     `GdkPixbufAnimation` or a static `GdkPixbuf`.
     
     `UniImageView` contains a `UniDragger` to move the current image,
-    `UniDragger` contains a `UniPixbufDrawCache`.
+    `UniDragger` contains a `UniDrawCache`.
 
     ```
     
         VnrWindow (GtkWindow)
             GtkBox
-            -------------------------------------------------------------------
+            ---------------------------------------------------------------
                 VnrMessageArea
-            -------------------------------------------------------------------
+            ---------------------------------------------------------------
                 UniScrollView (GtkGrid)
                     UniAnimView (UniImageView)
                         GdkPixbufAnimation, GdkPixbuf, UniDragger
-            -------------------------------------------------------------------
+            ---------------------------------------------------------------
             
     ```
 
 #### vnr_list
     
-    `vnr_list_*` methods uses a `GList` to create and store `VnrFile` objects.
+* Description
+    
+    `vnr_list_*` methods extend `GList` to create and store `VnrFile` objects.
 
 
 #### VnrFile
 
-
-#### message-view
-
-
-#### preferences
+* Description
+    
+    A `GObject` to store file path and display name.
 
 
 #### tools
 
+* Description
+    
 
 <br>
 
