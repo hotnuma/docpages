@@ -12,7 +12,7 @@
 
     + main.c
     + window.c
-      list.c
+    + list.c
       file.c
       vnr-tools.c
 
