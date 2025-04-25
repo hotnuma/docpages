@@ -16,10 +16,12 @@
 * File Managers
     
     https://gitlab.xfce.org/xfce/thunar/-/commits/master?ref_type=HEADS  
-    https://github.com/raspberrypi-ui/pcmanfm  
-    https://github.com/raspberrypi-ui/libfm  
     https://github.com/linuxmint/nemo  
     https://github.com/mate-desktop/caja  
+    https://github.com/raspberrypi-ui/pcmanfm  
+    https://github.com/raspberrypi-ui/libfm  
+    https://github.com/lxde/pcmanfm  
+    https://github.com/lxde/libfm  
 
 * Image Viewer
     
