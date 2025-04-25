@@ -16,6 +16,7 @@
 * File Managers
     
     https://gitlab.xfce.org/xfce/thunar/-/commits/master?ref_type=HEADS  
+    https://gitlab.xfce.org/xfce/exo/-/issues/58  
     https://github.com/linuxmint/nemo  
     https://github.com/mate-desktop/caja  
     https://github.com/raspberrypi-ui/pcmanfm  
