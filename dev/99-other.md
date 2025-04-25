@@ -10,11 +10,21 @@
 
 * Repositories
     
-    https://gitlab.xfce.org/xfce/thunar/-/commits/master?ref_type=HEADS  
     https://github.com/labwc/labwc  
     https://gitlab.freedesktop.org/wlroots  
-    https://gitlab.gnome.org/GNOME/shotwell  
 
+* File Managers
+    
+    https://gitlab.xfce.org/xfce/thunar/-/commits/master?ref_type=HEADS  
+    https://github.com/raspberrypi-ui/pcmanfm  
+    https://github.com/raspberrypi-ui/libfm  
+    https://github.com/linuxmint/nemo  
+    https://github.com/mate-desktop/caja  
+
+* Image Viewer
+    
+    https://gitlab.gnome.org/GNOME/shotwell  
+    
 <br/>
 
 

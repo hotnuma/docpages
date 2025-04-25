@@ -9,13 +9,13 @@
 #### Files
 
 ```
-    + job/io_jobs.c
-    + job/exo_job.c
+    + job/io-jobs.c
+    + job/exo-job.c
     + job/job.c
     + job/transferjob.c
     + job/simplejob.c
-    + job/dcount_job.c
-    + job/io_scandir.c
+    + job/dcountjob.c
+    + job/io-scandir.c
     + job/jobutils.c
 ```
 
@@ -66,29 +66,29 @@
 
 * Description
 
-    GObject used to wrap threaded/asynchronous operations in an object
-    oriented way. It uses internally a GIOSchedulerJob.
+    `GObject` used to wrap threaded/asynchronous operations in an object
+    oriented way. It uses internally a `GIOSchedulerJob`.
 
 
 #### ThunarJob
 
 * Description
 
-    An ExoJob used in dialogs and in file operations.
+    An `ExoJob` used in dialogs and in file operations.
 
 
 #### TransferJob
 
 * Description
 
-    A ThunarJob to perform Copy, Link, Move or Trash operations.
+    A `ThunarJob` to perform Copy, Link, Move or Trash operations.
 
 
 #### SimpleJob
 
 * Description
 
-    A ThunarJob for the following simple tasks :
+    A `ThunarJob` for the following simple tasks :
 
     ```
     io_jobs     _io_ls
@@ -107,7 +107,7 @@
 
 * Description
 
-    A ThunarJob to count the number of file and total size in
+    A `ThunarJob` to count the number of file and total size in
     a directory.
 
 
@@ -115,7 +115,8 @@
 
 * Description
 
-    A io_scan_directory function to parse the content of a directory, recursively or not.
+    A io_scan_directory function to parse the content of a directory,
+     recursively or not.
 
 
 #### jobutils
@@ -124,8 +125,7 @@
 
     jobutil_next_duplicate_file and jobutil_next_renamed_file functions.
 
-<br>
-<br>
+
 <br>
 
 
