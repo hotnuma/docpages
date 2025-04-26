@@ -23,7 +23,7 @@
     
     When the application starts, **application_command_line** si called and
     parses the command line. Then the following are called,
-    **application_process_filenames**, **_application_process_files**,
+    **_application_process_filenames**, **_application_process_files**,
     **browser_poke_file**, **_application_process_files_finish**,
     **th_file_launch**.
     
