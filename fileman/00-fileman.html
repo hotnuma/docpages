@@ -28,21 +28,21 @@ parses the command line. Then the following are called,
 <strong>th_file_launch</strong>.</p>
 
 <p>Then <strong>application_open_window</strong> is called with the current directory
-to parse. The AppWindow is created and <strong>window_set_current_directory</strong>
+to parse. The <code>AppWindow</code> is created and <strong>window_set_current_directory</strong>
 is called.</p></li>
 <li><p>Interfaces</p>
 
-<p>FileInfo : base class for ThunarFile</p>
+<p><code>FileInfo</code> : base class for <code>ThunarFile</code></p>
 
-<p>ThunarBrowser : base class to browse, file, device and location</p>
+<p><code>ThunarNavigator</code> : handles the current directory</p>
 
-<p>ThunarComponent : handles selected files</p>
+<p><code>ThunarBrowser</code> : base class to browse, file, device and location</p>
 
-<p>ThunarNavigator : handles the current directory</p>
+<p><code>ThunarComponent</code> : handles selected files</p>
 
-<p>SidePane : base class to handle show/hide property</p>
+<p><code>SidePane</code> : base class to handle show/hide property</p>
 
-<p>BaseView : base class for the StandardView</p></li>
+<p><code>BaseView</code> : base class for the <code>StandardView</code></p></li>
 </ul>
 
 <h4>Main</h4>
@@ -59,28 +59,17 @@ runs the application.</p></li>
 <ul>
 <li><p>Description</p>
 
-<p>Application object is a GtkApplication, it contains functions to
+<p><code>Application</code> object is a <code>GtkApplication</code>, it contains functions to
 execute file operations.</p>
 
 <pre><code>
     application_process_filenames
-
-    application_mkdir
-    application_creat
-
-    application_copy_into
-    application_link_into
-    application_move_into
-
-    application_unlink_files
-    application_trash
-    application_restore_files
-    application_empty_trash
+    application_launch
 
 </code></pre>
 
-<p>For example, LAUNCHER_ACTION_CREATE_FOLDER menu item calls
-_launcher_action_create_folder then calls application_mkdir.</p></li>
+<p><strong>application_launch</strong> is a central function to execute a file operation
+and create a progress dialog box if needed.</p></li>
 </ul>
 
 <h4>AppWindow</h4>
@@ -88,7 +77,7 @@ _launcher_action_create_folder then calls application_mkdir.</p></li>
 <ul>
 <li><p>Description</p>
 
-<p>A GtkWindow.</p>
+<p>A <code>GtkWindow</code>.</p>
 
 <pre><code>
     GtkWindow
@@ -115,7 +104,7 @@ _launcher_action_create_folder then calls application_mkdir.</p></li>
 <ul>
 <li><p>Description</p>
 
-<p>A GObject used to execute actions from particular widgets. <code>Window</code>,
+<p>A <code>GObject</code> used to execute actions from particular widgets. <code>Window</code>,
 and <code>TreeView</code> have a <code>ThunarLauncher</code>.</p></li>
 </ul>
 
@@ -126,21 +115,21 @@ and <code>TreeView</code> have a <code>ThunarLauncher</code>.</p></li>
 
 <p><a href="https://alexxcons.github.io/blogpost_1.html">https://alexxcons.github.io/blogpost_1.html</a>  </p>
 
-<p>AppMenu is a GtkMenu used as a popup menu in the TreeView and the
-StandardView. It&#39;s created using g_object_new and filled with
-appmenu_add_sections. First, the Launcher informations are filled,
+<p><code>AppMenu</code> is a <code>GtkMenu</code> used as a popup menu in the <code>TreeView</code> and the
+<code>StandardView</code>. It&#39;s created using <code>g_object_new</code> and filled with
+<strong>appmenu_add_sections</strong>. First, the Launcher informations are filled,
 then the popup is created, then selecting an item will call a launcher
 function on the corresponding Launcher object.</p></li>
 <li><p>TreeView</p>
 
-<p>The menu is created from the widget&#39;s <code>button_press_event</code> handler
-which calls the <code>treeview_popup_menu</code> function and then
-<code>_treeview_context_menu</code>.</p></li>
+<p>The menu is created from the widget&#39;s <strong>button_press_event</strong> handler
+which calls the <strong>treeview_popup_menu</strong> function and then
+<strong>_treeview_context_menu</strong>.</p></li>
 <li><p>StandardView</p>
 
-<p>The widget creates its popup in response to a button-release-event signal,
-it calls the <code>_standard_view_button</code>_release_event function and then it
-calls <code>standard_view_context_menu</code>.</p></li>
+<p>The widget creates its popup in response to a <strong>button-release-event</strong>
+signal, it calls the <strong>_standard_view_button_release_event</strong> function and
+then it calls <strong>standard_view_context_menu</strong>.</p></li>
 </ul>
 
 <p><br></p>

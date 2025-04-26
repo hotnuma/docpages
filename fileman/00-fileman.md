@@ -28,22 +28,22 @@
     **th_file_launch**.
     
     Then **application_open_window** is called with the current directory
-    to parse. The AppWindow is created and **window_set_current_directory**
+    to parse. The `AppWindow` is created and **window_set_current_directory**
     is called.
 
 * Interfaces
     
-    FileInfo : base class for ThunarFile
+    `FileInfo` : base class for `ThunarFile`
     
-    ThunarBrowser : base class to browse, file, device and location
+    `ThunarNavigator` : handles the current directory
     
-    ThunarComponent : handles selected files
+    `ThunarBrowser` : base class to browse, file, device and location
     
-    ThunarNavigator : handles the current directory
+    `ThunarComponent` : handles selected files
     
-    SidePane : base class to handle show/hide property
+    `SidePane` : base class to handle show/hide property
     
-    BaseView : base class for the StandardView
+    `BaseView` : base class for the `StandardView`
     
 
 #### Main
@@ -58,36 +58,25 @@
     
 * Description
 
-    Application object is a GtkApplication, it contains functions to
+    `Application` object is a `GtkApplication`, it contains functions to
     execute file operations.
     
     ```
     
         application_process_filenames
-        
-        application_mkdir
-        application_creat
-        
-        application_copy_into
-        application_link_into
-        application_move_into
-        
-        application_unlink_files
-        application_trash
-        application_restore_files
-        application_empty_trash
+        application_launch
     
     ```
     
-    For example, LAUNCHER_ACTION_CREATE_FOLDER menu item calls
-    _launcher_action_create_folder then calls application_mkdir.
+    **application_launch** is a central function to execute a file operation
+    and create a progress dialog box if needed.
     
 
 #### AppWindow
 
 * Description
 
-    A GtkWindow.
+    A `GtkWindow`.
     
     ```
     
@@ -114,7 +103,7 @@
 
 * Description
     
-    A GObject used to execute actions from particular widgets. `Window`,
+    A `GObject` used to execute actions from particular widgets. `Window`,
     and `TreeView` have a `ThunarLauncher`.
 
 
@@ -124,23 +113,23 @@
     
     https://alexxcons.github.io/blogpost_1.html  
 
-    AppMenu is a GtkMenu used as a popup menu in the TreeView and the
-    StandardView. It's created using g_object_new and filled with
-    appmenu_add_sections. First, the Launcher informations are filled,
+    `AppMenu` is a `GtkMenu` used as a popup menu in the `TreeView` and the
+    `StandardView`. It's created using `g_object_new` and filled with
+    **appmenu_add_sections**. First, the Launcher informations are filled,
     then the popup is created, then selecting an item will call a launcher
     function on the corresponding Launcher object.
 
 * TreeView
     
-    The menu is created from the widget's `button_press_event` handler
-    which calls the `treeview_popup_menu` function and then
-    `_treeview_context_menu`.
+    The menu is created from the widget's **button_press_event** handler
+    which calls the **treeview_popup_menu** function and then
+    **_treeview_context_menu**.
     
 * StandardView
 
-    The widget creates its popup in response to a button-release-event signal,
-    it calls the `_standard_view_button`_release_event function and then it
-    calls `standard_view_context_menu`.
+    The widget creates its popup in response to a **button-release-event**
+    signal, it calls the **_standard_view_button_release_event** function and
+    then it calls **standard_view_context_menu**.
 
 <br>
 
