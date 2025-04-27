@@ -8,97 +8,27 @@
 
 <h4>Files</h4>
 
-<pre><code>    + core/appnotify.c
+<pre><code>    + core/fileinfo.c
+    + core/th_file.c
+    + core/th_folder.c
+    + core/filemonitor.c
+    
+    + core/th_device.c
+    + core/devmonitor.c
+    
     + core/clipboard.c
     + core/dnd.c
-    + core/user.c
     
-    + core/devmonitor.c
-    + core/th_device.c
-    
-    + core/filemonitor.c
-    + core/th_folder.c
-    + core/th_file.c
-    + core/fileinfo.c
+    + core/appnotify.c
+    + core/usermanager.c
 </code></pre>
-
-<h4>app_notify</h4>
-
-<ul>
-<li><p>Description</p>
-
-<p>Functions to display notification message, ThunarDevice uses it
-to display unmount and ejects notifications.</p></li>
-</ul>
-
-<h4>ClipboardManager</h4>
-
-<ul>
-<li><p>Description</p>
-
-<p>A GObject to handle cut, copy, paste clipboard operations on files,
-it uses GtkClipboard internally.</p></li>
-</ul>
-
-<h4>DnD</h4>
-
-<ul>
-<li><p>Description</p>
-
-<p>dnd_ask</p>
-
-<p>dnd_perform</p></li>
-</ul>
-
-<h4>User</h4>
-
-<ul>
-<li><p>Description</p>
-
-<p>This module provides three objects, a global UserManager,
-a ThunarGroup and ThunarUser. The PermissionBox uses it.</p></li>
-</ul>
-
-<h4>DeviceMonitor</h4>
-
-<ul>
-<li><p>Description</p>
-
-<p>A global GObject to handle device events, it uses GVolumeMonitor
-internally. ThunarDevice, TreeModel and Window use it.</p></li>
-</ul>
-
-<h4>ThunarDevice</h4>
-
-<ul>
-<li><p>Description</p>
-
-<p>A GObject which uses a GVolume, GMount or GDrive to handle devices.</p></li>
-</ul>
-
-<h4>FileMonitor</h4>
-
-<ul>
-<li><p>Description</p>
-
-<p>A global GObject to handle file events.</p></li>
-</ul>
-
-<h4>ThunarFolder</h4>
-
-<ul>
-<li><p>Description</p>
-
-<p>A GObject to handle folders which uses a ThunarJob, ThunarFile,
-FileMonitor and GFileMonitor.</p></li>
-</ul>
 
 <h4>FileInfo</h4>
 
 <ul>
 <li><p>Description</p>
 
-<p>A GTypeInterface to handle file infos using GFile and GFileInfo.</p></li>
+<p>A <code>GTypeInterface</code> to handle file infos using <code>GFile</code> and <code>GFileInfo</code>.</p></li>
 </ul>
 
 <h4>ThunarFile</h4>
@@ -106,14 +36,83 @@ FileMonitor and GFileMonitor.</p></li>
 <ul>
 <li><p>Description</p>
 
-<p>An implementation of FileInfo. _th_file_load and _th_file_info_load functions
-load these informations.</p></li>
+<p>Implements a <code>FileInfo</code> interface. <strong>_th_file_load</strong>
+and <strong>_th_file_info_load</strong> functions load file informations.</p></li>
 <li><p>File sorting</p>
 
-<p>The th_file_compare_by_name function calls g_utf8_collate_key_for_filename
-to compare file names.</p></li>
+<p>The <strong>th_file_compare_by_name</strong> function calls
+<strong>g_utf8_collate_key_for_filename</strong> to compare file names.</p></li>
 </ul>
 
-<p><br>
-<br>
-<br></p>
+<h4>ThunarFolder</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A <code>GObject</code> to handle folders, it uses a <code>ThunarJob</code>, <code>ThunarFile</code>,
+<code>FileMonitor</code> and <code>GFileMonitor</code>.</p></li>
+</ul>
+
+<h4>FileMonitor</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A global <code>GObject</code> to handle file events.</p></li>
+</ul>
+
+<h4>ThunarDevice</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A <code>GObject</code> which uses a <code>GVolume</code>, <code>GMount</code> or <code>GDrive</code> to handle devices.</p></li>
+</ul>
+
+<h4>DeviceMonitor</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A global <code>GObject</code> to handle device events, it uses <code>GVolumeMonitor</code>
+internally. <code>ThunarDevice</code>, <code>TreeModel</code> and <code>AppWindow</code> use it.</p></li>
+</ul>
+
+<h4>ClipboardManager</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>A <code>GObject</code> to handle cut, copy, paste clipboard operations on files,
+it uses <code>GtkClipboard</code> internally.</p></li>
+</ul>
+
+<h4>DnD</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p><strong>dnd_ask</strong></p>
+
+<p><strong>dnd_perform</strong></p></li>
+</ul>
+
+<h4>app_notify</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>Functions to display notification message, <code>ThunarDevice</code> uses it
+to display unmount and ejects notifications.</p></li>
+</ul>
+
+<h4>UserManager</h4>
+
+<ul>
+<li><p>Description</p>
+
+<p>This module provides three objects, a global <code>UserManager</code>,
+a <code>ThunarGroup</code> and <code>ThunarUser</code>. The <code>PermissionBox</code> uses it.</p></li>
+</ul>
+
+<p><br></p>
