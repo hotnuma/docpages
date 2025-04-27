@@ -27,6 +27,10 @@
 * Image Viewer
     
     https://gitlab.gnome.org/GNOME/shotwell  
+
+* Other
+    
+    https://github.com/cboxdoerfer/fsearch  
     
 <br/>
 
