@@ -58,6 +58,10 @@
     https://gitlab.xfce.org/xfce/xfce4-session/-/issues/111  
     https://gitlab.xfce.org/xfce/xfce4-session/-/issues/50  
 
+* Thunar Leak ThunarFile objects
+    
+    https://gitlab.xfce.org/xfce/thunar/-/issues/573  
+
 * Xfwm4 Unmaximize
     
     https://gitlab.xfce.org/xfce/xfwm4/-/issues/190  
