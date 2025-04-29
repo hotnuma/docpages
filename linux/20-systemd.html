@@ -66,7 +66,7 @@ systemctl | grep running
 <li><p>Read shutdown log</p>
 
 <p><code>journalctl -b -1 -e</code></p></li>
-<li><p>Rotation des logs avec logrotate</p>
+<li><p>Using logrotate</p>
 
 <p><a href="https://journaldunadminlinux.fr/rotation-des-logs-avec-logrotate/">https://journaldunadminlinux.fr/rotation-des-logs-avec-logro</a></p></li>
 <li><p>Delete old files</p>
@@ -78,18 +78,30 @@ systemctl | grep running
 <p>check result : <code>sudo du /var/log  -x | sort -nr | head -10</code></p></li>
 </ul>
 
-<!--
-    https://unix.stackexchange.com/questions/459996/  
-    https://unix.stackexchange.com/questions/184488/  
-
-    ```
-    sudo find /var/log -type f -mtime +5 -delete
-    sudo find /var/log -maxdepth 1 -type f -mtime +5 -delete
-    sudo find /var/log ! -wholename "/var/log/journal/*" -type f -mtime +5 -delete
-    ```
--->
-
 <h4><a name="disable"></a> Turn off excessive logs</h4>
+
+<ul>
+<li><p>dbus-daemon</p>
+
+<p><a href="https://dbus.freedesktop.org/doc/dbus-daemon.1.html">https://dbus.freedesktop.org/doc/dbus-daemon.1.html</a>  </p>
+
+<p><code>sudo nano /etc/dbus-1/system-local.conf</code></p>
+
+<p>add the following :</p>
+
+<pre><code>&lt;!-- disable syslog polution --&gt;
+&lt;nosyslog/&gt;
+</code></pre></li>
+</ul>
+
+<!--
+    cat /usr/share/dbus-1/system.conf
+    ls /etc/dbus-1/
+    cat /usr/share/dbus-1/session.conf
+    sudo cp /etc/dbus-1/session-local.conf /etc/dbus-1/session-local.conf.bak
+    
+    add <nosyslog> ?
+-->
 
 <ul>
 <li><p>rtkit-daemon</p>
@@ -144,3 +156,16 @@ systemd-analyze --no-pager blame
 systemd-analyze critical-chain
 </code></pre></li>
 </ul>
+
+<p><br/></p>
+
+<!--
+    https://unix.stackexchange.com/questions/459996/  
+    https://unix.stackexchange.com/questions/184488/  
+
+    ```
+    sudo find /var/log -type f -mtime +5 -delete
+    sudo find /var/log -maxdepth 1 -type f -mtime +5 -delete
+    sudo find /var/log ! -wholename "/var/log/journal/*" -type f -mtime +5 -delete
+    ```
+-->

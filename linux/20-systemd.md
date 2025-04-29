@@ -73,7 +73,7 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
 
     `journalctl -b -1 -e`
     
-* Rotation des logs avec logrotate
+* Using logrotate
     
     [https://journaldunadminlinux.fr/rotation-des-logs-avec-logro](https://journaldunadminlinux.fr/rotation-des-logs-avec-logrotate/)
 
@@ -85,19 +85,30 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
 
     check result : `sudo du /var/log  -x | sort -nr | head -10`
 
-<!--
-    https://unix.stackexchange.com/questions/459996/  
-    https://unix.stackexchange.com/questions/184488/  
-
-    ```
-    sudo find /var/log -type f -mtime +5 -delete
-    sudo find /var/log -maxdepth 1 -type f -mtime +5 -delete
-    sudo find /var/log ! -wholename "/var/log/journal/*" -type f -mtime +5 -delete
-    ```
--->
-
 
 #### <a name="disable"></a> Turn off excessive logs
+
+* dbus-daemon
+    
+    https://dbus.freedesktop.org/doc/dbus-daemon.1.html  
+    
+    `sudo nano /etc/dbus-1/system-local.conf`
+    
+    add the following :
+    
+    ```
+    <!-- disable syslog polution -->
+    <nosyslog/>
+    ```
+    
+<!--
+    cat /usr/share/dbus-1/system.conf
+    ls /etc/dbus-1/
+    cat /usr/share/dbus-1/session.conf
+    sudo cp /etc/dbus-1/session-local.conf /etc/dbus-1/session-local.conf.bak
+    
+    add <nosyslog> ?
+-->
 
 * rtkit-daemon
     
@@ -155,4 +166,18 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     systemd-analyze --no-pager blame
     systemd-analyze critical-chain
     ```
+
+<br/>
+
+<!--
+    https://unix.stackexchange.com/questions/459996/  
+    https://unix.stackexchange.com/questions/184488/  
+
+    ```
+    sudo find /var/log -type f -mtime +5 -delete
+    sudo find /var/log -maxdepth 1 -type f -mtime +5 -delete
+    sudo find /var/log ! -wholename "/var/log/journal/*" -type f -mtime +5 -delete
+    ```
+-->
+
 
