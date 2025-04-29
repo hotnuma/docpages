@@ -10,7 +10,6 @@
 
 https://www.freedesktop.org/software/systemd/man/systemctl.html  
 [https://access.redhat.com/attachments/12052018_systemd_6.pdf](https://access.redhat.com/sites/default/files/attachments/12052018_systemd_6.pdf)  
-[https://access.redhat.com/documentation/](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-managing_services_with_systemd)  
 
 * Manage services and units
     
@@ -48,7 +47,7 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     ```
     systemctl list-unit-files --type=service
     systemctl list-unit-files | grep "enabled "
-    systemctl list-units --no-pager
+    systemctl --no-pager list-units
     systemctl | grep running
     ```
     
@@ -94,7 +93,7 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     
     ```
     sudo mkdir /etc/systemd/system/rtkit-daemon.service.d/
-    sudo geany /etc/systemd/system/rtkit-daemon.service.d/log.conf
+    sudo nano /etc/systemd/system/rtkit-daemon.service.d/log.conf
     ```
     
     Add the following :
@@ -116,7 +115,9 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     https://unix.stackexchange.com/questions/224370/  
     https://unix.stackexchange.com/questions/637227/  
     
-    In `/etc/pam.d/sudo` add the following with a real user name :
+    `sudo nano /etc/pam.d/sudo`
+    
+    add the following with the corresponding user name :
 
     `session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = <username>`
     

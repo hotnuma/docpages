@@ -9,8 +9,7 @@
 <h4>References</h4>
 
 <p><a href="https://www.freedesktop.org/software/systemd/man/systemctl.html">https://www.freedesktop.org/software/systemd/man/systemctl.html</a><br>
-<a href="https://access.redhat.com/sites/default/files/attachments/12052018_systemd_6.pdf">https://access.redhat.com/attachments/12052018_systemd_6.pdf</a><br>
-<a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-managing_services_with_systemd">https://access.redhat.com/documentation/</a>  </p>
+<a href="https://access.redhat.com/sites/default/files/attachments/12052018_systemd_6.pdf">https://access.redhat.com/attachments/12052018_systemd_6.pdf</a>  </p>
 
 <ul>
 <li><p>Manage services and units</p>
@@ -43,7 +42,7 @@ sudo systemctl reload application.service
 
 <pre><code>systemctl list-unit-files --type=service
 systemctl list-unit-files | grep &quot;enabled &quot;
-systemctl list-units --no-pager
+systemctl --no-pager list-units
 systemctl | grep running
 </code></pre></li>
 <li><p>List timers</p>
@@ -86,7 +85,7 @@ systemctl | grep running
 <p><a href="https://unix.stackexchange.com/questions/684379/">https://unix.stackexchange.com/questions/684379/</a>  </p>
 
 <pre><code>sudo mkdir /etc/systemd/system/rtkit-daemon.service.d/
-sudo geany /etc/systemd/system/rtkit-daemon.service.d/log.conf
+sudo nano /etc/systemd/system/rtkit-daemon.service.d/log.conf
 </code></pre>
 
 <p>Add the following :</p>
@@ -105,7 +104,9 @@ sudo systemctl restart rtkit-daemon.service
 <p><a href="https://unix.stackexchange.com/questions/224370/">https://unix.stackexchange.com/questions/224370/</a><br>
 <a href="https://unix.stackexchange.com/questions/637227/">https://unix.stackexchange.com/questions/637227/</a>  </p>
 
-<p>In <code>/etc/pam.d/sudo</code> add the following with a real user name :</p>
+<p><code>sudo nano /etc/pam.d/sudo</code></p>
+
+<p>add the following with the corresponding user name :</p>
 
 <p><code>session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = &lt;username&gt;</code></p>
 
