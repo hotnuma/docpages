@@ -49,20 +49,6 @@ systemctl | grep running
 <li><p>List timers</p>
 
 <p><code>systemctl --no-pager list-timers</code></p></li>
-<li><p>dbus</p>
-
-<p><a href="https://unix.stackexchange.com/questions/592542/">https://unix.stackexchange.com/questions/592542/</a>  </p></li>
-</ul>
-
-<h4>Disable Services</h4>
-
-<ul>
-<li><p>gvfs-backends</p>
-
-<pre><code>systemctl --user mask gvfs-afc-volume-monitor
-systemctl --user mask gvfs-gphoto2-volume-monitor
-systemctl --user mask gvfs-goa-volume-monitor
-</code></pre></li>
 </ul>
 
 <h4>Log files</h4>
@@ -93,39 +79,6 @@ systemctl --user mask gvfs-goa-volume-monitor
 </ul>
 
 <h4><a name="disable"></a> Turn off excessive logs</h4>
-
-<ul>
-<li><p>dbus-daemon</p>
-
-<p><a href="https://dbus.freedesktop.org/doc/dbus-daemon.1.html">https://dbus.freedesktop.org/doc/dbus-daemon.1.html</a>  </p>
-
-<p><code>sudo nano /etc/dbus-1/system-local.conf</code></p>
-
-<pre><code>cp /usr/lib/systemd/system/dbus.service ~/Bureau/
-sudo nano /usr/lib/systemd/system/dbus.service
-</code></pre>
-
-<p>replace <code>--syslog-only</code> by <code>--nosyslog</code></p></li>
-</ul>
-
-<!--
-    add the following :
-    
-    ```
-    <!-- disable syslog polution -->
-
-<pre><code>&lt;nosyslog/&gt;
-```
-
-cat /usr/share/dbus-1/system.conf
-ls /etc/dbus-1/
-cat /usr/share/dbus-1/session.conf
-sudo cp /etc/dbus-1/session-local.conf /etc/dbus-1/session-local.conf.bak
-
-add &lt;nosyslog&gt; ?
-</code></pre>
-
-<p>--&gt;</p>
 
 <ul>
 <li><p>rtkit-daemon</p>

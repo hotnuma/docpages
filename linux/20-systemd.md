@@ -57,22 +57,6 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     `systemctl --no-pager list-timers`
 
 
-* dbus
-    
-    https://unix.stackexchange.com/questions/592542/  
-
-
-#### Disable Services
-
-* gvfs-backends
-    
-    ```
-    systemctl --user mask gvfs-afc-volume-monitor
-    systemctl --user mask gvfs-gphoto2-volume-monitor
-    systemctl --user mask gvfs-goa-volume-monitor
-    ```
-
-
 #### Log files
 
 [https://www.golinuxcloud.com/view-logs-using-journalctl-filt](https://www.golinuxcloud.com/view-logs-using-journalctl-filter-journald/)
@@ -103,35 +87,6 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
 
 
 #### <a name="disable"></a> Turn off excessive logs
-
-* dbus-daemon
-    
-    https://dbus.freedesktop.org/doc/dbus-daemon.1.html  
-    
-    `sudo nano /etc/dbus-1/system-local.conf`
-    
-    ```
-    cp /usr/lib/systemd/system/dbus.service ~/Bureau/
-    sudo nano /usr/lib/systemd/system/dbus.service
-    ```
-    
-    replace `--syslog-only` by `--nosyslog`
-    
-<!--
-    add the following :
-    
-    ```
-    <!-- disable syslog polution -->
-    <nosyslog/>
-    ```
-    
-    cat /usr/share/dbus-1/system.conf
-    ls /etc/dbus-1/
-    cat /usr/share/dbus-1/session.conf
-    sudo cp /etc/dbus-1/session-local.conf /etc/dbus-1/session-local.conf.bak
-    
-    add <nosyslog> ?
--->
 
 * rtkit-daemon
     
