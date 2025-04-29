@@ -57,6 +57,11 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     `systemctl --no-pager list-timers`
 
 
+* dbus
+    
+    https://unix.stackexchange.com/questions/592542/  
+
+
 #### Log files
 
 [https://www.golinuxcloud.com/view-logs-using-journalctl-filt](https://www.golinuxcloud.com/view-logs-using-journalctl-filter-journald/)
