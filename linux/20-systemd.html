@@ -85,23 +85,27 @@ systemctl | grep running
 
 <p><a href="https://dbus.freedesktop.org/doc/dbus-daemon.1.html">https://dbus.freedesktop.org/doc/dbus-daemon.1.html</a>  </p>
 
-<p><code>sudo nano /etc/dbus-1/system-local.conf</code></p>
-
-<p>add the following :</p>
-
-<pre><code>&lt;!-- disable syslog polution --&gt;
-&lt;nosyslog/&gt;
-</code></pre></li>
+<p><code>sudo nano /etc/dbus-1/system-local.conf</code></p></li>
 </ul>
 
 <!--
-    cat /usr/share/dbus-1/system.conf
-    ls /etc/dbus-1/
-    cat /usr/share/dbus-1/session.conf
-    sudo cp /etc/dbus-1/session-local.conf /etc/dbus-1/session-local.conf.bak
+    add the following :
     
-    add <nosyslog> ?
--->
+    ```
+    <!-- disable syslog polution -->
+
+<pre><code>&lt;nosyslog/&gt;
+```
+
+cat /usr/share/dbus-1/system.conf
+ls /etc/dbus-1/
+cat /usr/share/dbus-1/session.conf
+sudo cp /etc/dbus-1/session-local.conf /etc/dbus-1/session-local.conf.bak
+
+add &lt;nosyslog&gt; ?
+</code></pre>
+
+<p>--&gt;</p>
 
 <ul>
 <li><p>rtkit-daemon</p>
