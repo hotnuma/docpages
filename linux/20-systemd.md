@@ -149,6 +149,10 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
 <br/>
 
 <!--
+
+    sudo sed -i.bak -e s/--syslog-only/--nosyslog/g /usr/lib/systemd/system/dbus.service
+    sudo sed -i.bak -e s/--syslog-only/--nosyslog/g /usr/lib/systemd/user/dbus.service
+
     https://unix.stackexchange.com/questions/459996/  
     https://unix.stackexchange.com/questions/184488/  
 
@@ -156,6 +160,7 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     sudo find /var/log -type f -mtime +5 -delete
     sudo find /var/log -maxdepth 1 -type f -mtime +5 -delete
     sudo find /var/log ! -wholename "/var/log/journal/*" -type f -mtime +5 -delete
+
     ```
 -->
 
