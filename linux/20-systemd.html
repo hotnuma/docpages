@@ -54,6 +54,17 @@ systemctl | grep running
 <p><a href="https://unix.stackexchange.com/questions/592542/">https://unix.stackexchange.com/questions/592542/</a>  </p></li>
 </ul>
 
+<h4>Disable Services</h4>
+
+<ul>
+<li><p>gvfs-backends</p>
+
+<pre><code>systemctl --user mask gvfs-afc-volume-monitor
+systemctl --user mask gvfs-gphoto2-volume-monitor
+systemctl --user mask gvfs-goa-volume-monitor
+</code></pre></li>
+</ul>
+
 <h4>Log files</h4>
 
 <p><a href="https://www.golinuxcloud.com/view-logs-using-journalctl-filter-journald/">https://www.golinuxcloud.com/view-logs-using-journalctl-filt</a></p>

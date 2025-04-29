@@ -62,6 +62,17 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     https://unix.stackexchange.com/questions/592542/  
 
 
+#### Disable Services
+
+* gvfs-backends
+    
+    ```
+    systemctl --user mask gvfs-afc-volume-monitor
+    systemctl --user mask gvfs-gphoto2-volume-monitor
+    systemctl --user mask gvfs-goa-volume-monitor
+    ```
+
+
 #### Log files
 
 [https://www.golinuxcloud.com/view-logs-using-journalctl-filt](https://www.golinuxcloud.com/view-logs-using-journalctl-filter-journald/)
