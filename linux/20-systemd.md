@@ -146,22 +146,18 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     systemd-analyze critical-chain
     ```
 
+* Disable gvfs-backends
+
+    using bak from systools : https://github.com/hotnuma/systools
+
+    ```
+    sudo bak /usr/share/gvfs/remote-volume-monitors/afc.monitor
+    sudo bak /usr/share/gvfs/remote-volume-monitors/goa.monitor
+    sudo bak /usr/share/gvfs/remote-volume-monitors/gphoto2.monitor
+    sudo bak /usr/share/gvfs/remote-volume-monitors/mtp.monitor
+    ```
+
+
 <br/>
-
-<!--
-
-    sudo sed -i.bak -e s/--syslog-only/--nosyslog/g /usr/lib/systemd/system/dbus.service
-    sudo sed -i.bak -e s/--syslog-only/--nosyslog/g /usr/lib/systemd/user/dbus.service
-
-    https://unix.stackexchange.com/questions/459996/  
-    https://unix.stackexchange.com/questions/184488/  
-
-    ```
-    sudo find /var/log -type f -mtime +5 -delete
-    sudo find /var/log -maxdepth 1 -type f -mtime +5 -delete
-    sudo find /var/log ! -wholename "/var/log/journal/*" -type f -mtime +5 -delete
-
-    ```
--->
 
 

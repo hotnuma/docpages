@@ -133,22 +133,15 @@ session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = hotnu
 systemd-analyze --no-pager blame
 systemd-analyze critical-chain
 </code></pre></li>
+<li><p>Disable gvfs-backends</p>
+
+<p>using bak from systools : <a href="https://github.com/hotnuma/systools">https://github.com/hotnuma/systools</a></p>
+
+<pre><code>sudo bak /usr/share/gvfs/remote-volume-monitors/afc.monitor
+sudo bak /usr/share/gvfs/remote-volume-monitors/goa.monitor
+sudo bak /usr/share/gvfs/remote-volume-monitors/gphoto2.monitor
+sudo bak /usr/share/gvfs/remote-volume-monitors/mtp.monitor
+</code></pre></li>
 </ul>
 
 <p><br/></p>
-
-<!--
-
-    sudo sed -i.bak -e s/--syslog-only/--nosyslog/g /usr/lib/systemd/system/dbus.service
-    sudo sed -i.bak -e s/--syslog-only/--nosyslog/g /usr/lib/systemd/user/dbus.service
-
-    https://unix.stackexchange.com/questions/459996/  
-    https://unix.stackexchange.com/questions/184488/  
-
-    ```
-    sudo find /var/log -type f -mtime +5 -delete
-    sudo find /var/log -maxdepth 1 -type f -mtime +5 -delete
-    sudo find /var/log ! -wholename "/var/log/journal/*" -type f -mtime +5 -delete
-
-    ```
--->
