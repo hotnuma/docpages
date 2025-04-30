@@ -76,29 +76,30 @@
     ```
     #!/usr/bin/bash
 
-    opt_dev=0
-    opt_name=""
+    opt_param=0
+    opt_filepath=""
 
     while (($#)); do
         case "$1" in
-            -dev)
-            opt_dev=1
+            -param)
+            opt_param=1
             ;;
-            -o)
+            -i)
                 test $# -gt 1 || error_exit "*** missing option"
                 shift
-                opt_name="$1"
+                opt_filepath="$1"
             ;;
             *)
-            opt_dev=0
+            opt_param=0
             ;;
         esac
         shift
     done
 
-    if [[ $DEV == 1 ]]; then
+    if [[ $opt_param == 1 ]]; then
         echo ok
     fi
+
     ```
 
 
@@ -193,9 +194,5 @@
         fi
     fi
     ```
-
-<!--
-    `basedir="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"`  
--->
 
 

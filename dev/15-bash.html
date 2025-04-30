@@ -75,29 +75,30 @@ ask_confirm()
 
 <pre><code>#!/usr/bin/bash
 
-opt_dev=0
-opt_name=&quot;&quot;
+opt_param=0
+opt_filepath=&quot;&quot;
 
 while (($#)); do
     case &quot;$1&quot; in
-        -dev)
-        opt_dev=1
+        -param)
+        opt_param=1
         ;;
-        -o)
+        -i)
             test $# -gt 1 || error_exit &quot;*** missing option&quot;
             shift
-            opt_name=&quot;$1&quot;
+            opt_filepath=&quot;$1&quot;
         ;;
         *)
-        opt_dev=0
+        opt_param=0
         ;;
     esac
     shift
 done
 
-if [[ $DEV == 1 ]]; then
+if [[ $opt_param == 1 ]]; then
     echo ok
 fi
+
 </code></pre></li>
 </ul>
 
@@ -185,7 +186,3 @@ else
 fi
 </code></pre></li>
 </ul>
-
-<!--
-    `basedir="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"`  
--->
