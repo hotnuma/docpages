@@ -128,7 +128,7 @@
 * Read network configuration
     
     ```
-    ip a
+    ip a show eth0
     ip route show default
     networkctl
     networkctl status
@@ -136,11 +136,12 @@
     
     List interfaces : `ls /sys/class/net`
     
-* Change interface state
+* Restart network
     
     ```
     sudo ifdown eth0
     sudo ifup eth0
+    ip a show eth0
     ```
 
     ```

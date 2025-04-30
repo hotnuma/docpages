@@ -109,17 +109,18 @@ hostname -d
 </code></pre></li>
 <li><p>Read network configuration</p>
 
-<pre><code>ip a
+<pre><code>ip a show eth0
 ip route show default
 networkctl
 networkctl status
 </code></pre>
 
 <p>List interfaces : <code>ls /sys/class/net</code></p></li>
-<li><p>Change interface state</p>
+<li><p>Restart network</p>
 
 <pre><code>sudo ifdown eth0
 sudo ifup eth0
+ip a show eth0
 </code></pre>
 
 <pre><code>sudo ip link set dev eth0 down
