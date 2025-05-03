@@ -15,7 +15,7 @@
     https://wiki.archlinux.org/title/Firefox/Tweaks  
     
     https://www.mozilla.org/en-US/firefox/releases/  
-    https://support.mozilla.org/en-US/kb/install-firefox-linux  
+    [https://support.mozilla.org/en-US/kb/install-firefox-linux](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_system-firefox-installation-for-advanced-users)  
     
 * Install from mozilla
     
@@ -28,9 +28,6 @@
     sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
     ```
     
-    `wget https://hotnuma.github.io/docpages/linux/firefox-opt.desktop firefox-opt.desktop`  
-    `sudo mv ./firefox-opt.desktop /usr/local/share/applications/`
-
 * Test Videos
     
     https://www.youtube.com/watch?v=cuXsupMuik4  
