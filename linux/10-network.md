@@ -26,6 +26,8 @@
     ```
     tar xvf firefox-*.tar.xz && sudo mv firefox /opt/
     sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
+    wget https://hotnuma.github.io/docpages/linux/firefox.desktop
+    sudo mv ./firefox.desktop /usr/local/share/applications/
     ```
     
 * Test Videos
