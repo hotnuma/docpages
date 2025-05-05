@@ -28,7 +28,7 @@
     [audacious](build-audacious.html)  
     [labwc](build-labwc.html)  
     [rofi](build-rofi.html)  
-    [thunar](build-thunar.html)  
+    [xfce](build-xfce.html)  
 
 <br/>
 
