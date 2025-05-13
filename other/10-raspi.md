@@ -114,51 +114,6 @@
     `update-initramfs -u`
 
 
-#### Debian Trixie
-
-* Installation
-    
-    Download an image from daily builds :  
-    https://raspi.debian.net/daily-images/  
-    
-    *the FAQ says these images are not compatible with the RPI 5*
-    
-    Default user is **root** with empty password.
-
-    ```
-    apt update && apt upgrade
-    apt install sudo debconf kbd locales
-
-    dpkg-reconfigure tzdata
-    dpkg-reconfigure locales
-
-    useradd -s /bin/bash -d /home/<username> -m <username>
-    passwd <username>
-    usermod -aG sudo <username>
-    reboot
-    ```
-
-    log as new user
-    
-    ```
-    sudo tasksel
-    (select debian desktop and xfce)
-    
-    sudo apt purge plymouth
-    sudo reboot
-    ```
-
-    Add hostname manually in `/etc/hosts` :
-
-    ```
-    127.0.0.1	localhost
-    127.0.1.1	<hostname>
-    ::1	localhost ip6-localhost ip6-loopback
-    ff02::1	ip6-allnodes
-    ff02::2	ip6-allrouters
-    ```
-
-
 #### Manual configuration
 
 * Xfce Configuration

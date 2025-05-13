@@ -103,49 +103,6 @@ grep -r MODULES /etc/initramfs-tools
 <p><code>update-initramfs -u</code></p></li>
 </ul>
 
-<h4>Debian Trixie</h4>
-
-<ul>
-<li><p>Installation</p>
-
-<p>Download an image from daily builds :<br>
-<a href="https://raspi.debian.net/daily-images/">https://raspi.debian.net/daily-images/</a>  </p>
-
-<p><em>the FAQ says these images are not compatible with the RPI 5</em></p>
-
-<p>Default user is <strong>root</strong> with empty password.</p>
-
-<pre><code>apt update &amp;&amp; apt upgrade
-apt install sudo debconf kbd locales
-
-dpkg-reconfigure tzdata
-dpkg-reconfigure locales
-
-useradd -s /bin/bash -d /home/&lt;username&gt; -m &lt;username&gt;
-passwd &lt;username&gt;
-usermod -aG sudo &lt;username&gt;
-reboot
-</code></pre>
-
-<p>log as new user</p>
-
-<pre><code>sudo tasksel
-(select debian desktop and xfce)
-
-sudo apt purge plymouth
-sudo reboot
-</code></pre>
-
-<p>Add hostname manually in <code>/etc/hosts</code> :</p>
-
-<pre><code>127.0.0.1   localhost
-127.0.1.1   &lt;hostname&gt;
-::1 localhost ip6-localhost ip6-loopback
-ff02::1 ip6-allnodes
-ff02::2 ip6-allrouters
-</code></pre></li>
-</ul>
-
 <h4>Manual configuration</h4>
 
 <ul>
