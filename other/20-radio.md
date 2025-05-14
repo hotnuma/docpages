@@ -6,7 +6,7 @@
 
 ---
 
-[elettrica](https://radio.garden/listen/radio-elettrica/KCB0neow)  
+[Radio Elettrica - Rome Italy](https://radio.garden/listen/radio-elettrica/KCB0neow)  
 
 <br/>
 
