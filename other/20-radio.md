@@ -6,7 +6,8 @@
 
 ---
 
-[Radio Elettrica - Rome Italy](https://radio.garden/listen/radio-elettrica/KCB0neow)  
+[Radio Elettrica - Rome, Italy](https://radio.garden/listen/radio-elettrica/KCB0neow)  
+[Funky Radio - Milan, Italy](https://radio.garden/listen/funky-radio/1GcYiXuJ)  
 
 <br/>
 
