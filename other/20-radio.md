@@ -10,6 +10,10 @@
 [Funky Radio - Milan, Italy](https://radio.garden/listen/funky-radio/1GcYiXuJ)  
 
 <!--
+Bulbul FM - Almaty, Kazakhstan
+Radio Merkury - Poznań, Poland
+Sabrosita 590 AM - Mexico City, Mexico
+
 https://fmstream.org  
 https://www.listenlive.nl  
 [101 fm grèce](https://azuralive.streams.ovh/radio/8190/radio.mp3?1615372278)  
