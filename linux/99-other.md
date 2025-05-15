@@ -59,6 +59,10 @@
     
     https://www.cpubenchmark.net/cpu.php?cpu=BCM2712&id=6054  
 
+* i3-6006U
+    
+    https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-6006U+%40+2.00GHz  
+
 * BCM2711
     
     https://www.cpubenchmark.net/cpu.php?cpu=BCM2711&id=4297  
