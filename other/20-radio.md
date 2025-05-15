@@ -9,22 +9,11 @@
 [Radio Elettrica - Rome, Italy](https://radio.garden/listen/radio-elettrica/KCB0neow)  
 [Funky Radio - Milan, Italy](https://radio.garden/listen/funky-radio/1GcYiXuJ)  
 
+Radio Merkury https://radio.garden/listen/radio-merkury/OcjUkUFO  
+[SON FM 102.0 - Guia de Isora, Spain](https://radio.serviciosderadio.com/listen/sonfmlasalsera/radio.aac)  
+Beirut https://radio.garden/visit/beirut/cZnWRQfj  
+
 <!--
-* Radio Garden – Radio Merkury
-    
-    https://radio.garden/listen/radio-merkury/OcjUkUFO  
-
-* Radio Garden – Beirut
-    
-    https://radio.garden/visit/beirut/cZnWRQfj  
-
-* Radio Garden – Guia de Isora
-    
-    https://radio.garden/visit/guia-de-isora/GU6qAAzd  
-
-* SON FM 102.0 - Guia de Isora, Spain
-    
-    [https://radio.serviciosderadio.com/listen/sonfmlasalsera/rad](https://radio.serviciosderadio.com/listen/sonfmlasalsera/radio.aac)  
 
 * Radio Garden – Cartago
     
@@ -56,7 +45,6 @@
 
 
 Bulbul FM - Almaty, Kazakhstan
-Radio Merkury - Poznań, Poland
 Sabrosita 590 AM - Mexico City, Mexico
 
 https://fmstream.org  
