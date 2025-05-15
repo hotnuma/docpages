@@ -9,8 +9,8 @@
 [Radio Elettrica - Rome, Italy](https://radio.garden/listen/radio-elettrica/KCB0neow)  
 [Funky Radio - Milan, Italy](https://radio.garden/listen/funky-radio/1GcYiXuJ)  
 [SON FM 102.0 - Guia de Isora, Spain](https://radio.serviciosderadio.com/listen/sonfmlasalsera/radio.aac)  
+[Middle East Radio International - Beirut, Lebanon](https://radio.garden/listen/middle-east-radio-international/I4dWP6l0)  
 
-Beirut https://radio.garden/visit/beirut/cZnWRQfj  
 Cartago https://radio.garden/visit/cartago/FuZ1HHeW  
 Jerusalem https://radio.garden/visit/jerusalem/viQpgDsB  
 Nador https://radio.garden/visit/nador/VnH7l5zc  
