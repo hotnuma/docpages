@@ -12,7 +12,6 @@
 [Middle East Radio International - Beirut, Lebanon](https://radio.garden/listen/middle-east-radio-international/I4dWP6l0)  
 
 https://radio.garden/listen/soul-radio-classics/OVjoAbNU  
-https://onlineradiobox.com/il/noshmim/?cs=il.noshmim  
 
 As-Suwayda, Syria https://stream.zeno.fm/4luag56o066uv  
 https://radio.garden/visit/genzano-di-roma/pAVsfbOk  
@@ -28,6 +27,7 @@ https://radio.garden/visit/zagreb/wRtG4LE8
 <!--
 Cartago https://radio.garden/visit/cartago/FuZ1HHeW  
 https://s22.maxcast.com.br:8210/live  
+https://onlineradiobox.com/il/noshmim/?cs=il.noshmim  
 
 https://fmstream.org  
 https://www.listenlive.nl  
