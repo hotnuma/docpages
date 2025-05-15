@@ -6,6 +6,44 @@
 
 <hr>
 
+<h4>Other</h4>
+
+<ul>
+<li><p>Repack a deb file</p>
+
+<p><a href="https://unix.stackexchange.com/questions/138188/">https://unix.stackexchange.com/questions/138188/</a>  </p>
+
+<p>raw extract :</p>
+
+<p><code>dpkg-deb -R gvfs-mtp_1.57.2-2_arm64.deb .</code></p>
+
+<p>create archive from list :</p>
+
+<p><code>tar cvfz gvfs-mtp_1.57.2-2_arm64.tgz -T files.txt</code></p>
+
+<p>create list :</p>
+
+<p><code>tar tfz gvfs-mtp_1.57.2-2_arm64.tgz \
+| grep -e &quot;[^/]$&quot; | sort &gt; files.txt</code></p>
+
+<pre><code>usr/libexec/gvfsd-mtp
+usr/libexec/gvfs-mtp-volume-monitor
+usr/lib/gvfs/gvfsd-mtp
+usr/lib/gvfs/gvfs-mtp-volume-monitor
+usr/lib/systemd/user/gvfs-mtp-volume-monitor.service
+usr/share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service
+usr/share/gvfs/mounts/mtp.mount
+usr/share/gvfs/remote-volume-monitors/mtp.monitor
+</code></pre>
+
+<p>install :</p>
+
+<pre><code>sudo tar xvf gvfs-mtp_1.57.2-2_arm64.tgz -C /
+killall -q /usr/lib/gvfs/gvfsd -HUP
+killall -q /usr/libexec/gvfsd -HUP
+</code></pre></li>
+</ul>
+
 <h4>System Processes on Debian 12</h4>
 
 <p><a href="https://debian-facile.org/viewtopic.php?pid=254022#p254022">https://debian-facile.org/viewtopic.php?pid=254022#p254022</a>  </p>
@@ -136,3 +174,5 @@
 
 <p>mem : 563</p></li>
 </ul>
+
+<p><br/></p>
