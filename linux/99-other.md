@@ -45,6 +45,25 @@
     ```
 
 
+#### Benchmarks
+
+* N100
+
+    https://www.cpubenchmark.net/cpu.php?cpu=Intel+N100&id=5157  
+
+* Athlon 200GE
+
+    https://www.cpubenchmark.net/cpu.php?cpu=AMD+Athlon+200GE&id=3325  
+
+* BCM2712
+    
+    https://www.cpubenchmark.net/cpu.php?cpu=BCM2712&id=6054  
+
+* BCM2711
+    
+    https://www.cpubenchmark.net/cpu.php?cpu=BCM2711&id=4297  
+
+    
 #### System Processes on Debian 12
 
 https://debian-facile.org/viewtopic.php?pid=254022#p254022  
