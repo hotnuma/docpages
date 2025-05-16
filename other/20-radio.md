@@ -10,7 +10,7 @@
 [Funky Radio - Milan, Italy](https://radio.garden/listen/funky-radio/1GcYiXuJ)  
 [Radio Underground Italia FM - Genzano di Roma, Italy](https://radio.garden/visit/genzano-di-roma/pAVsfbOk)  
 [SON FM 102.0 - Guia de Isora, Spain](https://radio.serviciosderadio.com/listen/sonfmlasalsera/radio.aac)  
-[Sabrosita 590 AM - Mexico City, Mexico](https://radio.garden/listen/sabrosita-590-am/sDcU1JFV)  
+[Sabrosita 590 AM - Mexico City, Mexico](https://18163.live.streamtheworld.com/XEPHAMAAC.aac)  
 [Middle East Radio International - Beirut, Lebanon](https://radio.garden/listen/middle-east-radio-international/I4dWP6l0)  
 [Soul Radio Classics - Marseille, France](https://radio.garden/listen/soul-radio-classics/OVjoAbNU)  
 
