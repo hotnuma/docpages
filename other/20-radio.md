@@ -15,7 +15,7 @@
 [Soul Radio Classics - Marseille, France](https://radio.garden/listen/soul-radio-classics/OVjoAbNU)  
 
 Radio Kawkaba - Kawkaba, Lebanon https://radio.garden/visit/kawkaba/M8CsIdjE  
-https://stream-173.zeno.fm/1mxqv90mq2zuv  
+[LM Radio Saquisilí](https://stream-173.zeno.fm/1mxqv90mq2zuv)  
 Bulbul FM - Almaty, Kazakhstan  
 [101 fm grèce](https://azuralive.streams.ovh/radio/8190/radio.mp3?1615372278)  
 https://radio.garden/visit/zagreb/wRtG4LE8  
