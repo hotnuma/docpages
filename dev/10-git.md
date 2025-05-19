@@ -8,6 +8,13 @@
 
 #### Basics
 
+* User Config
+    
+    ```
+    git config --global user.name "My Name"
+    git config --global user.email mymail@example.com
+    ```
+
 * Check Remote
 
     `git remote -v`

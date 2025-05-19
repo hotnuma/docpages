@@ -94,25 +94,6 @@
     reboot
     ```
 
-* Upgrade error
-    
-    https://serverfault.com/questions/905921/  
-    
-    ```
-    update-initramfs: Generating /boot/initrd.img-6.6.74+rpt-rpi-v8
-    mkinitramfs: failed to determine device for /
-    mkinitramfs: workaround is MODULES=most, check:
-    grep -r MODULES /etc/initramfs-tools
-    ```
-    
-    check MODULES : `grep -r MODULES= /etc/initramfs-tools`
-    
-    `sudo nano /etc/initramfs-tools/initramfs.conf`
-    
-    change **MODULES=dep** to **MODULES=most**
-    
-    `sudo update-initramfs -u`
-
 
 #### Manual configuration
 
