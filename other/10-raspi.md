@@ -111,7 +111,7 @@
     
     change **MODULES=dep** to **MODULES=most**
     
-    `update-initramfs -u`
+    `sudo update-initramfs -u`
 
 
 #### Manual configuration
