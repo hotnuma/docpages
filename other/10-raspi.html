@@ -84,23 +84,6 @@ reboot
 sudo apt purge plymouth
 reboot
 </code></pre></li>
-<li><p>Upgrade error</p>
-
-<p><a href="https://serverfault.com/questions/905921/">https://serverfault.com/questions/905921/</a>  </p>
-
-<pre><code>update-initramfs: Generating /boot/initrd.img-6.6.74+rpt-rpi-v8
-mkinitramfs: failed to determine device for /
-mkinitramfs: workaround is MODULES=most, check:
-grep -r MODULES /etc/initramfs-tools
-</code></pre>
-
-<p>check MODULES : <code>grep -r MODULES= /etc/initramfs-tools</code></p>
-
-<p><code>sudo nano /etc/initramfs-tools/initramfs.conf</code></p>
-
-<p>change <strong>MODULES=dep</strong> to <strong>MODULES=most</strong></p>
-
-<p><code>update-initramfs -u</code></p></li>
 </ul>
 
 <h4>Manual configuration</h4>
