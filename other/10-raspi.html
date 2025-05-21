@@ -43,22 +43,12 @@ sudo dd if=./raspios64-lite.img of=/dev/sdX bs=4M conv=fsync status=progress
 <p>if we don&#39;t need a camera : <code>sudo apt purge rpicam-apps-lite libpisp1</code></p>
 
 <p><code>reboot</code></p></li>
-<li><p>Disable raspi repository</p>
-
-<p><code>sudo nano /etc/apt/sources.list.d/raspi.list</code></p>
-
-<p>comment the repository like so :</p>
-
-<pre><code>#deb http://archive.raspberrypi.com/debian/ bookworm main
-# Uncomment line below then &#39;apt-get update&#39; to enable &#39;apt-get source&#39;
-#deb-src http://archive.raspberrypi.com/debian/ bookworm main
-</code></pre></li>
 <li><p>Switch to Trixie</p>
 
-<p><code>sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list</code></p>
-
-<pre><code>sudo apt update &amp;&amp; sudo apt upgrade
-sudo apt full-upgrade
+<pre><code>sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list
+sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list.d/raspi.list
+sudo apt update &amp;&amp; sudo apt full-upgrade
+sync
 reboot
 </code></pre></li>
 <li><p>Switch to Unstable</p>
@@ -67,8 +57,8 @@ reboot
 
 <p>comment security and updates</p>
 
-<pre><code>sudo apt update &amp;&amp; sudo apt upgrade
-sudo apt full-upgrade
+<pre><code>sudo apt update &amp;&amp; sudo apt full-upgrade
+sync
 reboot
 </code></pre></li>
 <li><p>List raspi packages</p>
@@ -207,5 +197,19 @@ with a udev rule.
 
 <p><a href="https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-down-xl4016e1-poti">https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-do</a>  </p></li>
 </ul>
+
+<!--
+* Disable raspi repository
+
+    `sudo nano /etc/apt/sources.list.d/raspi.list`
+    
+    comment the repository like so :
+    
+    ```
+    #deb http://archive.raspberrypi.com/debian/ bookworm main
+    # Uncomment line below then 'apt-get update' to enable 'apt-get source'
+    #deb-src http://archive.raspberrypi.com/debian/ bookworm main
+    ```
+-->
 
 <p><br/></p>

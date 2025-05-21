@@ -44,25 +44,13 @@
 
     `reboot`
 
-* Disable raspi repository
-
-    `sudo nano /etc/apt/sources.list.d/raspi.list`
-    
-    comment the repository like so :
-    
-    ```
-    #deb http://archive.raspberrypi.com/debian/ bookworm main
-    # Uncomment line below then 'apt-get update' to enable 'apt-get source'
-    #deb-src http://archive.raspberrypi.com/debian/ bookworm main
-    ```
-
 * Switch to Trixie
 
-    `sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list`
-    
     ```
-    sudo apt update && sudo apt upgrade
-    sudo apt full-upgrade
+    sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list
+    sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list.d/raspi.list
+    sudo apt update && sudo apt full-upgrade
+    sync
     reboot
     ```
     
@@ -73,8 +61,8 @@
     comment security and updates
     
     ```
-    sudo apt update && sudo apt upgrade
-    sudo apt full-upgrade
+    sudo apt update && sudo apt full-upgrade
+    sync
     reboot
     ```
 
@@ -234,6 +222,21 @@
 * XL4016E1 Buck converter
     
     [https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-do](https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-down-xl4016e1-poti)  
+
+
+<!--
+* Disable raspi repository
+
+    `sudo nano /etc/apt/sources.list.d/raspi.list`
+    
+    comment the repository like so :
+    
+    ```
+    #deb http://archive.raspberrypi.com/debian/ bookworm main
+    # Uncomment line below then 'apt-get update' to enable 'apt-get source'
+    #deb-src http://archive.raspberrypi.com/debian/ bookworm main
+    ```
+-->
 
 <br/>
 
