@@ -38,7 +38,7 @@ sudo dd if=./raspios64-lite.img of=/dev/sdX bs=4M conv=fsync status=progress
 
 <p>change locale and timezone</p>
 
-<p><code>sudo apt update &amp;&amp; sudo apt upgrade</code></p>
+<p><code>sudo apt update &amp;&amp; sudo apt full-upgrade</code></p>
 
 <p>if we don&#39;t need a camera : <code>sudo apt purge rpicam-apps-lite libpisp1</code></p>
 
@@ -61,9 +61,6 @@ reboot
 sync
 reboot
 </code></pre></li>
-<li><p>List raspi packages</p>
-
-<p><code>apt list ?obsolete</code></p></li>
 <li><p>Install XFCE</p>
 
 <p><code>sudo tasksel</code></p>
@@ -197,19 +194,5 @@ with a udev rule.
 
 <p><a href="https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-down-xl4016e1-poti">https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-do</a>  </p></li>
 </ul>
-
-<!--
-* Disable raspi repository
-
-    `sudo nano /etc/apt/sources.list.d/raspi.list`
-    
-    comment the repository like so :
-    
-    ```
-    #deb http://archive.raspberrypi.com/debian/ bookworm main
-    # Uncomment line below then 'apt-get update' to enable 'apt-get source'
-    #deb-src http://archive.raspberrypi.com/debian/ bookworm main
-    ```
--->
 
 <p><br/></p>

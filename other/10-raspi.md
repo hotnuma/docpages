@@ -38,7 +38,7 @@
     
     change locale and timezone
     
-    `sudo apt update && sudo apt upgrade`
+    `sudo apt update && sudo apt full-upgrade`
     
     if we don't need a camera : `sudo apt purge rpicam-apps-lite libpisp1`
 
@@ -65,10 +65,6 @@
     sync
     reboot
     ```
-
-* List raspi packages
-
-    `apt list ?obsolete`
 
 * Install XFCE
 
@@ -222,21 +218,6 @@
 * XL4016E1 Buck converter
     
     [https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-do](https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-down-xl4016e1-poti)  
-
-
-<!--
-* Disable raspi repository
-
-    `sudo nano /etc/apt/sources.list.d/raspi.list`
-    
-    comment the repository like so :
-    
-    ```
-    #deb http://archive.raspberrypi.com/debian/ bookworm main
-    # Uncomment line below then 'apt-get update' to enable 'apt-get source'
-    #deb-src http://archive.raspberrypi.com/debian/ bookworm main
-    ```
--->
 
 <br/>
 
