@@ -7,7 +7,7 @@
 ---
 
 [Radio Elettrica - Rome, Italy](https://radio.garden/listen/radio-elettrica/KCB0neow)  
-[Funky Radio - Milan, Italy](https://radio.garden/listen/funky-radio/1GcYiXuJ)  
+[Funky Radio - Milan, Italy](https://funkyradio.streamingmedia.it/audio.aac)  
 [Radio Underground Italia FM - Genzano di Roma, Italy](https://radio.garden/visit/genzano-di-roma/pAVsfbOk)  
 [SON FM 102.0 - Guia de Isora, Spain](https://radio.serviciosderadio.com/listen/sonfmlasalsera/radio.aac)  
 [Sabrosita 590 AM - Mexico City, Mexico](https://18163.live.streamtheworld.com/XEPHAMAAC.aac)  
