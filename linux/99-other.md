@@ -8,6 +8,14 @@
 
 #### Other
 
+* Datamash examples
+    
+    https://linuxcommandlibrary.com/man/datamash  
+    
+    alias : `alias datamash='LC_ALL=C datamash'`
+    
+    `datamash -R 2 mean 1 mean 2 mean 3 < ff_138_4.txt`
+    
 * Repack a deb file
     
     https://unix.stackexchange.com/questions/138188/  
