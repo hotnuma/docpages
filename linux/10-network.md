@@ -30,6 +30,13 @@
     sudo mv ./firefox.desktop /usr/local/share/applications/
     ```
     
+    custom settings :
+
+    ```
+    dom.ipc.processCount	1
+    dom.ipc.processPrelaunch.enabled	false
+    ```
+    
 * Test Videos
     
     https://www.youtube.com/watch?v=cuXsupMuik4  
