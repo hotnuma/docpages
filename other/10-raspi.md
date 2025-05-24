@@ -160,7 +160,7 @@
 
 * List Raspi Packages
     
-    `grep -h ^Package: /var/lib/apt/lists/archive.raspberrypi.com*arm64_Packages | cut -d ' ' -f 2`
+    `grep -h ^Package: /var/lib/apt/lists/archive.raspberrypi.com*arm64_Packages | grep -v -- -dbgsym$ | grep -v -- -dbg$ | cut -d ' ' -f 2`
 
 * Need to run as sudo
     

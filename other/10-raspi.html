@@ -147,7 +147,7 @@ sudo apt-file update
 <p><code>cat /sys/firmware/devicetree/base/model</code></p></li>
 <li><p>List Raspi Packages</p>
 
-<p><code>grep -h ^Package: /var/lib/apt/lists/archive.raspberrypi.com*arm64_Packages | cut -d &#39; &#39; -f 2</code></p></li>
+<p><code>grep -h ^Package: /var/lib/apt/lists/archive.raspberrypi.com*arm64_Packages | grep -v -- -dbgsym$ | grep -v -- -dbg$ | cut -d &#39; &#39; -f 2</code></p></li>
 <li><p>Need to run as sudo</p>
 
 <p><a href="https://forums.raspberrypi.com/viewtopic.php?t=384959">https://forums.raspberrypi.com/viewtopic.php?t=384959</a>  </p></li>
