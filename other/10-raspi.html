@@ -85,7 +85,7 @@ reboot
 <p><code>xfconf-query -c xfce4-panel -p /force-all-internal -t bool -s true --create</code></p></li>
 <li><p>Install labwc</p>
 
-<p><code>sudo apt install labwc swaybg kanshi</code></p>
+<p><code>sudo apt install labwc swaybg</code></p>
 
 <p><a href="https://labwc.github.io/getting-started.html">https://labwc.github.io/getting-started.html</a>  </p>
 
@@ -145,6 +145,9 @@ sudo apt-file update
 <li><p>Board model</p>
 
 <p><code>cat /sys/firmware/devicetree/base/model</code></p></li>
+<li><p>List Raspi Packages</p>
+
+<p><code>grep -h ^Package: /var/lib/apt/lists/archive.raspberrypi.com*arm64_Packages</code></p></li>
 <li><p>Need to run as sudo</p>
 
 <p><a href="https://forums.raspberrypi.com/viewtopic.php?t=384959">https://forums.raspberrypi.com/viewtopic.php?t=384959</a>  </p></li>

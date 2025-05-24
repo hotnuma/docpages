@@ -91,7 +91,7 @@
 
 * Install labwc
 
-    `sudo apt install labwc swaybg kanshi`
+    `sudo apt install labwc swaybg`
     
     https://labwc.github.io/getting-started.html  
     
@@ -157,6 +157,10 @@
 * Board model
     
     `cat /sys/firmware/devicetree/base/model`
+
+* List Raspi Packages
+    
+    `grep -h ^Package: /var/lib/apt/lists/archive.raspberrypi.com*arm64_Packages`
 
 * Need to run as sudo
     
