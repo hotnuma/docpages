@@ -174,10 +174,6 @@
     
     `sudo apt install hardinfo inxi`
 
-* Read CPU temperature
-
-    `vcgencmd measure_temp`
-
 * Read system infos
 
     ```
@@ -201,6 +197,14 @@
 * RPI5 USB max current
     
     Set `usb_max_current_enable=1` in `/boot/firmware/config.txt`
+
+* Test CPU load
+    
+    `sysbench cpu --threads=4 --time=30 run`
+
+* Test CPU temperature
+
+    `vcgencmd measure_temp`
 
 * USB Chipset
     

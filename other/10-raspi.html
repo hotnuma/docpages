@@ -157,9 +157,6 @@ sudo apt-file update
 <li><p>Other programs</p>
 
 <p><code>sudo apt install hardinfo inxi</code></p></li>
-<li><p>Read CPU temperature</p>
-
-<p><code>vcgencmd measure_temp</code></p></li>
 <li><p>Read system infos</p>
 
 <pre><code>uname -a
@@ -179,6 +176,12 @@ rpi-eeprom-config
 <li><p>RPI5 USB max current</p>
 
 <p>Set <code>usb_max_current_enable=1</code> in <code>/boot/firmware/config.txt</code></p></li>
+<li><p>Test CPU load</p>
+
+<p><code>sysbench cpu --threads=4 --time=30 run</code></p></li>
+<li><p>Test CPU temperature</p>
+
+<p><code>vcgencmd measure_temp</code></p></li>
 <li><p>USB Chipset</p>
 
 <p><a href="https://forums.raspberrypi.com/viewtopic.php?t=245931">https://forums.raspberrypi.com/viewtopic.php?t=245931</a><br>
