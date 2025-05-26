@@ -6,7 +6,11 @@
 
 ---
 
-[Radio Elettrica - Rome, Italy](https://radio.garden/listen/radio-elettrica/KCB0neow)  
+[70 Disco Nights](https://panel.retrolandigital.com/listen/70s_disco_nights/listen)  
+[Noshmim Mizrahit](https://mzr.mediacast.co.il/mzradio)  
+[Angelika - Jerusalem](https://live.ecast.co.il:8024/stream)  
+[Arabmix - Egypt](http://stream.zeno.fm/na3vpvn10qruv.acc)  
+[Radio Elettrica - Rome, Italy](https://nr8.newradio.it/proxy/apselett?mp=/stream)  
 [Funky Radio - Milan, Italy](https://funkyradio.streamingmedia.it/audio.aac)  
 [Radio Underground Italia FM - Genzano di Roma, Italy](https://radio.garden/visit/genzano-di-roma/pAVsfbOk)  
 [SON FM 102.0 - Guia de Isora, Spain](https://radio.serviciosderadio.com/listen/sonfmlasalsera/radio.aac)  
@@ -14,6 +18,7 @@
 [Middle East Radio International - Beirut, Lebanon](https://radio.garden/listen/middle-east-radio-international/I4dWP6l0)  
 [Soul Radio Classics - Marseille, France](https://radio.garden/listen/soul-radio-classics/OVjoAbNU)  
 [Universitaria 104,5 FM - Valencia, Venezuela](https://mp4.fm.uc.edu.ve:8443/fmuc.mp4)  
+[Word Music Radio](https://stream.probroadcast.dk/wmr)  
 
 <!--
 J1 Radio - Tokyo, Japan
