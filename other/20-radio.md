@@ -13,10 +13,10 @@
 [Sabrosita 590 AM - Mexico City, Mexico](https://18163.live.streamtheworld.com/XEPHAMAAC.aac)  
 [Middle East Radio International - Beirut, Lebanon](https://radio.garden/listen/middle-east-radio-international/I4dWP6l0)  
 [Soul Radio Classics - Marseille, France](https://radio.garden/listen/soul-radio-classics/OVjoAbNU)  
-
-J1 Radio - Tokyo, Japan
+[Universitaria 104,5 FM - Valencia, Venezuela](https://mp4.fm.uc.edu.ve:8443/fmuc.mp4)  
 
 <!--
+J1 Radio - Tokyo, Japan
 https://panel.retrolandigital.com/listen/70s_disco_nights/listen
 https://panel.retrolandigital.com:8170/listen
 Bulbul FM - Almaty, Kazakhstan
