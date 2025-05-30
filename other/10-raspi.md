@@ -10,8 +10,8 @@
 
 * Labwc
     
+    https://github.com/labwc/labwc/commits/master/  
     https://labwc.github.io/getting-started.html  
-    https://github.com/labwc/labwc-artwork/  
     https://wiki.archlinux.org/title/Labwc  
 
 
