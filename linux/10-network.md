@@ -31,10 +31,18 @@
     ```
     
     custom settings :
+    
+    Set new tab and home to a blank page.
 
     ```
-    dom.ipc.processCount	1
+    browser.newtab.preload	false
     dom.ipc.processPrelaunch.enabled	false
+    ```
+    
+    maybe usefull :
+    
+    ```
+    dom.ipc.processCount	1
     ```
     
 * Test Videos
