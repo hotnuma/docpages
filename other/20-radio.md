@@ -13,7 +13,7 @@
 [Funky Radio - Milan, Italy](https://funkyradio.streamingmedia.it/audio.aac)  
 [Noshmim Mizrahit](https://mzr.mediacast.co.il/mzradio)  
 [Sabrosita 590 AM - Mexico City, Mexico](https://18163.live.streamtheworld.com/XEPHAMAAC.aac)  
-[Word Music Radio](https://stream.probroadcast.dk/wmr)  
+[Word Music Radio](https://radioserver.dk/wmr)  
 
 [Radio Underground Italia FM - Genzano di Roma, Italy](https://radio.garden/visit/genzano-di-roma/pAVsfbOk)  
 [SON FM 102.0 - Guia de Isora, Spain](https://radio.serviciosderadio.com/listen/sonfmlasalsera/radio.aac)  
