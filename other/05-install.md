@@ -203,18 +203,13 @@
     
     https://unix.stackexchange.com/questions/138188/  
 
+    download : `apt download gvfs-backends`
+    
     raw extract :
     
-    `dpkg-deb -R gvfs-mtp_1.57.2-2_arm64.deb .`
+    `dpkg-deb -R gvfs-backends_1.57.2-2_arm64.deb gvfs-backends`
     
-    create archive from list :
-    
-    `tar cvfz gvfs-mtp_1.57.2-2_arm64.tgz -T files.txt`
-
-    create list :
-    
-    `tar tfz gvfs-mtp_1.57.2-2_arm64.tgz \
-    | grep -e "[^/]$" | sort > files.txt`
+    file list :
     
     ```
     usr/libexec/gvfsd-mtp
@@ -226,6 +221,14 @@
     usr/share/gvfs/mounts/mtp.mount
     usr/share/gvfs/remote-volume-monitors/mtp.monitor
     ```
+    
+    create archive from list :
+    
+    ```
+    pushd gvfs-backends
+    tar cvfz ../gvfs-mtp_1.57.2-2_arm64.tgz -T ../files.txt
+    popd
+    ```
 
     install :
     
@@ -234,6 +237,11 @@
 	killall -q /usr/lib/gvfs/gvfsd -HUP
 	killall -q /usr/libexec/gvfsd -HUP
     ```
+
+    create list :
+    
+    `tar tfz gvfs-mtp_1.57.2-2_arm64.tgz \
+    | grep -e "[^/]$" | sort > files.txt`
 
 
 #### Graphic card

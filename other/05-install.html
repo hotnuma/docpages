@@ -180,18 +180,13 @@ size to 11 and select the <code>Default Classic</code> color scheme.</p></li>
 
 <p><a href="https://unix.stackexchange.com/questions/138188/">https://unix.stackexchange.com/questions/138188/</a>  </p>
 
+<p>download : <code>apt download gvfs-backends</code></p>
+
 <p>raw extract :</p>
 
-<p><code>dpkg-deb -R gvfs-mtp_1.57.2-2_arm64.deb .</code></p>
+<p><code>dpkg-deb -R gvfs-backends_1.57.2-2_arm64.deb gvfs-backends</code></p>
 
-<p>create archive from list :</p>
-
-<p><code>tar cvfz gvfs-mtp_1.57.2-2_arm64.tgz -T files.txt</code></p>
-
-<p>create list :</p>
-
-<p><code>tar tfz gvfs-mtp_1.57.2-2_arm64.tgz \
-| grep -e &quot;[^/]$&quot; | sort &gt; files.txt</code></p>
+<p>file list :</p>
 
 <pre><code>usr/libexec/gvfsd-mtp
 usr/libexec/gvfs-mtp-volume-monitor
@@ -203,12 +198,24 @@ usr/share/gvfs/mounts/mtp.mount
 usr/share/gvfs/remote-volume-monitors/mtp.monitor
 </code></pre>
 
+<p>create archive from list :</p>
+
+<pre><code>pushd gvfs-backends
+tar cvfz ../gvfs-mtp_1.57.2-2_arm64.tgz -T ../files.txt
+popd
+</code></pre>
+
 <p>install :</p>
 
 <pre><code>sudo tar xvf gvfs-mtp_1.57.2-2_arm64.tgz -C /
 killall -q /usr/lib/gvfs/gvfsd -HUP
 killall -q /usr/libexec/gvfsd -HUP
-</code></pre></li>
+</code></pre>
+
+<p>create list :</p>
+
+<p><code>tar tfz gvfs-mtp_1.57.2-2_arm64.tgz \
+| grep -e &quot;[^/]$&quot; | sort &gt; files.txt</code></p></li>
 </ul>
 
 <h4>Graphic card</h4>
