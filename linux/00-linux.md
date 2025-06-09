@@ -474,6 +474,14 @@ https://wiki.debian.org/HardwareVideoAcceleration
     
     https://stackoverflow.com/questions/5130968/  
 
+* Datamash examples
+    
+    https://linuxcommandlibrary.com/man/datamash  
+    
+    alias : `alias datamash='LC_ALL=C datamash'`
+    
+    `datamash -R 2 mean 1 mean 2 mean 3 < ff_138_4.txt`
+    
 * Delete thumbnails older than 30 days
 
     `find ~/.cache/thumbnails/ -type f -iname \*.png -mtime +30 -delete`

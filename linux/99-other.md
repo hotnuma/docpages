@@ -6,53 +6,6 @@
 
 ---
 
-#### Other
-
-* Datamash examples
-    
-    https://linuxcommandlibrary.com/man/datamash  
-    
-    alias : `alias datamash='LC_ALL=C datamash'`
-    
-    `datamash -R 2 mean 1 mean 2 mean 3 < ff_138_4.txt`
-    
-* Repack a deb file
-    
-    https://unix.stackexchange.com/questions/138188/  
-
-    raw extract :
-    
-    `dpkg-deb -R gvfs-mtp_1.57.2-2_arm64.deb .`
-    
-    create archive from list :
-    
-    `tar cvfz gvfs-mtp_1.57.2-2_arm64.tgz -T files.txt`
-
-    create list :
-    
-    `tar tfz gvfs-mtp_1.57.2-2_arm64.tgz \
-    | grep -e "[^/]$" | sort > files.txt`
-    
-    ```
-    usr/libexec/gvfsd-mtp
-    usr/libexec/gvfs-mtp-volume-monitor
-    usr/lib/gvfs/gvfsd-mtp
-    usr/lib/gvfs/gvfs-mtp-volume-monitor
-    usr/lib/systemd/user/gvfs-mtp-volume-monitor.service
-    usr/share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service
-    usr/share/gvfs/mounts/mtp.mount
-    usr/share/gvfs/remote-volume-monitors/mtp.monitor
-    ```
-
-    install :
-    
-    ```
-    sudo tar xvf gvfs-mtp_1.57.2-2_arm64.tgz -C /
-	killall -q /usr/lib/gvfs/gvfsd -HUP
-	killall -q /usr/libexec/gvfsd -HUP
-    ```
-
-
 #### Benchmarks
 
 * N100

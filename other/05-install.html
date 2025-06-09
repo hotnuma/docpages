@@ -176,21 +176,39 @@ Version Control
 
 <p>In the preferences of the editor, <code>Fonts and Colors</code>, set font
 size to 11 and select the <code>Default Classic</code> color scheme.</p></li>
-<li><p>gvfs-backends</p>
+<li><p>Repack gvfs-backends</p>
 
-<p>Provides <code>gvfs-mtp-volume-monitor</code> which permits to mount Android devices.</p>
+<p><a href="https://unix.stackexchange.com/questions/138188/">https://unix.stackexchange.com/questions/138188/</a>  </p>
 
-<p>Install <code>sudo apt install gvfs-backends</code></p>
+<p>raw extract :</p>
 
-<p>Mask service :</p>
+<p><code>dpkg-deb -R gvfs-mtp_1.57.2-2_arm64.deb .</code></p>
 
-<pre><code>systemctl --user stop gvfs-mtp-volume-monitor
-systemctl --user mask gvfs-mtp-volume-monitor
+<p>create archive from list :</p>
+
+<p><code>tar cvfz gvfs-mtp_1.57.2-2_arm64.tgz -T files.txt</code></p>
+
+<p>create list :</p>
+
+<p><code>tar tfz gvfs-mtp_1.57.2-2_arm64.tgz \
+| grep -e &quot;[^/]$&quot; | sort &gt; files.txt</code></p>
+
+<pre><code>usr/libexec/gvfsd-mtp
+usr/libexec/gvfs-mtp-volume-monitor
+usr/lib/gvfs/gvfsd-mtp
+usr/lib/gvfs/gvfs-mtp-volume-monitor
+usr/lib/systemd/user/gvfs-mtp-volume-monitor.service
+usr/share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service
+usr/share/gvfs/mounts/mtp.mount
+usr/share/gvfs/remote-volume-monitors/mtp.monitor
 </code></pre>
 
-<p>Unmask service :</p>
+<p>install :</p>
 
-<p><code>rm $HOME/.config/systemd/user/gvfs-mtp-volume-monitor.service</code></p></li>
+<pre><code>sudo tar xvf gvfs-mtp_1.57.2-2_arm64.tgz -C /
+killall -q /usr/lib/gvfs/gvfsd -HUP
+killall -q /usr/libexec/gvfsd -HUP
+</code></pre></li>
 </ul>
 
 <h4>Graphic card</h4>

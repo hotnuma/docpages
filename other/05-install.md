@@ -199,23 +199,42 @@
     In the preferences of the editor, `Fonts and Colors`, set font
     size to 11 and select the `Default Classic` color scheme.
 
-* gvfs-backends
+* Repack gvfs-backends
     
-    Provides `gvfs-mtp-volume-monitor` which permits to mount Android devices.
+    https://unix.stackexchange.com/questions/138188/  
+
+    raw extract :
     
-    Install `sudo apt install gvfs-backends`
+    `dpkg-deb -R gvfs-mtp_1.57.2-2_arm64.deb .`
     
-    Mask service :
+    create archive from list :
+    
+    `tar cvfz gvfs-mtp_1.57.2-2_arm64.tgz -T files.txt`
+
+    create list :
+    
+    `tar tfz gvfs-mtp_1.57.2-2_arm64.tgz \
+    | grep -e "[^/]$" | sort > files.txt`
     
     ```
-    systemctl --user stop gvfs-mtp-volume-monitor
-    systemctl --user mask gvfs-mtp-volume-monitor
+    usr/libexec/gvfsd-mtp
+    usr/libexec/gvfs-mtp-volume-monitor
+    usr/lib/gvfs/gvfsd-mtp
+    usr/lib/gvfs/gvfs-mtp-volume-monitor
+    usr/lib/systemd/user/gvfs-mtp-volume-monitor.service
+    usr/share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service
+    usr/share/gvfs/mounts/mtp.mount
+    usr/share/gvfs/remote-volume-monitors/mtp.monitor
     ```
+
+    install :
     
-    Unmask service :
-    
-    `rm $HOME/.config/systemd/user/gvfs-mtp-volume-monitor.service`
-    
+    ```
+    sudo tar xvf gvfs-mtp_1.57.2-2_arm64.tgz -C /
+	killall -q /usr/lib/gvfs/gvfsd -HUP
+	killall -q /usr/libexec/gvfsd -HUP
+    ```
+
 
 #### Graphic card
 
