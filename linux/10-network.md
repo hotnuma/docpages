@@ -36,6 +36,7 @@
 
     ```
     browser.newtab.preload	false
+    browser.tabs.groups.enabled	false
     dom.ipc.processPrelaunch.enabled	false
     ```
     
