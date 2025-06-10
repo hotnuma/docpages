@@ -83,6 +83,8 @@
     meson compile -C build
     sudo meson install -C build
     ```
+    
+    `sudo /sbin/ldconfig -v`
 
 * labwc-tweaks-gtk
 

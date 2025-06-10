@@ -75,7 +75,9 @@ meson setup build --wrap-mode=nodownload -Dbuildtype=release \
 -Dxwayland=disabled
 meson compile -C build
 sudo meson install -C build
-</code></pre></li>
+</code></pre>
+
+<p><code>sudo /sbin/ldconfig -v</code></p></li>
 <li><p>labwc-tweaks-gtk</p>
 
 <pre><code>git clone https://github.com/labwc/labwc-tweaks-gtk.git
