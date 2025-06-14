@@ -30,39 +30,13 @@
     sudo mv ./firefox.desktop /usr/local/share/applications/
     ```
     
-    custom settings :
-    
     Set new tab and home to a blank page.
 
-    ```
-    browser.newtab.preload	false
-    browser.tabs.groups.enabled	false
-    dom.ipc.processPrelaunch.enabled	false
-    ```
-    
-    maybe usefull :
-    
-    ```
-    dom.ipc.processCount	1
-    ```
-    
 * Test Videos
     
     https://www.youtube.com/watch?v=pcSv22DTDUI  
     https://www.youtube.com/watch?v=cuXsupMuik4  
     https://www.youtube.com/watch?v=TVtoxUohG5E  
-
-* Change user agent
-    
-    Create the following key in `about:config` :
-    
-    `general.useragent.override	Mozilla/5.0 (X11; Linux x86_64; rv:137.0) Gecko/20100101 Firefox/137.0`
-
-* Fix Slow YouTube
-    
-    https://lifehacker.com/tech/stop-google-slowing-down-youtube-firefox-edge  
-    
-    `||googlevideo.com/videoplayback$xhr,3p,method=get,domain=www.youtube.com`
 
 * User Profiles
 
