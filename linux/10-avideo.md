@@ -1,8 +1,8 @@
 <link href="../style.css" rel="stylesheet"></link>
 
-**[ [Home](../index.html) | [Linux](00-linux.html) | [Xfce](05-xfce.html) | [Network](10-network.html) | FFmpeg | [Systemd](20-systemd.html) | [Bugs](25-bugs.html) | [Other](99-other.html) ]**
+**[ [Home](../index.html) | [Linux](00-linux.html) | [Xfce](05-xfce.html) | AVideo | [Network](11-network.html) | [Systemd](20-systemd.html) | [Bugs](25-bugs.html) | [Other](99-other.html) ]**
 
-## FFmpeg
+## AVideo
 
 ---
 
@@ -12,7 +12,7 @@ https://ffmpeg.org/ffmpeg-filters.html
 [https://www.codeproject.com/Tips/5356341/](https://www.codeproject.com/Tips/5356341/How-to-Compile-FFmpeg-6-0-in-Linux-and-What-New-Th)  
 
 
-#### Audio/Video
+#### FFmpeg A/V
 
 * Change aspect ratio
 
@@ -37,7 +37,7 @@ https://ffmpeg.org/ffmpeg-filters.html
     `ffprobe -v quiet -show_format -show_streams "input.mp4"`
     
 
-#### Audio
+#### FFmpeg Audio
 
 * Mp3 encoding
 
@@ -85,7 +85,7 @@ https://ffmpeg.org/ffmpeg-filters.html
     `ffmpeg -y -i "input.mp4" -c:v copy -af "highpass=f=100" "output.mp4"`
 
 
-#### Images
+#### FFmpeg Images
     
 * Resize image
     
@@ -93,6 +93,13 @@ https://ffmpeg.org/ffmpeg-filters.html
     ffmpeg -hide_banner -loglevel error -y \
     -i "input.jpg" -q:v 1 -vf scale=1680:1050:flags=lanczos "output.jpg"
     ```
+
+
+#### mpv
+    
+    https://www.reddit.com/r/linuxquestions/comments/clyt9z/  
+    
+    In mpv.conf : `ytdl-format=bestvideo[height<=?480]+bestaudio/best`
 
 
 #### Subtitles

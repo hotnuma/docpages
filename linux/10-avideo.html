@@ -1,8 +1,8 @@
 <p><link href="../style.css" rel="stylesheet"></link></p>
 
-<p><strong>[ <a href="../index.html">Home</a> | <a href="00-linux.html">Linux</a> | <a href="05-xfce.html">Xfce</a> | <a href="10-network.html">Network</a> | FFmpeg | <a href="20-systemd.html">Systemd</a> | <a href="25-bugs.html">Bugs</a> | <a href="99-other.html">Other</a> ]</strong></p>
+<p><strong>[ <a href="../index.html">Home</a> | <a href="00-linux.html">Linux</a> | <a href="05-xfce.html">Xfce</a> | AVideo | <a href="11-network.html">Network</a> | <a href="20-systemd.html">Systemd</a> | <a href="25-bugs.html">Bugs</a> | <a href="99-other.html">Other</a> ]</strong></p>
 
-<h2>FFmpeg</h2>
+<h2>AVideo</h2>
 
 <hr>
 
@@ -11,7 +11,7 @@
 
 <p><a href="https://www.codeproject.com/Tips/5356341/How-to-Compile-FFmpeg-6-0-in-Linux-and-What-New-Th">https://www.codeproject.com/Tips/5356341/</a>  </p>
 
-<h4>Audio/Video</h4>
+<h4>FFmpeg A/V</h4>
 
 <ul>
 <li><p>Change aspect ratio</p>
@@ -33,7 +33,7 @@
 <p><code>ffprobe -v quiet -show_format -show_streams &quot;input.mp4&quot;</code></p></li>
 </ul>
 
-<h4>Audio</h4>
+<h4>FFmpeg Audio</h4>
 
 <ul>
 <li><p>Mp3 encoding</p>
@@ -74,7 +74,7 @@
 <p><code>ffmpeg -y -i &quot;input.mp4&quot; -c:v copy -af &quot;highpass=f=100&quot; &quot;output.mp4&quot;</code></p></li>
 </ul>
 
-<h4>Images</h4>
+<h4>FFmpeg Images</h4>
 
 <ul>
 <li><p>Resize image</p>
@@ -83,6 +83,13 @@
 -i &quot;input.jpg&quot; -q:v 1 -vf scale=1680:1050:flags=lanczos &quot;output.jpg&quot;
 </code></pre></li>
 </ul>
+
+<h4>mpv</h4>
+
+<pre><code>https://www.reddit.com/r/linuxquestions/comments/clyt9z/  
+
+In mpv.conf : `ytdl-format=bestvideo[height&lt;=?480]+bestaudio/best`
+</code></pre>
 
 <h4>Subtitles</h4>
 
