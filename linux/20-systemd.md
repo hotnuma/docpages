@@ -157,7 +157,5 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     sudo bak /usr/share/gvfs/remote-volume-monitors/mtp.monitor
     ```
 
-
 <br/>
-
 
