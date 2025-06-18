@@ -137,43 +137,5 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     
     mem : 3546
 
-
-#### More System Processes on Ubuntu
-
-* accounts-daemon
-    
-    https://www.freedesktop.org/wiki/Software/AccountsService/  
-    
-    AccountsService is a D-Bus service for accessing the list of user accounts and information attached to those accounts.
-    
-    mem : 1604
-
-* acpid
-    
-    https://wiki.archlinux.org/title/acpid  
-    
-    A flexible and extensible daemon for delivering ACPI events. When an event occurs, it executes programs to handle the event.
-    
-    mem : 261
-
-* gnome-keyring-daemon
-    
-    https://wiki.archlinux.org/title/GNOME/Keyring  
-    https://docs.xfce.org/xfce/xfce4-session/advanced#ssh_and_gpg_agents  
-    
-    GNOME Keyring is a collection of components that store secrets, passwords, keys, certificates and make them available to applications.
-    
-    directory : `~/.local/share/keyrings`
-    
-    mem : 2637
-
-* irqbalance
-    
-    https://linux.die.net/man/1/irqbalance  
-    
-    Distribute hardware interrupts across processors on a multiprocessor system.
-    
-    mem : 563
-
 <br/>
 
