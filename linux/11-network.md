@@ -32,6 +32,14 @@
     
     Set new tab and home to a blank page.
 
+* Firefox Fonts
+    
+    ```
+    DejaVu 16 / 15 / 15
+    Don't allow web pages...
+    Zoom 110 %
+    ```
+    
 * Test Videos
     
     https://www.youtube.com/watch?v=pcSv22DTDUI  
