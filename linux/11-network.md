@@ -32,6 +32,17 @@
     
     Set new tab and home to a blank page.
 
+* Install icon under Wayland
+    
+    ```
+    sudo mkdir -p /usr/local/share/icons/hicolor/128x128/apps/
+    sudo cp /opt/firefox/browser/chrome/icons/default/default128.png \
+    /usr/local/share/icons/hicolor/128x128/apps/firefox.png
+    sudo update-icon-caches /usr/local/share/icons/*
+    sudo sed -i -e 's,/opt/firefox/browser/chrome/icons/default/default128.png,firefox,g' \
+    /usr/local/share/applications/firefox.desktop
+    ```
+
 * Firefox Fonts
     
     ```
