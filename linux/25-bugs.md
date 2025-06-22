@@ -78,6 +78,12 @@
     Warning :
     update-initramfs: Generating /boot/initrd.img-6.1.0-28-amd64
     W: Possible missing firmware
+
+* Nouveau
+    
+    `nouveau 0000:01:00.0: bus: MMIO read of 00000000 FAULT`
+    
+    https://bbs.archlinux.org/viewtopic.php?id=288769  
     
 * Upgrade error
     
