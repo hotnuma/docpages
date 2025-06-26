@@ -207,6 +207,8 @@
 * Test CPU load
     
     `sysbench cpu --threads=4 --time=30 run`
+    
+    `stress-ng --cpu 0 --cpu-method fft`
 
 * Test CPU temperature
 

@@ -183,7 +183,9 @@ rpi-eeprom-config
 <p>Set <code>usb_max_current_enable=1</code> in <code>/boot/firmware/config.txt</code></p></li>
 <li><p>Test CPU load</p>
 
-<p><code>sysbench cpu --threads=4 --time=30 run</code></p></li>
+<p><code>sysbench cpu --threads=4 --time=30 run</code></p>
+
+<p><code>stress-ng --cpu 0 --cpu-method fft</code></p></li>
 <li><p>Test CPU temperature</p>
 
 <p><code>vcgencmd measure_temp</code></p></li>
