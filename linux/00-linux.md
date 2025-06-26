@@ -82,8 +82,8 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
 * System CPU usage
     
-    `ps -Ao user,uid,comm,pid,pcpu --sort=-pcpu | head -n 11`  
     `top -n2`
+    `ps -Ao user,uid,comm,pid,pcpu --sort=-pcpu | head -n 11`  
 
 * System memory usage
     
