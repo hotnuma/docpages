@@ -144,6 +144,11 @@ sudo ip link set dev eth0 up
 <p>Add <code>GRUB_CMDLINE_LINUX=&quot;net.ifnames=0&quot;</code> in <code>/etc/default/grub</code></p>
 
 <p>Execute <code>sudo update-grub</code></p></li>
+<li><p>Set BBox name in hosts file</p>
+
+<p><code>sudo nano /etc/hosts</code></p>
+
+<p>append : <code>192.168.1.254   mabbox.bytel.fr</code></p></li>
 </ul>
 
 <h4>Switch to /etc/network/interfaces</h4>

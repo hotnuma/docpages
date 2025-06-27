@@ -170,6 +170,12 @@
     
     Execute `sudo update-grub`
     
+* Set BBox name in hosts file
+
+    `sudo nano /etc/hosts`
+    
+    append : `192.168.1.254   mabbox.bytel.fr`
+
 
 #### Switch to /etc/network/interfaces
 
