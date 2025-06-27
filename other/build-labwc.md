@@ -24,8 +24,6 @@
     https://gitlab.freedesktop.org/wlroots  
     
     ```
-    cdeps libwlroots-0.18
-
     sudo apt install \
     dpkg-dev glslang-tools hwdata libcap-dev libcairo2-dev \
     libdisplay-info-dev libdrm-dev libegl1-mesa-dev libegl-dev libgbm-dev \
@@ -37,14 +35,12 @@
     ```
     git clone https://gitlab.freedesktop.org/wlroots/wlroots.git
     cd wlroots
-    git checkout 0.18
+    git checkout 0.19
     meson setup build -Dbuildtype=release \
     -Dxcb-errors=disabled -Dxwayland=disabled -Dexamples=false
     ```
     
     ```
-    wlroots 0.18.2
-
     drm-backend     : YES
     x11-backend     : NO
     libinput-backend: YES
@@ -73,7 +69,6 @@
 * labwc
 
     https://github.com/labwc/labwc?tab=readme-ov-file#2-build-and-installation  
-    (depends on wlroots-0.18)
 
     ```
     git clone https://github.com/labwc/labwc.git
