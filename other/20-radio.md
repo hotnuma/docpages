@@ -9,22 +9,21 @@
 [70 Disco Nights](https://panel.retrolandigital.com/listen/70s_disco_nights/listen)  
 [Angelika - Jerusalem](https://live.ecast.co.il:8024/stream)  
 [Arabmix - Egypt](http://stream.zeno.fm/na3vpvn10qruv.acc)  
-[Radio Elettrica - Rome, Italy](https://nr8.newradio.it/proxy/apselett?mp=/stream)  
+[Elettrica - Rome, Italy](https://nr8.newradio.it/proxy/apselett?mp=/stream)  
 [Funky Radio - Milan, Italy](https://funkyradio.streamingmedia.it/audio.aac)  
-[Noshmim Mizrahit](https://mzr.mediacast.co.il/mzradio)  
-[Sabrosita 590 AM - Mexico City, Mexico](https://18163.live.streamtheworld.com/XEPHAMAAC.aac)  
-[Word Music Radio](https://radioserver.dk/wmr)  
+[Mizrahit](https://mzr.mediacast.co.il/mzradio)  
+[Sabrosita - Mexico City, Mexico](https://18163.live.streamtheworld.com/XEPHAMAAC.aac)  
 
 [Radio Underground Italia FM - Genzano di Roma, Italy](https://radio.garden/visit/genzano-di-roma/pAVsfbOk)  
 [SON FM 102.0 - Guia de Isora, Spain](https://radio.serviciosderadio.com/listen/sonfmlasalsera/radio.aac)  
 [Middle East Radio International - Beirut, Lebanon](https://radio.garden/listen/middle-east-radio-international/I4dWP6l0)  
 [Soul Radio Classics - Marseille, France](https://radio.garden/listen/soul-radio-classics/OVjoAbNU)  
 [Universitaria 104,5 FM - Valencia, Venezuela](https://mp4.fm.uc.edu.ve:8443/fmuc.mp4)  
+[Word Music Radio](https://radioserver.dk/wmr)  
 
 <!--
 https://fmstream.org  
 
-BBC2 https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/dash/nonuk/pc_hd_abr_v2/aks/bbc_radio_two.mpd  
 J1 Radio - Tokyo, Japan
 https://panel.retrolandigital.com/listen/70s_disco_nights/listen
 https://panel.retrolandigital.com:8170/listen
