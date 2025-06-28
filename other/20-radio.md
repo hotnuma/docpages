@@ -16,10 +16,10 @@
 
 [Live 101 FM - Greece](https://azuralive.streams.ovh/radio/8190/radio.mp3?1615372278)  
 [Emaar FM - As-Suwayda, Syria](https://stream.zeno.fm/4luag56o066uv)  
-Bulbul FM - Almaty, Kazakhstan  
+[Bulbul FM - Almaty, Kazakhstan](https://stream.laut.fm/radiobulbul/)  
 [Funky Radio - Milan, Italy](https://funkyradio.streamingmedia.it/audio.aac)  
 [Ivri 6 haifa](https://streaming.radio.co/sa06221901/listen)  
-J1 Radio - Tokyo, Japan  
+[J1 Radio - Tokyo, Japan](https://jenny.torontocast.com:2000/stream/J1HITS/)  
 [Kawkaba - Kawkaba, Lebanon](https://cad.casthost.ca/proxy/antoine/stream)  
 [LM Radio Saquisilí](https://stream-173.zeno.fm/1mxqv90mq2zuv)  
 [Radio Underground Italia FM - Genzano di Roma, Italy](https://nr14.newradio.it:8707/stream)  
