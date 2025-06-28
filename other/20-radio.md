@@ -10,7 +10,6 @@
 [Arabmix - Egypt](http://stream.zeno.fm/na3vpvn10qruv.acc)  
 [Elettrica - Rome](https://nr8.newradio.it/proxy/apselett?mp=/stream)  
 [Mizrahit](https://mzr.mediacast.co.il/mzradio)  
-[Soul Radio Classics - Marseille, France](https://listen.soulradio.eu/eu)  
 
 [70 Disco Nights](https://panel.retrolandigital.com/listen/70s_disco_nights/listen)  
 [Funky Radio - Milan, Italy](https://funkyradio.streamingmedia.it/audio.aac)  
@@ -35,6 +34,8 @@ https://s22.maxcast.com.br:8210/live
 https://radio.garden  
 
 <!--
+pubs [Soul Radio Classics - Marseille, France](https://listen.soulradio.eu/eu)  
+
 https://fmstream.org  
 https://onlineradiobox.com/il/noshmim/?cs=il.noshmim  
 https://www.listenlive.nl  
