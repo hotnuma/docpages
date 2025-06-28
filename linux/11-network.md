@@ -57,6 +57,16 @@
     https://www.youtube.com/watch?v=cuXsupMuik4  
     https://www.youtube.com/watch?v=TVtoxUohG5E  
 
+* Google Web Search
+    
+    https://www.reddit.com/r/firefox/comments/1kpqv5r/  
+    
+    ```
+    GoogleWeb
+    https://www.google.com/search?udm=14&q=%s
+    https://suggestqueries.google.com/complete/search?client=firefox&q=%s
+    ```
+
 * User Profiles
 
     https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data  
