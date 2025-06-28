@@ -76,10 +76,6 @@
     
     https://www.popsci.com/diy/youtube-ambient-mode-off-on/  
     
-* Turn off picture-in-picture mode
-    
-    https://support.mozilla.org/en-US/kb/turn-picture-picture-mode  
-
 * Turn off updates
     
     Create a `policies.json` file in `firefox/distribution/` :
