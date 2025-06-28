@@ -20,6 +20,7 @@
 [Universitaria 104,5 FM - Valencia, Venezuela](https://mp4.fm.uc.edu.ve:8443/fmuc.mp4)  
 [Word Music Radio](https://radioserver.dk/wmr)  
 
+[Tocantins FM Brazil](https://s22.maxcast.com.br:8210/live)  
 J1 Radio - Tokyo, Japan  
 Bulbul FM - Almaty, Kazakhstan  
 [Radio Kawkaba - Kawkaba, Lebanon](https://cad.casthost.ca/proxy/antoine/stream)  
@@ -29,19 +30,18 @@ Bulbul FM - Almaty, Kazakhstan
 As-Suwayda, Syria https://stream.zeno.fm/4luag56o066uv  
 Ivri 6 haifa https://streaming.radio.co/sa06221901/listen  
 [Radio Sinfonola 90.3 FM - Cartago, Costa Rica](https://live.turadio.stream:7006/stream?type=http&nocache=82)  
-https://s22.maxcast.com.br:8210/live  
 
 https://radio.garden  
 
 <!--
-pubs [Soul Radio Classics - Marseille, France](https://listen.soulradio.eu/eu)  
-
 https://fmstream.org  
 https://onlineradiobox.com/il/noshmim/?cs=il.noshmim  
 https://www.listenlive.nl  
 https://goldfm.fr/  
 https://www.radio.fr/  
 https://xfm.neocities.org/  
+
+pubs [Soul Radio Classics - Marseille, France](https://listen.soulradio.eu/eu)  
 -->
 
 <br/>
