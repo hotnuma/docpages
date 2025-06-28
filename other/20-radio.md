@@ -15,7 +15,7 @@
 [Middle East Radio International - Beirut, Lebanon](https://listen.radioking.com/radio/343456/stream/392077)  
 
 [101 fm grèce](https://azuralive.streams.ovh/radio/8190/radio.mp3?1615372278)  
-[As-Suwayda, Syria](https://stream.zeno.fm/4luag56o066uv)  
+[Emaar FM - As-Suwayda, Syria](https://stream.zeno.fm/4luag56o066uv)  
 Bulbul FM - Almaty, Kazakhstan  
 [Funky Radio - Milan, Italy](https://funkyradio.streamingmedia.it/audio.aac)  
 [Ivri 6 haifa](https://streaming.radio.co/sa06221901/listen)  
