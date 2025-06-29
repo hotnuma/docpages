@@ -12,10 +12,6 @@
     [Elettrica - Roma](https://nr8.newradio.it/proxy/apselett?mp=/stream) [(web)](https://www.radioelettrica.it/)  
     [Noshmim Mizrahit - Eilat](https://mzr.mediacast.co.il/mzradio) [(web)](https://mizrahit.fm/)  
 
-* Other
-
-    [Radio Romance - Guayaquil, Ecuador](https://streamingecuador.com:9010/stream)  
-
 <!--
     [70 Disco Nights - Monterrey, Mexico](https://panel.retrolandigital.com/listen/70s_disco_nights/listen)  
     [Arabmix - Egypt](http://stream.zeno.fm/na3vpvn10qruv.acc)  
@@ -29,6 +25,7 @@
     [Live 101 FM - Greece](https://azuralive.streams.ovh/radio/8190/radio.mp3?1615372278)  
     [LM Radio Saquisilí](https://stream-173.zeno.fm/1mxqv90mq2zuv)  
     [Middle East Radio International - Beirut, Lebanon](https://listen.radioking.com/radio/343456/stream/392077)  
+    [Radio Romance - Guayaquil, Ecuador](https://streamingecuador.com:9010/stream)  
     [Radio Underground Italia FM - Genzano di Roma, Italy](https://nr14.newradio.it:8707/stream)  
     [Rock&Off Radio - Zagreb, Croatia](https://stream.player-jukebox.com/proxy/rockoff/stream)  
     [Sabrosita - Mexico City, Mexico](https://18163.live.streamtheworld.com/XEPHAMAAC.aac)  
