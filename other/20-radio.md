@@ -14,7 +14,7 @@
 
 * New
 
-    [Radio Romance - Guayaquil, Ecuador](https://radio.garden/listen/radio-romance/EU9IXa8B)  
+    [Radio Romance - Guayaquil, Ecuador](https://streamingecuador.com:9010/stream)  
 
 * Other
 
