@@ -10,9 +10,10 @@
 [Angelika - Jerusalem](https://live.ecast.co.il:8024/stream)  
 [Arabmix - Egypt](http://stream.zeno.fm/na3vpvn10qruv.acc)  
 [Elettrica - Rome](https://nr8.newradio.it/proxy/apselett?mp=/stream)  
-[Mizrahit](https://mzr.mediacast.co.il/mzradio)  
+[Noshmim Mizrahit - Eilat](https://mzr.mediacast.co.il/mzradio) [(web)](https://mizrahit.fm/)  
 
 [Middle East Radio International - Beirut, Lebanon](https://listen.radioking.com/radio/343456/stream/392077)  
+[Radio Romance - Guayaquil, Ecuador](https://radio.garden/listen/radio-romance/EU9IXa8B)  
 
 [Live 101 FM - Greece](https://azuralive.streams.ovh/radio/8190/radio.mp3?1615372278)  
 [Emaar FM - As-Suwayda, Syria](https://stream.zeno.fm/4luag56o066uv)  
