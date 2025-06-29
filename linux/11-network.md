@@ -87,6 +87,8 @@
     https://www.popsci.com/diy/youtube-ambient-mode-off-on/  
     
 * Turn off updates
+
+    https://mozilla.github.io/policy-templates/#manualappupdateonly  
     
     Create a `policies.json` file in `firefox/distribution/` :
     

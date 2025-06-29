@@ -6,33 +6,41 @@
 
 ---
 
-[70 Disco Nights - Monterrey, Mexico](https://panel.retrolandigital.com/listen/70s_disco_nights/listen)  
-[Angelika - Jerusalem](https://live.ecast.co.il:8024/stream)  
-[Arabmix - Egypt](http://stream.zeno.fm/na3vpvn10qruv.acc)  
-[Elettrica - Rome](https://nr8.newradio.it/proxy/apselett?mp=/stream)  
-[Noshmim Mizrahit - Eilat](https://mzr.mediacast.co.il/mzradio) [(web)](https://mizrahit.fm/)  
+* Favorites
 
-[Middle East Radio International - Beirut, Lebanon](https://listen.radioking.com/radio/343456/stream/392077)  
-[Radio Romance - Guayaquil, Ecuador](https://radio.garden/listen/radio-romance/EU9IXa8B)  
+    [Angelika - Jerusalem](https://live.ecast.co.il:8024/stream)  
+    [Elettrica - Roma](https://nr8.newradio.it/proxy/apselett?mp=/stream)  
+    [Noshmim Mizrahit - Eilat](https://mzr.mediacast.co.il/mzradio) [(web)](https://mizrahit.fm/)  
 
-[Live 101 FM - Greece](https://azuralive.streams.ovh/radio/8190/radio.mp3?1615372278)  
-[Emaar FM - As-Suwayda, Syria](https://stream.zeno.fm/4luag56o066uv)  
-[Bulbul FM - Almaty, Kazakhstan](https://stream.laut.fm/radiobulbul/)  
-[Funky Radio - Milan, Italy](https://funkyradio.streamingmedia.it/audio.aac)  
-[Ivri 6 haifa](https://streaming.radio.co/sa06221901/listen)  
-[J1 Radio - Tokyo, Japan](https://jenny.torontocast.com:2000/stream/J1HITS/)  
-[Kawkaba - Kawkaba, Lebanon](https://cad.casthost.ca/proxy/antoine/stream)  
-[LM Radio Saquisilí](https://stream-173.zeno.fm/1mxqv90mq2zuv)  
-[Radio Underground Italia FM - Genzano di Roma, Italy](https://nr14.newradio.it:8707/stream)  
-[Rock&Off Radio - Zagreb, Croatia](https://stream.player-jukebox.com/proxy/rockoff/stream)  
-[Sabrosita - Mexico City, Mexico](https://18163.live.streamtheworld.com/XEPHAMAAC.aac)  
-[Sinfonola 90.3 FM - Cartago, Costa Rica](https://live.turadio.stream:7006/stream?type=http&nocache=82)  
-[Son FM 102.0 - Guia de Isora, Spain](https://radio.serviciosderadio.com/listen/sonfmlasalsera/radio.aac)  
-[Tocantins FM Brazil](https://s22.maxcast.com.br:8210/live)  
-[Universitaria 104,5 FM - Valencia, Venezuela](https://mp4.fm.uc.edu.ve:8443/fmuc.mp4)  
-[Word Music Radio](https://radioserver.dk/wmr)  
+* New
 
-https://radio.garden  
+    [Radio Romance - Guayaquil, Ecuador](https://radio.garden/listen/radio-romance/EU9IXa8B)  
+
+* Other
+
+    [70 Disco Nights - Monterrey, Mexico](https://panel.retrolandigital.com/listen/70s_disco_nights/listen)  
+    [Arabmix - Egypt](http://stream.zeno.fm/na3vpvn10qruv.acc)  
+    [Bulbul FM - Almaty, Kazakhstan](https://stream.laut.fm/radiobulbul/)  
+    [Emaar FM - As-Suwayda, Syria](https://stream.zeno.fm/4luag56o066uv)  
+    [Funky Radio - Milan, Italy](https://funkyradio.streamingmedia.it/audio.aac)  
+    [Ivri 6 haifa](https://streaming.radio.co/sa06221901/listen)  
+    [J1 Radio - Tokyo, Japan](https://jenny.torontocast.com:2000/stream/J1HITS/)  
+    [Kawkaba - Kawkaba, Lebanon](https://cad.casthost.ca/proxy/antoine/stream)  
+    [Live 101 FM - Greece](https://azuralive.streams.ovh/radio/8190/radio.mp3?1615372278)  
+    [LM Radio Saquisilí](https://stream-173.zeno.fm/1mxqv90mq2zuv)  
+    [Middle East Radio International - Beirut, Lebanon](https://listen.radioking.com/radio/343456/stream/392077)  
+    [Radio Underground Italia FM - Genzano di Roma, Italy](https://nr14.newradio.it:8707/stream)  
+    [Rock&Off Radio - Zagreb, Croatia](https://stream.player-jukebox.com/proxy/rockoff/stream)  
+    [Sabrosita - Mexico City, Mexico](https://18163.live.streamtheworld.com/XEPHAMAAC.aac)  
+    [Sinfonola 90.3 FM - Cartago, Costa Rica](https://live.turadio.stream:7006/stream?type=http&nocache=82)  
+    [Son FM 102.0 - Guia de Isora, Spain](https://radio.serviciosderadio.com/listen/sonfmlasalsera/radio.aac)  
+    [Tocantins FM Brazil](https://s22.maxcast.com.br:8210/live)  
+    [Universitaria 104,5 FM - Valencia, Venezuela](https://mp4.fm.uc.edu.ve:8443/fmuc.mp4)  
+    [Word Music Radio](https://radioserver.dk/wmr)  
+
+* Sites
+
+    https://radio.garden  
 
 <!--
 https://fmstream.org  
