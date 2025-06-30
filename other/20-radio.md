@@ -12,15 +12,12 @@
     [Elettrica - Roma](https://nr8.newradio.it/proxy/apselett?mp=/stream) [(web)](https://www.radioelettrica.it/)  
     [Noshmim Mizrahit - Eilat](https://mzr.mediacast.co.il/mzradio) [(web)](https://mizrahit.fm/)  
 
-* Favorites 2
+* Other
 
     [70 Disco Nights - Monterrey, Mexico](https://panel.retrolandigital.com/listen/70s_disco_nights/listen)  
     [Arabmix - Egypt](http://stream.zeno.fm/na3vpvn10qruv.acc)  
     [Ivri 6 - Haifa](https://streaming.radio.co/sa06221901/listen)  
-    [Sabrosita - Mexico City, Mexico](https://18163.live.streamtheworld.com/XEPHAMAAC.aac)  
     
-* Other
-
     [Bulbul FM - Almaty, Kazakhstan](https://stream.laut.fm/radiobulbul/)  
     [Emaar FM - As-Suwayda, Syria](https://stream.zeno.fm/4luag56o066uv)  
     [Funky Radio - Milan, Italy](https://funkyradio.streamingmedia.it/audio.aac)  
@@ -32,6 +29,7 @@
     [Radio Romance - Guayaquil, Ecuador](https://streamingecuador.com:9010/stream)  
     [Radio Underground Italia FM - Genzano di Roma, Italy](https://nr14.newradio.it:8707/stream)  
     [Rock&Off Radio - Zagreb, Croatia](https://stream.player-jukebox.com/proxy/rockoff/stream)  
+    [Sabrosita - Mexico City, Mexico](https://18163.live.streamtheworld.com/XEPHAMAAC.aac)  
     [Sinfonola 90.3 FM - Cartago, Costa Rica](https://live.turadio.stream:7006/stream?type=http&nocache=82)  
     [Son FM 102.0 - Guia de Isora, Spain](https://radio.serviciosderadio.com/listen/sonfmlasalsera/radio.aac)  
     [Tocantins FM Brazil](https://s22.maxcast.com.br:8210/live)  
