@@ -17,10 +17,10 @@
 
 * Other
 
-    [70 Disco Nights - Monterrey, Mexico](https://panel.retrolandigital.com/listen/70s_disco_nights/listen)  
-    [Arabmix - Egypt](http://stream.zeno.fm/na3vpvn10qruv.acc)  
     [RTS La Première - Geneva, Switzerland](https://livestreaming-node-4.srg-ssr.ch/srgssr/la-1ere/mp3/128)  
     
+    [70 Disco Nights - Monterrey, Mexico](https://panel.retrolandigital.com/listen/70s_disco_nights/listen)  
+    [Arabmix - Egypt](http://stream.zeno.fm/na3vpvn10qruv.acc)  
     [Emaar FM - As-Suwayda, Syria](https://stream.zeno.fm/4luag56o066uv)  
     [J1 Radio - Tokyo, Japan](https://jenny.torontocast.com:2000/stream/J1HITS/)  
     [Kawkaba - Kawkaba, Lebanon](https://cad.casthost.ca/proxy/antoine/stream)  
