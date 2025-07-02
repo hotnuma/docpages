@@ -93,6 +93,11 @@
     Create a `policies.json` file in `firefox/distribution/` :
     
     ```
+    sudo mkdir /opt/firefox/distribution/
+    sudo nano /opt/firefox/distribution/policies.json
+    ```
+    
+    ```
     {
         "policies":
         {
@@ -100,11 +105,6 @@
             "ManualAppUpdateOnly": true
         }
     }
-    ```
-    
-    ```
-    sudo mkdir -p /opt/firefox115esr/distribution/
-    sudo cp ./policies.json /opt/firefox115esr/distribution/
     ```
 
 

@@ -79,6 +79,10 @@ https://suggestqueries.google.com/complete/search?client=firefox&amp;q=%s
 
 <p>Create a <code>policies.json</code> file in <code>firefox/distribution/</code> :</p>
 
+<pre><code>sudo mkdir /opt/firefox/distribution/
+sudo nano /opt/firefox/distribution/policies.json
+</code></pre>
+
 <pre><code>{
     &quot;policies&quot;:
     {
@@ -86,10 +90,6 @@ https://suggestqueries.google.com/complete/search?client=firefox&amp;q=%s
         &quot;ManualAppUpdateOnly&quot;: true
     }
 }
-</code></pre>
-
-<pre><code>sudo mkdir -p /opt/firefox115esr/distribution/
-sudo cp ./policies.json /opt/firefox115esr/distribution/
 </code></pre></li>
 </ul>
 
