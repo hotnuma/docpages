@@ -18,6 +18,7 @@
 * Other
 
     [RTS La Première - Geneva, Switzerland](https://livestreaming-node-4.srg-ssr.ch/srgssr/la-1ere/mp3/128)  
+    [Word Music Radio](https://radioserver.dk/wmr)  
     
     [70 Disco Nights - Monterrey, Mexico](https://panel.retrolandigital.com/listen/70s_disco_nights/listen)  
     [Arabmix - Egypt](http://stream.zeno.fm/na3vpvn10qruv.acc)  
@@ -28,7 +29,6 @@
     [Radio Underground Italia FM - Genzano di Roma, Italy](https://nr14.newradio.it:8707/stream)  
     [Rock&Off Radio - Zagreb, Croatia](https://stream.player-jukebox.com/proxy/rockoff/stream)  
     [Universitaria 104,5 FM - Valencia, Venezuela](https://mp4.fm.uc.edu.ve:8443/fmuc.mp4)  
-    [Word Music Radio](https://radioserver.dk/wmr)  
 
 * Sites
 
