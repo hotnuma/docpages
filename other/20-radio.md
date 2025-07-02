@@ -20,6 +20,8 @@
     [Arabmix - Egypt](http://stream.zeno.fm/na3vpvn10qruv.acc)  
     [Ivri 6 - Haifa](https://streaming.radio.co/sa06221901/listen)  
     
+    [RTS La Première - Geneva, Switzerland](https://livestreaming-node-4.srg-ssr.ch/srgssr/la-1ere/mp3/128)  
+    
     [+ Emaar FM - As-Suwayda, Syria](https://stream.zeno.fm/4luag56o066uv)  
     [+ J1 Radio - Tokyo, Japan](https://jenny.torontocast.com:2000/stream/J1HITS/)  
     [+ Kawkaba - Kawkaba, Lebanon](https://cad.casthost.ca/proxy/antoine/stream)  
