@@ -17,12 +17,10 @@
 
 * Other
 
-    [RTS Première - Geneve](https://livestreaming-node-4.srg-ssr.ch/srgssr/la-1ere/mp3/128)  
-    [Word Music Radio](https://radioserver.dk/wmr)  
-    
     [Mizrahit Original](https://sweb.co.il:8000/)  
     [Radio Underground Italia FM - Genzano di Roma, Italy](https://nr14.newradio.it:8707/stream)  
-    [Universitaria 104,5 FM - Valencia, Venezuela](https://mp4.fm.uc.edu.ve:8443/fmuc.mp4)  
+    [RTS Première - Geneve](https://livestreaming-node-4.srg-ssr.ch/srgssr/la-1ere/mp3/128)  
+    [Word Music Radio](https://radioserver.dk/wmr)  
 
 * Sites
 
@@ -41,6 +39,7 @@ https://xfm.neocities.org/
 [J1 Radio - Tokyo, Japan](https://jenny.torontocast.com:2000/stream/J1HITS/)  
 [Kawkaba - Kawkaba, Lebanon](https://cad.casthost.ca/proxy/antoine/stream)  
 [Middle East Radio International - Beirut, Lebanon](https://listen.radioking.com/radio/343456/stream/392077)  
+[Universitaria 104,5 FM - Valencia, Venezuela](https://mp4.fm.uc.edu.ve:8443/fmuc.mp4)  
 -->
 
 <br/>
