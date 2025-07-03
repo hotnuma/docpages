@@ -176,10 +176,6 @@
     
     [https://www.instructables.com/Oak-Raspberry-Pi...](https://www.instructables.com/Oak-Raspberry-Pi-case-for-under-10/)  
 
-* Other programs
-    
-    `sudo apt install hardinfo inxi`
-
 * Read system infos
 
     ```
