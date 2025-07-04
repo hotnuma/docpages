@@ -28,8 +28,6 @@
 
 <!--
 
-af=dynaudnorm=framelen=50
-af=acompressor=threshold=-18dB:ratio=8:knee=1:attack=2:release=60:makeup=2.0
 https://playerservices.streamtheworld.com/api/livestream-redirect/XEPHAMAAC.aac
 https://18163.live.streamtheworld.com/XEPHAMAAC.aac
 https://26143.live.streamtheworld.com/XEPHAMAAC.aac
