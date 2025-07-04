@@ -6,7 +6,7 @@
 
 ---
 
-* Favorites 1
+* Favs 1
 
     [Angelika - Jerusalem](https://live.ecast.co.il:8024/stream) [(web)](https://radioangelika.com/)  
     [Elettrica - Roma](https://nr8.newradio.it/proxy/apselett?mp=/stream) [(web)](https://www.radioelettrica.it/)  
@@ -17,10 +17,9 @@
 
 * Other
 
-    [Mizrahit Original](https://sweb.co.il:8000/)  
-    [Radio Underground Italia FM - Genzano di Roma, Italy](https://nr14.newradio.it:8707/stream)  
+    [Mizrahit Orginal - Jerusalem](https://sweb.co.il:8000/)  
     [RTS Première - Geneve](https://livestreaming-node-4.srg-ssr.ch/srgssr/la-1ere/mp3/128)  
-    [Word Music Radio](https://radioserver.dk/wmr)  
+    [Word Music Radio - Randers](https://radioserver.dk/wmr)  
 
 * Sites
 
@@ -35,10 +34,11 @@ https://www.radio.fr/
 https://xfm.neocities.org/  
 
 [70 Disco Nights - Monterrey](https://panel.retrolandigital.com/listen/70s_disco_nights/listen)  
-[Arabmix - Egypt](http://stream.zeno.fm/na3vpvn10qruv.acc)  
-[J1 Radio - Tokyo, Japan](https://jenny.torontocast.com:2000/stream/J1HITS/)  
+[Arabmix - Cairo](http://stream.zeno.fm/na3vpvn10qruv.acc)  
+[J1 Radio - Tokyo](https://jenny.torontocast.com:2000/stream/J1HITS/)  
 [Kawkaba - Kawkaba, Lebanon](https://cad.casthost.ca/proxy/antoine/stream)  
 [Middle East Radio International - Beirut, Lebanon](https://listen.radioking.com/radio/343456/stream/392077)  
+[Radio Underground Italia FM - Genzano di Roma, Italy](https://nr14.newradio.it:8707/stream)  
 [Universitaria 104,5 FM - Valencia, Venezuela](https://mp4.fm.uc.edu.ve:8443/fmuc.mp4)  
 -->
 
