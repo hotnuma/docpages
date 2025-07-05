@@ -17,7 +17,7 @@
 
 * Other
 
-    [Mizrahit Orginal - Jerusalem](https://sweb.co.il:8000/)  
+    [Mizrahit Orginal - Jerusalem](https://sweb.co.il:8000/;)  
     [RTS Première - Geneve](https://livestreaming-node-4.srg-ssr.ch/srgssr/la-1ere/mp3/128)  
     [Word Music Radio - Randers](https://radioserver.dk/wmr)  
 
