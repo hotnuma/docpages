@@ -11,13 +11,13 @@
     [Angelika - Jerusalem](https://live.ecast.co.il:8024/stream) [(web)](https://radioangelika.com/)  
     [Elettrica - Roma](https://nr8.newradio.it/proxy/apselett?mp=/stream) [(web)](https://www.radioelettrica.it/)  
     [Ivri 6 - Haifa](https://streaming.radio.co/sa06221901/listen) [(web)](https://ivri6.net/)  
-    [Funky Radio - Milano](https://funkyradio.streamingmedia.it/audio.aac) [(web)](https://funky.radio/)  
     [Noshmim Mizrahit - Eilat](https://mzr.mediacast.co.il/mzradio) [(web)](https://mizrahit.fm/)  
     [Sabrosita - Mexico City](https://18163.live.streamtheworld.com/XEPHAMAAC.aac) [(web)](https://sabrositadigital.mx/)  
 
 * Other
 
     [Arabmix - Cairo](https://stream.zeno.fm/8vrkggsb1d0uv)  
+    [Funky Radio - Milano](https://funkyradio.streamingmedia.it/audio.aac) [(web)](https://funky.radio/)  
     [Mizrahit Orginal - Jerusalem](https://sweb.co.il:8000/;)  
     [RTS Première - Geneve](https://livestreaming-node-4.srg-ssr.ch/srgssr/la-1ere/mp3/128)  
     [Word Music Radio - Randers](https://radioserver.dk/wmr)  
