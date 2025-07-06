@@ -12,7 +12,7 @@
     [Elettrica - Roma](https://nr8.newradio.it/proxy/apselett?mp=/stream) [(web)](https://www.radioelettrica.it/)  
     [Ivri 6 - Haifa](https://streaming.radio.co/sa06221901/listen) [(web)](https://ivri6.net/)  
     [Noshmim Mizrahit - Eilat](https://mzr.mediacast.co.il/mzradio) [(web)](https://mizrahit.fm/)  
-    [Sabrosita - Mexico City](https://18163.live.streamtheworld.com/XEPHAMAAC.aac) [(web)](https://sabrositadigital.mx/)  
+    [Sabrosita - Mexico City](https://18163.live.streamtheworld.com/XEPHAMAAC.aac) [(web)](https://sabrositadigital.mx/portfolio/talento/)  
 
 * Other
 
