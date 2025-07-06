@@ -30,6 +30,33 @@ sudo mv ./firefox.desktop /usr/local/share/applications/
 </code></pre>
 
 <p>Set new tab and home to a blank page.</p></li>
+<li><p>Policies</p>
+
+<p><a href="https://mozilla.github.io/policy-templates/#manualappupdateonly">https://mozilla.github.io/policy-templates/#manualappupdateonly</a>  </p>
+
+<pre><code>sudo mkdir /opt/firefox/distribution/
+sudo nano /opt/firefox/distribution/policies.json
+</code></pre>
+
+<p>Manual updates :</p>
+
+<pre><code>{
+    &quot;policies&quot;:
+    {
+        &quot;ManualAppUpdateOnly&quot;: true
+    }
+}
+</code></pre>
+
+<p>Disable updates :</p>
+
+<pre><code>{
+    &quot;policies&quot;:
+    {
+        &quot;DisableAppUpdate&quot;: true,
+    }
+}
+</code></pre></li>
 <li><p>Install icon under Wayland</p>
 
 <pre><code>sudo mkdir -p /usr/local/share/icons/hicolor/128x128/apps/
@@ -73,24 +100,6 @@ https://suggestqueries.google.com/complete/search?client=firefox&amp;q=%s
 <li><p>Turn off ambient mode</p>
 
 <p><a href="https://www.popsci.com/diy/youtube-ambient-mode-off-on/">https://www.popsci.com/diy/youtube-ambient-mode-off-on/</a>  </p></li>
-<li><p>Turn off updates</p>
-
-<p><a href="https://mozilla.github.io/policy-templates/#manualappupdateonly">https://mozilla.github.io/policy-templates/#manualappupdateonly</a>  </p>
-
-<p>Create a <code>policies.json</code> file in <code>firefox/distribution/</code> :</p>
-
-<pre><code>sudo mkdir /opt/firefox/distribution/
-sudo nano /opt/firefox/distribution/policies.json
-</code></pre>
-
-<pre><code>{
-    &quot;policies&quot;:
-    {
-        &quot;DisableAppUpdate&quot;: true,
-        &quot;ManualAppUpdateOnly&quot;: true
-    }
-}
-</code></pre></li>
 </ul>
 
 <h4>Network</h4>

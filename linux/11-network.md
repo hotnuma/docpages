@@ -32,6 +32,37 @@
     
     Set new tab and home to a blank page.
 
+* Policies
+
+    https://mozilla.github.io/policy-templates/#manualappupdateonly  
+    
+    ```
+    sudo mkdir /opt/firefox/distribution/
+    sudo nano /opt/firefox/distribution/policies.json
+    ```
+
+    Manual updates :
+    
+    ```
+    {
+        "policies":
+        {
+            "ManualAppUpdateOnly": true
+        }
+    }
+    ```
+    
+    Disable updates :
+
+    ```
+    {
+        "policies":
+        {
+            "DisableAppUpdate": true,
+        }
+    }
+    ```
+
 * Install icon under Wayland
     
     ```
@@ -86,27 +117,6 @@
     
     https://www.popsci.com/diy/youtube-ambient-mode-off-on/  
     
-* Turn off updates
-
-    https://mozilla.github.io/policy-templates/#manualappupdateonly  
-    
-    Create a `policies.json` file in `firefox/distribution/` :
-    
-    ```
-    sudo mkdir /opt/firefox/distribution/
-    sudo nano /opt/firefox/distribution/policies.json
-    ```
-    
-    ```
-    {
-        "policies":
-        {
-            "DisableAppUpdate": true,
-            "ManualAppUpdateOnly": true
-        }
-    }
-    ```
-
 
 #### Network
 
