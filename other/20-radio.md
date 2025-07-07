@@ -19,6 +19,7 @@
     [Arabmix - Cairo](https://stream.zeno.fm/8vrkggsb1d0uv)  
     [Funky Radio - Milano](https://funkyradio.streamingmedia.it/audio.aac) [(web)](https://funky.radio/)  
     [Holmim Mizrahit](http://liveradio.co.il:1040/;)  
+    [Love in the Mediterranean](https://liveradio.co.il:9070/;) [(web)](https://love-bayamhatichon.co.il/)  
     [Mizrahit Orginal - Jerusalem](https://sweb.co.il:8000/;)  
     [Word Music Radio - Randers](https://radioserver.dk/wmr)  
 
