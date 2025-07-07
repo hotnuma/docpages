@@ -18,7 +18,7 @@
 
     [Arabmix - Cairo](https://stream.zeno.fm/8vrkggsb1d0uv)  
     [Funky Radio - Milano](https://funkyradio.streamingmedia.it/audio.aac) [(web)](https://funky.radio/)  
-    [Holmim Mizrahit - Haïfa](http://liveradio.co.il:1040/;)  
+    [Holmim Mizrahit](http://liveradio.co.il:1040/;)  
     [Mizrahit Orginal - Jerusalem](https://sweb.co.il:8000/;)  
     [Word Music Radio - Randers](https://radioserver.dk/wmr)  
 
@@ -33,6 +33,9 @@ https://www.listenlive.nl
 https://goldfm.fr/  
 https://www.radio.fr/  
 https://xfm.neocities.org/  
+
+[Holmim Mizrahit](https://liveradio.co.il:8070/index.html/;) [(web)](https://www.holmimmizrahit.co.il/)  
+https://www.liveradio.ie/stations/eastern-radio  
 
 [J1 Radio - Tokyo](https://jenny.torontocast.com:2000/stream/J1HITS/)  
 [Kawkaba - Kawkaba, Lebanon](https://cad.casthost.ca/proxy/antoine/stream)  
