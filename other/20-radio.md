@@ -18,8 +18,8 @@
 
     [Arabmix - Cairo](https://stream.zeno.fm/8vrkggsb1d0uv)  
     [Funky Radio - Milano](https://funkyradio.streamingmedia.it/audio.aac) [(web)](https://funky.radio/)  
+    [Holmim Mizrahit - Haïfa](http://liveradio.co.il:1040/;)  
     [Mizrahit Orginal - Jerusalem](https://sweb.co.il:8000/;)  
-    [RTS Première - Geneve](https://livestreaming-node-4.srg-ssr.ch/srgssr/la-1ere/mp3/128)  
     [Word Music Radio - Randers](https://radioserver.dk/wmr)  
 
 * Sites
@@ -34,11 +34,11 @@ https://goldfm.fr/
 https://www.radio.fr/  
 https://xfm.neocities.org/  
 
-[70 Disco Nights - Monterrey](https://panel.retrolandigital.com/listen/70s_disco_nights/listen)  
 [J1 Radio - Tokyo](https://jenny.torontocast.com:2000/stream/J1HITS/)  
 [Kawkaba - Kawkaba, Lebanon](https://cad.casthost.ca/proxy/antoine/stream)  
 [Middle East Radio International - Beirut, Lebanon](https://listen.radioking.com/radio/343456/stream/392077)  
 [Radio Underground Italia FM - Genzano di Roma, Italy](https://nr14.newradio.it:8707/stream)  
+[RTS Première - Geneve](https://livestreaming-node-4.srg-ssr.ch/srgssr/la-1ere/mp3/128)  
 [Universitaria 104,5 FM - Valencia, Venezuela](https://mp4.fm.uc.edu.ve:8443/fmuc.mp4)  
 -->
 
