@@ -58,13 +58,34 @@ reboot
 </code></pre></li>
 <li><p>Switch to Unstable</p>
 
-<p><code>sed -i.bak s/bookworm/unstable/g /etc/apt/sources.list</code></p>
+<p><code>sudo nano /etc/apt/sources.list</code></p>
 
-<p>comment security and updates</p>
+<pre><code>deb http://deb.debian.org/debian unstable main contrib non-free non-free-firmware
+deb-src http://deb.debian.org/debian unstable main contrib non-free non-free-firmware
+</code></pre>
 
 <pre><code>sudo apt update &amp;&amp; sudo apt full-upgrade
 sync
 reboot
+</code></pre>
+
+<p><a href="https://forums.raspberrypi.com/viewtopic.php?t=335951#p2036878">https://forums.raspberrypi.com/viewtopic.php?t=335951#p2036878</a>  </p>
+
+<pre><code>Package: *
+Pin: release a=unstable
+Pin-Priority: 800
+
+Package: *
+Pin: release a=experimental
+Pin-Priority: 700
+
+Package: *
+Pin: release a=stable
+Pin-Priority: 600
+
+Package: *
+Pin: origin &quot;archive.raspberry.org&quot;
+Pin-Priority: 200
 </code></pre></li>
 <li><p>Install XFCE</p>
 

@@ -62,16 +62,39 @@
     
 * Switch to Unstable
 
-    `sed -i.bak s/bookworm/unstable/g /etc/apt/sources.list`
-    
-    comment security and updates
+    `sudo nano /etc/apt/sources.list`
+
+    ```
+    deb http://deb.debian.org/debian unstable main contrib non-free non-free-firmware
+    deb-src http://deb.debian.org/debian unstable main contrib non-free non-free-firmware
+    ```
     
     ```
     sudo apt update && sudo apt full-upgrade
     sync
     reboot
     ```
+    
+    https://forums.raspberrypi.com/viewtopic.php?t=335951#p2036878  
+    
+    ```
+    Package: *
+    Pin: release a=unstable
+    Pin-Priority: 800
 
+    Package: *
+    Pin: release a=experimental
+    Pin-Priority: 700
+
+    Package: *
+    Pin: release a=stable
+    Pin-Priority: 600
+
+    Package: *
+    Pin: origin "archive.raspberry.org"
+    Pin-Priority: 200
+    ```
+    
 * Install XFCE
 
     `sudo tasksel`
