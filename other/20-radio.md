@@ -17,6 +17,7 @@
 * Other
 
     [Arabmix - Cairo](https://stream.zeno.fm/8vrkggsb1d0uv)  
+    [Canal B - Bruz](https://stream.levillage.org/canalb)  
     [Funky Radio - Milano](https://funkyradio.streamingmedia.it/audio.aac) [(web)](https://funky.radio/)  
     [Love in the Mediterranean](https://liveradio.co.il:9070/;) [(web)](https://love-bayamhatichon.co.il/)  
     [Mizrahit Orginal - Jerusalem](https://sweb.co.il:8000/;)  
