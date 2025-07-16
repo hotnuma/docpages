@@ -4,7 +4,7 @@
 | [Fileman](fileman/00-fileman.html) | [ImgView](imgview/05-imgview.html) ]**
 
 **[ [Install](other/05-install.html) | [Raspi](other/10-raspi.html)
-| [Build](other/15-build.html) | [Radio](other/20-radio.html) ]**
+| [Build](other/15-build.html) ]**
 
 <br/>
 
