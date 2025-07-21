@@ -96,14 +96,16 @@ install_subdir(&#39;assets&#39;, install_dir: config_dir)
 <li><p>Find linked libraries</p>
 
 <p><a href="https://unix.stackexchange.com/questions/120015/">https://unix.stackexchange.com/questions/120015/</a>  </p></li>
-<li><p>Fix library error</p>
-
-<p><code>sudo /sbin/ldconfig -v</code></p></li>
 <li><p>pkg-config</p>
 
-<p><code>pkg-config --cflags --libs gtk+-3.0</code></p>
+<p>flags : <code>pkg-config --cflags --libs gtk+-3.0</code></p>
 
 <p>version : <code>pkg-config --modversion glib-2.0</code></p></li>
+<li><p>Update the shared library system</p>
+
+<p><a href="https://www.debian.org/doc/debian-policy/ch-sharedlibs.html#ldconfig">ldconfig</a>  </p>
+
+<p><code>sudo /sbin/ldconfig -v</code></p></li>
 <li><p>Common Dev Packages</p>
 
 <table>

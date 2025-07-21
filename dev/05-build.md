@@ -101,15 +101,17 @@ https://wiki.debian.org/BuildingTutorial
 
     https://unix.stackexchange.com/questions/120015/  
     
-* Fix library error
-
-    `sudo /sbin/ldconfig -v`
-
 * pkg-config
 
-    `pkg-config --cflags --libs gtk+-3.0`
+    flags : `pkg-config --cflags --libs gtk+-3.0`
     
     version : `pkg-config --modversion glib-2.0`
+
+* Update the shared library system
+    
+    [ldconfig](https://www.debian.org/doc/debian-policy/ch-sharedlibs.html#ldconfig)  
+
+    `sudo /sbin/ldconfig -v`
 
 * Common Dev Packages
 
