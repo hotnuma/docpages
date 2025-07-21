@@ -493,11 +493,7 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
 * Output command without localization
 
-    `LANGUAGE=C free -h`
-    
-    or
-    
-    `LANG=C free -h`
+    `LC_ALL=C free -h`
     
 * Switch to non-graphical
     
