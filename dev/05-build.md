@@ -109,7 +109,7 @@ https://wiki.debian.org/BuildingTutorial
 
 * Update the shared library system
     
-    [ldconfig](https://www.debian.org/doc/debian-policy/ch-sharedlibs.html#ldconfig)  
+    [https://www.debian.org/doc/debian-policy/...](https://www.debian.org/doc/debian-policy/ch-sharedlibs.html#ldconfig)  
 
     `sudo /sbin/ldconfig -v`
 
