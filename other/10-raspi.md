@@ -187,6 +187,10 @@
     
     `cat /sys/firmware/devicetree/base/model`
 
+* List Packages not in unstable
+    
+    `apt list --installed | grep -v /unstable`
+
 * List Raspi Packages
     
     `grep -h ^Package: /var/lib/apt/lists/archive.raspberrypi.com*arm64_Packages | grep -v -- -dbgsym$ | grep -v -- -dbg$ | cut -d ' ' -f 2`

@@ -171,6 +171,9 @@ sudo apt-file update
 <li><p>Board model</p>
 
 <p><code>cat /sys/firmware/devicetree/base/model</code></p></li>
+<li><p>List Packages not in unstable</p>
+
+<p><code>apt list --installed | grep -v /unstable</code></p></li>
 <li><p>List Raspi Packages</p>
 
 <p><code>grep -h ^Package: /var/lib/apt/lists/archive.raspberrypi.com*arm64_Packages | grep -v -- -dbgsym$ | grep -v -- -dbg$ | cut -d &#39; &#39; -f 2</code></p></li>
