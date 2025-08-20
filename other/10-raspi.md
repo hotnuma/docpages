@@ -83,14 +83,6 @@
     Pin-Priority: 800
 
     Package: *
-    Pin: release a=experimental
-    Pin-Priority: 700
-
-    Package: *
-    Pin: release a=stable
-    Pin-Priority: 600
-
-    Package: *
     Pin: origin "archive.raspberry.org"
     Pin-Priority: 200
     ```
