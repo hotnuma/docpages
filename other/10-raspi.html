@@ -48,14 +48,6 @@ sudo dd if=./raspios64-lite.img of=/dev/sdX bs=4M conv=fsync status=progress
 <p>if we don&#39;t need a camera : <code>sudo apt purge rpicam-apps-lite libpisp1</code></p>
 
 <p><code>reboot</code></p></li>
-<li><p>Switch to Trixie</p>
-
-<pre><code>sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list
-sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list.d/raspi.list
-sudo apt update &amp;&amp; sudo apt full-upgrade
-sync
-reboot
-</code></pre></li>
 <li><p>Switch to Unstable</p>
 
 <p><code>sudo nano /etc/apt/sources.list</code></p>
@@ -222,3 +214,15 @@ with a udev rule.
 </ul>
 
 <p><br/></p>
+
+<!--
+* Switch to Trixie
+
+    ```
+    sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list
+    sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list.d/raspi.list
+    sudo apt update && sudo apt full-upgrade
+    sync
+    reboot
+    ```
+-->

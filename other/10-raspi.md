@@ -50,16 +50,6 @@
 
     `reboot`
 
-* Switch to Trixie
-
-    ```
-    sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list
-    sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list.d/raspi.list
-    sudo apt update && sudo apt full-upgrade
-    sync
-    reboot
-    ```
-    
 * Switch to Unstable
 
     `sudo nano /etc/apt/sources.list`
@@ -251,5 +241,17 @@
     [https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-do](https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-down-xl4016e1-poti)  
 
 <br/>
+
+<!--
+* Switch to Trixie
+
+    ```
+    sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list
+    sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list.d/raspi.list
+    sudo apt update && sudo apt full-upgrade
+    sync
+    reboot
+    ```
+-->
 
 
