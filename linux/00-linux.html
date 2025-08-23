@@ -118,9 +118,11 @@ apt source &lt;package&gt;
 <p><a href="https://stackoverflow.com/questions/58831133/">https://stackoverflow.com/questions/58831133/</a><br>
 <a href="https://luminousmen.com/post/why-use-pip-install-user">https://luminousmen.com/post/why-use-pip-install-user</a>  </p>
 
+<p><code>python3 -m pip config set global.break-system-packages true</code></p>
+
 <p>create an alias such as :  </p>
 
-<p><code>alias pyinst=&#39;python3 -m pip install --break-system-packages --user&#39;</code></p>
+<p><code>alias pyinst=&#39;python3 -m pip install --user&#39;</code></p>
 
 <p>then run : <code>pyinst &lt;appname&gt;</code></p></li>
 <li><p>List dependencies</p>

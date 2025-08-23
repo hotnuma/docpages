@@ -139,9 +139,11 @@ https://wiki.debian.org/HardwareVideoAcceleration
     https://stackoverflow.com/questions/58831133/  
     https://luminousmen.com/post/why-use-pip-install-user  
     
+    `python3 -m pip config set global.break-system-packages true`
+    
     create an alias such as :  
     
-    `alias pyinst='python3 -m pip install --break-system-packages --user'`
+    `alias pyinst='python3 -m pip install --user'`
     
     then run : `pyinst <appname>`
     
