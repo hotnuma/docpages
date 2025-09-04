@@ -435,9 +435,18 @@ https://wiki.debian.org/HardwareVideoAcceleration
     
     https://ss64.com/bash/syntax-keyboard.html  
 
+* batocera
+    
+    https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/  
+
 * libreoffice
     
-    convert csv to odt : `soffice --convert-to ods example.csv --headless`
+    convert csv to odt : `soffice --convert-to ods example.csv --headless`  
+    go to page : `Shift+Ctrl+F5`
+
+* mpv
+    
+    https://mpv.io/manual/master/  
 
 * rofi
     
@@ -445,23 +454,14 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
 * zathura
 
-    copy to clipboard : https://unix.stackexchange.com/questions/339487/  
-
-
-#### Shortcuts
-
-* Batocera
-    
-    https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/  
-
-* Mpv
-    
-    https://mpv.io/manual/master/  
-
-* Zathura
-    
     https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/  
     https://unix.stackexchange.com/questions/497737/  
+
+    copy to clipboard : https://unix.stackexchange.com/questions/339487/  
+    
+    go to page 10 : `10GG`  
+    got to previous : `Ctrl+O`  
+    got to next : `Ctrl+I`  
 
 
 #### Misc
