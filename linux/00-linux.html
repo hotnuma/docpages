@@ -384,8 +384,19 @@ go to page : <code>Shift+Ctrl+F5</code></p></li>
 
 <p><a href="https://github.com/yt-dlp/yt-dlp">https://github.com/yt-dlp/yt-dlp</a>  </p>
 
-<p>install or update : <code>pyinst -U yt-dlp</code><br>
-create a symlink : <code>sudo ln -s ~/.local/bin/yt-dlp /usr/local/bin/yt-dlp</code>  </p>
+<p>install binary :</p>
+
+<pre><code>sudo wget -P /usr/local/bin \
+https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux
+
+sudo ln -s /usr/local/bin/yt-dlp_linux /usr/local/bin/yt-dlp
+</code></pre>
+
+<p>install with pyinst :</p>
+
+<pre><code>pyinst -U yt-dlp
+sudo ln -s ~/.local/bin/yt-dlp /usr/local/bin/yt-dlp
+</code></pre>
 
 <p>nightly releases : <a href="https://github.com/yt-dlp/yt-dlp-nightly-builds/releases">https://github.com/yt-dlp/yt-dlp-nightly-builds/releases</a>  </p></li>
 <li><p>zathura</p>
