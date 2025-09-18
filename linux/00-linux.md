@@ -202,15 +202,6 @@ https://wiki.debian.org/HardwareVideoAcceleration
     
     `sudo apt update && sudo apt full-upgrade`
 
-* yt-dlp
-    
-    https://github.com/yt-dlp/yt-dlp  
-    
-    install or update : `pyinst -U yt-dlp`  
-    create a symlink : `sudo ln -s ~/.local/bin/yt-dlp /usr/local/bin/yt-dlp`  
-    
-    nightly releases : https://github.com/yt-dlp/yt-dlp-nightly-builds/releases  
-
 
 #### Drives
 
@@ -451,6 +442,15 @@ https://wiki.debian.org/HardwareVideoAcceleration
 * rofi
     
     delete entry : type shift+delete on the entry
+
+* yt-dlp
+    
+    https://github.com/yt-dlp/yt-dlp  
+    
+    install or update : `pyinst -U yt-dlp`  
+    create a symlink : `sudo ln -s ~/.local/bin/yt-dlp /usr/local/bin/yt-dlp`  
+    
+    nightly releases : https://github.com/yt-dlp/yt-dlp-nightly-builds/releases  
 
 * zathura
 
