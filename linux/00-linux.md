@@ -431,6 +431,8 @@ https://wiki.debian.org/HardwareVideoAcceleration
     https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/  
 
 * libreoffice
+
+    install hyphenation : `sudo apt install hyphen-fr`
     
     convert csv to odt : `soffice --convert-to ods example.csv --headless`  
     go to page : `Shift+Ctrl+F5`
