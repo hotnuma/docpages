@@ -457,14 +457,7 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
     sudo ln -s /usr/local/bin/yt-dlp_linux /usr/local/bin/yt-dlp
     ```
-    
-    install with pyinst :
-    
-    ```
-    pyinst -U yt-dlp
-    sudo ln -s ~/.local/bin/yt-dlp /usr/local/bin/yt-dlp
-    ```
-    
+
     nightly releases : https://github.com/yt-dlp/yt-dlp-nightly-builds/releases  
 
 * zathura
@@ -529,3 +522,12 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
 <br/>
 
+<!--
+    install with pip3 :
+    
+    ```
+    python3 -m pip install --user -U yt-dlp
+    sudo ln -s ~/.local/bin/yt-dlp /usr/local/bin/yt-dlp
+    ```
+-->
+    
