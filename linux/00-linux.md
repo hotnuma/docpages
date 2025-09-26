@@ -457,6 +457,8 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
     sudo ln -s /usr/local/bin/yt-dlp_linux /usr/local/bin/yt-dlp
     ```
+    
+    update : `sudo yt-dlp -U`  
 
     nightly releases : https://github.com/yt-dlp/yt-dlp-nightly-builds/releases  
 
