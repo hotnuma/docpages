@@ -56,7 +56,15 @@
 
 * Firefox
     
-    Install uBlock Origin, SingleFile, cookies.txt.  
+    extensions :
+    
+    ```
+    cookies.txt
+    SingleFile
+    uBlock Origin
+    YouTube Tweaks
+    ```
+    
     Restore bookmarks, passwords, filters and user.js.  
     
     Test videos :  
