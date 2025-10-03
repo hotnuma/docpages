@@ -55,35 +55,9 @@
 #### <a name="disable"></a> Manual configuration
 
 * Firefox
-    
-    extensions :
-    
-    ```
-    cookies.txt
-    SingleFile
-    uBlock Origin
-    YouTube Tweaks
-    ```
-    
-    Restore bookmarks, passwords, filters and user.js.  
-    
-    Test videos :  
-    
-    https://www.youtube.com/watch?v=cuXsupMuik4  
-    https://www.youtube.com/watch?v=TVtoxUohG5E  
-    
-    Disable Filemanager service :
-    
-    https://bbs.archlinux.org/viewtopic.php?id=255794  
-    https://unix.stackexchange.com/questions/66662/  
-    https://askubuntu.com/questions/530779/  
-    
-    ```
-    sudo mv /usr/share/dbus-1/services/org.xfce.FileManager.service .
-    sudo mv /usr/share/dbus-1/services/org.xfce.Thunar.FileManager1.service .
-    sudo mv /usr/share/dbus-1/services/org.xfce.Thunar.service .
-    ```
 
+    https://hotnuma.github.io/docpages/linux/11-network.html  
+    
 * Configure Terminal
     
     Font :      DejaVu Sans Mono Book 11
@@ -146,10 +120,19 @@
     
     edit user dirs .config/user-dirs.dirs
 
+* Change border size with Labwc
+    
+    ```
+    cat $HOME/.config/labwc/themerc-override
+    border.width: 3
+    ```
+
 * Progams settings
     
     copy restore geany settings  
     copy mpv settings  
+    
+    install hyphenation : `sudo apt install hyphen-fr`
 
 * Xfwm4
 
@@ -158,18 +141,6 @@
     If the panel is on top, disable drop down shasows :
     
     https://stackoverflow.com/questions/53725696/  
-
-* Install yt-dlp
-    
-    https://github.com/yt-dlp/yt-dlp/wiki/Installation  
-    
-    ```
-    wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
-    chmod a+rx ./yt-dlp
-    sudo mv ./yt-dlp /usr/local/bin/
-    ```
-    
-    To upgrade download the program again.
 
 * Install QtCreator
 
@@ -206,6 +177,24 @@
     
     In the preferences of the editor, `Fonts and Colors`, set font
     size to 11 and select the `Default Classic` color scheme.
+
+* Install yt-dlp
+    
+    https://github.com/yt-dlp/yt-dlp  
+    
+    install binary :
+    
+    ```
+    sudo wget -P /usr/local/bin \
+    https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux
+
+    chmod a+rx /usr/local/bin/yt-dlp_linux
+    sudo ln -s /usr/local/bin/yt-dlp_linux /usr/local/bin/yt-dlp
+    ```
+    
+    update : `sudo yt-dlp -U`  
+
+    nightly releases : https://github.com/yt-dlp/yt-dlp-nightly-builds/releases  
 
 * Repack gvfs-backends
     
@@ -250,6 +239,10 @@
     
     `tar tfz gvfs-mtp_1.57.2-2_arm64.tgz \
     | grep -e "[^/]$" | sort > files.txt`
+
+* Uninstall desktop portals
+
+    `sudo apt purge xdg-desktop-portal*`
 
 
 #### Graphic card

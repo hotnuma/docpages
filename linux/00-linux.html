@@ -113,18 +113,6 @@ systemctl poweroff
 <pre><code>sudo apt update
 apt source &lt;package&gt;
 </code></pre></li>
-<li><p>Install python programs</p>
-
-<p><a href="https://stackoverflow.com/questions/58831133/">https://stackoverflow.com/questions/58831133/</a><br>
-<a href="https://luminousmen.com/post/why-use-pip-install-user">https://luminousmen.com/post/why-use-pip-install-user</a>  </p>
-
-<p><code>python3 -m pip config set global.break-system-packages true</code></p>
-
-<p>create an alias such as :  </p>
-
-<p><code>alias pyinst=&#39;python3 -m pip install --user&#39;</code></p>
-
-<p>then run : <code>pyinst &lt;appname&gt;</code></p></li>
 <li><p>List dependencies</p>
 
 <p><a href="https://askubuntu.com/questions/80655/">https://askubuntu.com/questions/80655/</a>  </p>
@@ -372,8 +360,6 @@ xfce4-screenshooter
 <p><a href="https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/">https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/</a>  </p></li>
 <li><p>libreoffice</p>
 
-<p>install hyphenation : <code>sudo apt install hyphen-fr</code></p>
-
 <p>convert csv to odt : <code>soffice --convert-to ods example.csv --headless</code><br>
 go to page : <code>Shift+Ctrl+F5</code></p></li>
 <li><p>mpv</p>
@@ -382,21 +368,6 @@ go to page : <code>Shift+Ctrl+F5</code></p></li>
 <li><p>rofi</p>
 
 <p>delete entry : type shift+delete on the entry</p></li>
-<li><p>yt-dlp</p>
-
-<p><a href="https://github.com/yt-dlp/yt-dlp">https://github.com/yt-dlp/yt-dlp</a>  </p>
-
-<p>install binary :</p>
-
-<pre><code>sudo wget -P /usr/local/bin \
-https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux
-
-sudo ln -s /usr/local/bin/yt-dlp_linux /usr/local/bin/yt-dlp
-</code></pre>
-
-<p>update : <code>sudo yt-dlp -U</code>  </p>
-
-<p>nightly releases : <a href="https://github.com/yt-dlp/yt-dlp-nightly-builds/releases">https://github.com/yt-dlp/yt-dlp-nightly-builds/releases</a>  </p></li>
 <li><p>zathura</p>
 
 <p><a href="https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/">https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/</a><br>
@@ -412,11 +383,6 @@ got to next : <code>Ctrl+I</code>  </p></li>
 <h4>Misc</h4>
 
 <ul>
-<li><p>Change border size with Labwc</p>
-
-<pre><code>cat $HOME/.config/labwc/themerc-override
-border.width: 3
-</code></pre></li>
 <li><p>Copy to clipboard</p>
 
 <p><a href="https://stackoverflow.com/questions/5130968/">https://stackoverflow.com/questions/5130968/</a>  </p></li>
@@ -442,21 +408,9 @@ border.width: 3
 
 <p>console : <code>Ctrl+Alt+F1</code><br>
 graphical : <code>Ctrl+Alt+F7</code>  </p></li>
-<li><p>Uninstall desktop portals</p>
-
-<p><code>sudo apt purge xdg-desktop-portal*</code></p></li>
 <li><p>Using Wget with Cookies</p>
 
 <p><a href="https://www.apharmony.com/software-sagacity/2014/10/using-wget-with-cookies/">https://www.apharmony.com/software-sagacity/</a>  </p></li>
 </ul>
 
 <p><br/></p>
-
-<!--
-    install with pip3 :
-    
-    ```
-    python3 -m pip install --user -U yt-dlp
-    sudo ln -s ~/.local/bin/yt-dlp /usr/local/bin/yt-dlp
-    ```
--->

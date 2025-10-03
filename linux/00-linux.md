@@ -134,19 +134,6 @@ https://wiki.debian.org/HardwareVideoAcceleration
     apt source <package>
     ```
 
-* Install python programs
-    
-    https://stackoverflow.com/questions/58831133/  
-    https://luminousmen.com/post/why-use-pip-install-user  
-    
-    `python3 -m pip config set global.break-system-packages true`
-    
-    create an alias such as :  
-    
-    `alias pyinst='python3 -m pip install --user'`
-    
-    then run : `pyinst <appname>`
-    
 * List dependencies
     
     https://askubuntu.com/questions/80655/  
@@ -432,8 +419,6 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
 * libreoffice
 
-    install hyphenation : `sudo apt install hyphen-fr`
-    
     convert csv to odt : `soffice --convert-to ods example.csv --headless`  
     go to page : `Shift+Ctrl+F5`
 
@@ -444,23 +429,6 @@ https://wiki.debian.org/HardwareVideoAcceleration
 * rofi
     
     delete entry : type shift+delete on the entry
-
-* yt-dlp
-    
-    https://github.com/yt-dlp/yt-dlp  
-    
-    install binary :
-    
-    ```
-    sudo wget -P /usr/local/bin \
-    https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux
-
-    sudo ln -s /usr/local/bin/yt-dlp_linux /usr/local/bin/yt-dlp
-    ```
-    
-    update : `sudo yt-dlp -U`  
-
-    nightly releases : https://github.com/yt-dlp/yt-dlp-nightly-builds/releases  
 
 * zathura
 
@@ -475,13 +443,6 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
 
 #### Misc
-
-* Change border size with Labwc
-    
-    ```
-    cat $HOME/.config/labwc/themerc-override
-    border.width: 3
-    ```
 
 * Copy to clipboard
     
@@ -514,22 +475,9 @@ https://wiki.debian.org/HardwareVideoAcceleration
     console : `Ctrl+Alt+F1`  
     graphical : `Ctrl+Alt+F7`  
 
-* Uninstall desktop portals
-
-    `sudo apt purge xdg-desktop-portal*`
-
 * Using Wget with Cookies
     
     [https://www.apharmony.com/software-sagacity/](https://www.apharmony.com/software-sagacity/2014/10/using-wget-with-cookies/)  
 
 <br/>
 
-<!--
-    install with pip3 :
-    
-    ```
-    python3 -m pip install --user -U yt-dlp
-    sudo ln -s ~/.local/bin/yt-dlp /usr/local/bin/yt-dlp
-    ```
--->
-    

@@ -30,7 +30,23 @@
     sudo mv ./firefox.desktop /usr/local/share/applications/
     ```
     
-    Set new tab and home to a blank page.
+    extensions :
+    
+    ```
+    cookies.txt
+    SingleFile
+    uBlock Origin
+    YouTube Tweaks
+    ```
+    
+    Set new tab and home to a blank page.  
+    Restore bookmarks, passwords, filters and user.js.  
+    
+* Test Videos
+    
+    https://www.youtube.com/watch?v=pcSv22DTDUI  
+    https://www.youtube.com/watch?v=cuXsupMuik4  
+    https://www.youtube.com/watch?v=TVtoxUohG5E  
 
 * Policies
 
@@ -82,11 +98,17 @@
     Zoom 110 %
     ```
     
-* Test Videos
+* Disable Filemanager service
     
-    https://www.youtube.com/watch?v=pcSv22DTDUI  
-    https://www.youtube.com/watch?v=cuXsupMuik4  
-    https://www.youtube.com/watch?v=TVtoxUohG5E  
+    https://bbs.archlinux.org/viewtopic.php?id=255794  
+    https://unix.stackexchange.com/questions/66662/  
+    https://askubuntu.com/questions/530779/  
+    
+    ```
+    sudo mv /usr/share/dbus-1/services/org.xfce.FileManager.service .
+    sudo mv /usr/share/dbus-1/services/org.xfce.Thunar.FileManager1.service .
+    sudo mv /usr/share/dbus-1/services/org.xfce.Thunar.service .
+    ```
 
 * Google Web Search
     

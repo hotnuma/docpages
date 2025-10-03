@@ -29,7 +29,21 @@ wget https://hotnuma.github.io/docpages/linux/firefox.desktop
 sudo mv ./firefox.desktop /usr/local/share/applications/
 </code></pre>
 
-<p>Set new tab and home to a blank page.</p></li>
+<p>extensions :</p>
+
+<pre><code>cookies.txt
+SingleFile
+uBlock Origin
+YouTube Tweaks
+</code></pre>
+
+<p>Set new tab and home to a blank page.<br>
+Restore bookmarks, passwords, filters and user.js.  </p></li>
+<li><p>Test Videos</p>
+
+<p><a href="https://www.youtube.com/watch?v=pcSv22DTDUI">https://www.youtube.com/watch?v=pcSv22DTDUI</a><br>
+<a href="https://www.youtube.com/watch?v=cuXsupMuik4">https://www.youtube.com/watch?v=cuXsupMuik4</a><br>
+<a href="https://www.youtube.com/watch?v=TVtoxUohG5E">https://www.youtube.com/watch?v=TVtoxUohG5E</a>  </p></li>
 <li><p>Policies</p>
 
 <p><a href="https://mozilla.github.io/policy-templates/#manualappupdateonly">https://mozilla.github.io/policy-templates/#manualappupdateonly</a>  </p>
@@ -72,11 +86,16 @@ sudo sed -i -e &#39;s,/opt/firefox/browser/chrome/icons/default/default128.png,f
 Don&#39;t allow web pages...
 Zoom 110 %
 </code></pre></li>
-<li><p>Test Videos</p>
+<li><p>Disable Filemanager service</p>
 
-<p><a href="https://www.youtube.com/watch?v=pcSv22DTDUI">https://www.youtube.com/watch?v=pcSv22DTDUI</a><br>
-<a href="https://www.youtube.com/watch?v=cuXsupMuik4">https://www.youtube.com/watch?v=cuXsupMuik4</a><br>
-<a href="https://www.youtube.com/watch?v=TVtoxUohG5E">https://www.youtube.com/watch?v=TVtoxUohG5E</a>  </p></li>
+<p><a href="https://bbs.archlinux.org/viewtopic.php?id=255794">https://bbs.archlinux.org/viewtopic.php?id=255794</a><br>
+<a href="https://unix.stackexchange.com/questions/66662/">https://unix.stackexchange.com/questions/66662/</a><br>
+<a href="https://askubuntu.com/questions/530779/">https://askubuntu.com/questions/530779/</a>  </p>
+
+<pre><code>sudo mv /usr/share/dbus-1/services/org.xfce.FileManager.service .
+sudo mv /usr/share/dbus-1/services/org.xfce.Thunar.FileManager1.service .
+sudo mv /usr/share/dbus-1/services/org.xfce.Thunar.service .
+</code></pre></li>
 <li><p>Google Web Search</p>
 
 <p><a href="https://www.reddit.com/r/firefox/comments/1kpqv5r/">https://www.reddit.com/r/firefox/comments/1kpqv5r/</a>  </p>
