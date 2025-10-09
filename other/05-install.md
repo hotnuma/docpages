@@ -31,26 +31,8 @@
 
 * Upgrade packages
     
-    `sudo apt update && sudo apt upgrade`
+    `sudo apt update && sudo apt full-upgrade`
     
-* Install and Configure Git
-    
-    ```
-    sudo apt install git
-    git config --global user.name "My Name"
-    git config --global user.email mymail@example.com
-    ```
-
-* Execute the post-install script
-
-    ```
-    mkdir ~/DevFiles && cd ~/DevFiles
-    git clone https://github.com/hotnuma/sysconfig.git
-    cd sysconfig
-    ./sysconfig.sh
-    reboot
-    ```
-
 
 #### <a name="disable"></a> Manual configuration
 

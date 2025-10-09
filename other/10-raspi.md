@@ -21,9 +21,9 @@
     https://github.com/orgs/RPi-Distro/repositories  
 
 
-#### RaspiOS Lite 64
+#### System Install
 
-* Installation
+* RaspiOS Lite 64
 
     [raspberry-pi-os-64-bit](https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit)  
     
@@ -38,7 +38,7 @@
     sudo dd if=./raspios64-lite.img of=/dev/sdX bs=4M conv=fsync status=progress
     ```
 
-* Upgrade
+* Upgrade packages
 
     `sudo raspi-config`
     

@@ -31,21 +31,7 @@ let the domain name blank or enter a local domain such as : <code>mydomain.local
 let the root password blank in order to use <code>sudo</code>.  </p></li>
 <li><p>Upgrade packages</p>
 
-<p><code>sudo apt update &amp;&amp; sudo apt upgrade</code></p></li>
-<li><p>Install and Configure Git</p>
-
-<pre><code>sudo apt install git
-git config --global user.name &quot;My Name&quot;
-git config --global user.email mymail@example.com
-</code></pre></li>
-<li><p>Execute the post-install script</p>
-
-<pre><code>mkdir ~/DevFiles &amp;&amp; cd ~/DevFiles
-git clone https://github.com/hotnuma/sysconfig.git
-cd sysconfig
-./sysconfig.sh
-reboot
-</code></pre></li>
+<p><code>sudo apt update &amp;&amp; sudo apt full-upgrade</code></p></li>
 </ul>
 
 <h4><a name="disable"></a> Manual configuration</h4>
