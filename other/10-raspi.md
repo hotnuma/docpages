@@ -44,11 +44,13 @@
     
     change locale and timezone
     
-    `sudo apt update && sudo apt full-upgrade`
-    
     if we don't need a camera : `sudo apt purge rpicam-apps-lite libpisp1`
 
-    `reboot`
+    ```
+    sudo apt update && sudo apt full-upgrade
+    sync
+    reboot
+    ```
 
 * Switch to Unstable
 
@@ -79,6 +81,8 @@
     
 * Install XFCE
 
+    `sudo apt install tasksel`
+    
     `sudo tasksel`
     
     (select debian desktop and xfce)
@@ -86,6 +90,7 @@
     ```
     sudo systemctl set-default graphical.target
     sudo apt purge plymouth
+    sync
     reboot
     ```
 

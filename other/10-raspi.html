@@ -43,11 +43,12 @@ sudo dd if=./raspios64-lite.img of=/dev/sdX bs=4M conv=fsync status=progress
 
 <p>change locale and timezone</p>
 
-<p><code>sudo apt update &amp;&amp; sudo apt full-upgrade</code></p>
-
 <p>if we don&#39;t need a camera : <code>sudo apt purge rpicam-apps-lite libpisp1</code></p>
 
-<p><code>reboot</code></p></li>
+<pre><code>sudo apt update &amp;&amp; sudo apt full-upgrade
+sync
+reboot
+</code></pre></li>
 <li><p>Switch to Unstable</p>
 
 <p><code>sudo nano /etc/apt/sources.list</code></p>
@@ -73,12 +74,15 @@ Pin-Priority: 200
 </code></pre></li>
 <li><p>Install XFCE</p>
 
+<p><code>sudo apt install tasksel</code></p>
+
 <p><code>sudo tasksel</code></p>
 
 <p>(select debian desktop and xfce)</p>
 
 <pre><code>sudo systemctl set-default graphical.target
 sudo apt purge plymouth
+sync
 reboot
 </code></pre></li>
 </ul>
