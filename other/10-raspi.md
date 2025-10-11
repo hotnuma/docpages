@@ -99,7 +99,7 @@
 
 * Common settings
 
-    https://hotnuma.github.io/docpages/linux/05-install.html#common  
+    https://hotnuma.github.io/docpages/other/05-install.html#common  
 
 * Change border size with Labwc
     

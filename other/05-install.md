@@ -42,7 +42,7 @@
     
 * Configure a static ip
     
-    https://hotnuma.github.io/docpages/linux/10-network.html  
+    https://hotnuma.github.io/docpages/linux/11-network.html  
 
 * Configure Terminal
     
