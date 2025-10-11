@@ -93,14 +93,18 @@ reboot
 <li><p>Common settings</p>
 
 <p><a href="https://hotnuma.github.io/docpages/other/05-install.html#common">https://hotnuma.github.io/docpages/other/05-install.html#common</a>  </p></li>
+<li><p>Firefox</p>
+
+<p>Disable hardware acceleration, restore user.js configuration.</p></li>
 <li><p>Change border size with Labwc</p>
 
-<pre><code>cat $HOME/.config/labwc/themerc-override
-border.width: 3
-</code></pre></li>
-<li><p>Menu icons</p>
+<p>create overrride file : <code>nano ~/.config/labwc/themerc-override</code></p>
 
-<p>create settings.ini into <code>~/.config/gtk-3.0</code> :</p>
+<pre><code>border.width: 3
+</code></pre></li>
+<li><p>Enable menu icons</p>
+
+<p>create Gtk settings file : <code>nano ~/.config/gtk-3.0/settings.ini</code></p>
 
 <pre><code>[Settings]
 gtk-button-images=1
@@ -109,8 +113,6 @@ gtk-menu-images=1
 <li><p>Xfce Configuration</p>
 
 <p><a href="https://wiki.archlinux.org/title/Xfwm">https://wiki.archlinux.org/title/Xfwm</a>  </p>
-
-<p><code>xfconf-query -c xfwm4 -p /general/vblank_mode -s glx</code></p>
 
 <p><code>xfconf-query -c xfce4-panel -p /force-all-internal -t bool -s true --create</code></p></li>
 </ul>
@@ -212,6 +214,9 @@ with a udev rule.
 <p><br/></p>
 
 <!--
+    `xfconf-query -c xfwm4 -p /general/vblank_mode -s glx`
+
+
 * Switch to Trixie
 
     ```

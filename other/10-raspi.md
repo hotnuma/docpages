@@ -101,16 +101,21 @@
 
     https://hotnuma.github.io/docpages/other/05-install.html#common  
 
+* Firefox
+	
+	Disable hardware acceleration, restore user.js configuration.
+
 * Change border size with Labwc
     
+    create overrride file : `nano ~/.config/labwc/themerc-override`
+    
     ```
-    cat $HOME/.config/labwc/themerc-override
     border.width: 3
     ```
 
-* Menu icons
+* Enable menu icons
     
-    create settings.ini into `~/.config/gtk-3.0` :
+    create Gtk settings file : `nano ~/.config/gtk-3.0/settings.ini`
     
     ```
     [Settings]
@@ -122,8 +127,6 @@
     
     https://wiki.archlinux.org/title/Xfwm  
     
-    `xfconf-query -c xfwm4 -p /general/vblank_mode -s glx`
-
     `xfconf-query -c xfce4-panel -p /force-all-internal -t bool -s true --create`
 
 
@@ -241,6 +244,9 @@
 <br/>
 
 <!--
+    `xfconf-query -c xfwm4 -p /general/vblank_mode -s glx`
+
+
 * Switch to Trixie
 
     ```
