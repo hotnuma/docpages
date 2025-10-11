@@ -90,26 +90,14 @@ reboot
 <h4>Manual configuration</h4>
 
 <ul>
-<li><p>Xfce Configuration</p>
+<li><p>Common settings</p>
 
-<p><a href="https://wiki.archlinux.org/title/Xfwm">https://wiki.archlinux.org/title/Xfwm</a>  </p>
+<p><a href="https://hotnuma.github.io/docpages/linux/05-install.html#common">https://hotnuma.github.io/docpages/linux/05-install.html#common</a>  </p></li>
+<li><p>Change border size with Labwc</p>
 
-<p><code>xfconf-query -c xfwm4 -p /general/vblank_mode -s glx</code></p>
-
-<p><code>xfconf-query -c xfce4-panel -p /force-all-internal -t bool -s true --create</code></p></li>
-<li><p>Install labwc</p>
-
-<p><code>sudo apt install labwc swaybg</code></p>
-
-<p><a href="https://labwc.github.io/getting-started.html">https://labwc.github.io/getting-started.html</a>  </p>
-
-<p>create configuration files for labwc in <code>~/.config/labwc</code>  </p>
-
-<p>configs and themes : </p>
-
-<p><a href="https://github.com/hotnuma/sysconfig/tree/master/labwc">https://github.com/hotnuma/sysconfig/tree/master/labwc</a>  </p>
-
-<p>reboot and select the labwc session  </p></li>
+<pre><code>cat $HOME/.config/labwc/themerc-override
+border.width: 3
+</code></pre></li>
 <li><p>Menu icons</p>
 
 <p>create settings.ini into <code>~/.config/gtk-3.0</code> :</p>
@@ -118,9 +106,13 @@ reboot
 gtk-button-images=1
 gtk-menu-images=1
 </code></pre></li>
-<li><p>Configure a static ip</p>
+<li><p>Xfce Configuration</p>
 
-<p><a href="https://hotnuma.github.io/docpages/linux/10-network.html">https://hotnuma.github.io/docpages/linux/10-network.html</a>  </p></li>
+<p><a href="https://wiki.archlinux.org/title/Xfwm">https://wiki.archlinux.org/title/Xfwm</a>  </p>
+
+<p><code>xfconf-query -c xfwm4 -p /general/vblank_mode -s glx</code></p>
+
+<p><code>xfconf-query -c xfce4-panel -p /force-all-internal -t bool -s true --create</code></p></li>
 </ul>
 
 <h4>System Startup</h4>
@@ -229,4 +221,18 @@ with a udev rule.
     sync
     reboot
     ```
+    
+* Install labwc
+
+    `sudo apt install labwc swaybg`
+    
+    https://labwc.github.io/getting-started.html  
+    
+    create configuration files for labwc in `~/.config/labwc`  
+    
+    configs and themes : 
+    
+    https://github.com/hotnuma/sysconfig/tree/master/labwc  
+    
+    reboot and select the labwc session  
 -->

@@ -34,20 +34,20 @@
     `sudo apt update && sudo apt full-upgrade`
     
 
-#### <a name="disable"></a> Manual configuration
+#### <a name="common"></a> Common settings
 
 * Firefox
 
     https://hotnuma.github.io/docpages/linux/11-network.html  
     
+* Configure a static ip
+    
+    https://hotnuma.github.io/docpages/linux/10-network.html  
+
 * Configure Terminal
     
     Font :      DejaVu Sans Mono Book 11
     Geometry :  90 x 35
-
-* XFCE Session
-    
-    On log out, set don't save session, delete saved sessions.
 
 * Mount internal drives
     
@@ -63,37 +63,6 @@
     
     `sudo chown -R $USER:$USER /media/$USER/Data/`
 
-* Disable grub background
-    
-    ```
-    cat /etc/default/grub
-
-    GRUB_DEFAULT=0
-    GRUB_TIMEOUT=0
-    GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
-    GRUB_CMDLINE_LINUX_DEFAULT="quiet"
-    GRUB_CMDLINE_LINUX=""
-    GRUB_BACKGROUND=
-    ```
-
-* Install Adwaita-xfwm4 theme
-    
-    ```
-    wget https://github.com/hotnuma/Adwaita-xfwm4/archive/refs/heads/master.tar.gz
-    tar xzf master.tar.gz
-    mkdir $HOME/.themes
-    mv ./Adwaita-xfwm4-master $HOME/.themes/Adwaita-xfwm4
-    ```
-
-* Panel dark mode
-
-    Run `xfce4-appearance-settings`, select adwata dark and then clair theme to
-    have dark panel working.
-
-* Icon theme
-
-    set icon theme  elementary xfce  
-
 * Disable log messages
 
     https://github.com/hotnuma/doclinux/blob/master/01-Systemd.md#disable  
@@ -102,27 +71,9 @@
     
     edit user dirs .config/user-dirs.dirs
 
-* Change border size with Labwc
-    
-    ```
-    cat $HOME/.config/labwc/themerc-override
-    border.width: 3
-    ```
-
 * Progams settings
     
-    copy restore geany settings  
-    copy mpv settings  
-    
     install hyphenation : `sudo apt install hyphen-fr`
-
-* Xfwm4
-
-    Use resistance instead of magnet.
-    
-    If the panel is on top, disable drop down shasows :
-    
-    https://stackoverflow.com/questions/53725696/  
 
 * Install QtCreator
 
@@ -225,6 +176,52 @@
 * Uninstall desktop portals
 
     `sudo apt purge xdg-desktop-portal*`
+    
+
+#### Specific configuration
+
+* XFCE Session
+    
+    On log out, set don't save session, delete saved sessions.
+
+* Disable grub background
+    
+    ```
+    cat /etc/default/grub
+
+    GRUB_DEFAULT=0
+    GRUB_TIMEOUT=0
+    GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+    GRUB_CMDLINE_LINUX_DEFAULT="quiet"
+    GRUB_CMDLINE_LINUX=""
+    GRUB_BACKGROUND=
+    ```
+
+* Install Adwaita-xfwm4 theme
+    
+    ```
+    wget https://github.com/hotnuma/Adwaita-xfwm4/archive/refs/heads/master.tar.gz
+    tar xzf master.tar.gz
+    mkdir $HOME/.themes
+    mv ./Adwaita-xfwm4-master $HOME/.themes/Adwaita-xfwm4
+    ```
+
+* Panel dark mode
+
+    Run `xfce4-appearance-settings`, select adwata dark and then clair theme to
+    have dark panel working.
+
+* Icon theme
+
+    set icon theme  elementary xfce  
+
+* Xfwm4
+
+    Use resistance instead of magnet.
+    
+    If the panel is on top, disable drop down shasows :
+    
+    https://stackoverflow.com/questions/53725696/  
 
 
 #### Graphic card

@@ -34,19 +34,19 @@ let the root password blank in order to use <code>sudo</code>.  </p></li>
 <p><code>sudo apt update &amp;&amp; sudo apt full-upgrade</code></p></li>
 </ul>
 
-<h4><a name="disable"></a> Manual configuration</h4>
+<h4><a name="common"></a> Common settings</h4>
 
 <ul>
 <li><p>Firefox</p>
 
 <p><a href="https://hotnuma.github.io/docpages/linux/11-network.html">https://hotnuma.github.io/docpages/linux/11-network.html</a>  </p></li>
+<li><p>Configure a static ip</p>
+
+<p><a href="https://hotnuma.github.io/docpages/linux/10-network.html">https://hotnuma.github.io/docpages/linux/10-network.html</a>  </p></li>
 <li><p>Configure Terminal</p>
 
 <p>Font :      DejaVu Sans Mono Book 11
 Geometry :  90 x 35</p></li>
-<li><p>XFCE Session</p>
-
-<p>On log out, set don&#39;t save session, delete saved sessions.</p></li>
 <li><p>Mount internal drives</p>
 
 <p><code>sudo nano /usr/share/polkit-1/actions/org.freedesktop.UDisks2.policy</code></p>
@@ -59,55 +59,15 @@ Geometry :  90 x 35</p></li>
 <p>If needed, set user right to the drive mount point :</p>
 
 <p><code>sudo chown -R $USER:$USER /media/$USER/Data/</code></p></li>
-<li><p>Disable grub background</p>
-
-<pre><code>cat /etc/default/grub
-
-GRUB_DEFAULT=0
-GRUB_TIMEOUT=0
-GRUB_DISTRIBUTOR=`lsb_release -i -s 2&gt; /dev/null || echo Debian`
-GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet&quot;
-GRUB_CMDLINE_LINUX=&quot;&quot;
-GRUB_BACKGROUND=
-</code></pre></li>
-<li><p>Install Adwaita-xfwm4 theme</p>
-
-<pre><code>wget https://github.com/hotnuma/Adwaita-xfwm4/archive/refs/heads/master.tar.gz
-tar xzf master.tar.gz
-mkdir $HOME/.themes
-mv ./Adwaita-xfwm4-master $HOME/.themes/Adwaita-xfwm4
-</code></pre></li>
-<li><p>Panel dark mode</p>
-
-<p>Run <code>xfce4-appearance-settings</code>, select adwata dark and then clair theme to
-have dark panel working.</p></li>
-<li><p>Icon theme</p>
-
-<p>set icon theme  elementary xfce  </p></li>
 <li><p>Disable log messages</p>
 
 <p><a href="https://github.com/hotnuma/doclinux/blob/master/01-Systemd.md#disable">https://github.com/hotnuma/doclinux/blob/master/01-Systemd.md#disable</a>  </p></li>
 <li><p>User dirs</p>
 
 <p>edit user dirs .config/user-dirs.dirs</p></li>
-<li><p>Change border size with Labwc</p>
-
-<pre><code>cat $HOME/.config/labwc/themerc-override
-border.width: 3
-</code></pre></li>
 <li><p>Progams settings</p>
 
-<p>copy restore geany settings<br>
-copy mpv settings  </p>
-
 <p>install hyphenation : <code>sudo apt install hyphen-fr</code></p></li>
-<li><p>Xfwm4</p>
-
-<p>Use resistance instead of magnet.</p>
-
-<p>If the panel is on top, disable drop down shasows :</p>
-
-<p><a href="https://stackoverflow.com/questions/53725696/">https://stackoverflow.com/questions/53725696/</a>  </p></li>
 <li><p>Install QtCreator</p>
 
 <p><a href="https://unix.stackexchange.com/questions/752145/">https://unix.stackexchange.com/questions/752145/</a><br>
@@ -201,6 +161,46 @@ killall -q /usr/libexec/gvfsd -HUP
 <li><p>Uninstall desktop portals</p>
 
 <p><code>sudo apt purge xdg-desktop-portal*</code></p></li>
+</ul>
+
+<h4>Specific configuration</h4>
+
+<ul>
+<li><p>XFCE Session</p>
+
+<p>On log out, set don&#39;t save session, delete saved sessions.</p></li>
+<li><p>Disable grub background</p>
+
+<pre><code>cat /etc/default/grub
+
+GRUB_DEFAULT=0
+GRUB_TIMEOUT=0
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2&gt; /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet&quot;
+GRUB_CMDLINE_LINUX=&quot;&quot;
+GRUB_BACKGROUND=
+</code></pre></li>
+<li><p>Install Adwaita-xfwm4 theme</p>
+
+<pre><code>wget https://github.com/hotnuma/Adwaita-xfwm4/archive/refs/heads/master.tar.gz
+tar xzf master.tar.gz
+mkdir $HOME/.themes
+mv ./Adwaita-xfwm4-master $HOME/.themes/Adwaita-xfwm4
+</code></pre></li>
+<li><p>Panel dark mode</p>
+
+<p>Run <code>xfce4-appearance-settings</code>, select adwata dark and then clair theme to
+have dark panel working.</p></li>
+<li><p>Icon theme</p>
+
+<p>set icon theme  elementary xfce  </p></li>
+<li><p>Xfwm4</p>
+
+<p>Use resistance instead of magnet.</p>
+
+<p>If the panel is on top, disable drop down shasows :</p>
+
+<p><a href="https://stackoverflow.com/questions/53725696/">https://stackoverflow.com/questions/53725696/</a>  </p></li>
 </ul>
 
 <h4>Graphic card</h4>

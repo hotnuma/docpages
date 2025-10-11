@@ -97,27 +97,16 @@
 
 #### Manual configuration
 
-* Xfce Configuration
-    
-    https://wiki.archlinux.org/title/Xfwm  
-    
-    `xfconf-query -c xfwm4 -p /general/vblank_mode -s glx`
+* Common settings
 
-    `xfconf-query -c xfce4-panel -p /force-all-internal -t bool -s true --create`
+    https://hotnuma.github.io/docpages/linux/05-install.html#common  
 
-* Install labwc
-
-    `sudo apt install labwc swaybg`
+* Change border size with Labwc
     
-    https://labwc.github.io/getting-started.html  
-    
-    create configuration files for labwc in `~/.config/labwc`  
-    
-    configs and themes : 
-    
-    https://github.com/hotnuma/sysconfig/tree/master/labwc  
-    
-    reboot and select the labwc session  
+    ```
+    cat $HOME/.config/labwc/themerc-override
+    border.width: 3
+    ```
 
 * Menu icons
     
@@ -129,9 +118,13 @@
     gtk-menu-images=1
     ```
 
-* Configure a static ip
+* Xfce Configuration
     
-    https://hotnuma.github.io/docpages/linux/10-network.html  
+    https://wiki.archlinux.org/title/Xfwm  
+    
+    `xfconf-query -c xfwm4 -p /general/vblank_mode -s glx`
+
+    `xfconf-query -c xfce4-panel -p /force-all-internal -t bool -s true --create`
 
 
 #### System Startup
@@ -257,6 +250,20 @@
     sync
     reboot
     ```
+    
+* Install labwc
+
+    `sudo apt install labwc swaybg`
+    
+    https://labwc.github.io/getting-started.html  
+    
+    create configuration files for labwc in `~/.config/labwc`  
+    
+    configs and themes : 
+    
+    https://github.com/hotnuma/sysconfig/tree/master/labwc  
+    
+    reboot and select the labwc session  
 -->
 
 
