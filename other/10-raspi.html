@@ -93,9 +93,11 @@ reboot
 <li><p>Common settings</p>
 
 <p><a href="https://hotnuma.github.io/docpages/other/05-install.html#common">https://hotnuma.github.io/docpages/other/05-install.html#common</a>  </p></li>
-<li><p>Firefox</p>
+<li><p>Firefox and static ip</p>
 
-<p>Disable hardware acceleration, restore user.js configuration.</p></li>
+<p><a href="https://hotnuma.github.io/docpages/linux/11-network.html">https://hotnuma.github.io/docpages/linux/11-network.html</a>  </p>
+
+<p>Disable hardware acceleration.</p></li>
 <li><p>Change border size with Labwc</p>
 
 <p>create overrride file : <code>nano ~/.config/labwc/themerc-override</code></p>
@@ -109,6 +111,19 @@ reboot
 <pre><code>[Settings]
 gtk-button-images=1
 gtk-menu-images=1
+</code></pre></li>
+<li><p>Mpv Configuration</p>
+
+<p><a href="https://forums.raspberrypi.com/viewtopic.php?t=360902">https://forums.raspberrypi.com/viewtopic.php?t=360902</a>  </p>
+
+<pre><code>vo=gpu
+gpu-api=opengl
+gpu-context=wayland
+gpu-dumb-mode=yes
+gpu-sw=yes
+hwdec=drm-copy
+drm-vrr-enabled=auto
+opengl-glfinish=yes
 </code></pre></li>
 <li><p>Xfce Configuration</p>
 
@@ -124,12 +139,13 @@ gtk-menu-images=1
 
 <p><a href="https://wiki.archlinux.org/title/LightDM">https://wiki.archlinux.org/title/LightDM</a>  </p>
 
-<pre><code>cat /etc/lightdm/lightdm.conf
+<p><code>cat /etc/lightdm/lightdm.conf</code></p>
 
-[Seat:*]
+<pre><code>[Seat:*]
 autologin-guest=false
-autologin-user=&lt;username&gt;
+autologin-user=hotnuma
 autologin-user-timeout=0
+#autologin-session=lightdm-xsession
 autologin-session=labwc
 </code></pre>
 
@@ -212,32 +228,3 @@ with a udev rule.
 </ul>
 
 <p><br/></p>
-
-<!--
-    `xfconf-query -c xfwm4 -p /general/vblank_mode -s glx`
-
-
-* Switch to Trixie
-
-    ```
-    sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list
-    sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list.d/raspi.list
-    sudo apt update && sudo apt full-upgrade
-    sync
-    reboot
-    ```
-    
-* Install labwc
-
-    `sudo apt install labwc swaybg`
-    
-    https://labwc.github.io/getting-started.html  
-    
-    create configuration files for labwc in `~/.config/labwc`  
-    
-    configs and themes : 
-    
-    https://github.com/hotnuma/sysconfig/tree/master/labwc  
-    
-    reboot and select the labwc session  
--->

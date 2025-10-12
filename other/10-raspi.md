@@ -101,9 +101,11 @@
 
     https://hotnuma.github.io/docpages/other/05-install.html#common  
 
-* Firefox
+* Firefox and static ip
 	
-	Disable hardware acceleration, restore user.js configuration.
+	https://hotnuma.github.io/docpages/linux/11-network.html  
+	
+	Disable hardware acceleration.
 
 * Change border size with Labwc
     
@@ -123,6 +125,21 @@
     gtk-menu-images=1
     ```
 
+* Mpv Configuration
+	
+	https://forums.raspberrypi.com/viewtopic.php?t=360902  
+	
+	```
+	vo=gpu
+	gpu-api=opengl
+	gpu-context=wayland
+	gpu-dumb-mode=yes
+	gpu-sw=yes
+	hwdec=drm-copy
+	drm-vrr-enabled=auto
+	opengl-glfinish=yes
+	```
+    
 * Xfce Configuration
     
     https://wiki.archlinux.org/title/Xfwm  
@@ -136,14 +153,15 @@
 
     https://wiki.archlinux.org/title/LightDM  
     
-    ```
-    cat /etc/lightdm/lightdm.conf
+    `cat /etc/lightdm/lightdm.conf`
     
-    [Seat:*]
-    autologin-guest=false
-    autologin-user=<username>
-    autologin-user-timeout=0
-    autologin-session=labwc
+    ```
+	[Seat:*]
+	autologin-guest=false
+	autologin-user=hotnuma
+	autologin-user-timeout=0
+	#autologin-session=lightdm-xsession
+	autologin-session=labwc
     ```
     
     show current config : `lightdm --show-config`
@@ -242,34 +260,5 @@
     [https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-do](https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-down-xl4016e1-poti)  
 
 <br/>
-
-<!--
-    `xfconf-query -c xfwm4 -p /general/vblank_mode -s glx`
-
-
-* Switch to Trixie
-
-    ```
-    sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list
-    sed -i.bak s/bookworm/trixie/g /etc/apt/sources.list.d/raspi.list
-    sudo apt update && sudo apt full-upgrade
-    sync
-    reboot
-    ```
-    
-* Install labwc
-
-    `sudo apt install labwc swaybg`
-    
-    https://labwc.github.io/getting-started.html  
-    
-    create configuration files for labwc in `~/.config/labwc`  
-    
-    configs and themes : 
-    
-    https://github.com/hotnuma/sysconfig/tree/master/labwc  
-    
-    reboot and select the labwc session  
--->
 
 

@@ -17,6 +17,11 @@
 
 <p><a href="https://www.mozilla.org/en-US/firefox/releases/">https://www.mozilla.org/en-US/firefox/releases/</a><br>
 <a href="https://support.mozilla.org/en-US/kb/install-firefox-linux#w_system-firefox-installation-for-advanced-users">https://support.mozilla.org/en-US/kb/install-firefox-linux</a>  </p></li>
+<li><p>Test Videos</p>
+
+<p><a href="https://www.youtube.com/watch?v=pcSv22DTDUI">https://www.youtube.com/watch?v=pcSv22DTDUI</a><br>
+<a href="https://www.youtube.com/watch?v=cuXsupMuik4">https://www.youtube.com/watch?v=cuXsupMuik4</a><br>
+<a href="https://www.youtube.com/watch?v=TVtoxUohG5E">https://www.youtube.com/watch?v=TVtoxUohG5E</a>  </p></li>
 <li><p>Install from mozilla</p>
 
 <p><a href="https://ftp.mozilla.org/pub/firefox/releases/">https://ftp.mozilla.org/pub/firefox/releases/</a>  </p>
@@ -29,7 +34,7 @@ wget https://hotnuma.github.io/docpages/linux/firefox.desktop
 sudo mv ./firefox.desktop /usr/local/share/applications/
 </code></pre>
 
-<p>extensions :</p>
+<p>install extensions :</p>
 
 <pre><code>cookies.txt
 SingleFile
@@ -38,12 +43,13 @@ YouTube Tweaks
 </code></pre>
 
 <p>Set new tab and home to a blank page.<br>
-Restore bookmarks, passwords, filters and user.js.  </p></li>
-<li><p>Test Videos</p>
+Restore bookmarks, passwords, UBO filters and user.js.  </p></li>
+<li><p>Firefox Fonts</p>
 
-<p><a href="https://www.youtube.com/watch?v=pcSv22DTDUI">https://www.youtube.com/watch?v=pcSv22DTDUI</a><br>
-<a href="https://www.youtube.com/watch?v=cuXsupMuik4">https://www.youtube.com/watch?v=cuXsupMuik4</a><br>
-<a href="https://www.youtube.com/watch?v=TVtoxUohG5E">https://www.youtube.com/watch?v=TVtoxUohG5E</a>  </p></li>
+<pre><code>DejaVu 16 / 15 / 15
+Allow pages to choose their fonts : uncheck
+Zoom 110 %
+</code></pre></li>
 <li><p>Policies</p>
 
 <p><a href="https://mozilla.github.io/policy-templates/#manualappupdateonly">https://mozilla.github.io/policy-templates/#manualappupdateonly</a>  </p>
@@ -79,12 +85,6 @@ sudo cp /opt/firefox/browser/chrome/icons/default/default128.png \
 sudo update-icon-caches /usr/local/share/icons/*
 sudo sed -i -e &#39;s,/opt/firefox/browser/chrome/icons/default/default128.png,firefox,g&#39; \
 /usr/local/share/applications/firefox.desktop
-</code></pre></li>
-<li><p>Firefox Fonts</p>
-
-<pre><code>DejaVu 16 / 15 / 15
-Don&#39;t allow web pages...
-Zoom 110 %
 </code></pre></li>
 <li><p>Disable Filemanager service</p>
 

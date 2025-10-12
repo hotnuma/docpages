@@ -36,18 +36,13 @@
 
 #### <a name="common"></a> Common settings
 
-* Firefox
-
-    https://hotnuma.github.io/docpages/linux/11-network.html  
-    
-* Configure a static ip
-    
-    https://hotnuma.github.io/docpages/linux/11-network.html  
-
+* Firefox and static ip
+	
+	https://hotnuma.github.io/docpages/linux/11-network.html  
+	
 * Configure Terminal
     
-    Font :      DejaVu Sans Mono Book 11
-    Geometry :  90 x 35
+    font : DejaVu Sans Mono Book 11
 
 * Mount internal drives
     
@@ -66,10 +61,6 @@
 * Disable log messages
 
     https://github.com/hotnuma/doclinux/blob/master/01-Systemd.md#disable  
-
-* User dirs
-    
-    edit user dirs .config/user-dirs.dirs
 
 * Progams settings
     

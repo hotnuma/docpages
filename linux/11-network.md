@@ -17,6 +17,12 @@
     https://www.mozilla.org/en-US/firefox/releases/  
     [https://support.mozilla.org/en-US/kb/install-firefox-linux](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_system-firefox-installation-for-advanced-users)  
     
+* Test Videos
+    
+    https://www.youtube.com/watch?v=pcSv22DTDUI  
+    https://www.youtube.com/watch?v=cuXsupMuik4  
+    https://www.youtube.com/watch?v=TVtoxUohG5E  
+
 * Install from mozilla
     
     https://ftp.mozilla.org/pub/firefox/releases/  
@@ -30,7 +36,7 @@
     sudo mv ./firefox.desktop /usr/local/share/applications/
     ```
     
-    extensions :
+    install extensions :
     
     ```
     cookies.txt
@@ -40,14 +46,16 @@
     ```
     
     Set new tab and home to a blank page.  
-    Restore bookmarks, passwords, filters and user.js.  
+    Restore bookmarks, passwords, UBO filters and user.js.  
     
-* Test Videos
+* Firefox Fonts
     
-    https://www.youtube.com/watch?v=pcSv22DTDUI  
-    https://www.youtube.com/watch?v=cuXsupMuik4  
-    https://www.youtube.com/watch?v=TVtoxUohG5E  
-
+    ```
+    DejaVu 16 / 15 / 15
+    Allow pages to choose their fonts : uncheck
+    Zoom 110 %
+    ```
+    
 * Policies
 
     https://mozilla.github.io/policy-templates/#manualappupdateonly  
@@ -90,14 +98,6 @@
     /usr/local/share/applications/firefox.desktop
     ```
 
-* Firefox Fonts
-    
-    ```
-    DejaVu 16 / 15 / 15
-    Don't allow web pages...
-    Zoom 110 %
-    ```
-    
 * Disable Filemanager service
     
     https://bbs.archlinux.org/viewtopic.php?id=255794  
