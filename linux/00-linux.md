@@ -402,6 +402,7 @@ https://wiki.debian.org/HardwareVideoAcceleration
     greybird-gtk-theme
     libgd-dev
     lz4json
+    mupdf
     plotutils
     sigil
     uchardet
