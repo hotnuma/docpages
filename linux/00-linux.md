@@ -384,6 +384,12 @@ https://wiki.debian.org/HardwareVideoAcceleration
     
     `fmt --width=120 input.txt > output.txt`
 
+* Merge text files
+    
+    https://unix.stackexchange.com/questions/3770/  
+    
+    `cat ./* > ../result.txt`
+    
 * Replace end of lines
     
     https://stackoverflow.com/questions/1251999/  
