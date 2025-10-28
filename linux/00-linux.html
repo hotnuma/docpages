@@ -335,7 +335,8 @@ sudo mkfs.ntfs -f -L &quot;Backup&quot; /dev/sdX1
 <p><a href="https://stackoverflow.com/questions/1251999/">https://stackoverflow.com/questions/1251999/</a>  </p>
 
 <p><code>sed -z &#39;s/\n\n/\n/g&#39; input.txt &gt; output.txt</code><br>
-<code>sed -z &#39;s/\n\n*/\n/g&#39; input.txt &gt; output.txt</code>  </p></li>
+<code>sed -z &#39;s/\n\n*/\n/g&#39; input.txt &gt; output.txt</code><br>
+<code>sed -z -e &#39;s/\n\n*/\n/g&#39; -e &#39;s/ \n/\n/g&#39; input.txt &gt; output.txt</code></p></li>
 <li><p>Replace multiple spaces</p>
 
 <p><a href="https://superuser.com/questions/241018/">https://superuser.com/questions/241018/</a>  </p>

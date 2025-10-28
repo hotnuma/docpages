@@ -390,6 +390,7 @@ https://wiki.debian.org/HardwareVideoAcceleration
     
     `sed -z 's/\n\n/\n/g' input.txt > output.txt`  
     `sed -z 's/\n\n*/\n/g' input.txt > output.txt`  
+    `sed -z -e 's/\n\n*/\n/g' -e 's/ \n/\n/g' input.txt > output.txt`
 
 * Replace multiple spaces
     
