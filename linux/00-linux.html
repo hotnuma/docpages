@@ -285,20 +285,6 @@ sudo mkfs.ntfs -f -L &quot;Backup&quot; /dev/sdX1
 <li><p>Create a symbolic link</p>
 
 <p><code>ln -s target_path link_name</code></p></li>
-<li><p>Edit config files</p>
-
-<p><a href="https://unix.stackexchange.com/questions/642578/">https://unix.stackexchange.com/questions/642578/</a>  </p>
-
-<p><code>sed -i &#39;s/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/&#39; &quot;input.txt&quot;</code></p></li>
-<li><p>Extract lines</p>
-
-<pre><code>sed -n \
--e &#39;/^\[Desktop Entry\]/p&#39; \
--e &#39;/^Name=/p&#39; \
--e &#39;/^Exec=/p&#39; \
--e &#39;/^Type=/p&#39; \
-/usr/share/applications/firefox.desktop
-</code></pre></li>
 <li><p>Find biggest files in directory</p>
 
 <p><code>find . -type f -printf &quot;%s\t%p\n&quot; | sort -nr | head -10</code></p></li>
@@ -314,17 +300,41 @@ sudo mkfs.ntfs -f -L &quot;Backup&quot; /dev/sdX1
 <li><p>Find multiple pattern</p>
 
 <p><code>find . -type f -name &quot;*.h&quot; -o -name &quot;*.c&quot;</code></p></li>
-<li><p>Format text file to a specific line length</p>
-
-<p><a href="https://unix.stackexchange.com/questions/146089/">https://unix.stackexchange.com/questions/146089/</a>  </p>
-
-<p><code>fmt --width=120 input.txt &gt; output.txt</code></p></li>
 <li><p>Remove execute flag</p>
 
 <p><code>find . -type f -exec chmod -x {} \;</code></p></li>
 <li><p>Remove presentation mode in PDFs</p>
 
 <p><a href="https://unix.stackexchange.com/questions/754414/">https://unix.stackexchange.com/questions/754414/</a>  </p></li>
+</ul>
+
+<h4>Edit files</h4>
+
+<ul>
+<li><p>Edit config files</p>
+
+<p><a href="https://unix.stackexchange.com/questions/642578/">https://unix.stackexchange.com/questions/642578/</a>  </p>
+
+<p><code>sed -i &#39;s/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/&#39; &quot;input.txt&quot;</code></p></li>
+<li><p>Extract lines</p>
+
+<pre><code>sed -n \
+-e &#39;/^\[Desktop Entry\]/p&#39; \
+-e &#39;/^Name=/p&#39; \
+-e &#39;/^Exec=/p&#39; \
+-e &#39;/^Type=/p&#39; \
+/usr/share/applications/firefox.desktop
+</code></pre></li>
+<li><p>Format text file to a specific line length</p>
+
+<p><a href="https://unix.stackexchange.com/questions/146089/">https://unix.stackexchange.com/questions/146089/</a>  </p>
+
+<p><code>fmt --width=120 input.txt &gt; output.txt</code></p></li>
+<li><p>Replace end of lines</p>
+
+<p><a href="https://stackoverflow.com/questions/1251999/">https://stackoverflow.com/questions/1251999/</a>  </p>
+
+<p><code>sed -z &#39;s/\n\n/\n/g&#39; input.txt &gt; output.txt</code></p></li>
 <li><p>Replace multiple spaces</p>
 
 <p><a href="https://superuser.com/questions/241018/">https://superuser.com/questions/241018/</a>  </p>

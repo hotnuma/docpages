@@ -330,23 +330,6 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
     `ln -s target_path link_name`
 
-* Edit config files
-    
-    https://unix.stackexchange.com/questions/642578/  
-    
-    `sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' "input.txt"`
-
-* Extract lines
-    
-    ```
-    sed -n \
-    -e '/^\[Desktop Entry\]/p' \
-    -e '/^Name=/p' \
-    -e '/^Exec=/p' \
-    -e '/^Type=/p' \
-    /usr/share/applications/firefox.desktop
-    ```
-
 * Find biggest files in directory
     
     `find . -type f -printf "%s\t%p\n" | sort -nr | head -10`
@@ -367,12 +350,6 @@ https://wiki.debian.org/HardwareVideoAcceleration
     
     `find . -type f -name "*.h" -o -name "*.c"`
     
-* Format text file to a specific line length
-    
-    https://unix.stackexchange.com/questions/146089/  
-    
-    `fmt --width=120 input.txt > output.txt`
-
 * Remove execute flag
     
     `find . -type f -exec chmod -x {} \;`
@@ -380,6 +357,38 @@ https://wiki.debian.org/HardwareVideoAcceleration
 * Remove presentation mode in PDFs
     
     https://unix.stackexchange.com/questions/754414/  
+
+
+#### Edit files
+
+* Edit config files
+    
+    https://unix.stackexchange.com/questions/642578/  
+    
+    `sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' "input.txt"`
+
+* Extract lines
+    
+    ```
+    sed -n \
+    -e '/^\[Desktop Entry\]/p' \
+    -e '/^Name=/p' \
+    -e '/^Exec=/p' \
+    -e '/^Type=/p' \
+    /usr/share/applications/firefox.desktop
+    ```
+
+* Format text file to a specific line length
+    
+    https://unix.stackexchange.com/questions/146089/  
+    
+    `fmt --width=120 input.txt > output.txt`
+
+* Replace end of lines
+    
+    https://stackoverflow.com/questions/1251999/  
+    
+    `sed -z 's/\n\n/\n/g' input.txt > output.txt`
 
 * Replace multiple spaces
     
