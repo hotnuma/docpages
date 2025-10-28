@@ -315,7 +315,7 @@ sudo mkfs.ntfs -f -L &quot;Backup&quot; /dev/sdX1
 
 <p><a href="https://unix.stackexchange.com/questions/642578/">https://unix.stackexchange.com/questions/642578/</a>  </p>
 
-<p><code>sed -i &#39;s/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/&#39; &quot;input.txt&quot;</code></p></li>
+<p><code>sed &#39;s/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/&#39; input.txt &gt; output.txt</code></p></li>
 <li><p>Extract lines</p>
 
 <pre><code>sed -n \
@@ -334,13 +334,14 @@ sudo mkfs.ntfs -f -L &quot;Backup&quot; /dev/sdX1
 
 <p><a href="https://stackoverflow.com/questions/1251999/">https://stackoverflow.com/questions/1251999/</a>  </p>
 
-<p><code>sed -z &#39;s/\n\n/\n/g&#39; input.txt &gt; output.txt</code></p></li>
+<p><code>sed -z &#39;s/\n\n/\n/g&#39; input.txt &gt; output.txt</code><br>
+<code>sed -z &#39;s/\n\n*/\n/g&#39; input.txt &gt; output.txt</code>  </p></li>
 <li><p>Replace multiple spaces</p>
 
 <p><a href="https://superuser.com/questions/241018/">https://superuser.com/questions/241018/</a>  </p>
 
-<p><code>sed -i &#39;s/&nbsp;&nbsp;&#42;/ /g&#39; &quot;input.txt&quot;</code><br>
-<code>sed -i &#39;s/&nbsp;&nbsp;&#42;/\t/g&#39; &quot;input.txt&quot;</code>  </p></li>
+<p><code>sed &#39;s/&nbsp;&nbsp;&#42;/ /g&#39; input.txt &gt; output.txt</code><br>
+<code>sed &#39;s/&nbsp;&nbsp;&#42;/\t/g&#39; input.txt &gt; output.txt</code>  </p></li>
 </ul>
 
 <h4>Programs</h4>

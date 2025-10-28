@@ -365,7 +365,7 @@ https://wiki.debian.org/HardwareVideoAcceleration
     
     https://unix.stackexchange.com/questions/642578/  
     
-    `sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' "input.txt"`
+    `sed 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' input.txt > output.txt`
 
 * Extract lines
     
@@ -388,14 +388,15 @@ https://wiki.debian.org/HardwareVideoAcceleration
     
     https://stackoverflow.com/questions/1251999/  
     
-    `sed -z 's/\n\n/\n/g' input.txt > output.txt`
+    `sed -z 's/\n\n/\n/g' input.txt > output.txt`  
+    `sed -z 's/\n\n*/\n/g' input.txt > output.txt`  
 
 * Replace multiple spaces
     
     https://superuser.com/questions/241018/  
     
-    <code>sed -i 's/&nbsp;&nbsp;&#42;/ /g' "input.txt"</code>  
-    <code>sed -i 's/&nbsp;&nbsp;&#42;/\t/g' "input.txt"</code>  
+    <code>sed 's/&nbsp;&nbsp;&#42;/ /g' input.txt > output.txt</code>  
+    <code>sed 's/&nbsp;&nbsp;&#42;/\t/g' input.txt > output.txt</code>  
 
 
 #### Programs
