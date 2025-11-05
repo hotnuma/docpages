@@ -106,22 +106,33 @@
 
     deno :
 
+    https://github.com/yt-dlp/yt-dlp/issues/14404  
+    
     ```
     wget https://deno.land/install.sh
     chmod +x ./install.sh
     ./install.sh -y --no-modify-path
+    sudo ln -s ~/.deno/bin/deno /usr/local/bin/deno
     ```
     
     https://github.com/yt-dlp/yt-dlp  
     
-    yt-dlp :
+    x86_64 :
     
     ```
     sudo wget -P /usr/local/bin \
     https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux
-
     chmod +x /usr/local/bin/yt-dlp_linux
     sudo ln -s /usr/local/bin/yt-dlp_linux /usr/local/bin/yt-dlp
+    ```
+    
+    aarch64 :
+    
+    ```
+    sudo wget -P /usr/local/bin \
+    https://github.com/yt-dlp/yt-dlp/releases/latest/download/ yt-dlp_linux_aarch64
+    chmod +x /usr/local/bin/yt-dlp_linux_aarch64
+    sudo ln -s /usr/local/bin/yt-dlp_linux_aarch64 /usr/local/bin/yt-dlp
     ```
     
     update : `sudo yt-dlp -U`  

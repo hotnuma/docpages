@@ -99,20 +99,30 @@ size to 11 and select the <code>Default Classic</code> color scheme.</p></li>
 
 <p>deno :</p>
 
+<p><a href="https://github.com/yt-dlp/yt-dlp/issues/14404">https://github.com/yt-dlp/yt-dlp/issues/14404</a>  </p>
+
 <pre><code>wget https://deno.land/install.sh
 chmod +x ./install.sh
 ./install.sh -y --no-modify-path
+sudo ln -s ~/.deno/bin/deno /usr/local/bin/deno
 </code></pre>
 
 <p><a href="https://github.com/yt-dlp/yt-dlp">https://github.com/yt-dlp/yt-dlp</a>  </p>
 
-<p>yt-dlp :</p>
+<p>x86_64 :</p>
 
 <pre><code>sudo wget -P /usr/local/bin \
 https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux
-
 chmod +x /usr/local/bin/yt-dlp_linux
 sudo ln -s /usr/local/bin/yt-dlp_linux /usr/local/bin/yt-dlp
+</code></pre>
+
+<p>aarch64 :</p>
+
+<pre><code>sudo wget -P /usr/local/bin \
+https://github.com/yt-dlp/yt-dlp/releases/latest/download/ yt-dlp_linux_aarch64
+chmod +x /usr/local/bin/yt-dlp_linux_aarch64
+sudo ln -s /usr/local/bin/yt-dlp_linux_aarch64 /usr/local/bin/yt-dlp
 </code></pre>
 
 <p>update : <code>sudo yt-dlp -U</code>  </p>
