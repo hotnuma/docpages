@@ -97,14 +97,21 @@ Version Control
 size to 11 and select the <code>Default Classic</code> color scheme.</p></li>
 <li><p>Install yt-dlp</p>
 
+<p>deno :</p>
+
+<pre><code>wget https://deno.land/install.sh
+chmod +x ./install.sh
+./install.sh -y --no-modify-path
+</code></pre>
+
 <p><a href="https://github.com/yt-dlp/yt-dlp">https://github.com/yt-dlp/yt-dlp</a>  </p>
 
-<p>install binary :</p>
+<p>yt-dlp :</p>
 
 <pre><code>sudo wget -P /usr/local/bin \
 https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux
 
-chmod a+rx /usr/local/bin/yt-dlp_linux
+chmod +x /usr/local/bin/yt-dlp_linux
 sudo ln -s /usr/local/bin/yt-dlp_linux /usr/local/bin/yt-dlp
 </code></pre>
 

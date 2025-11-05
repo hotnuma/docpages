@@ -103,16 +103,24 @@
     size to 11 and select the `Default Classic` color scheme.
 
 * Install yt-dlp
+
+    deno :
+
+    ```
+    wget https://deno.land/install.sh
+    chmod +x ./install.sh
+    ./install.sh -y --no-modify-path
+    ```
     
     https://github.com/yt-dlp/yt-dlp  
     
-    install binary :
+    yt-dlp :
     
     ```
     sudo wget -P /usr/local/bin \
     https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux
 
-    chmod a+rx /usr/local/bin/yt-dlp_linux
+    chmod +x /usr/local/bin/yt-dlp_linux
     sudo ln -s /usr/local/bin/yt-dlp_linux /usr/local/bin/yt-dlp
     ```
     
