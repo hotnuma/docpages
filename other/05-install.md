@@ -104,9 +104,10 @@
 
 * Install yt-dlp
 
-    deno :
-
+    https://github.com/yt-dlp/yt-dlp  
     https://github.com/yt-dlp/yt-dlp/issues/14404  
+    
+    deno :
     
     ```
     wget https://deno.land/install.sh
@@ -115,29 +116,25 @@
     sudo ln -s ~/.deno/bin/deno /usr/local/bin/deno
     ```
     
-    https://github.com/yt-dlp/yt-dlp  
-    
     x86_64 :
     
     ```
-    sudo wget -P /usr/local/bin \
+    sudo wget -O /usr/local/bin/yt-dlp \
     https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux
-    chmod +x /usr/local/bin/yt-dlp_linux
-    sudo ln -s /usr/local/bin/yt-dlp_linux /usr/local/bin/yt-dlp
+    sudo chmod +x /usr/local/bin/yt-dlp
     ```
     
     aarch64 :
     
     ```
-    sudo wget -P /usr/local/bin \
+    sudo wget -O /usr/local/bin/yt-dlp \
     https://github.com/yt-dlp/yt-dlp/releases/latest/download/ yt-dlp_linux_aarch64
-    chmod +x /usr/local/bin/yt-dlp_linux_aarch64
-    sudo ln -s /usr/local/bin/yt-dlp_linux_aarch64 /usr/local/bin/yt-dlp
+    sudo chmod +x /usr/local/bin/yt-dlp
     ```
     
+    switch to nightly : `sudo yt-dlp --update-to nightly`
+    
     update : `sudo yt-dlp -U`  
-
-    nightly releases : https://github.com/yt-dlp/yt-dlp-nightly-builds/releases  
 
 * Repack gvfs-backends
     
