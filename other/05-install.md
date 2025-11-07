@@ -110,9 +110,10 @@
     deno :
     
     ```
-    wget https://deno.land/install.sh
-    chmod +x ./install.sh
-    ./install.sh -y --no-modify-path
+    wget -O /tmp/install.sh \
+    https://deno.land/install.sh
+    chmod +x /tmp/install.sh
+    /tmp/install.sh -y --no-modify-path
     sudo ln -s ~/.deno/bin/deno /usr/local/bin/deno
     ```
     

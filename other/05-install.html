@@ -102,9 +102,10 @@ size to 11 and select the <code>Default Classic</code> color scheme.</p></li>
 
 <p>deno :</p>
 
-<pre><code>wget https://deno.land/install.sh
-chmod +x ./install.sh
-./install.sh -y --no-modify-path
+<pre><code>wget -O /tmp/install.sh \
+https://deno.land/install.sh
+chmod +x /tmp/install.sh
+/tmp/install.sh -y --no-modify-path
 sudo ln -s ~/.deno/bin/deno /usr/local/bin/deno
 </code></pre>
 
