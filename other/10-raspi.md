@@ -101,6 +101,10 @@
 
     https://hotnuma.github.io/docpages/other/05-install.html#common  
 
+* RPI Firefox
+	
+    `sudo apt install --no-install-recommends firefox rpi-firefox-mods`
+
 * Firefox and static ip
 	
 	https://hotnuma.github.io/docpages/linux/11-network.html  
@@ -130,6 +134,7 @@
 	https://forums.raspberrypi.com/viewtopic.php?t=360902  
 	
 	```
+	ytdl-format=bestvideo[height<=?480]+bestaudio/best
 	vo=gpu
 	gpu-api=opengl
 	gpu-context=wayland

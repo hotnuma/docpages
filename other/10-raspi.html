@@ -93,6 +93,9 @@ reboot
 <li><p>Common settings</p>
 
 <p><a href="https://hotnuma.github.io/docpages/other/05-install.html#common">https://hotnuma.github.io/docpages/other/05-install.html#common</a>  </p></li>
+<li><p>RPI Firefox</p>
+
+<p><code>sudo apt install --no-install-recommends firefox rpi-firefox-mods</code></p></li>
 <li><p>Firefox and static ip</p>
 
 <p><a href="https://hotnuma.github.io/docpages/linux/11-network.html">https://hotnuma.github.io/docpages/linux/11-network.html</a>  </p>
@@ -116,7 +119,8 @@ gtk-menu-images=1
 
 <p><a href="https://forums.raspberrypi.com/viewtopic.php?t=360902">https://forums.raspberrypi.com/viewtopic.php?t=360902</a>  </p>
 
-<pre><code>vo=gpu
+<pre><code>ytdl-format=bestvideo[height&lt;=?480]+bestaudio/best
+vo=gpu
 gpu-api=opengl
 gpu-context=wayland
 gpu-dumb-mode=yes
