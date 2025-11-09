@@ -129,7 +129,7 @@
     
     ```
     sudo wget -O /usr/local/bin/yt-dlp \
-    https://github.com/yt-dlp/yt-dlp/releases/latest/download/ yt-dlp_linux_aarch64
+    https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux_aarch64
     sudo chmod +x /usr/local/bin/yt-dlp
     ```
     
