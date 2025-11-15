@@ -35,6 +35,7 @@
     unxz ./raspios64-lite.img.xz
     lsblk
     umount /dev/sdX?
+    sudo dd if=/dev/zero of=/dev/sdX bs=512 count=1 conv=notrunc
     sudo dd if=./raspios64-lite.img of=/dev/sdX bs=4M conv=fsync status=progress
     ```
 
