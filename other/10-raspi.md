@@ -135,15 +135,11 @@
 	https://forums.raspberrypi.com/viewtopic.php?t=360902  
 	
 	```
-	ytdl-format=bestvideo[height<=?480]+bestaudio/best
-	vo=gpu
-	gpu-api=opengl
-	gpu-context=wayland
-	gpu-dumb-mode=yes
-	gpu-sw=yes
-	hwdec=drm-copy
-	drm-vrr-enabled=auto
-	opengl-glfinish=yes
+    ytdl-format=bestvideo[height<=?480]+bestaudio/best
+    vo=gpu
+    gpu-api=opengl
+    gpu-dumb-mode=yes
+    hwdec=drm-copy
 	```
     
 * Xfce Configuration
