@@ -230,6 +230,12 @@
     
     Set `usb_max_current_enable=1` in `/boot/firmware/config.txt`
 
+* Set resolution to 1366
+    
+    prepend in labwc/autostart :
+    
+    `wlr-randr --output HDMI-A-1 --custom-mode 1360x768 &`
+    
 * Test CPU load
     
     `sysbench cpu --threads=4 --time=30 run`

@@ -201,6 +201,11 @@ rpi-eeprom-config
 <li><p>RPI5 USB max current</p>
 
 <p>Set <code>usb_max_current_enable=1</code> in <code>/boot/firmware/config.txt</code></p></li>
+<li><p>Set resolution to 1366</p>
+
+<p>prepend in labwc/autostart :</p>
+
+<p><code>wlr-randr --output HDMI-A-1 --custom-mode 1360x768 &amp;</code></p></li>
 <li><p>Test CPU load</p>
 
 <p><code>sysbench cpu --threads=4 --time=30 run</code></p>
