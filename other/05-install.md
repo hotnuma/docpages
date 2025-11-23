@@ -181,6 +181,10 @@
     `tar tfz gvfs-mtp_1.57.2-2_arm64.tgz \
     | grep -e "[^/]$" | sort > files.txt`
 
+* Uninstall cups
+
+    `sudo apt purge cups*`
+    
 * Uninstall desktop portals
 
     `sudo apt purge xdg-desktop-portal*`
