@@ -141,7 +141,11 @@
     gpu-dumb-mode=yes
     hwdec=drm-copy
 	```
+
+* Uninstall programs
     
+    `sudo apt purge cups* network-manager netplan.io rpicam-apps-lite`
+
 * Xfce Configuration
     
     https://wiki.archlinux.org/title/Xfwm  

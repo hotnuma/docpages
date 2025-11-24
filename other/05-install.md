@@ -181,7 +181,7 @@
     `tar tfz gvfs-mtp_1.57.2-2_arm64.tgz \
     | grep -e "[^/]$" | sort > files.txt`
 
-* Uninstall cups
+* Uninstall programs
 
     `sudo apt purge cups*`
     
