@@ -144,7 +144,7 @@
 
 * Uninstall programs
     
-    `sudo apt purge cups* network-manager netplan.io rpicam-apps-lite`
+    `sudo apt purge cloud-init cups* netplan.io network-manager rpicam-apps-lite`
 
 * Xfce Configuration
     
