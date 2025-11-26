@@ -8,17 +8,19 @@
 
 #### References
 
+* Repositories
+    
+    https://www.raspberrypi.com/documentation/computers/software-sources.html  
+    
+    https://github.com/orgs/raspberrypi-ui/repositories  
+    https://github.com/orgs/raspberrypi/repositories  
+    https://github.com/orgs/RPi-Distro/repositories  
+
 * Labwc
     
     https://github.com/labwc/labwc/commits/master/  
     https://labwc.github.io/getting-started.html  
     https://wiki.archlinux.org/title/Labwc  
-
-* Repositories
-    
-    https://github.com/orgs/raspberrypi-ui/repositories  
-    https://github.com/orgs/raspberrypi/repositories  
-    https://github.com/orgs/RPi-Distro/repositories  
 
 
 #### System Install
