@@ -8,9 +8,9 @@
 
 #### References
 
-* Repositories
+* Raspi
     
-    https://www.raspberrypi.com/documentation/computers/software-sources.html  
+    https://www.raspberrypi.com/documentation/  
     
     https://github.com/orgs/raspberrypi-ui/repositories  
     https://github.com/orgs/raspberrypi/repositories  
@@ -31,9 +31,10 @@
     
     Download RaspiOS Lite 64 bits and copy the image :
     
-    *replace sdX with the corresponding device, for example sdc*
+    *replace /dev/sdX with the corresponding device, for example /dev/sdc*
 
     ```
+    sha256sum ./raspios64-lite.img.xz
     unxz ./raspios64-lite.img.xz
     lsblk
     umount /dev/sdX?

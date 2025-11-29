@@ -9,9 +9,9 @@
 <h4>References</h4>
 
 <ul>
-<li><p>Repositories</p>
+<li><p>Raspi</p>
 
-<p><a href="https://www.raspberrypi.com/documentation/computers/software-sources.html">https://www.raspberrypi.com/documentation/computers/software-sources.html</a>  </p>
+<p><a href="https://www.raspberrypi.com/documentation/">https://www.raspberrypi.com/documentation/</a>  </p>
 
 <p><a href="https://github.com/orgs/raspberrypi-ui/repositories">https://github.com/orgs/raspberrypi-ui/repositories</a><br>
 <a href="https://github.com/orgs/raspberrypi/repositories">https://github.com/orgs/raspberrypi/repositories</a><br>
@@ -32,9 +32,10 @@
 
 <p>Download RaspiOS Lite 64 bits and copy the image :</p>
 
-<p><em>replace sdX with the corresponding device, for example sdc</em></p>
+<p><em>replace /dev/sdX with the corresponding device, for example /dev/sdc</em></p>
 
-<pre><code>unxz ./raspios64-lite.img.xz
+<pre><code>sha256sum ./raspios64-lite.img.xz
+unxz ./raspios64-lite.img.xz
 lsblk
 umount /dev/sdX?
 sudo dd if=/dev/zero of=/dev/sdX bs=512 count=1 conv=notrunc
