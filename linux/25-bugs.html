@@ -102,3 +102,26 @@ grep -r MODULES /etc/initramfs-tools
 </ul>
 
 <p><br/></p>
+
+<!--
+* Memory leak
+    
+    https://gitlab.xfce.org/xfce/thunar/-/issues/573  
+    [https://gitlab.xfce.org/xfce/thunar/-/commit/...](https://gitlab.xfce.org/xfce/thunar/-/commit/bdb2f762cf335e621d9bd2556f5f92306ecf4201)  
+
+* Sorting
+    
+    https://gitlab.xfce.org/xfce/thunar/-/issues/68  
+    https://unix.stackexchange.com/questions/510530/  
+    https://github.com/linuxmint/nemo/issues/2247  
+
+* Startup/Restart freeze
+    
+    `nov. 15 16:28:59 athlon kernel: [drm:drm_atomic_helper_wait_for_flip_done [drm_kms_helper]] *ERROR* [CRTC:62:crtc-0] flip_done timed out`
+
+    `dev/sdaX: clean, X files, X blocks`
+
+* The offending /etc/xdg/xfce4/xinitrc script
+    
+    https://gist.github.com/ncraike/6204799  
+-->

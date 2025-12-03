@@ -276,4 +276,192 @@
 
 <br/>
 
+<!--
+* Rpi
+
+    https://github.com/orgs/raspberrypi-ui/repositories  
+    https://github.com/orgs/RPi-Distro/repositories  
+    https://github.com/orgs/raspberrypi/repositories  
+    https://github.com/raspberrypi/bookworm-feedback/issues  
+    https://www.raspberrypi.com/documentation/  
+    https://www.raspberrypi.com/documentation/computers/raspberry-pi.html  
+    https://linuxhint.com/gpio-pinout-raspberry-pi/  
+    [tearing_test](https://www.youtube.com/watch?v=cuXsupMuik4)  
+    [howto_desktops](https://forums.raspberrypi.com/viewtopic.php?t=133691)  
+    [howto_autostart](https://forums.raspberrypi.com/viewtopic.php?t=294014)  
+    https://github.com/raspberrypi/rpi-eeprom  
+
+* Install Thorium Browser
+
+    https://github.com/Alex313031/Thorium-Raspi/releases  
+    
+    `sudo unzip -d /opt/thorium thorium-browser_128.0.6613.194_arm64.zip`
+    
+    under wayland : `/opt/thorium/thorium --ozone-platform=wayland`
+
+* Avoid keyring password
+    
+    https://unix.stackexchange.com/questions/324843/  
+    
+    `rm ~/.local/share/keyrings/*.keyring`
+    
+    Restart Chrome, when prompted to create a keyring, continue without entering a password. (Turns out you would have been okay if you did this the first time.)
+
+* SD cards
+
+    [best-ssd-storage](https://jamesachambers.com/best-ssd-storage-adapters-for-raspberry-pi-4-400/)  
+
+* Revert to specific firmware using git commit hash
+
+    https://www.raspberrypi.com/documentation/computers/os.html  
+    
+    `sudo rpi-update 6e61ab523f0a9d2fbb4319f6f6430d4c13203c0e`
+
+* Revert to stable firmware
+
+    ```
+    sudo apt update
+    sudo apt install --reinstall libraspberrypi0 libraspberrypi-{bin,dev,doc} raspberrypi-bootloader raspberrypi-kernel
+    ```
+
+* Fix screen tearing
+    
+    `/etc/xdg/menus/lxde-pi-applications.menu`
+    
+    https://forum.manjaro.org/t/how-to-fix-intel-screen-tearing-on-xfce/31361/1  
+    
+    ```
+    1- Go to “setting manager”
+    2- Go to “setting editor”
+    3- Choose “xfwm4”
+    4- Find “vblank_mode” and select
+    5- Press the “edit”
+    6- Type glx to “value” section
+    7- Save and reboot
+
+    Note: This is the gui way of those commands
+    xfwm4 --replace --vblank=glx &
+    xfconf-query -c xfwm4 -p /general/vblank_mode -s glx
+    ```
+
+* SSD Boot
+    
+    Change boot order with `raspi-config`
+    
+    View current EEPROM configuration : `rpi-eeprom-config`
+    
+    Edit configuration : `sudo -E rpi-eeprom-config --edit`
+    
+    Add `USB_MSD_DISCOVER_TIMEOUT=5`
+    
+    [udev_trim](https://forums.raspberrypi.com/viewtopic.php?t=307276#p1839171)  
+
+* Test RPi version
+
+    https://forums.raspberrypi.com/viewtopic.php?t=34678  
+    https://forums.raspberrypi.com/viewtopic.php?t=200059  
+
+    ```
+    ARCH=$(uname -m)
+    VERSION=$(cat /etc/debian_version)
+    if [[ $ARCH != "aarch64" ]] || [[ $VERSION != 11* ]]; then
+        echo " *** This script was tested only on a Raspberry Pi 4B 64 bit"
+        echo " *** abort..."
+        exit 1
+    fi
+
+    cat /proc/cpuinfo
+    grep -q BCM2708 /proc/cpuinfo
+    cat /etc/*-release
+    cat /proc/device-tree/model
+    cat /sys/firmware/devicetree/base/model
+    ```
+
+* Anti-rpi
+
+    https://www.fsf.org/resources/hw/single-board-computers  
+    https://wiki.debian.org/RaspberryPi/  
+
+    Limitations
+    
+    - 1.2A current limit for all USB plugs
+    - slow SD controller (40 MB/s)
+    - incompatible usb to sata controllers
+
+* Drive consumption
+
+    Toshiba Canvio Basics : a maximum of 900mA power, even in the largest capacity version.
+    
+    Kingston a400 SSD : 0.195W Idle / 0.279W Avg / 0.642W (MAX) Read / 1.535W (MAX) Write
+
+* Upgrade
+    
+    https://gist.github.com/jauderho/6b7d42030e264a135450ecc0ba521bd8  
+    https://raspberrytips.com/update-raspberry-pi-latest-version/  
+
+* Thorium Wrapper Script
+    
+    ```
+    #!/usr/bin/bash
+
+    if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
+        /opt/thorium/thorium --enable-features=UseOzonePlatform --ozone-platform=wayland 2>/dev/null &
+    else
+        /opt/thorium/thorium 2>/dev/null &
+    fi
+    ```
+
+* raspi-config/raspi-config at bookworm
+    
+    [https://github.com/RPi-Distro/raspi-config/blob/bookworm/ras](https://github.com/RPi-Distro/raspi-config/blob/bookworm/raspi-config)  
+
+* What are the installed defaults and configuration settings?
+    
+    https://raspi.debian.net/defaults-and-settings/  
+
+#### Raspi Debian Trixie
+
+* Installation
+    
+    Download an image from daily builds :  
+    https://raspi.debian.net/daily-images/  
+    
+    *the FAQ says these images are not compatible with the RPI 5*
+    
+    Default user is **root** with empty password.
+
+    ```
+    apt update && apt upgrade
+    apt install sudo debconf kbd locales
+
+    dpkg-reconfigure tzdata
+    dpkg-reconfigure locales
+
+    useradd -s /bin/bash -d /home/<username> -m <username>
+    passwd <username>
+    usermod -aG sudo <username>
+    reboot
+    ```
+
+    log as new user
+    
+    ```
+    sudo tasksel
+    (select debian desktop and xfce)
+    
+    sudo apt purge plymouth
+    sudo reboot
+    ```
+
+    Add hostname manually in `/etc/hosts` :
+
+    ```
+    127.0.0.1	localhost
+    127.0.1.1	<hostname>
+    ::1	localhost ip6-localhost ip6-loopback
+    ff02::1	ip6-allnodes
+    ff02::2	ip6-allrouters
+    ```
+-->
+
 

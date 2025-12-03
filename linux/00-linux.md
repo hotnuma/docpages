@@ -411,6 +411,7 @@ https://wiki.debian.org/HardwareVideoAcceleration
 * Additional programs
 
     ```
+    aria2
     datamash
     evince
     exiv2
