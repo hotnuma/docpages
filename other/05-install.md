@@ -42,7 +42,8 @@
 	
 * Configure Terminal
     
-    font : DejaVu Sans Mono Book 11
+    font : DejaVu Sans Mono Book 11  
+    colors : Select custom colors  
 
 * Mount internal drives
     
