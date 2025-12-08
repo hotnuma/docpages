@@ -105,16 +105,6 @@
 
     https://hotnuma.github.io/docpages/other/00-install.html#common  
 
-* RPI Firefox
-	
-    `sudo apt install --no-install-recommends firefox rpi-firefox-mods`
-
-* Firefox and static ip
-	
-	https://hotnuma.github.io/docpages/linux/11-network.html  
-	
-	Disable hardware acceleration.
-
 * Change border size with Labwc
     
     create overrride file : `nano ~/.config/labwc/themerc-override`
@@ -132,6 +122,20 @@
     gtk-button-images=1
     gtk-menu-images=1
     ```
+
+* Hide bootloader screen
+    
+    https://forums.raspberrypi.com/viewtopic.php?t=394290#p2351439  
+
+* Install Raspi's Firefox
+	
+    `sudo apt install --no-install-recommends firefox rpi-firefox-mods`
+
+* Firefox and static ip
+	
+	https://hotnuma.github.io/docpages/linux/11-network.html  
+	
+	Disable hardware acceleration.
 
 * Mpv Configuration
 	
