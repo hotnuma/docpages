@@ -1,6 +1,6 @@
 <link href="../style.css" rel="stylesheet"></link>
 
-**[ [Home](../index.html) | Build ]**
+**[ [Home](../index.html) | [Install](00-install.html) | [Raspi](05-raspi.html) | Build ]**
 
 ## Build
 

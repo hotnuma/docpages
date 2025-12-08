@@ -1,6 +1,6 @@
 <link href="../style.css" rel="stylesheet"></link>
 
-**[ [Home](../index.html) | Raspi ]**
+**[ [Home](../index.html) | [Install](00-install.html) | Raspi | [Build](10-build.html) ]**
 
 ## Raspi
 
@@ -103,7 +103,7 @@
 
 * Common settings
 
-    https://hotnuma.github.io/docpages/other/05-install.html#common  
+    https://hotnuma.github.io/docpages/other/00-install.html#common  
 
 * RPI Firefox
 	
