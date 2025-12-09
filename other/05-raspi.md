@@ -196,6 +196,12 @@
     sudo apt install apt-file
     sudo apt-file update
     ```
+
+* Mouse lag
+    
+    https://superuser.com/questions/528727/  
+    https://bbs.archlinux.org/viewtopic.php?id=258638  
+    https://blog.smittytone.net/2020/11/09/quick-cure-for-raspberry-pi-slow-mouse-syndrome/  
     
 * Oak Raspberry Pi Case
     
