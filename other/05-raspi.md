@@ -197,6 +197,10 @@
     sudo apt-file update
     ```
 
+* Fix Xorg black screen
+    
+    `sudo apt install gldriver-test`
+
 * Oak Raspberry Pi Case
     
     [https://www.instructables.com/Oak-Raspberry-Pi...](https://www.instructables.com/Oak-Raspberry-Pi-case-for-under-10/)  
@@ -250,17 +254,17 @@
 
 <!--
 
+* Installation
+    
+    dpkg-reconfigure tzdata
+    dpkg-reconfigure locales
+
 * Mouse lag
     
     https://superuser.com/questions/528727/  
     https://bbs.archlinux.org/viewtopic.php?id=258638  
     https://blog.smittytone.net/2020/11/09/quick-cure-for-raspberry-pi-slow-mouse-syndrome/  
     
-* Installation
-    
-    dpkg-reconfigure tzdata
-    dpkg-reconfigure locales
-
 * Remove unused kernels
     
     https://forums.raspberrypi.com/viewtopic.php?t=371710  
