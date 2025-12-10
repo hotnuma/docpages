@@ -197,9 +197,17 @@
     sudo apt-file update
     ```
 
+* Fix swap file
+    
+    https://forums.raspberrypi.com/viewtopic.php?t=314530  
+
 * Fix Xorg black screen
     
     `sudo apt install gldriver-test`
+
+* Mouse lag
+    
+    https://github.com/labwc/labwc/discussions/1810  
 
 * Oak Raspberry Pi Case
     
