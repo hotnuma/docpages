@@ -44,9 +44,8 @@
 
 * Upgrade packages
 
-    `sudo raspi-config`
-    
-    change locale and timezone
+    `dpkg-reconfigure tzdata`
+    `dpkg-reconfigure locales`
     
     if we don't need a camera : `sudo apt purge rpicam-apps-lite libpisp1`
 
@@ -261,11 +260,6 @@
 
 
 <!--
-
-* Installation
-    
-    dpkg-reconfigure tzdata
-    dpkg-reconfigure locales
 
 * Mouse lag
     

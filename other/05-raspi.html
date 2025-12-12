@@ -43,9 +43,8 @@ sudo dd if=./raspios64-lite.img of=/dev/sdX bs=4M conv=fsync status=progress
 </code></pre></li>
 <li><p>Upgrade packages</p>
 
-<p><code>sudo raspi-config</code></p>
-
-<p>change locale and timezone</p>
+<p><code>dpkg-reconfigure tzdata</code>
+<code>dpkg-reconfigure locales</code></p>
 
 <p>if we don&#39;t need a camera : <code>sudo apt purge rpicam-apps-lite libpisp1</code></p>
 
@@ -229,11 +228,6 @@ with a udev rule.
 <p><br/></p>
 
 <!--
-
-* Installation
-    
-    dpkg-reconfigure tzdata
-    dpkg-reconfigure locales
 
 * Mouse lag
     
