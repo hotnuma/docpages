@@ -44,8 +44,8 @@
 
 * Upgrade packages
 
-    `dpkg-reconfigure tzdata`
-    `dpkg-reconfigure locales`
+    `dpkg-reconfigure tzdata`  
+    `dpkg-reconfigure locales`  
     
     if we don't need a camera : `sudo apt purge rpicam-apps-lite libpisp1`
 
