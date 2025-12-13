@@ -207,6 +207,7 @@
 
 * GPIO
     
+    https://pinout.xyz/  
     https://forums.raspberrypi.com/viewtopic.php?t=394138  
 
 * Mouse lag
