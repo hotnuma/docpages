@@ -207,6 +207,7 @@
 * Mouse lag
     
     https://github.com/labwc/labwc/discussions/1810  
+    https://github.com/raspberrypi/bookworm-feedback/issues/65  
 
 * Oak Raspberry Pi Case
     
