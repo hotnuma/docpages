@@ -205,6 +205,10 @@
     
     `sudo apt install gldriver-test`
 
+* GPIO
+    
+    https://forums.raspberrypi.com/viewtopic.php?t=394138  
+
 * Mouse lag
     
     https://github.com/labwc/labwc/discussions/1810  
