@@ -83,8 +83,9 @@ Pin-Priority: 200
 
 <p>(select debian desktop and xfce)</p>
 
-<pre><code>sudo systemctl set-default graphical.target
+<pre><code>sudo apt install gldriver-test
 sudo apt purge plymouth
+sudo systemctl set-default graphical.target
 sync
 reboot
 </code></pre></li>

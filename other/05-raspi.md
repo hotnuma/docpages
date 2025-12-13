@@ -91,8 +91,9 @@
     (select debian desktop and xfce)
     
     ```
-    sudo systemctl set-default graphical.target
+    sudo apt install gldriver-test
     sudo apt purge plymouth
+    sudo systemctl set-default graphical.target
     sync
     reboot
     ```
