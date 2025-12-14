@@ -205,6 +205,20 @@
     
     `sudo apt install gldriver-test`
 
+* Get board version
+
+    https://forums.raspberrypi.com/viewtopic.php?t=34678  
+    https://forums.raspberrypi.com/viewtopic.php?t=200059  
+
+    ```
+    ARCH=$(uname -m)
+    VERSION=$(cat /etc/debian_version)
+    cat /proc/cpuinfo
+    cat /etc/*-release
+    cat /proc/device-tree/model
+    cat /sys/firmware/devicetree/base/model
+    ```
+
 * GPIO
     
     https://pinout.xyz/  
@@ -223,11 +237,12 @@
 
     ```
     uname -a
-    vcgencmd version
+    rpi-eeprom-config
     vcgencmd bootloader_config
     vcgencmd bootloader_version
     vcgencmd measure_clock arm
-    rpi-eeprom-config
+    vcgencmd measure_temp
+    vcgencmd version
     ```
 
 * Set resolution to 1366
@@ -241,10 +256,6 @@
     `sysbench cpu --threads=4 --time=30 run`
     
     `stress-ng --cpu 0 --cpu-method fft`
-
-* Test CPU temperature
-
-    `vcgencmd measure_temp`
 
 * USB Chipset
     
@@ -264,94 +275,4 @@
     [https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-do](https://www.az-delivery.de/fr/products/xh-m401-dc-dc-step-down-xl4016e1-poti)  
 
 <br/>
-
-
-<!--
-
-* Mouse lag
-    
-    https://superuser.com/questions/528727/  
-    https://bbs.archlinux.org/viewtopic.php?id=258638  
-    https://blog.smittytone.net/2020/11/09/quick-cure-for-raspberry-pi-slow-mouse-syndrome/  
-    
-* Remove unused kernels
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=371710  
-    
-    for rpi4 : `sudo apt --autoremove remove linux-image-*-2712`
-
-* List Packages not in unstable
-    
-    `apt list --installed | grep -v /unstable`
-
-* List Raspi Packages
-    
-    `grep -h ^Package: /var/lib/apt/lists/archive.raspberrypi.com*arm64_Packages | grep -v -- -dbgsym$ | grep -v -- -dbg$ | cut -d ' ' -f 2`
-
-* Need to run as sudo
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=384959  
-
-* Avoid keyring password
-    
-    https://unix.stackexchange.com/questions/324843/  
-    
-    `rm ~/.local/share/keyrings/*.keyring`
-    
-    Restart Chrome, when prompted to create a keyring, continue without entering a password. (Turns out you would have been okay if you did this the first time.)
-
-* Revert to specific firmware using git commit hash
-
-    https://www.raspberrypi.com/documentation/computers/os.html  
-    
-    `sudo rpi-update 6e61ab523f0a9d2fbb4319f6f6430d4c13203c0e`
-
-* SSD Boot
-    
-    Change boot order with `raspi-config`
-    
-    View current EEPROM configuration : `rpi-eeprom-config`
-    
-    Edit configuration : `sudo -E rpi-eeprom-config --edit`
-    
-    Add `USB_MSD_DISCOVER_TIMEOUT=5`
-    
-    [udev_trim](https://forums.raspberrypi.com/viewtopic.php?t=307276#p1839171)  
-
-* Test RPi version
-
-    https://forums.raspberrypi.com/viewtopic.php?t=34678  
-    https://forums.raspberrypi.com/viewtopic.php?t=200059  
-
-    ```
-    ARCH=$(uname -m)
-    VERSION=$(cat /etc/debian_version)
-    if [[ $ARCH != "aarch64" ]] || [[ $VERSION != 11* ]]; then
-        echo " *** This script was tested only on a Raspberry Pi 4B 64 bit"
-        echo " *** abort..."
-        exit 1
-    fi
-
-    cat /proc/cpuinfo
-    grep -q BCM2708 /proc/cpuinfo
-    cat /etc/*-release
-    cat /proc/device-tree/model
-    cat /sys/firmware/devicetree/base/model
-    ```
-
-* Drive consumption
-
-    Toshiba Canvio Basics : a maximum of 900mA power, even in the largest capacity version.
-    
-    Kingston a400 SSD : 0.195W Idle / 0.279W Avg / 0.642W (MAX) Read / 1.535W (MAX) Write
-
-* raspi-config/raspi-config at bookworm
-    
-    [https://github.com/RPi-Distro/raspi-config/blob/bookworm/ras](https://github.com/RPi-Distro/raspi-config/blob/bookworm/raspi-config)  
-
-* What are the installed defaults and configuration settings?
-    
-    https://raspi.debian.net/defaults-and-settings/  
-
--->
 
