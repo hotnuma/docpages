@@ -11,6 +11,7 @@
 * Raspi
     
     https://www.raspberrypi.com/documentation/  
+    https://pinout.xyz/  
     
     https://github.com/orgs/raspberrypi-ui/repositories  
     https://github.com/orgs/raspberrypi/repositories  
