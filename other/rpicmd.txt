@@ -11,6 +11,9 @@ reboot
 
 sudo systemctl stop avahi-daemon
 sudo systemctl disable avahi-daemon
+
+sudo rfkill list
+sudo rfkill unblock 1
 sudo apt install ifupdown resolvconf wpa_supplicant
 ifconfig
 
@@ -69,8 +72,6 @@ sudo raspi-config
 (enable ssh)
 
 ssh hotnuma@192.168.1.135
-sudo rfkill list
-sudo rfkill unblock 1
 
 sudo apt install git meson
 git config --global user.name "user_name"
