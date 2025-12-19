@@ -113,7 +113,8 @@ sudo psmem.py
 2. i2c
 
 sudo apt install i2c-tools
-sudo nano /boot/firmware/config.txt
+sudo raspi-config
+(enable arm i2c)
 ---
 dtparam=i2c_arm=on
 ---
