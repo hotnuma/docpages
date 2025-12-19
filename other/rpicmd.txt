@@ -1,6 +1,7 @@
 
-1. setup headless pi using wifi
+1. Setup headless pi using wifi
 
+(install raspiOS lite)
 sudo apt update && sudo apt full-upgrade
 sudo apt purge rpicam-apps-lite libpisp1
 sudo dpkg-reconfigure tzdata
@@ -110,12 +111,17 @@ sudo psmem.py
 =================================
 ---
 
-2. i2c
+2. Enable i2c
 
 sudo apt install i2c-tools
 sudo raspi-config
 (enable arm i2c)
----
-dtparam=i2c_arm=on
----
+
+3. Passwordless login
+
+https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/
+ssh-keygen -t rsa
+(press enter 3 times)
+ssh-copy-id hotnuma@192.168.1.135
+ssh hotnuma@192.168.1.135
 
