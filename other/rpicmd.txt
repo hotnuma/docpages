@@ -9,6 +9,8 @@ sudo dpkg-reconfigure locales
 sync
 reboot
 
+sudo systemctl stop avahi-daemon
+sudo systemctl disable avahi-daemon
 sudo apt install ifupdown resolvconf wpa_supplicant
 ifconfig
 
