@@ -1,5 +1,5 @@
 
-setup headless pi using wifi
+1. setup headless pi using wifi
 
 sudo apt update && sudo apt full-upgrade
 sudo apt purge rpicam-apps-lite libpisp1
@@ -108,5 +108,13 @@ sudo psmem.py
                            21 prc
                          51.2 MiB
 =================================
+---
+
+2. i2c
+
+sudo apt install i2c-tools
+sudo nano /boot/firmware/config.txt
+---
+dtparam=i2c_arm=on
 ---
 
