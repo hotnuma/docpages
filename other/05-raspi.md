@@ -198,6 +198,14 @@
     sudo apt-file update
     ```
 
+* EEPROM settings
+    
+    [https://www.raspberrypi.com/doc...bootloader-configuration](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#raspberry-pi-bootloader-configuration)  
+    
+    `sudo rpi-eeprom-config -e`
+    
+    POWER_OFF_ON_HALT=1
+    
 * Fix swap file
     
     https://forums.raspberrypi.com/viewtopic.php?t=314530  
