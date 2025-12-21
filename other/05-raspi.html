@@ -44,12 +44,10 @@ sudo dd if=./raspios64-lite.img of=/dev/sdX bs=4M conv=fsync status=progress
 </code></pre></li>
 <li><p>Upgrade packages</p>
 
-<p><code>dpkg-reconfigure tzdata</code><br>
-<code>dpkg-reconfigure locales</code>  </p>
-
-<p>if we don&#39;t need a camera : <code>sudo apt purge rpicam-apps-lite libpisp1</code></p>
-
 <pre><code>sudo apt update &amp;&amp; sudo apt full-upgrade
+sudo apt purge rpicam-apps-lite rpi-connect-lite libpisp1
+sudo dpkg-reconfigure tzdata  
+sudo dpkg-reconfigure locales  
 sync
 reboot
 </code></pre></li>

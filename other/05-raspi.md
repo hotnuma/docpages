@@ -45,13 +45,11 @@
 
 * Upgrade packages
 
-    `dpkg-reconfigure tzdata`  
-    `dpkg-reconfigure locales`  
-    
-    if we don't need a camera : `sudo apt purge rpicam-apps-lite libpisp1`
-
     ```
     sudo apt update && sudo apt full-upgrade
+    sudo apt purge rpicam-apps-lite rpi-connect-lite libpisp1
+    sudo dpkg-reconfigure tzdata  
+    sudo dpkg-reconfigure locales  
     sync
     reboot
     ```
