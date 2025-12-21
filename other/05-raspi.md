@@ -231,6 +231,10 @@
     https://pinout.xyz/  
     https://forums.raspberrypi.com/viewtopic.php?t=394138  
 
+* Kernel 6.18
+    
+    https://forums.raspberrypi.com/viewtopic.php?t=394580  
+
 * Mouse lag
     
     https://github.com/labwc/labwc/discussions/1810  
