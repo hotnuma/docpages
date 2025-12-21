@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+CONFIG="/boot/firmware/config.txt"
+
+get_i2c()
+{
+  if grep -q -E "^(device_tree_param|dtparam)=([^,]*,)*i2c(_arm)?(=(on|true|yes|1))?(,.*)?$" $CONFIG; then
+    echo 0
+  else
+    echo 1
+  fi
+}
+
+if [[ $(get_i2c) -eq 0 ]]; then
+    echo "i2c : enabled"
+fi
