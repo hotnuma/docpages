@@ -167,6 +167,24 @@ labwc.desktop
 </code></pre></li>
 </ul>
 
+<h4>Gpio</h4>
+
+<ul>
+<li><p>Reference</p>
+
+<p><a href="https://pinout.xyz/">https://pinout.xyz/</a><br>
+<a href="https://forums.raspberrypi.com/viewtopic.php?t=394138">https://forums.raspberrypi.com/viewtopic.php?t=394138</a>  </p>
+
+<p>list chips : <code>gpiodetect</code><br>
+scan chip0 : <code>gpioinfo -c 0</code>  </p></li>
+<li><p>Enable i2c</p>
+
+<p>sudo apt install i2c-tools
+sudo raspi-config
+(enable arm i2c)
+i2cdetect -y 1</p></li>
+</ul>
+
 <h4>Other</h4>
 
 <ul>
@@ -182,12 +200,6 @@ sudo apt-file update
 <p><code>sudo rpi-eeprom-config -e</code></p>
 
 <p>POWER_OFF_ON_HALT=1</p></li>
-<li><p>Enable i2c</p>
-
-<p>sudo apt install i2c-tools
-sudo raspi-config
-(enable arm i2c)
-i2cdetect -y 1</p></li>
 <li><p>Fix swap file</p>
 
 <p><a href="https://forums.raspberrypi.com/viewtopic.php?t=314530">https://forums.raspberrypi.com/viewtopic.php?t=314530</a>  </p></li>
@@ -206,13 +218,6 @@ cat /etc/*-release
 cat /proc/device-tree/model
 cat /sys/firmware/devicetree/base/model
 </code></pre></li>
-<li><p>GPIO</p>
-
-<p><a href="https://pinout.xyz/">https://pinout.xyz/</a><br>
-<a href="https://forums.raspberrypi.com/viewtopic.php?t=394138">https://forums.raspberrypi.com/viewtopic.php?t=394138</a>  </p>
-
-<p>list chips : <code>gpiodetect</code><br>
-scan chip0 : <code>gpioinfo -c 0</code>  </p></li>
 <li><p>Kernel 6.18</p>
 
 <p><a href="https://forums.raspberrypi.com/viewtopic.php?t=394580">https://forums.raspberrypi.com/viewtopic.php?t=394580</a>  </p></li>

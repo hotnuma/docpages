@@ -187,6 +187,24 @@
     ```
 
 
+#### Gpio
+
+* Reference
+    
+    https://pinout.xyz/  
+    https://forums.raspberrypi.com/viewtopic.php?t=394138  
+    
+    list chips : `gpiodetect`  
+    scan chip0 : `gpioinfo -c 0`  
+
+* Enable i2c
+
+    sudo apt install i2c-tools
+    sudo raspi-config
+    (enable arm i2c)
+    i2cdetect -y 1
+
+
 #### Other
 
 * apt-file
@@ -203,13 +221,6 @@
     `sudo rpi-eeprom-config -e`
     
     POWER_OFF_ON_HALT=1
-
-* Enable i2c
-
-    sudo apt install i2c-tools
-    sudo raspi-config
-    (enable arm i2c)
-    i2cdetect -y 1
 
 * Fix swap file
     
@@ -232,14 +243,6 @@
     cat /proc/device-tree/model
     cat /sys/firmware/devicetree/base/model
     ```
-
-* GPIO
-    
-    https://pinout.xyz/  
-    https://forums.raspberrypi.com/viewtopic.php?t=394138  
-    
-    list chips : `gpiodetect`  
-    scan chip0 : `gpioinfo -c 0`  
 
 * Kernel 6.18
     
