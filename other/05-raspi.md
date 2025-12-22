@@ -192,6 +192,7 @@
 * Reference
     
     https://pinout.xyz/  
+    https://libgpiod.readthedocs.io/en/latest/index.html  
     https://forums.raspberrypi.com/viewtopic.php?t=394138  
     
     list chips : `gpiodetect`  
