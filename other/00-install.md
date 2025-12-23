@@ -80,17 +80,22 @@
     Disable unneeded plugins :
     
     ```
-    QbsProjectManager
-    Help
-    Welcome
-    Android
-    Qnx
-    RemoteLinux
-    Modeling
-    GLSLEditor
-    Qt Quick
-    FakeVim
-    Version Control
+     IncrediBuild
+     Qbs
+     CTF Visualizer
+     Pref Profiler
+     Valgrind
+     Help
+     Welcome
+    [Device Support]
+    [Fun]
+    [Language Client]
+    [Modeling]
+     GLSL Editor
+    [Qt Quick]
+    [Scripting]
+     FakeVim
+    [Version Control]
     ```
     
     In `Edit/Preferences/Kits`.
