@@ -199,12 +199,13 @@
     scan chip0 : `gpioinfo -c 0`  
 
 * Enable i2c
-
+    
+    ```
     sudo apt install i2c-tools
     sudo raspi-config
     (enable arm i2c)
     i2cdetect -y 1
-
+    ```
 
 #### Other
 
