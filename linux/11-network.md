@@ -36,7 +36,7 @@
     sudo mv ./firefox.desktop /usr/local/share/applications/
     ```
     
-    install extensions :
+    Install extensions :
     
     ```
     cookies.txt
@@ -45,10 +45,13 @@
     YouTube Tweaks
     ```
     
-    Set new tab and home to a blank page.  
-    Restore bookmarks, passwords, UBO filters and user.js.  
+* Manual settings
     
-* Firefox Fonts
+    Restore bookmarks, passwords, UBO filters and user.js.  
+    Set new tab and home to a blank page.  
+    Disable container tabs.  
+    
+    Set fonts :
     
     ```
     DejaVu 16 / 15 / 15
