@@ -1,0 +1,204 @@
+<p><link href="../style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="../index.html">Home</a> | <a href="00-install.html">Install</a> | <a href="05-raspi.html">Raspi</a> | Lite | <a href="15-build.html">Build</a> ]</strong></p>
+
+<h2>Lite</h2>
+
+<hr>
+
+<h4>Install</h4>
+
+<ul>
+<li><p>Setup Wifi</p>
+
+<p>(install raspiOS lite)</p>
+
+<pre><code>sudo apt update &amp;&amp; sudo apt full-upgrade
+sudo apt purge rpicam-apps-lite libpisp1
+sudo dpkg-reconfigure tzdata
+sudo dpkg-reconfigure locales
+sync
+reboot
+</code></pre>
+
+<pre><code>sudo systemctl stop avahi-daemon
+sudo systemctl disable avahi-daemon
+</code></pre>
+
+<pre><code>sudo rfkill list
+sudo rfkill unblock 1
+sudo apt install ifupdown resolvconf wpa_supplicant
+ifconfig
+</code></pre>
+
+<pre><code>sudo nano /etc/wpa_supplicant/wpa_supplicant.conf 
+---
+country=FR
+update_config=1
+ctrl_interface=/var/run/wpa_supplicant
+---
+</code></pre>
+
+<p><code>wpa_passphrase MY_SSID MY_PSK | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf</code></p>
+
+<pre><code>sudo mv /etc/network/interfaces /etc/network/interfaces.bak
+sudo nano /etc/network/interfaces
+---
+auto lo
+iface lo inet loopback
+
+allow-hotplug wlan0
+iface wlan0 inet static
+    address 192.168.1.135/24
+    netmask 255.255.255.0
+    broadcast 192.168.1.255
+    gateway 192.168.1.254
+    dns-nameservers 8.8.8.8 8.8.4.4
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+---
+</code></pre>
+
+<pre><code>sudo systemctl stop NetworkManager
+sudo systemctl disable NetworkManager
+sync
+reboot
+</code></pre>
+
+<pre><code>sudo apt purge network-manager netplan.io cloud-init
+sudo apt autopurge
+</code></pre>
+
+<pre><code>sudo cp /boot/firmware/config.txt /boot/firmware/config.txt.bak
+sudo nano /boot/firmware/config.txt
+---
+auto_initramfs=1
+dtoverlay=vc4-kms-v3d
+max_framebuffers=2
+disable_fw_kms_setup=1
+arm_64bit=1
+disable_overscan=1
+
+#user config
+dtoverlay=disable-bt
+---
+</code></pre></li>
+<li><p>Enable SSH</p>
+
+<p><code>sudo raspi-config</code><br>
+(enable ssh)</p>
+
+<p><code>ssh hotnuma@192.168.1.135</code></p></li>
+<li><p>Install custom programs</p>
+
+<pre><code>sudo apt install git meson
+git config --global user.name &quot;user_name&quot;
+git config --global user.email user_email@gmail.com
+
+mkdir ~/DevFiles &amp;&amp; cd ~/DevFiles
+
+git clone https://github.com/hotnuma/libtinyc.git
+pushd libtinyc
+./install.sh
+popd
+
+git clone https://github.com/hotnuma/systools.git
+pushd systools
+./install.sh
+popd
+
+git clone https://github.com/hotnuma/sysload.git
+pushd sysload
+./install.sh
+popd
+</code></pre>
+
+<pre><code>sudo psmem.py
+---
+ Private  +   Shared  =  RAM used   Program
+
+  5.9 MiB +   4.7 MiB =  10.5 MiB   systemd (2)
+  3.2 MiB +   4.3 MiB =   7.5 MiB   sshd-session (2)
+  4.2 MiB +   2.1 MiB =   6.3 MiB   wpa_supplicant (2)
+  3.3 MiB + 838.5 KiB =   4.1 MiB   systemd-udevd
+  3.7 MiB + 172.5 KiB =   3.9 MiB   bash
+  2.1 MiB + 775.5 KiB =   2.9 MiB   systemd-journald
+852.0 KiB +   2.0 MiB =   2.8 MiB   sudo (2)
+  1.6 MiB +   1.1 MiB =   2.7 MiB   sshd
+  1.4 MiB + 873.5 KiB =   2.3 MiB   systemd-logind
+  1.2 MiB + 772.5 KiB =   2.0 MiB   systemd-timesyncd
+  1.8 MiB + 200.5 KiB =   1.9 MiB   (sd-pam)
+  1.1 MiB + 449.5 KiB =   1.5 MiB   dbus-daemon
+400.0 KiB + 895.0 KiB =   1.3 MiB   avahi-daemon (2)
+620.0 KiB + 426.0 KiB =   1.0 MiB   agetty (2)
+288.0 KiB + 207.5 KiB = 495.5 KiB   cron
+---------------------------------
+                           21 prc
+                         51.2 MiB
+=================================
+---
+</code></pre></li>
+<li><p>Passwordless login</p>
+
+<p><a href="https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/">https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/</a></p>
+
+<pre><code>ssh-keygen -t rsa
+(press enter 3 times)
+ssh-copy-id hotnuma@192.168.1.135
+ssh hotnuma@192.168.1.135
+</code></pre></li>
+<li><p>Enable i2c</p>
+
+<pre><code>sudo apt install i2c-tools
+sudo raspi-config
+(enable arm i2c)
+</code></pre></li>
+<li><p>Install IR receiver</p>
+
+<pre><code>sudo nano /boot/firmware/config.txt
+---
+dtoverlay=gpio-ir,gpio_pin=17
+---
+reboot
+</code></pre>
+
+<p>sudo apt install lirc liblirc-dev ir-keytable</p>
+
+<p>select a protocol : <code>sudo ir-keytable -p nec</code></p>
+
+<p>read key codes : <code>ir-keytable -t</code></p>
+
+<p>create a custom keymap :</p>
+
+<pre><code>sudo nano /etc/rc_keymaps/custom.toml
+---
+[[protocols]]
+name = &quot;custom&quot;
+protocol = &quot;nec&quot;
+variant = &quot;nec&quot;
+#variant = &quot;nec-x&quot;
+#variant = &quot;nec-32&quot;
+[protocols.scancodes]
+0x52 = &quot;KEY_OK&quot;
+---
+</code></pre>
+
+<p>test the keymap :</p>
+
+<pre><code>sudo ir-keytable -c -w /etc/rc_keymaps/custom.toml
+ir-keytable -t
+</code></pre>
+
+<pre><code>sudo cp /etc/rc_maps.cfg /etc/rc_maps.cfg.bak
+sudo nano /etc/rc_maps.cfg
+---
+* * custom.toml
+---
+
+sudo ir-keytable -a /etc/rc_maps.cfg
+irw
+
+reboot
+</code></pre></li>
+</ul>
+
+<p><br/></p>
