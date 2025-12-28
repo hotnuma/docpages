@@ -1,5 +1,5 @@
 // https://www.lirc.org/api-docs/html/group__lirc__client.html
-// cbuild test main.c lirc
+// cbuild test remote.c lirc
 // ./test
 
 #include "lirc_client.h"
