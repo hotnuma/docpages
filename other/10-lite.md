@@ -187,8 +187,6 @@
     name = "custom"
     protocol = "nec"
     variant = "nec"
-    #variant = "nec-x"
-    #variant = "nec-32"
     [protocols.scancodes]
     0x52 = "KEY_OK"
     ---
@@ -213,5 +211,27 @@
     reboot
     ```
 
+* Execute command from C code
+    
+    https://www.lirc.org/api-docs/html/group__lirc__client.html
+    
+    ```
+    nano ~/.lircrc
+    ---
+    begin
+     prog = radio
+     button = KEY_OK
+     config = radio sabrosita
+    end
+    ---
+    ```
+    
+    [remote.c](remote.c)  
+    
+    ```
+    cbuild test remote.c lirc
+    ./test
+    ```
+    
 <br/>
 

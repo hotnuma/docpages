@@ -175,8 +175,6 @@ reboot
 name = &quot;custom&quot;
 protocol = &quot;nec&quot;
 variant = &quot;nec&quot;
-#variant = &quot;nec-x&quot;
-#variant = &quot;nec-32&quot;
 [protocols.scancodes]
 0x52 = &quot;KEY_OK&quot;
 ---
@@ -198,6 +196,25 @@ sudo ir-keytable -a /etc/rc_maps.cfg
 irw
 
 reboot
+</code></pre></li>
+<li><p>Execute command from C code</p>
+
+<p><a href="https://www.lirc.org/api-docs/html/group__lirc__client.html">https://www.lirc.org/api-docs/html/group__lirc__client.html</a></p>
+
+<pre><code>nano ~/.lircrc
+---
+begin
+ prog = radio
+ button = KEY_OK
+ config = radio sabrosita
+end
+---
+</code></pre>
+
+<p><a href="remote.c">remote.c</a>  </p>
+
+<pre><code>cbuild test remote.c lirc
+./test
 </code></pre></li>
 </ul>
 
