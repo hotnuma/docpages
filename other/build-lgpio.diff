@@ -1,0 +1,26 @@
+diff --git a/Makefile b/Makefile
+index 6cf86ee..d66cb8d 100644
+--- a/Makefile
++++ b/Makefile
+@@ -9,7 +9,6 @@ SIZE         = $(CROSS_PREFIX)size
+ STRIP        = $(CROSS_PREFIX)strip
+ SHLIB        = $(CC) -shared
+ STRIPLIB     = $(STRIP) --strip-unneeded
+-PYTHON       ?= python3
+ 
+ SOVERSION    = 1
+ 
+@@ -135,13 +134,6 @@ install: $(ALL)
+ ifeq ($(DESTDIR),)
+ 	ldconfig
+ endif
+-	@if which $(PYTHON); then cd PY_RGPIO && $(PYTHON) setup.py -q install $(PYINSTALLARGS) || echo "*** install of Python3 rgpio.py failed ***"; fi
+-	@if which swig $(PYTHON); then \
+-		cd PY_LGPIO && \
+-		$(PYTHON) setup.py build_ext $(PYBUILDARGS) && \
+-		$(PYTHON) setup.py -q install $(PYINSTALLARGS) || \
+-		echo "*** install of Python3 lgpio.py failed ***"; \
+-	fi
+ 
+ uninstall:
+ 	rm -f $(DESTDIR)$(includedir)/lgpio.h

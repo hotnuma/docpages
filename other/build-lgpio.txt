@@ -1,0 +1,19 @@
+
+git clone https://github.com/joan2937/lg.git
+cd lg
+path -p 1 -f ../lg.diff
+make
+
+sudo make install
+install -m 0644 lgpio.h                  /usr/local/include
+install -m 0644 rgpio.h                  /usr/local/include
+install -m 0755 liblgpio.so.1 /usr/local/lib
+install -m 0755 librgpio.so.1 /usr/local/lib
+install -m 0755 rgpiod                   /usr/local/bin
+install -m 0755 rgs                      /usr/local/bin
+install -m 0644 rgpiod.1                 /usr/local/man/man1
+install -m 0644 rgs.1                    /usr/local/man/man1
+install -m 0644 lgpio.3                  /usr/local/man/man3
+install -m 0644 rgpio.3                  /usr/local/man/man3
+ldconfig
+
