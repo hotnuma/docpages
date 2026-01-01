@@ -1,6 +1,6 @@
 <link href="../style.css" rel="stylesheet"></link>
 
-**[ [Home](../index.html) | [Install](00-install.html) | [Raspi](05-raspi.html) | Lite | [Build](15-build.html) ]**
+**[ [Home](../index.html) | [Install](00-install.html) | [Raspi](05-raspi.html) | Lite | [Gpio](15-gpio.html) | [Build](20-build.html) ]**
 
 ## Lite
 

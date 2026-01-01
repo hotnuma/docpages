@@ -8,7 +8,7 @@
 
 **[ [ImgView](imgview/05-imgview.html) | [Uni](imgview/10-uni.html) | [Dialog](imgview/20-dialog.html) ]**
 
-**[ [Install](other/00-install.html) | [Raspi](other/05-raspi.html) | [Lite](other/10-lite.html) | [Build](other/15-build.html) ]**
+**[ [Install](other/00-install.html) | [Raspi](other/05-raspi.html) | [Lite](other/10-lite.html) | [Gpio](other/15-gpio.html) | [Build](other/20-build.html) ]**
 
 <br/>
 
