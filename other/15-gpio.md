@@ -10,6 +10,7 @@
 
 * Links
     
+    https://pinout.xyz/  
     https://workboot.fr/ciela/libgpiod/  
     https://libgpiod.readthedocs.io/en/stable/core_api.html  
     https://forums.raspberrypi.com/viewtopic.php?t=360259  
