@@ -17,17 +17,17 @@
 
 #### Driver
 
-* Digilent/linux-userspace-examples
+*  Display_Lib_RPI
     
-    [https://github.com/Digilent/linux-userspace-examples/tree/ma](https://github.com/Digilent/linux-userspace-examples/tree/master)  
+    https://github.com/gavinlyonsrepo/Display_Lib_RPI  
 
 *  SH1106
     
     https://github.com/bitbank2/ss_oled  
 
-*  Display_Lib_RPI
+* Digilent/linux-userspace-examples
     
-    https://github.com/gavinlyonsrepo/Display_Lib_RPI  
+    [https://github.com/Digilent/linux-userspace-examples/tree/ma](https://github.com/Digilent/linux-userspace-examples/tree/master)  
 
 
 #### Other
