@@ -37,9 +37,14 @@
     
     [https://github.com/micropython/micropython/blob/master/extmo](https://github.com/micropython/micropython/blob/master/extmod/font_petme128_8x8.h)  
 
-* lgpiod
+* examples
     
     [https://www.blaess.fr/christophe/2018/10/15/pilotage-de-gpio](https://www.blaess.fr/christophe/2018/10/15/pilotage-de-gpio-avec-lapi-libgpiod-partie-1/)  
+    https://marcjuneau.ca/?p=463  
+
+* Pwm
+    
+    https://forums.raspberrypi.com/viewtopic.php?t=291003  
 
 * i2c
 
