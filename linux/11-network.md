@@ -101,6 +101,10 @@
     /usr/local/share/applications/firefox.desktop
     ```
 
+* Disable AI
+    
+    [https://www.askvg.com/how-to-disable-and-remove-all-ai](https://www.askvg.com/how-to-disable-and-remove-all-ai-features-in-mozilla-firefox/)  
+
 * Disable Filemanager service
     
     https://bbs.archlinux.org/viewtopic.php?id=255794  
