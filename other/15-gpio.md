@@ -37,7 +37,7 @@
     
     [https://github.com/micropython/micropython/blob/master/extmo](https://github.com/micropython/micropython/blob/master/extmod/font_petme128_8x8.h)  
 
-* examples
+* Examples
     
     [https://www.blaess.fr/christophe/2018/10/15/pilotage-de-gpio](https://www.blaess.fr/christophe/2018/10/15/pilotage-de-gpio-avec-lapi-libgpiod-partie-1/)  
     https://marcjuneau.ca/?p=463  
@@ -45,7 +45,11 @@
 * Pwm
     
     https://forums.raspberrypi.com/viewtopic.php?t=291003  
-
+    https://raspberrypi.stackexchange.com/questions/143643  
+    https://www.pi4j.com/documentation/io-types/pwm/  
+    https://raspberrypi.stackexchange.com/questions/132780/  
+    https://github.com/raspberrypi/linux/issues/6818  
+    
 * i2c
 
     https://hackerbikepacker.com/i2c-on-linux  
