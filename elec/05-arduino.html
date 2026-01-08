@@ -1,4 +1,4 @@
-<p><link href="style.css" rel="stylesheet"></link></p>
+<p><link href="../style.css" rel="stylesheet"></link></p>
 
 <p><strong>[ <a href="../index.html">Home</a> | <a href="00-elec.html">Elec</a> | Arduino | <a href="10-oscillator.html">Oscillator</a> | <a href="15-counter.html">Counter</a> | <a href="20-temperature.html">Temp</a> | <a href="25-meter.html">Meter</a> | <a href="30-transistor.html">Transistor</a> | <a href="35-other.html">Other</a> ]</strong></p>
 
@@ -57,11 +57,17 @@ ID          Installé Latest Name
 arduino:avr 1.8.6    1.8.6  Arduino AVR Boards
 </code></pre>
 
-<p>Compile and upload :</p>
+<p>Upload to UNO :</p>
 
 <p><code>arduino-cli compile --fqbn arduino:avr:uno  MyFirstSketch</code></p>
 
-<p><code>arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno MyFirstSketch</code></p></li>
+<p><code>arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno MyFirstSketch</code></p>
+
+<p>Upload to Pro Mini 16 MHz :</p>
+
+<p><code>arduino-cli compile -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch</code></p>
+
+<p><code>arduino-cli upload -p /dev/ttyUSB0 -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch</code></p></li>
 <li><p>Installing Libraries</p>
 
 <p><a href="https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries">https://docs.arduino.cc/software/ide-v1/tutorials/installing</a><br>

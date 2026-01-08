@@ -1,4 +1,4 @@
-<link href="style.css" rel="stylesheet"></link>
+<link href="../style.css" rel="stylesheet"></link>
 
 **[ [Home](../index.html) | [Elec](00-elec.html) | Arduino | [Oscillator](10-oscillator.html) | [Counter](15-counter.html) | [Temp](20-temperature.html) | [Meter](25-meter.html) | [Transistor](30-transistor.html) | [Other](35-other.html) ]**
 
@@ -63,11 +63,17 @@
     arduino:avr 1.8.6    1.8.6  Arduino AVR Boards
     ```
     
-    Compile and upload :
+    Upload to UNO :
     
     `arduino-cli compile --fqbn arduino:avr:uno  MyFirstSketch`
     
     `arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno MyFirstSketch`
+
+    Upload to Pro Mini 16 MHz :
+    
+    `arduino-cli compile -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch`
+    
+    `arduino-cli upload -p /dev/ttyUSB0 -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch`
 
 * Installing Libraries
     

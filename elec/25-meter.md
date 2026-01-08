@@ -1,4 +1,4 @@
-<link href="style.css" rel="stylesheet"></link>
+<link href="../style.css" rel="stylesheet"></link>
 
 **[ [Home](../index.html) | [Elec](00-elec.html) | [Arduino](05-arduino.html) | [Oscillator](10-oscillator.html) | [Counter](15-counter.html) | [Temp](20-temperature.html) | Meter | [Transistor](30-transistor.html) | [Other](35-other.html) ]**
 
