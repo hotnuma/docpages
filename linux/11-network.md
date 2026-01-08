@@ -224,7 +224,11 @@
     append : `192.168.1.254   mabbox.bytel.fr`
 
 
-#### Switch to /etc/network/interfaces
+#### <a name="static"></a> Switch to /etc/network/interfaces
+
+* Install ifupdown
+    
+    `sudo apt install ifupdown resolvconf`
 
 * Network Interfaces
 
@@ -246,10 +250,6 @@
         gateway 192.168.1.254
         dns-nameservers 8.8.8.8 8.8.4.4
     ```
-
-* Install ifupdown
-    
-    `sudo apt install ifupdown resolvconf`
 
 * Disable NetworkManager
 
@@ -280,7 +280,10 @@
 
 * Uninstall network manager
 
-    `sudo apt purge network-manager`
+    ```
+    sudo apt purge cloud-init netplan.io network-manager
+    sudo apt autopurge
+    ```
 
 
 #### Use systemd-networkd

@@ -192,9 +192,12 @@ sudo ip link set dev eth0 up
 <p>append : <code>192.168.1.254   mabbox.bytel.fr</code></p></li>
 </ul>
 
-<h4>Switch to /etc/network/interfaces</h4>
+<h4><a name="static"></a> Switch to /etc/network/interfaces</h4>
 
 <ul>
+<li><p>Install ifupdown</p>
+
+<p><code>sudo apt install ifupdown resolvconf</code></p></li>
 <li><p>Network Interfaces</p>
 
 <p>check interfaces names : <code>ifconfig</code></p>
@@ -214,9 +217,6 @@ iface eth0 inet static
     gateway 192.168.1.254
     dns-nameservers 8.8.8.8 8.8.4.4
 </code></pre></li>
-<li><p>Install ifupdown</p>
-
-<p><code>sudo apt install ifupdown resolvconf</code></p></li>
 <li><p>Disable NetworkManager</p>
 
 <pre><code>sudo systemctl stop NetworkManager
@@ -240,7 +240,9 @@ sudo rm /etc/systemd/network/00-eth0.network
 <p><code>sudo ifup eth0</code></p></li>
 <li><p>Uninstall network manager</p>
 
-<p><code>sudo apt purge network-manager</code></p></li>
+<pre><code>sudo apt purge cloud-init netplan.io network-manager
+sudo apt autopurge
+</code></pre></li>
 </ul>
 
 <h4>Use systemd-networkd</h4>
