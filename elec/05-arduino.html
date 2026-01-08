@@ -21,14 +21,47 @@
 <li><p>ATmega328P Datasheet</p>
 
 <p><a href="https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf">https://ww1.microchip.com/.../ATmega328P_Datasheet.pdf</a>  </p></li>
-<li><p>Install Arduino IDE</p>
+<li><p>Install Arduino Cli</p>
 
-<p><a href="https://www.arduino.cc/en/Guide/Linux">https://www.arduino.cc/en/Guide/Linux</a>  </p>
+<p>Download binary :</p>
 
-<p>extract the archive, cd to the created directory and run <code>sudo sh install.sh</code></p></li>
-<li><p>Install CLI</p>
+<pre><code>https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Linux_64bit.tar.gz
+https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Linux_ARM64.tar.gz
+</code></pre>
 
-<p><code>sudo apt install gcc-avr avr-libc avrdude</code></p></li>
+<p>Extract binary into &#39;/usr/local/bin&#39;</p>
+
+<p><a href="https://arduino.github.io/arduino-cli/0.32/getting-started/">https://arduino.github.io/arduino-cli/0.32/getting-started/</a>  </p>
+
+<pre><code>arduino-cli config init
+arduino-cli sketch new MyFirstSketch
+arduino-cli core update-index
+</code></pre>
+
+<p>Plug the board and list devices :</p>
+
+<pre><code>arduino-cli board list
+Port         Protocol Type              Board Name  FQBN            Core
+/dev/ttyACM0 serial   Serial Port (USB) Arduino Uno arduino:avr:uno arduino:avr
+/dev/ttyAMA0 serial   Serial Port       Unknown
+</code></pre>
+
+<p>Install core :</p>
+
+<p><code>arduino-cli core install arduino:avr</code></p>
+
+<p>List cores :</p>
+
+<pre><code>arduino-cli core list
+ID          Installé Latest Name
+arduino:avr 1.8.6    1.8.6  Arduino AVR Boards
+</code></pre>
+
+<p>Compile and upload :</p>
+
+<p><code>arduino-cli compile --fqbn arduino:avr:uno  MyFirstSketch</code></p>
+
+<p><code>arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno MyFirstSketch</code></p></li>
 <li><p>Installing Libraries</p>
 
 <p><a href="https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries">https://docs.arduino.cc/software/ide-v1/tutorials/installing</a><br>
@@ -140,3 +173,18 @@
 
 <p><a href="https://www.youtube.com/watch?v=kmHyRaiJLpQ">https://www.youtube.com/watch?v=kmHyRaiJLpQ</a> (Indrek)  </p></li>
 </ul>
+
+<p><br/></p>
+
+<!--
+    
+* Install Arduino IDE
+    
+    https://www.arduino.cc/en/Guide/Linux  
+    
+    extract the archive, cd to the created directory and run `sudo sh install.sh`
+    
+* Install CLI
+    
+    `sudo apt install gcc-avr avr-libc avrdude`
+-->

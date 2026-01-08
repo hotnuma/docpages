@@ -23,15 +23,51 @@
     
     [https://ww1.microchip.com/.../ATmega328P_Datasheet.pdf](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf)  
 
-* Install Arduino IDE
+* Install Arduino Cli
     
-    https://www.arduino.cc/en/Guide/Linux  
+    Download binary :
     
-    extract the archive, cd to the created directory and run `sudo sh install.sh`
+    ```
+    https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Linux_64bit.tar.gz
+    https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Linux_ARM64.tar.gz
+    ```
     
-* Install CLI
+    Extract binary into '/usr/local/bin'
     
-    `sudo apt install gcc-avr avr-libc avrdude`
+    https://arduino.github.io/arduino-cli/0.32/getting-started/  
+    
+    ```
+    arduino-cli config init
+    arduino-cli sketch new MyFirstSketch
+    arduino-cli core update-index
+    ```
+    
+    Plug the board and list devices :
+    
+    ```
+    arduino-cli board list
+    Port         Protocol Type              Board Name  FQBN            Core
+    /dev/ttyACM0 serial   Serial Port (USB) Arduino Uno arduino:avr:uno arduino:avr
+    /dev/ttyAMA0 serial   Serial Port       Unknown
+    ```
+    
+    Install core :
+    
+    `arduino-cli core install arduino:avr`
+    
+    List cores :
+    
+    ```
+    arduino-cli core list
+    ID          Installé Latest Name
+    arduino:avr 1.8.6    1.8.6  Arduino AVR Boards
+    ```
+    
+    Compile and upload :
+    
+    `arduino-cli compile --fqbn arduino:avr:uno  MyFirstSketch`
+    
+    `arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno MyFirstSketch`
 
 * Installing Libraries
     
@@ -144,4 +180,18 @@
     
     https://www.youtube.com/watch?v=kmHyRaiJLpQ (Indrek)  
 
+<br/>
+
+<!--
+    
+* Install Arduino IDE
+    
+    https://www.arduino.cc/en/Guide/Linux  
+    
+    extract the archive, cd to the created directory and run `sudo sh install.sh`
+    
+* Install CLI
+    
+    `sudo apt install gcc-avr avr-libc avrdude`
+-->
 
