@@ -17,11 +17,13 @@
     https://www.mozilla.org/en-US/firefox/releases/  
     [https://support.mozilla.org/en-US/kb/install-firefox-linux](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_system-firefox-installation-for-advanced-users)  
     
-* Test Videos
+* Tests
     
     https://www.youtube.com/watch?v=pcSv22DTDUI  
     https://www.youtube.com/watch?v=cuXsupMuik4  
     https://www.youtube.com/watch?v=TVtoxUohG5E  
+    
+    https://www.vsynctester.com/  
 
 * Install from mozilla
     
