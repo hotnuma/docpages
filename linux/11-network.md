@@ -103,6 +103,7 @@
 
 * Disable AI
     
+    https://www.reddit.com/r/firefox/comments/1lp9fsy/  
     [https://www.askvg.com/how-to-disable-and-remove-all-ai](https://www.askvg.com/how-to-disable-and-remove-all-ai-features-in-mozilla-firefox/)  
 
 * Disable Filemanager service
