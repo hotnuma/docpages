@@ -130,6 +130,10 @@
     https://suggestqueries.google.com/complete/search?client=firefox&q=%s
     ```
 
+* Optimization
+    
+    https://www.reddit.com/r/firefox/comments/1q874gt/  
+
 * User Profiles
 
     https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data  
