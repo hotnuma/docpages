@@ -103,11 +103,6 @@
     /usr/local/share/applications/firefox.desktop
     ```
 
-* Disable AI
-    
-    https://www.reddit.com/r/firefox/comments/1lp9fsy/  
-    [https://www.askvg.com/how-to-disable-and-remove-all-ai](https://www.askvg.com/how-to-disable-and-remove-all-ai-features-in-mozilla-firefox/)  
-
 * Disable Filemanager service
     
     https://bbs.archlinux.org/viewtopic.php?id=255794  
@@ -130,10 +125,6 @@
     https://suggestqueries.google.com/complete/search?client=firefox&q=%s
     ```
 
-* Optimization
-    
-    https://www.reddit.com/r/firefox/comments/1q874gt/  
-
 * User Profiles
 
     https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data  
@@ -152,7 +143,28 @@
 * Turn off ambient mode
     
     https://www.popsci.com/diy/youtube-ambient-mode-off-on/  
+
+
+#### <a name="optimize"></a> Optimization
+
+* Disable AI
     
+    https://www.reddit.com/r/firefox/comments/1lp9fsy/  
+    [https://www.askvg.com/how-to-disable-and-remove-all-ai](https://www.askvg.com/how-to-disable-and-remove-all-ai-features-in-mozilla-firefox/)  
+
+* Enable Annoyance Filters
+    
+    https://www.reddit.com/r/firefox/comments/1qcr8ya/  
+
+* Video Playback
+    
+    https://www.reddit.com/r/firefox/comments/1q874gt/  
+    
+    ```
+    gfx.webrender.layer-compositor true
+    privacy.reduceTimerPrecision false
+    ```
+
 
 #### Network
 
