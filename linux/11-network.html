@@ -34,6 +34,18 @@
 sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
 wget https://hotnuma.github.io/docpages/linux/firefox.desktop
 sudo mv ./firefox.desktop /usr/local/share/applications/
+sudo mkdir /opt/firefox/distribution/
+sudo nano /opt/firefox/distribution/policies.json
+</code></pre>
+
+<p>Set manual updates :</p>
+
+<pre><code>{
+    &quot;policies&quot;:
+    {
+        &quot;ManualAppUpdateOnly&quot;: true
+    }
+}
 </code></pre>
 
 <p>Install extensions :</p>
@@ -54,33 +66,6 @@ Disable container tabs.  </p>
 <pre><code>DejaVu 16 / 15 / 15
 Allow pages to choose their fonts : uncheck
 Zoom 110 %
-</code></pre></li>
-<li><p>Policies</p>
-
-<p><a href="https://mozilla.github.io/policy-templates/#manualappupdateonly">https://mozilla.github.io/policy-templates/#manualappupdateonly</a>  </p>
-
-<pre><code>sudo mkdir /opt/firefox/distribution/
-sudo nano /opt/firefox/distribution/policies.json
-</code></pre>
-
-<p>Manual updates :</p>
-
-<pre><code>{
-    &quot;policies&quot;:
-    {
-        &quot;ManualAppUpdateOnly&quot;: true
-    }
-}
-</code></pre>
-
-<p>Disable updates :</p>
-
-<pre><code>{
-    &quot;policies&quot;:
-    {
-        &quot;DisableAppUpdate&quot;: true,
-    }
-}
 </code></pre></li>
 <li><p>Install icon under Wayland</p>
 

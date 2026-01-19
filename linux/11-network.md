@@ -36,8 +36,21 @@
     sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
     wget https://hotnuma.github.io/docpages/linux/firefox.desktop
     sudo mv ./firefox.desktop /usr/local/share/applications/
+    sudo mkdir /opt/firefox/distribution/
+    sudo nano /opt/firefox/distribution/policies.json
     ```
+
+    Set manual updates :
     
+    ```
+    {
+        "policies":
+        {
+            "ManualAppUpdateOnly": true
+        }
+    }
+    ```
+
     Install extensions :
     
     ```
@@ -61,37 +74,6 @@
     Zoom 110 %
     ```
     
-* Policies
-
-    https://mozilla.github.io/policy-templates/#manualappupdateonly  
-    
-    ```
-    sudo mkdir /opt/firefox/distribution/
-    sudo nano /opt/firefox/distribution/policies.json
-    ```
-
-    Manual updates :
-    
-    ```
-    {
-        "policies":
-        {
-            "ManualAppUpdateOnly": true
-        }
-    }
-    ```
-    
-    Disable updates :
-
-    ```
-    {
-        "policies":
-        {
-            "DisableAppUpdate": true,
-        }
-    }
-    ```
-
 * Install icon under Wayland
     
     ```
