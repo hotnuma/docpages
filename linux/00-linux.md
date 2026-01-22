@@ -134,6 +134,12 @@ https://wiki.debian.org/HardwareVideoAcceleration
     apt source <package>
     ```
 
+* List broken packages
+    
+    https://askubuntu.com/questions/772653/  
+    
+    `dpkg -l | grep ^..r `
+
 * List dependencies
     
     https://askubuntu.com/questions/80655/  
