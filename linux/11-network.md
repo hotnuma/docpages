@@ -13,6 +13,7 @@
     https://wiki.debian.org/Firefox  
     https://wiki.archlinux.org/title/Firefox  
     https://wiki.archlinux.org/title/Firefox/Tweaks  
+    https://mozilla.github.io/policy-templates/  
     
     https://www.mozilla.org/en-US/firefox/releases/  
     [https://support.mozilla.org/en-US/kb/install-firefox-linux](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_system-firefox-installation-for-advanced-users)  
