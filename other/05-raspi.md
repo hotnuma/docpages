@@ -121,6 +121,12 @@
     gtk-menu-images=1
     ```
 
+* Firefox and static ip
+	
+	https://hotnuma.github.io/docpages/linux/11-network.html  
+	
+	Disable hardware acceleration.
+
 * Hide bootloader screen
     
     https://forums.raspberrypi.com/viewtopic.php?t=394290#p2351439  
@@ -128,12 +134,6 @@
 * Install Raspi's Firefox
 	
     `sudo apt install --no-install-recommends firefox rpi-firefox-mods`
-
-* Firefox and static ip
-	
-	https://hotnuma.github.io/docpages/linux/11-network.html  
-	
-	Disable hardware acceleration.
 
 * Mpv Configuration
 	
@@ -147,6 +147,12 @@
     hwdec=drm-copy
 	```
 
+* Set Qt theme
+    
+    `sudo apt install qt6ct`
+    
+    Add `QT_QPA_PLATFORMTHEME=qt6ct` to `/etc/environment` and reboot.
+    
 * Uninstall programs
     
     `sudo apt purge cloud-init cups* netplan.io network-manager rpicam-apps-lite rpi-connect-lite`

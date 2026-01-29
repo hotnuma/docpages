@@ -109,17 +109,17 @@ reboot
 gtk-button-images=1
 gtk-menu-images=1
 </code></pre></li>
+<li><p>Firefox and static ip</p>
+
+<p><a href="https://hotnuma.github.io/docpages/linux/11-network.html">https://hotnuma.github.io/docpages/linux/11-network.html</a>  </p>
+
+<p>Disable hardware acceleration.</p></li>
 <li><p>Hide bootloader screen</p>
 
 <p><a href="https://forums.raspberrypi.com/viewtopic.php?t=394290#p2351439">https://forums.raspberrypi.com/viewtopic.php?t=394290#p2351439</a>  </p></li>
 <li><p>Install Raspi&#39;s Firefox</p>
 
 <p><code>sudo apt install --no-install-recommends firefox rpi-firefox-mods</code></p></li>
-<li><p>Firefox and static ip</p>
-
-<p><a href="https://hotnuma.github.io/docpages/linux/11-network.html">https://hotnuma.github.io/docpages/linux/11-network.html</a>  </p>
-
-<p>Disable hardware acceleration.</p></li>
 <li><p>Mpv Configuration</p>
 
 <p><a href="https://forums.raspberrypi.com/viewtopic.php?t=360902">https://forums.raspberrypi.com/viewtopic.php?t=360902</a>  </p>
@@ -130,6 +130,11 @@ gpu-api=opengl
 gpu-dumb-mode=yes
 hwdec=drm-copy
 </code></pre></li>
+<li><p>Set Qt theme</p>
+
+<p><code>sudo apt install qt6ct</code></p>
+
+<p>Add <code>QT_QPA_PLATFORMTHEME=qt6ct</code> to <code>/etc/environment</code> and reboot.</p></li>
 <li><p>Uninstall programs</p>
 
 <p><code>sudo apt purge cloud-init cups* netplan.io network-manager rpicam-apps-lite rpi-connect-lite</code></p></li>
