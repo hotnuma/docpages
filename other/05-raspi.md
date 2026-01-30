@@ -151,7 +151,7 @@
     
     `sudo apt install qt6ct`
     
-    Add `QT_QPA_PLATFORMTHEME=qt6ct` to `/etc/environment` and reboot.
+    Add `QT_QPA_PLATFORMTHEME=qt5ct` to `/etc/environment` and reboot.
     
 * Uninstall programs
     
