@@ -11,9 +11,9 @@
     https://gitlab.freedesktop.org/vyivel/libsfdo  
     
     ```
-    git clone https://gitlab.freedesktop.org/vyivel/libsfdo.git
-    cd libsfdo
-    git checkout v0.1.3
+    git clone https://gitlab.freedesktop.org/vyivel/libsfdo.git libsfdo104
+    cd libsfdo104
+    git checkout v0.1.4
     meson setup build -Dbuildtype=release -Dexamples=false -Dtests=false
     meson compile -C build
     sudo meson install -C build
@@ -33,8 +33,8 @@
     ```
 
     ```
-    git clone https://gitlab.freedesktop.org/wlroots/wlroots.git
-    cd wlroots
+    git clone https://gitlab.freedesktop.org/wlroots/wlroots.git wlroots019
+    cd wlroots019
     git checkout 0.19
     meson setup build -Dbuildtype=release \
     -Dxcb-errors=disabled -Dxwayland=disabled -Dexamples=false
