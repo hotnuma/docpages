@@ -25,14 +25,21 @@
 
 * Install Arduino Cli
     
-    Download binary :
+    x86-64 :
     
     ```
+    wget -O /tmp/arduino_cli.tar.gz \
     https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Linux_64bit.tar.gz
+    ```
+    
+    arm64 :
+    
+    ```
+    wget -O /tmp/arduino_cli.tar.gz \
     https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Linux_ARM64.tar.gz
     ```
     
-    Extract binary into '/usr/local/bin'
+    `sudo tar -C /usr/local/bin/ -zxvf /tmp/arduino_cli.tar.gz arduino-cli`
     
     https://arduino.github.io/arduino-cli/0.32/getting-started/  
     
@@ -65,9 +72,9 @@
     
     Upload to UNO :
     
-    `arduino-cli compile --fqbn arduino:avr:uno  MyFirstSketch`
+    `arduino-cli compile -b arduino:avr:uno  MyFirstSketch`
     
-    `arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno MyFirstSketch`
+    `arduino-cli upload -p /dev/ttyACM0 -b arduino:avr:uno MyFirstSketch`
 
     Upload to Pro Mini 16 MHz :
     

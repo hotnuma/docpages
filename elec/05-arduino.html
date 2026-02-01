@@ -23,13 +23,19 @@
 <p><a href="https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf">https://ww1.microchip.com/.../ATmega328P_Datasheet.pdf</a>  </p></li>
 <li><p>Install Arduino Cli</p>
 
-<p>Download binary :</p>
+<p>x86-64 :</p>
 
-<pre><code>https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Linux_64bit.tar.gz
+<pre><code>wget -O /tmp/arduino_cli.tar.gz \
+https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Linux_64bit.tar.gz
+</code></pre>
+
+<p>arm64 :</p>
+
+<pre><code>wget -O /tmp/arduino_cli.tar.gz \
 https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Linux_ARM64.tar.gz
 </code></pre>
 
-<p>Extract binary into &#39;/usr/local/bin&#39;</p>
+<p><code>sudo tar -C /usr/local/bin/ -zxvf /tmp/arduino_cli.tar.gz arduino-cli</code></p>
 
 <p><a href="https://arduino.github.io/arduino-cli/0.32/getting-started/">https://arduino.github.io/arduino-cli/0.32/getting-started/</a>  </p>
 
@@ -59,9 +65,9 @@ arduino:avr 1.8.6    1.8.6  Arduino AVR Boards
 
 <p>Upload to UNO :</p>
 
-<p><code>arduino-cli compile --fqbn arduino:avr:uno  MyFirstSketch</code></p>
+<p><code>arduino-cli compile -b arduino:avr:uno  MyFirstSketch</code></p>
 
-<p><code>arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno MyFirstSketch</code></p>
+<p><code>arduino-cli upload -p /dev/ttyACM0 -b arduino:avr:uno MyFirstSketch</code></p>
 
 <p>Upload to Pro Mini 16 MHz :</p>
 
