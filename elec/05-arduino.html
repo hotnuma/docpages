@@ -23,6 +23,8 @@
 <p><a href="https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf">https://ww1.microchip.com/.../ATmega328P_Datasheet.pdf</a>  </p></li>
 <li><p>Install Arduino Cli</p>
 
+<p>docs : <a href="https://arduino.github.io/arduino-cli/">https://arduino.github.io/arduino-cli/</a>  </p>
+
 <p>x86-64 :</p>
 
 <pre><code>wget -O /tmp/arduino_cli.tar.gz \
@@ -42,13 +44,6 @@ https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Linux_ARM64.tar.gz
 <pre><code>arduino-cli config init
 arduino-cli core update-index
 arduino-cli core install arduino:avr
-</code></pre>
-
-<p>List cores :</p>
-
-<pre><code>arduino-cli core list
-ID          Installé Latest Name
-arduino:avr 1.8.6    1.8.6  Arduino AVR Boards
 </code></pre>
 
 <p>Set user dir in <code>nano $HOME/.arduino15/arduino-cli.yaml</code> :  </p>
@@ -77,6 +72,12 @@ arduino-cli upload -p /dev/ttyACM0 -b arduino:avr:uno MyFirstSketch
 
 <pre><code>arduino-cli compile -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch
 arduino-cli upload -p /dev/ttyUSB0 -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch
+</code></pre>
+
+<p>Other :</p>
+
+<pre><code>arduino-cli core list
+arduino-cli lib list
 </code></pre></li>
 <li><p>Installing Libraries</p>
 
