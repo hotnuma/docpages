@@ -40,9 +40,24 @@ https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Linux_ARM64.tar.gz
 <p><a href="https://arduino.github.io/arduino-cli/0.32/getting-started/">https://arduino.github.io/arduino-cli/0.32/getting-started/</a>  </p>
 
 <pre><code>arduino-cli config init
-arduino-cli sketch new MyFirstSketch
 arduino-cli core update-index
+arduino-cli core install arduino:avr
 </code></pre>
+
+<p>List cores :</p>
+
+<pre><code>arduino-cli core list
+ID          Installé Latest Name
+arduino:avr 1.8.6    1.8.6  Arduino AVR Boards
+</code></pre>
+
+<p>Set user dir in <code>nano $HOME/.arduino15/arduino-cli.yaml</code> :  </p>
+
+<pre><code>directories:
+    user: /home/hotnuma/DevSrc/libarduino/
+</code></pre>
+
+<p>Create a sketch : <code>arduino-cli sketch new MyFirstSketch</code>  </p>
 
 <p>Plug the board and list devices :</p>
 
@@ -52,28 +67,17 @@ Port         Protocol Type              Board Name  FQBN            Core
 /dev/ttyAMA0 serial   Serial Port       Unknown
 </code></pre>
 
-<p>Install core :</p>
-
-<p><code>arduino-cli core install arduino:avr</code></p>
-
-<p>List cores :</p>
-
-<pre><code>arduino-cli core list
-ID          Installé Latest Name
-arduino:avr 1.8.6    1.8.6  Arduino AVR Boards
-</code></pre>
-
 <p>Upload to UNO :</p>
 
-<p><code>arduino-cli compile -b arduino:avr:uno  MyFirstSketch</code></p>
-
-<p><code>arduino-cli upload -p /dev/ttyACM0 -b arduino:avr:uno MyFirstSketch</code></p>
+<pre><code>arduino-cli compile -b arduino:avr:uno  MyFirstSketch
+arduino-cli upload -p /dev/ttyACM0 -b arduino:avr:uno MyFirstSketch
+</code></pre>
 
 <p>Upload to Pro Mini 16 MHz :</p>
 
-<p><code>arduino-cli compile -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch</code></p>
-
-<p><code>arduino-cli upload -p /dev/ttyUSB0 -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch</code></p></li>
+<pre><code>arduino-cli compile -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch
+arduino-cli upload -p /dev/ttyUSB0 -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch
+</code></pre></li>
 <li><p>Installing Libraries</p>
 
 <p><a href="https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries">https://docs.arduino.cc/software/ide-v1/tutorials/installing</a><br>

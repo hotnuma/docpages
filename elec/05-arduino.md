@@ -45,9 +45,26 @@
     
     ```
     arduino-cli config init
-    arduino-cli sketch new MyFirstSketch
     arduino-cli core update-index
+    arduino-cli core install arduino:avr
     ```
+    
+    List cores :
+    
+    ```
+    arduino-cli core list
+    ID          Installé Latest Name
+    arduino:avr 1.8.6    1.8.6  Arduino AVR Boards
+    ```
+    
+    Set user dir in `nano $HOME/.arduino15/arduino-cli.yaml` :  
+    
+    ```
+    directories:
+        user: /home/hotnuma/DevSrc/libarduino/
+    ```
+    
+    Create a sketch : `arduino-cli sketch new MyFirstSketch`  
     
     Plug the board and list devices :
     
@@ -58,29 +75,19 @@
     /dev/ttyAMA0 serial   Serial Port       Unknown
     ```
     
-    Install core :
-    
-    `arduino-cli core install arduino:avr`
-    
-    List cores :
-    
-    ```
-    arduino-cli core list
-    ID          Installé Latest Name
-    arduino:avr 1.8.6    1.8.6  Arduino AVR Boards
-    ```
-    
     Upload to UNO :
     
-    `arduino-cli compile -b arduino:avr:uno  MyFirstSketch`
-    
-    `arduino-cli upload -p /dev/ttyACM0 -b arduino:avr:uno MyFirstSketch`
+    ```
+    arduino-cli compile -b arduino:avr:uno  MyFirstSketch
+    arduino-cli upload -p /dev/ttyACM0 -b arduino:avr:uno MyFirstSketch
+    ```
 
     Upload to Pro Mini 16 MHz :
     
-    `arduino-cli compile -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch`
-    
-    `arduino-cli upload -p /dev/ttyUSB0 -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch`
+    ```
+    arduino-cli compile -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch
+    arduino-cli upload -p /dev/ttyUSB0 -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch
+    ```
 
 * Installing Libraries
     
