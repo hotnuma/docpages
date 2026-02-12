@@ -55,7 +55,7 @@
     
     ```
     directories:
-        user: /home/hotnuma/DevSrc/libarduino/
+        user: /home/hotnuma/DevFiles/libarduino/
     ```
     
     Create a sketch : `arduino-cli sketch new MyFirstSketch`  
