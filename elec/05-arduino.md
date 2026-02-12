@@ -83,17 +83,21 @@
     arduino-cli upload -p /dev/ttyUSB0 -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch
     ```
 
-    Other :
+    List cores and libraries :
     
     ```
     arduino-cli core list
     arduino-cli lib list
     ```
     
+    Upgrade libraries : `arduino-cli lib upgrade`
+
+<!--
 * Installing Libraries
     
     [https://docs.arduino.cc/software/ide-v1/tutorials/installing](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries)  
     [https://create.arduino.cc/projecthub/akshayjoseph666/adding-](https://create.arduino.cc/projecthub/akshayjoseph666/adding-library-in-arduino-ide-7deb01)  
+-->
 
 
 #### Display
