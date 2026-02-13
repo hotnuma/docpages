@@ -29,7 +29,6 @@
     [http://www.radioman33.com/pages/mes-constructions/ameliorati](http://www.radioman33.com/pages/mes-constructions/amelioration-d-un-petit-kit-frequencemetre.html)  
 
 
-
 #### Frequency Counters
 
 * Arduino Timers
@@ -52,12 +51,15 @@
     https://swharden.com/static/2019/08/03/schematic.png  
     [https://github.com/qubitqualia/SN74LV8154...](https://github.com/qubitqualia/SN74LV8154-Dual-16-bit-counter-IC-Driver-for-Arduino)  
     [https://github.com/qubitqualia/SN74HC165...](https://github.com/qubitqualia/SN74HC165-8-bit-Parallel-Load-Shift-Register-Driver-for-Arduino)  
+    [https://github.com/swharden/USB-Counter...](https://github.com/swharden/USB-Counter/tree/main/builds/1.1)  
     
     [https://forum.arduino.cc/t/faster-frequency...](https://forum.arduino.cc/t/faster-frequency-measurement/210735)  
-    https://swharden.com/blog/2019-08-03-usb-frequency-counter/  
-    https://github.com/swharden/USB-Counter  
-    [https://swharden.com/blog/2016-09-05-vhf-frequency-counter-w](https://swharden.com/blog/2016-09-05-vhf-frequency-counter-with-pc-interface/)  
     [https://www.ednasia.com/simple-high-accuracy-precision-resol](https://www.ednasia.com/simple-high-accuracy-precision-resolution-frequency-counter/)  
+
+<!--
+    [https://swharden.com/blog/2016-09-05-vhf-frequency-counter-w](https://swharden.com/blog/2016-09-05-vhf-frequency-counter-with-pc-interface/)  
+    https://swharden.com/blog/2019-08-03-usb-frequency-counter/  
+-->
 
 * SAMD51
 
