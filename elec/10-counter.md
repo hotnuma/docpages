@@ -51,6 +51,9 @@
     https://swharden.com/static/2019/08/03/schematic.png  
     [https://github.com/qubitqualia/SN74LV8154...](https://github.com/qubitqualia/SN74LV8154-Dual-16-bit-counter-IC-Driver-for-Arduino)  
     [https://github.com/qubitqualia/SN74HC165...](https://github.com/qubitqualia/SN74HC165-8-bit-Parallel-Load-Shift-Register-Driver-for-Arduino)  
+    
+    [https://github.com/swharden/AVR-projects...](https://github.com/swharden/AVR-projects/issues/1)  
+    [https://github.com/swharden/AVR-projects...](https://github.com/swharden/AVR-projects/tree/master/ATMega328%202016-09-04%20SN74LV8154)  
     [https://github.com/swharden/USB-Counter...](https://github.com/swharden/USB-Counter/tree/main/builds/1.1)  
     
     [https://forum.arduino.cc/t/faster-frequency...](https://forum.arduino.cc/t/faster-frequency-measurement/210735)  
