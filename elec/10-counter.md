@@ -48,8 +48,10 @@
 
 * SN74LV8154
     
-    [https://forum.arduino.cc/t/faster-frequency...](https://forum.arduino.cc/t/faster-frequency-measurement/210735)  
     [https://github.com/qubitqualia/SN74LV8154...](https://github.com/qubitqualia/SN74LV8154-Dual-16-bit-counter-IC-Driver-for-Arduino)  
+    [https://github.com/qubitqualia/SN74HC165...](https://github.com/qubitqualia/SN74HC165-8-bit-Parallel-Load-Shift-Register-Driver-for-Arduino)  
+    
+    [https://forum.arduino.cc/t/faster-frequency...](https://forum.arduino.cc/t/faster-frequency-measurement/210735)  
     https://swharden.com/blog/2019-08-03-usb-frequency-counter/  
     https://github.com/swharden/USB-Counter  
     [https://swharden.com/blog/2016-09-05-vhf-frequency-counter-w](https://swharden.com/blog/2016-09-05-vhf-frequency-counter-with-pc-interface/)  
