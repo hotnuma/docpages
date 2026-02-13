@@ -48,6 +48,7 @@
 
 * SN74LV8154
     
+    [https://www.ti.com/lit/ds/symlink/sn74lv8154.pdf](https://www.ti.com/lit/ds/symlink/sn74lv8154.pdf)  
     [https://github.com/qubitqualia/SN74LV8154...](https://github.com/qubitqualia/SN74LV8154-Dual-16-bit-counter-IC-Driver-for-Arduino)  
     [https://github.com/qubitqualia/SN74HC165...](https://github.com/qubitqualia/SN74HC165-8-bit-Parallel-Load-Shift-Register-Driver-for-Arduino)  
     
