@@ -1,6 +1,6 @@
 <link href="../style.css" rel="stylesheet"></link>
 
-**[ [Home](../index.html) | [Elec](00-elec.html) | [Arduino](05-arduino.html) | Oscillator | [Counter](15-counter.html) | [Temp](20-temperature.html) | [Meter](25-meter.html) | [Transistor](30-transistor.html) | [Other](35-other.html) ]**
+**[ [Home](../index.html) | [Elec](00-elec.html) | [Arduino](05-arduino.html) | [Counter](10-counter.html) | Oscillator | [Temp](20-temperature.html) | [Meter](25-meter.html) | [Transistor](30-transistor.html) | [Other](35-other.html) ]**
 
 ## Oscillator
 

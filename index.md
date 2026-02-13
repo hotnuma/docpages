@@ -8,7 +8,7 @@
 
 **[ [ImgView](imgview/05-imgview.html) | [Uni](imgview/10-uni.html) | [Dialog](imgview/20-dialog.html) ]**
 
-**[ [Elec](elec/00-elec.html) | [Arduino](elec/05-arduino.html) | [Oscillator](elec/10-oscillator.html) | [Counter](elec/15-counter.html) | [Temp](elec/20-temperature.html) | [Meter](elec/25-meter.html) | [Transistor](elec/30-transistor.html) | [Other](elec/35-other.html) ]**
+**[ [Elec](elec/00-elec.html) | [Arduino](elec/05-arduino.html) | [Counter](elec/10-counter.html) | [Oscillator](elec/15-oscillator.html) | [Temp](elec/20-temperature.html) | [Meter](elec/25-meter.html) | [Transistor](elec/30-transistor.html) | [Other](elec/35-other.html) ]**
 
 **[ [Install](other/00-install.html) | [Raspi](other/05-raspi.html) | [Lite](other/10-lite.html) | [Gpio](other/15-gpio.html) | [Build](other/20-build.html) ]**
 
