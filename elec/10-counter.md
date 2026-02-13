@@ -57,10 +57,6 @@
     [https://swharden.com/blog/2016-09-05-vhf-frequency-counter-w](https://swharden.com/blog/2016-09-05-vhf-frequency-counter-with-pc-interface/)  
     [https://www.ednasia.com/simple-high-accuracy-precision-resol](https://www.ednasia.com/simple-high-accuracy-precision-resolution-frequency-counter/)  
 
-* 74HC165 & 74HC595 Shift Registers
-    
-    https://www.youtube.com/watch?v=Ys2fu4NINrA  
-
 * SAMD51
 
     [https://forum.arduino.cc/t/best-microcontroller...](https://forum.arduino.cc/t/best-microcontroller-for-frequency-counter-up-to-30mhz/623439)  
