@@ -82,6 +82,10 @@
     arduino-cli compile -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch
     arduino-cli upload -p /dev/ttyUSB0 -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch
     ```
+    
+    Serial to Pro Mini with minicom :
+    
+    `sudo minicom -D /dev/ttyUSB0 -b 96000`
 
     List cores and libraries :
     
