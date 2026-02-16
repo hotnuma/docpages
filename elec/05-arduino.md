@@ -72,8 +72,9 @@
     Upload to UNO :
     
     ```
-    arduino-cli compile -b arduino:avr:uno  MyFirstSketch
+    arduino-cli compile -b arduino:avr:uno MyFirstSketch
     arduino-cli upload -p /dev/ttyACM0 -b arduino:avr:uno MyFirstSketch
+    sudo minicom -D /dev/ttyACM0 -b 115200
     ```
 
     Upload to Pro Mini 16 MHz :
@@ -81,12 +82,9 @@
     ```
     arduino-cli compile -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch
     arduino-cli upload -p /dev/ttyUSB0 -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch
+    sudo minicom -D /dev/ttyUSB0 -b 96000
     ```
     
-    Serial to Pro Mini with minicom :
-    
-    `sudo minicom -D /dev/ttyUSB0 -b 96000`
-
     List cores and libraries :
     
     ```
