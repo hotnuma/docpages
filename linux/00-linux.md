@@ -336,6 +336,10 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
     `ln -s target_path link_name`
 
+* Find and convert files to unix eol
+    
+    `find . -type f -print0 | xargs -0 dos2unix`
+
 * Find biggest files in directory
     
     `find . -type f -printf "%s\t%p\n" | sort -nr | head -10`

@@ -290,6 +290,9 @@ sudo mkfs.ntfs -f -L &quot;Backup&quot; /dev/sdX1
 <li><p>Create a symbolic link</p>
 
 <p><code>ln -s target_path link_name</code></p></li>
+<li><p>Find and convert files to unix eol</p>
+
+<p><code>find . -type f -print0 | xargs -0 dos2unix</code></p></li>
 <li><p>Find biggest files in directory</p>
 
 <p><code>find . -type f -printf &quot;%s\t%p\n&quot; | sort -nr | head -10</code></p></li>
