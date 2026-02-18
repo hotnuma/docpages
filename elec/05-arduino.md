@@ -85,6 +85,10 @@
     sudo minicom -D /dev/ttyUSB0 -b 9600
     ```
     
+    Read serial output :
+    
+    https://arduino.stackexchange.com/questions/79058/  
+    
     List cores and libraries :
     
     ```

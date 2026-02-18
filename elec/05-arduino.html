@@ -66,15 +66,19 @@ Port         Protocol Type              Board Name  FQBN            Core
 
 <pre><code>arduino-cli compile -b arduino:avr:uno MyFirstSketch
 arduino-cli upload -p /dev/ttyACM0 -b arduino:avr:uno MyFirstSketch
-sudo minicom -D /dev/ttyACM0 -b 115200
+sudo minicom -D /dev/ttyACM0 -b 9600
 </code></pre>
 
 <p>Upload to Pro Mini 16 MHz :</p>
 
 <pre><code>arduino-cli compile -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch
 arduino-cli upload -p /dev/ttyUSB0 -b arduino:avr:pro:cpu=16MHzatmega328 MyFirstSketch
-sudo minicom -D /dev/ttyUSB0 -b 96000
+sudo minicom -D /dev/ttyUSB0 -b 9600
 </code></pre>
+
+<p>Read serial output :</p>
+
+<p><a href="https://arduino.stackexchange.com/questions/79058/">https://arduino.stackexchange.com/questions/79058/</a>  </p>
 
 <p>List cores and libraries :</p>
 
