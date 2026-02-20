@@ -19,17 +19,6 @@
 * $20 LCR ESR
     
     [https://www.eevblog.com/forum/testgear/$20-lcr-esr-transisto](https://www.eevblog.com/forum/testgear/$20-lcr-esr-transistor-checker-project/8050/)  
-    [2013](https://www.eevblog.com/forum/testgear/$20-lcr-esr-transistor-checker-project/msg195093/#msg195093)  
-    [2014]()  
-    [2015]()  
-    [2016]()  
-    [2017]()  
-    [2018]()  
-    [2019]()  
-    [2020]()  
-    [2021]()  
-    [2022]()  
-    [2023](https://www.eevblog.com/forum/testgear/$20-lcr-esr-transistor-checker-project/msg4612447/#msg4612447)  
 
 #### Cap Meter
 
