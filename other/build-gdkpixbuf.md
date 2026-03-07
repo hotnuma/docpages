@@ -21,6 +21,7 @@
      -Dinstalled_tests=false -Dthumbnailer=disabled
     meson compile -C build
     meson install -C build
+    sudo /sbin/ldconfig -v
     ```
 
     ```

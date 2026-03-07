@@ -20,6 +20,7 @@ git clone --depth 1 https://gitlab.gnome.org/GNOME/gdk-pixbuf.git
  -Dinstalled_tests=false -Dthumbnailer=disabled
 meson compile -C build
 meson install -C build
+sudo /sbin/ldconfig -v
 </code></pre>
 
 <pre><code>DEPRECATION: WrapDB v1 is deprecated, updated using `meson wrap update libpng`
