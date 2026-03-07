@@ -1,0 +1,58 @@
+<p><link href="../style.css" rel="stylesheet"></link></p>
+
+<p><strong>[ <a href="../index.html">Home</a> | <a href="15-build.html">Build</a> ]</strong></p>
+
+<h2>gdk-pixbuf</h2>
+
+<hr>
+
+<ul>
+<li><p>gdk-pixbuf</p>
+
+<p><a href="https://gitlab.gnome.org/GNOME/gdk-pixbuf">https://gitlab.gnome.org/GNOME/gdk-pixbuf</a>  </p>
+
+<pre><code>sudo apt install libjpeg62-turbo-dev libpng-dev libtiff-dev
+git clone --depth 1 https://gitlab.gnome.org/GNOME/gdk-pixbuf.git
+</code></pre>
+
+<pre><code>meson setup build -Dbuildtype=release -Dglycin=disabled \
+ -Dintrospection=disabled -Dman=false -Dtests=false \
+ -Dinstalled_tests=false -Dthumbnailer=disabled
+meson compile -C build
+meson install -C build
+</code></pre>
+
+<pre><code>DEPRECATION: WrapDB v1 is deprecated, updated using `meson wrap update libpng`
+</code></pre>
+
+<pre><code>Dropping privileges to &#39;hotnuma&#39; before running ninja...
+ninja: Entering directory `/home/hotnuma/DevSrc/gdk-pixbuf/build&#39;
+ninja: no work to do.
+Installing gdk-pixbuf/gdk-pixbuf-marshal.h to /usr/local/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing gdk-pixbuf/gdk-pixbuf-enum-types.h to /usr/local/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing gdk-pixbuf/libgdk_pixbuf-2.0.so.0.4400.5 to /usr/local/lib/aarch64-linux-gnu
+Installing gdk-pixbuf/libpixbufloader-gif.so to /usr/local/lib/aarch64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+Installing gdk-pixbuf/libpixbufloader-tiff.so to /usr/local/lib/aarch64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+Installing gdk-pixbuf/gdk-pixbuf-csource to /usr/local/bin
+Installing gdk-pixbuf/gdk-pixbuf-pixdata to /usr/local/bin
+Installing gdk-pixbuf/gdk-pixbuf-query-loaders to /usr/local/bin
+Installing po/ab/LC_MESSAGES/gdk-pixbuf.mo to /usr/local/share/locale/ab/LC_MESSAGES
+...
+Installing /home/hotnuma/DevSrc/gdk-pixbuf/gdk-pixbuf/gdk-pixbuf.h to /usr/local/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /home/hotnuma/DevSrc/gdk-pixbuf/gdk-pixbuf/gdk-pixbuf-animation.h to /usr/local/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /home/hotnuma/DevSrc/gdk-pixbuf/gdk-pixbuf/gdk-pixbuf-core.h to /usr/local/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /home/hotnuma/DevSrc/gdk-pixbuf/gdk-pixbuf/gdk-pixbuf-io.h to /usr/local/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /home/hotnuma/DevSrc/gdk-pixbuf/gdk-pixbuf/gdk-pixbuf-loader.h to /usr/local/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /home/hotnuma/DevSrc/gdk-pixbuf/gdk-pixbuf/gdk-pixbuf-macros.h to /usr/local/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /home/hotnuma/DevSrc/gdk-pixbuf/gdk-pixbuf/gdk-pixbuf-simple-anim.h to /usr/local/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /home/hotnuma/DevSrc/gdk-pixbuf/gdk-pixbuf/gdk-pixbuf-transform.h to /usr/local/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /home/hotnuma/DevSrc/gdk-pixbuf/gdk-pixbuf/gdk-pixdata.h to /usr/local/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /home/hotnuma/DevSrc/gdk-pixbuf/build/gdk-pixbuf/gdk-pixbuf-features.h to /usr/local/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /home/hotnuma/DevSrc/gdk-pixbuf/build/meson-private/gdk-pixbuf-2.0.pc to /usr/local/lib/aarch64-linux-gnu/pkgconfig
+Installing symlink pointing to libgdk_pixbuf-2.0.so.0.4400.5 to /usr/local/lib/aarch64-linux-gnu/libgdk_pixbuf-2.0.so.0
+Installing symlink pointing to libgdk_pixbuf-2.0.so.0 to /usr/local/lib/aarch64-linux-gnu/libgdk_pixbuf-2.0.so
+Running custom install script &#39;/usr/bin/python3 /home/hotnuma/DevSrc/gdk-pixbuf/build-aux/post-install.py /usr/local/bin /usr/local/lib/aarch64-linux-gnu 2.10.0&#39;
+</code></pre></li>
+</ul>
+
+<p><br/></p>

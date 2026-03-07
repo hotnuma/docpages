@@ -26,6 +26,7 @@
 * build instructions
 
     [audacious](build-audacious.html)  
+    [gdk-pixbuf](build-gdkpixbuf.html)  
     [labwc](build-labwc.html)  
     [rofi](build-rofi.html)  
     [xfce](build-xfce.html)  
