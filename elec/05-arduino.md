@@ -96,14 +96,10 @@
     arduino-cli lib list
     ```
     
-    Upgrade libraries : `arduino-cli lib upgrade`
-
-<!--
-* Installing Libraries
-    
-    [https://docs.arduino.cc/software/ide-v1/tutorials/installing](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries)  
-    [https://create.arduino.cc/projecthub/akshayjoseph666/adding-](https://create.arduino.cc/projecthub/akshayjoseph666/adding-library-in-arduino-ide-7deb01)  
--->
+    https://arduino.github.io/arduino-cli/0.23/commands/arduino-cli_lib/  
+    Search libraries : `arduino-cli lib search OneButton`  
+    Install libraries : `arduino-cli lib install OneButton`  
+    Upgrade libraries : `arduino-cli lib upgrade`  
 
 
 #### Display
