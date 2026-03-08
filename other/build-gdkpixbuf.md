@@ -6,6 +6,25 @@
 
 ---
 
+* loaders
+    
+    `ls /usr/lib/$(arch)-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders`
+
+    ```
+    -rw-r--r-- 1 root root  67720 12 juil.  2025 libpixbufloader-ani.so
+    -rw-r--r-- 1 root root  67736 12 juil.  2025 libpixbufloader-bmp.so
+    -rw-r--r-- 1 root root  67720 12 juil.  2025 libpixbufloader-gif.so
+    -rw-r--r-- 1 root root  67720 12 juil.  2025 libpixbufloader-icns.so
+    -rw-r--r-- 1 root root  67792 12 juil.  2025 libpixbufloader-ico.so
+    -rw-r--r-- 1 root root  67776 12 juil.  2025 libpixbufloader-pnm.so
+    -rw-r--r-- 1 root root  67744 12 juil.  2025 libpixbufloader-qtif.so
+    -rw-r--r-- 1 root root 395424 19 mars   2025 libpixbufloader_svg.so
+    -rw-r--r-- 1 root root  67728 12 juil.  2025 libpixbufloader-tga.so
+    -rw-r--r-- 1 root root  67728 12 juil.  2025 libpixbufloader-tiff.so
+    -rw-r--r-- 1 root root  67720 12 juil.  2025 libpixbufloader-xbm.so
+    -rw-r--r-- 1 root root  67720 12 juil.  2025 libpixbufloader-xpm.so
+    ```
+
 * gdk-pixbuf
     
     https://gitlab.gnome.org/GNOME/gdk-pixbuf  
