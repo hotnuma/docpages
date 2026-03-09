@@ -13,9 +13,13 @@
     [https://www.eevblog.com/forum/testgear/$20-lcr-esr](https://www.eevblog.com/forum/testgear/$20-lcr-esr-transistor-checker-project/8050/)  
 
 
-#### Cap Meter
+#### Capacitance
 
-* LM311 High-res Cap Meter
+* RC Bridge
+    
+    [Mariscotti RC bridge](https://www.eevblog.com/forum/metrology/diy-capacitance-measurement-using-simple-rc-bridge-based-technique/)  
+
+* LM311 Relaxation Oscillator
     
     [Grounding capacitance meter](https://www.researchgate.net/publication/340548186_A_period-based_measurement_for_grounding_capacitance_meter_with_Arduino_using_a_relaxation_oscillator)  
     [http://www.seekic.com/precision_RC_oscillator.html](http://www.seekic.com/circuit_diagram/Electrical_Equipment_Circuit/Low_frequency_precision_RC_oscillator.html)  
