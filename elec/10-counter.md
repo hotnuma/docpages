@@ -59,11 +59,5 @@
     [https://forum.arduino.cc/t/faster-frequency...](https://forum.arduino.cc/t/faster-frequency-measurement/210735)  
     [https://www.ednasia.com/simple-high-accuracy-precision-resol](https://www.ednasia.com/simple-high-accuracy-precision-resolution-frequency-counter/)  
 
-<!--
-* SAMD51
-
-    [https://forum.arduino.cc/t/best-microcontroller...](https://forum.arduino.cc/t/best-microcontroller-for-frequency-counter-up-to-30mhz/623439)  
--->
-
 <br/>
 
