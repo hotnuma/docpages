@@ -415,6 +415,12 @@ https://wiki.debian.org/HardwareVideoAcceleration
     <code>sed 's/&nbsp;&nbsp;&#42;/ /g' input.txt > output.txt</code>  
     <code>sed 's/&nbsp;&nbsp;&#42;/\t/g' input.txt > output.txt</code>  
 
+* Split pdf
+    
+    https://askubuntu.com/questions/221962/  
+    
+    `qpdf input.pdf --pages . 6-666 -- output.pdf`
+
 
 #### Programs
 
