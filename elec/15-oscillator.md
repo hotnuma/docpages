@@ -44,9 +44,6 @@
 * 32768 Hz
 
     https://atomsoft.wordpress.com/2010/08/17/32khz-oscillator-reference-signal/  
-    [https://softsolder.com/2017/04/07/colpitts-oscillator-at-32-](https://softsolder.com/2017/04/07/colpitts-oscillator-at-32-768-khz/)  
-    [https://electronics.stackexchange.com/...](https://electronics.stackexchange.com/questions/299392/)  
-    https://www.industrial-electronics.com/393_osc_6.html  
 
 * CD4060 examples
     
@@ -117,4 +114,10 @@
     
     [https://groups.io/g/qrp-tech/topic/6523696?p=Created,,,20,2,](https://groups.io/g/qrp-tech/topic/6523696?p=Created,,,20,2,0,0::,,,0,0,0,6523696)  
 
+<!--
+    [https://softsolder.com/2017/04/07/colpitts-oscillator-at-32-](https://softsolder.com/2017/04/07/colpitts-oscillator-at-32-768-khz/)  
+    [https://electronics.stackexchange.com/...](https://electronics.stackexchange.com/questions/299392/)  
+-->
+
+<br/>
 
