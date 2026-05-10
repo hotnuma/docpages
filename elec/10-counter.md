@@ -12,6 +12,11 @@
     
     [https://makingcircuits.com/blog/how-to-make-logic-inverter-b](https://makingcircuits.com/blog/how-to-make-logic-inverter-buffer-gates-using-bjts/)
 
+* Dual transistor
+    
+    [https://forums.futura-sciences.com/electronique/641302-circu](https://forums.futura-sciences.com/electronique/641302-circuit-dentree-dun-frequencemetre.html)  
+
+<!--
 * Single transistor
     
     [https://static.wixstatic.com/media/e43988_3d33daf1fa574fa6a8](https://static.wixstatic.com/media/e43988_3d33daf1fa574fa6a84c94032f5d531a~mv2.jpg)  
@@ -27,7 +32,7 @@
     [https://forums.futura-sciences.com/electronique/641302-circu](https://forums.futura-sciences.com/electronique/641302-circuit-dentree-dun-frequencemetre.html)  
     [https://www.sonelec-musique.com/electronique_realisations_fr](https://www.sonelec-musique.com/electronique_realisations_frequencemetre_etage_entree_001.html)  
     [http://www.radioman33.com/pages/mes-constructions/ameliorati](http://www.radioman33.com/pages/mes-constructions/amelioration-d-un-petit-kit-frequencemetre.html)  
-
+-->
 
 #### Frequency Counters
 
