@@ -25,11 +25,8 @@
     [https://hackster.imgix.net/uploads/attachments/1276713/schem](https://hackster.imgix.net/uploads/attachments/1276713/schematic_-_display_board_b7BEVZdsyj.png?auto=compress%2Cformat&w=1280&h=960&fit=max)  
     [https://electronics-diy.com/50MHz_Frequency_Meter_Counter.ph](https://electronics-diy.com/50MHz_Frequency_Meter_Counter.php)  
 
-* Dual transistor
-    
     [https://forum.retrotechnique.org/t/frequencemetre-testeur-de](https://forum.retrotechnique.org/t/frequencemetre-testeur-de-quartz/20876/19?page=2)  
     http://www.py2bbs.qsl.br/freq_dl4yhf.php  
-    [https://forums.futura-sciences.com/electronique/641302-circu](https://forums.futura-sciences.com/electronique/641302-circuit-dentree-dun-frequencemetre.html)  
     [https://www.sonelec-musique.com/electronique_realisations_fr](https://www.sonelec-musique.com/electronique_realisations_frequencemetre_etage_entree_001.html)  
     [http://www.radioman33.com/pages/mes-constructions/ameliorati](http://www.radioman33.com/pages/mes-constructions/amelioration-d-un-petit-kit-frequencemetre.html)  
 -->
